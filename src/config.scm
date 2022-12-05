@@ -1,9 +1,13 @@
 ;; This is an operating system configuration template
 ;; for a "bare bones" setup, with no X11 display server.
 
-(use-modules (gnu)) 
-(use-service-modules networking desktop)
-(use-package-modules certs)
+(use-modules (gnu)
+	     (srfi srfi-1)) ;;srfi is list processing, we use it for remove gdm
+;;	     (gnu services desktop)) ;;
+(use-service-modules networking 
+		     desktop 
+		     xorg) ;;defines gdm-service-type so we can remove it
+(use-package-modules certs wm)
 
 (operating-system
   (host-name "cool_desktop_guix")
@@ -41,8 +45,9 @@
                %base-user-accounts))
 
   ;; Globally-installed packages.
-  (packages (append (list 
-		     nss-certs)
-		     %base-packages))
+  (packages (append (list nss-certs
+			  sway)
+		    %base-packages))
 
-  (services %desktop-services))
+  (services (remove (lambda (service)
+		     (eq? (service-kind service) gdm-service-type)) %desktop-services)))
