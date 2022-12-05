@@ -2,7 +2,7 @@
 ;; for a "bare bones" setup, with no X11 display server.
 
 (use-modules (gnu)) 
-(use-service-modules networking)
+(use-service-modules networking desktop)
 (use-package-modules certs)
 
 (operating-system
@@ -45,6 +45,4 @@
 		     nss-certs)
 		     %base-packages))
 
-  ;; Add services to the baseline: a DHCP client and
-  (services (append (list (service dhcp-client-service-type))
-                    %base-services)))
+  (services %desktop-services))
