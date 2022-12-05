@@ -14,7 +14,12 @@
 (home-environment
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
-  (packages (specifications->packages (list "icecat" "lf" "git" "neovim" "sway")))
+  (packages (specifications->packages (list "icecat"
+					    "lf"
+					    "git"
+					    "neovim"
+					    "curl"
+					    "openssh")))
 
   ;; Below is the list of Home services.  To search for available
   ;; services, run 'guix home search KEYWORD' in a terminal.
