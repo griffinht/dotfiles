@@ -50,5 +50,7 @@
 			  sway)
 		    %base-packages))
 
-  (services (remove (lambda (service) ;; remove usees srfi srfi-1
-		     (eq? (service-kind service) gdm-service-type)) %desktop-services)))
+  (services (append (list (service dhcp-client-service-type))
+		    %base-services)))
+;;  (services (remove (lambda (service) ;; remove usees srfi srfi-1
+;;		     (eq? (service-kind service) gdm-service-type)) %desktop-services)))
