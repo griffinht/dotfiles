@@ -7,7 +7,8 @@
 (use-service-modules networking 
 		     desktop 
 		     xorg) ;;defines gdm-service-type so we can remove it
-(use-package-modules certs wm)
+(use-package-modules certs ;; for nss-certs so we have ssl certs for https
+		     wm) ;; sway
 
 (operating-system
   (host-name "cool_desktop_guix")
@@ -45,9 +46,9 @@
                %base-user-accounts))
 
   ;; Globally-installed packages.
-  (packages (append (list nss-certs
+  (packages (append (list nss-certs ;; so we have ssl certs for https
 			  sway)
 		    %base-packages))
 
-  (services (remove (lambda (service)
+  (services (remove (lambda (service) ;; remove usees srfi srfi-1
 		     (eq? (service-kind service) gdm-service-type)) %desktop-services)))
