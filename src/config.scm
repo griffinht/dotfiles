@@ -56,10 +56,11 @@
  (kernel-arguments (append
 		      '("modprobe.blacklist=nouveau");; make sure we don't load nouvuea which would conflict with nvidia's proprietary drivers
 	      %default-kernel-arguments))
- (kernel linux)
+;; (kernel linux)
+ (kernel linux-lts)
  (initrd microcode-initrd)
  (firmware (list linux-firmware))
-;; (kernel-loadable-modules (list nvidia-driver))
+ (kernel-loadable-modules (list nvidia-driver))
 
   ;; Globally-installed packages.
   (packages (append (list nss-certs ;; so we have ssl certs for https
