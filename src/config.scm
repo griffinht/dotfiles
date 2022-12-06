@@ -28,7 +28,12 @@
 
   (bootloader (bootloader-configuration
                 (bootloader grub-efi-bootloader)
-                (target "/boot/efi")))
+                (target "/boot/efi")
+		(menu-entries (list (menu-entry
+				      (label "arch btw")
+				      (linux "/boot/arch/vmlinuz-linux")
+				      (linux-arguments '("root=/dev/nvme0n1p7"))
+				      (initrd "/boot/arch/initramfs-linux.img"))))))
 
   (file-systems (append
                  (list (file-system
