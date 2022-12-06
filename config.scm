@@ -81,8 +81,9 @@
 		    (cons* (simple-service
 			     'custom-udev-rules udev-service-type
 			     (list nvidia-driver))
-			   (service kernel-module-loader-service-type '("nvidia_uvm"
+			   (service kernel-module-loader-service-type '("nvidia_drm"
 									"nvidia"
+									"nvidia_uvm"
 									"nvidia_modeset"
 									"ipmi_devintf"))
 			   (modify-services %desktop-services
