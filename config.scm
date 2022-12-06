@@ -59,7 +59,8 @@
                %base-user-accounts))
 
  (kernel-arguments (append
-		      '("modprobe.blacklist=nouveau");; make sure we don't load nouvuea which would conflict with nvidia's proprietary drivers
+		      '("modprobe.blacklist=nouveau";; make sure we don't load nouvuea which would conflict with nvidia's proprietary drivers
+			"nvidia_drm.modeset=1");; arch wiki nvdia says so
 	      %default-kernel-arguments))
 ;; (kernel linux)
  (kernel linux-lts)
