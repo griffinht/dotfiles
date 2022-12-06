@@ -2,13 +2,21 @@
 ;; for a "bare bones" setup, with no X11 display server.
 
 (use-modules (gnu)
+	     (guix transformations);; for transform
+	     (nongnu packages nvidia);; proprietary nvidia drivers
 	     (srfi srfi-1)) ;;srfi is list processing, we use it for remove gdm
 ;;	     (gnu services desktop)) ;;
 (use-service-modules networking 
 		     desktop 
+		     linux
 		     xorg) ;;defines gdm-service-type so we can remove it
 (use-package-modules certs ;; for nss-certs so we have ssl certs for https
+		     linux
 		     wm) ;; sway
+
+(define trannsform
+  (options->transformation
+    '((with-grafy . "mesa=nvda"))))
 
 (operating-system
   (host-name "cool_desktop_guix")
@@ -37,13 +45,15 @@
                 (name "griffin")
                 (group "users")
 
-                ;; Adding the account to the "wheel" group
-                ;; makes it a sudoer.  Adding it to "audio"
-                ;; and "video" allows the user to play sound
-                ;; and access the webcam.
-                (supplementary-groups '("wheel"
-                                        "audio" "video")))
+                (supplementary-groups '("wheel";; sudo
+                                        "audio";; play sound
+					"video")));; access webcam
                %base-user-accounts))
+
+ ;; (kernel-arguments (append
+;;		      '("modprobe.blacklist=nouvuea");; make sure we don't load nouvuea which would conflict with nvidia's proprietary drivers
+;;		      %default-kernel-arguments))
+;;  (kernel-loadable-modules (list nvidia-driver))
 
   ;; Globally-installed packages.
   (packages (append (list nss-certs ;; so we have ssl certs for https
@@ -53,4 +63,14 @@
 ;;  (services (append (list (service dhcp-client-service-type))
 ;;		    %base-services)))
   (services (remove (lambda (service) ;; remove usees srfi srfi-1
-		     (eq? (service-kind service) gdm-service-type)) %desktop-services)))
+		     (eq? (service-kind service) gdm-service-type))
+		    (cons* (simple-service
+			     'custom-udev-rules udev-service-type
+			     (list nvidia-driver))
+;;			   (service kernel-module-loader-service-type
+;;				    '("ipmi_devintf"
+;;				      "nvidia"
+;;				      "nvidia_modeset"
+;;				      "nvidia_uvm"))
+)
+			   %desktop-services))))
