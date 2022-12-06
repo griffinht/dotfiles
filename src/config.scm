@@ -4,19 +4,21 @@
 (use-modules (gnu)
 	     (guix transformations);; for transform
 	     (nongnu packages nvidia);; proprietary nvidia drivers
+	     (nongnu packages linux)
+;;	     (nongnu system linux-initrd)
 	     (srfi srfi-1)) ;;srfi is list processing, we use it for remove gdm
 ;;	     (gnu services desktop)) ;;
 (use-service-modules networking 
 		     desktop 
-		     linux
+;;		     linux
 		     xorg) ;;defines gdm-service-type so we can remove it
 (use-package-modules certs ;; for nss-certs so we have ssl certs for https
 		     linux
 		     wm) ;; sway
 
-(define trannsform
+(define transform
   (options->transformation
-    '((with-grafy . "mesa=nvda"))))
+    '((with-graft . "mesa=nvda"))))
 
 (operating-system
   (host-name "cool_desktop_guix")
@@ -50,13 +52,17 @@
 					"video")));; access webcam
                %base-user-accounts))
 
- ;; (kernel-arguments (append
-;;		      '("modprobe.blacklist=nouvuea");; make sure we don't load nouvuea which would conflict with nvidia's proprietary drivers
-;;		      %default-kernel-arguments))
-;;  (kernel-loadable-modules (list nvidia-driver))
+ (kernel-arguments (append
+		      '("modprobe.blacklist=nouveau");; make sure we don't load nouvuea which would conflict with nvidia's proprietary drivers
+	      %default-kernel-arguments))
+ (kernel linux)
+;; (initrd microcode-initrd)
+ (firmware (list linux-firmware))
+;; (kernel-loadable-modules (list nvidia-driver))
 
   ;; Globally-installed packages.
   (packages (append (list nss-certs ;; so we have ssl certs for https
+			  nvidia-driver
 			  sway)
 		    %base-packages))
 
@@ -67,10 +73,15 @@
 		    (cons* (simple-service
 			     'custom-udev-rules udev-service-type
 			     (list nvidia-driver))
-;;			   (service kernel-module-loader-service-type
-;;				    '("ipmi_devintf"
-;;				      "nvidia"
-;;				      "nvidia_modeset"
-;;				      "nvidia_uvm"))
-)
-			   %desktop-services))))
+			   (modify-services %desktop-services
+					    (guix-service-type config =>
+					      (guix-configuration
+						    (inherit config)
+						    (substitute-urls
+						      (append (list "https:;//substitutes.nonguix.org")
+							      %default-substitute-urls))
+						    (authorized-keys
+						      (append (list (local-file "./nonguix-signing-key.pub"))
+							      %default-authorized-guix-keys))))
+;;			   (service kernel-module-loader-service-type '("nvidia_uvm"))
+			   )))))
