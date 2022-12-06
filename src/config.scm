@@ -2,6 +2,7 @@
 ;; for a "bare bones" setup, with no X11 display server.
 
 (use-modules (gnu)
+	     (gnu services)
 	     (guix transformations);; for transform
 	     (nongnu packages nvidia);; proprietary nvidia drivers
 	     (nongnu packages linux)
@@ -10,7 +11,7 @@
 ;;	     (gnu services desktop)) ;;
 (use-service-modules networking 
 		     desktop 
-;;		     linux
+		     linux ;;kernel-module-loader-service-type
 		     xorg) ;;defines gdm-service-type so we can remove it
 (use-package-modules certs ;; for nss-certs so we have ssl certs for https
 		     linux
@@ -73,6 +74,10 @@
 		    (cons* (simple-service
 			     'custom-udev-rules udev-service-type
 			     (list nvidia-driver))
+			   (service kernel-module-loader-service-type '("nvidia_uvm"
+									"nvidia"
+									"nvidia_modeset"
+									"ipmi_devintf"))
 			   (modify-services %desktop-services
 					    (guix-service-type config =>
 					      (guix-configuration
@@ -83,5 +88,4 @@
 						    (authorized-keys
 						      (append (list (local-file "./nonguix-signing-key.pub"))
 							      %default-authorized-guix-keys))))
-;;			   (service kernel-module-loader-service-type '("nvidia_uvm"))
 			   )))))
