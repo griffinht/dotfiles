@@ -25,15 +25,21 @@
   ;; services, run 'guix home search KEYWORD' in a terminal.
   (services
    (list 
+     (simple-service 'dotfiles
+		     home-xdg-configuration-files-service-type
+		     `(("nvim/init.vim"
+			,(local-file "config/nvim/init.vim"))
+		       ("git/config"
+			,(local-file "config/git/config"))))
     (service home-bash-service-type
                   (home-bash-configuration
                    (aliases '(("grep" . "grep --color=auto") ("ll" . "ls -l")
                               ("ls" . "ls -p --color=auto")))
                    (bashrc (list (local-file
-                                  "/home/griffin/src/guix-config/.bashrc"
+                                  "bashrc"
                                   "bashrc")))
                    (bash-profile (list (local-file
-                                        "/home/griffin/src/guix-config/.bash_profile"
+                                        "bash_profile"
                                         "bash_profile")))))
     )))
 ;;    (service home-xdg-configuration-files-service-type
