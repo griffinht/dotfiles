@@ -5,7 +5,7 @@
 	     (guix transformations);; for transform
 	     (nongnu packages nvidia);; proprietary nvidia drivers
 	     (nongnu packages linux)
-;;	     (nongnu system linux-initrd)
+	     (nongnu system linux-initrd)
 	     (srfi srfi-1)) ;;srfi is list processing, we use it for remove gdm
 ;;	     (gnu services desktop)) ;;
 (use-service-modules networking 
@@ -56,7 +56,7 @@
 		      '("modprobe.blacklist=nouveau");; make sure we don't load nouvuea which would conflict with nvidia's proprietary drivers
 	      %default-kernel-arguments))
  (kernel linux)
-;; (initrd microcode-initrd)
+ (initrd microcode-initrd)
  (firmware (list linux-firmware))
 ;; (kernel-loadable-modules (list nvidia-driver))
 
