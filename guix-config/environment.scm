@@ -36,10 +36,10 @@
                    (aliases '(("grep" . "grep --color=auto") ("ll" . "ls -l")
                               ("ls" . "ls -p --color=auto")))
                    (bashrc (list (local-file
-                                  "bashrc"
+                                  ".bashrc"
                                   "bashrc")))
                    (bash-profile (list (local-file
-                                        "bash_profile"
+                                        ".bash_profile"
                                         "bash_profile")))))
     )))
 ;;    (service home-xdg-configuration-files-service-type
