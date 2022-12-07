@@ -19,6 +19,7 @@
 					    "git"
 					    "neovim"
 					    "curl"
+					    "sway"
 					    "openssh")))
 
   ;; Below is the list of Home services.  To search for available
