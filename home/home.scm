@@ -15,9 +15,10 @@
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
   (packages (specifications->packages (list ;;"icecat"
-					    ;; sway stuff
+					    ;; sway
 					    "sway"
-					    "foot"
+					    "foot" ;; wayland terminal emulator
+					    "ncurses" ;; makes foot work
 					    ;; dev utils
 					    "openssh"
 					    "git"
