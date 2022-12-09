@@ -15,13 +15,18 @@
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
   (packages (specifications->packages (list ;;"icecat"
-					    "lf"
-					    "git"
-					    "neovim"
-					    "curl"
+					    ;; sway stuff
 					    "sway"
 					    "foot"
-					    "openssh")))
+					    ;; dev utils
+					    "openssh"
+					    "git"
+					    "curl"
+					    ;; cool utils
+					    "lf"
+					    "mpv"
+					    "neovim"
+					    )))
   ;; note that on debian i had to install glibc-locales or something
 
   ;; Below is the list of Home services.  To search for available
@@ -36,5 +41,5 @@
 			,(local-file "config/sway/config"))
 		       ("git/config"
 			,(local-file "config/git/config"))))
-    (service home-bash-service-type)
+    (service home-bash-service-type) ;; provides default bash config
     )))
