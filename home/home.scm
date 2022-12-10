@@ -44,6 +44,8 @@
 			,(local-file "config/sway/config"))
 		       ("sway/wacom"
 			,(local-file "config/sway/wacom"))
+		       ("foot/foot.ini"
+			,(local-file "config/foot/foot.ini"))
 		       ("git/config"
 			,(local-file "config/git/config"))))
     (service home-bash-service-type) ;; provides default bash config
