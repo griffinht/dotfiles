@@ -19,6 +19,7 @@
 					    "sway"
 					    "foot" ;; wayland terminal emulator
 					    "ncurses" ;; makes foot work
+                                            "fzf" ;; fuzzy search for menu
 					    ;; dev utils
 					    "openssh"
 					    "git"
@@ -27,6 +28,7 @@
 					    "lf"
 					    "mpv"
 					    "neovim"
+                                            "ncdu" ;; disk usage
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
