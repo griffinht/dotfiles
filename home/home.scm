@@ -40,6 +40,8 @@
 			,(local-file "config/nvim/init.vim"))
 		       ("sway/config"
 			,(local-file "config/sway/config"))
+		       ("sway/wacom"
+			,(local-file "config/sway/wacom"))
 		       ("git/config"
 			,(local-file "config/git/config"))))
     (service home-bash-service-type) ;; provides default bash config
