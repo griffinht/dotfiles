@@ -18,6 +18,9 @@
 					    "foot" ;; terminal emulator
 					    "ncurses" ;; makes foot work
                                             "fzf" ;; fuzzy search for application launcher menu
+					    ;; todo doesnt work
+					    "xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
+					    ;; https://mozilla.github.io/webrtc-landing/gum_test.html
 					    ;; dev utils
 					    "openssh"
 					    "git"

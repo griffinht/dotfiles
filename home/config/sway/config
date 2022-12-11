@@ -7,7 +7,8 @@
 ### todo debug desktop stuff
 # https://github.com/swaywm/sway/issues/5732
 # this only applies to debian i think
-exec systemctl --user import-environment
+#exec systemctl --user import-environment
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 ### Variables
 #
