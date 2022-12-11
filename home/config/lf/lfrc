@@ -4,13 +4,13 @@ cmd open ${{
 		    nvim $fx
 		    ;;
 		image/*)
-		    imv "$fx"
+		    imv "$fx" &
 		    ;;
 		application/pdf)
-		    zathura "$fx"
+		    zathura "$fx" &
 		    ;;
 		application/gzip)
-		    xournalpp "$fx"
+		    xournalpp "$fx" &
 		    ;;
 		*) 
 		    for f in $fx; do
