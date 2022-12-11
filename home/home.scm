@@ -14,19 +14,22 @@
 (home-environment
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
-  (packages (specifications->packages (list ;;"icecat"
-					    ;; sway
+  (packages (specifications->packages (list ;; window manager
 					    "sway"
-					    "foot" ;; wayland terminal emulator
+					    "foot" ;; terminal emulator
 					    "ncurses" ;; makes foot work
-                                            "fzf" ;; fuzzy search for menu
+                                            "fzf" ;; fuzzy search for application launcher menu
 					    ;; dev utils
 					    "openssh"
 					    "git"
 					    "curl"
+                                            ;; file browsing
+                                            "lf" ;; terminal file browser
+					    "mpv" ;; video player
+                                            "imv" ;; image viewer
+                                            "zathura" ;; document viewer
+                                            "zathura-pdf-mupdf" ;; allows zathura to render pdfs
 					    ;; cool utils
-					    "lf"
-					    "mpv"
 					    "neovim"
                                             "ncdu" ;; disk usage
 					    )))
