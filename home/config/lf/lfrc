@@ -1,19 +1,22 @@
 cmd open ${{
-    case $(file --mime-type -Lb "$f") in
-        text/*) 
-            nvim $fx
-            ;;
-        image/*)
-            imv "$fx"
-            ;;
-        application/pdf)
-            zathura "$fx"
-            ;;
-        *) 
-            for f in $fx; do
-                echo $f $(file --mime-type -Lb $f)| less;
-                # xdg-open $f > /dev/null 2> /dev/null &
-            done
-            ;;
-    esac
+	case $(file --mime-type -Lb "$f") in
+ 		text/*) 
+		    nvim $fx
+		    ;;
+		image/*)
+		    imv "$fx"
+		    ;;
+		application/pdf)
+		    zathura "$fx"
+		    ;;
+		application/gzip)
+		    xournalpp "$fx"
+		    ;;
+		*) 
+		    for f in $fx; do
+			echo $f $(file --mime-type -Lb $f)| less;
+			# xdg-open $f > /dev/null 2> /dev/null &
+		    done
+		    ;;
+	esac
 }}
