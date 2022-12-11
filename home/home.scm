@@ -44,6 +44,8 @@
 			,(local-file "config/sway/config"))
 		       ("sway/wacom"
 			,(local-file "config/sway/wacom"))
+		       ("lf/lfrc"
+			,(local-file "config/lf/lfrc"))
 		       ("foot/foot.ini"
 			,(local-file "config/foot/foot.ini"))
 		       ("git/config"
