@@ -1,0 +1,10 @@
+# https://libreddit.griffinht.com/r/swaywm/comments/bw9m52/how_to_take_a_screenshot_of_currently_active/
+
+# screenshot
+bindsym Print exec grim
+# screenshot to clipboard
+bindsym Shift+Print exec grim - | wl-copy
+# screenshot with area selection
+bindsym Control+Print exec slurp | grim -g -
+# screenshot with area selection to clipboard
+bindsym Control+Shift+Print exec slurp | grim -g - - | wl-copy
