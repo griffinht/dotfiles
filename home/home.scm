@@ -1,5 +1,4 @@
-;; This "home-environment" file can be passed to 'guix home reconfigure'
-;; to reproduce the content of your profile.  This is "symbolic": it only
+;; This "home-environment" file can be passed to 'guix home reconfigure' to reproduce the content of your profile.  This is "symbolic": it only
 ;; specifies package names.  To reproduce the exact same profile, you also
 ;; need to capture the channels being used, as returned by "guix describe".
 ;; See the "Replicating Guix" section in the manual.
@@ -29,8 +28,10 @@
                                             "imv" ;; image viewer
                                             "zathura" ;; document viewer
                                             "zathura-pdf-mupdf" ;; allows zathura to render pdfs
-					    ;; cool utils
+					    ;; neovim
 					    "neovim"
+					    "wl-clipboard" ;; needed for neovim clipboard to work https://github.com/neovim/neovim/pull/9229
+					    ;; cool utils
                                             "ncdu" ;; disk usage
 					    )))
   ;; note that on debian i had to install glibc-locales or something
