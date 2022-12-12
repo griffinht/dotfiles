@@ -44,6 +44,8 @@
 					    "wl-clipboard" ;; needed for neovim clipboard to work https://github.com/neovim/neovim/pull/9229
 					    ;; cool utils
                                             "ncdu" ;; disk usage
+					    ;; other
+					    "xournalpp" ;; drawing gui
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
