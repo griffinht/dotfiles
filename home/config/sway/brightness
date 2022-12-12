@@ -1,0 +1,6 @@
+# control brightness with brightnessctl
+# todo check out brillo for ddcutil??
+# todo wob maybe notification monitor??
+
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-

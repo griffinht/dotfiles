@@ -19,6 +19,8 @@
 					    "ncurses" ;; makes foot work
                                             "fzf" ;; fuzzy search for application launcher menu
 					    "grim" "slurp" ;; screenshot and screen selection
+					    "brightnessctl" ;; brightness, might require root setup
+					    
 					    ;; todo doesnt work
 					    "xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
 					    ;; https://mozilla.github.io/webrtc-landing/gum_test.html
@@ -63,6 +65,8 @@
 			,(local-file "config/sway/wacom"))
 		       ("sway/screenshot"
 			,(local-file "config/sway/screenshot"))
+		       ("sway/brightness"
+			,(local-file "config/sway/brightness"))
 		       ("lf/lfrc"
 			,(local-file "config/lf/lfrc"))
 		       ("foot/foot.ini"

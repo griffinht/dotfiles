@@ -4,12 +4,6 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-### todo debug desktop stuff
-# https://github.com/swaywm/sway/issues/5732
-# this only applies to debian i think
-#exec systemctl --user import-environment
-exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-
 include screenshot
 
 ### Variables
@@ -73,6 +67,10 @@ set $menu foot sh -c 'compgen -c | sort -u | fzf | xargs swaymsg exec --'
 include wacom
 # hide cursor when typing
 seat * hide_cursor when-typing enable
+# control brightness
+include brightness
+# control volume
+include volume
 
 ### Key bindings
 #
@@ -208,6 +206,7 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
+    # battery /sys/class/power/BAT*/capacity
     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 
     colors {
