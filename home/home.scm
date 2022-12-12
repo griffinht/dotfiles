@@ -22,6 +22,13 @@
 					    ;; todo doesnt work
 					    "xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
 					    ;; https://mozilla.github.io/webrtc-landing/gum_test.html
+					    ;; todo sound selector brightness audio controls
+					    ;; wob
+					    ;; https://wiki.archlinux.org/title/PulseAudio#Keyboard_volume_control
+					    ;; https://wiki.archlinux.org/title/MPRIS
+					    ;; https://github.com/misterdanb/avizo
+					    ;; https://libreddit.griffinht.com/r/swaywm/comments/oms1jf/help_with_volume_up_and_down_keys/
+					    ;; pavucontrol
 					    ;; dev utils
 					    "openssh"
 					    "git"
