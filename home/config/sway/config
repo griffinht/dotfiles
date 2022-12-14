@@ -4,8 +4,6 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-include screenshot
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -63,12 +61,19 @@ set $menu foot sh -c 'compgen -c | sort -u | fzf | xargs swaymsg exec --'
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+# screenshot with grim and slurp
+include screenshot
+
 # automatically map wacom tablet input to any workspace
 include wacom
 # hide cursor when typing
 seat * hide_cursor when-typing enable
+
+include wob
+
 # control brightness
 include brightness
+
 # control volume
 include volume
 
