@@ -1,6 +1,10 @@
 # control brightness with brightnessctl
+# todo use light? its on github
 # todo check out brillo for ddcutil??
 # todo wob maybe notification monitor??
 
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+
+#bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+#bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
