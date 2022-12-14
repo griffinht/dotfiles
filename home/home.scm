@@ -13,24 +13,25 @@
 (home-environment
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
-  (packages (specifications->packages (list ;; window manager
+  (packages (specifications->packages (list 
+					    ;; window manager
 					    "sway"
 					    "foot" ;; terminal emulator
 					    "ncurses" ;; makes foot work
                                             "fzf" ;; fuzzy search for application launcher menu
 					    "grim" "slurp" ;; screenshot and screen selection
+
+					    ;; system controls
 					    "brightnessctl" ;; brightness, might require root setup
 					    "playerctl" ;; mpris controller for media players (play/pause)					    
 					    "wob" ;; graphical slider display 
-					    "pulseaudio"
+					    "pulseaudio" ;; required for pactl version with get-sink-volume for 
+
 					    ;;todo nvim tabs -> spaces
 					    ;; todo doesnt work
 					    "xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
 					    ;; https://mozilla.github.io/webrtc-landing/gum_test.html
-					    ;; todo sound selector brightness audio controls
-					    ;; wob
 					    ;; https://wiki.archlinux.org/title/PulseAudio#Keyboard_volume_control
-					    ;; https://wiki.archlinux.org/title/MPRIS
 					    ;; https://github.com/misterdanb/avizo
 					    ;; https://libreddit.griffinht.com/r/swaywm/comments/oms1jf/help_with_volume_up_and_down_keys/
 					    ;; pavucontrol
@@ -51,7 +52,7 @@
                                             "ncdu" ;; disk usage
 					    ;; other
 					    "xournalpp" ;; drawing gui
-					    "firefox-wayland" ;; web browser
+					    ;; "firefox-wayland" ;; web browser
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
@@ -75,6 +76,8 @@
 			,(local-file "config/sway/wob"))
 		       ("sway/volume"
 			,(local-file "config/sway/volume"))
+		       ("sway/playerctl"
+			,(local-file "config/sway/playerctl"))
 		       ("lf/lfrc"
 			,(local-file "config/lf/lfrc"))
 		       ("foot/foot.ini"

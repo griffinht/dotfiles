@@ -69,6 +69,12 @@ include wacom
 # hide cursor when typing
 seat * hide_cursor when-typing enable
 
+# play/pause for mpris devices with playerctl
+include playerctl
+
+#
+# brightness and volume depend on wob
+#
 include wob
 
 # control brightness

@@ -1,3 +1,5 @@
+# include wob
+
 # control brightness with brightnessctl
 # todo use light? its on github
 # todo check out brillo for ddcutil??
