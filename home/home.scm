@@ -53,7 +53,7 @@
                                             "ncdu" ;; disk usage
 					    ;; other
 					    "xournalpp" ;; drawing gui
-					    ;; "firefox-wayland" ;; web browser
+					    "firefox-wayland" ;; web browser
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
