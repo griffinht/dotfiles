@@ -14,6 +14,7 @@
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
   (packages (specifications->packages (list 
+					    "glibc-locales"
 					    ;; window manager
 					    "sway"
 					    "foot" ;; terminal emulator
@@ -84,5 +85,9 @@
 			,(local-file "config/foot/foot.ini"))
 		       ("git/config"
 			,(local-file "config/git/config"))))
-    (service home-bash-service-type) ;; provides default bash config
+    (service home-bash-service-type ;; provides default bash config
+	     (home-bash-configuration
+	       (bashrc (list (local-file
+			       ".bashrc"
+			       "bashrc"))))) 
     )))
