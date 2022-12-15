@@ -25,11 +25,11 @@
 					    "brightnessctl" ;; brightness, might require root setup
 					    "playerctl" ;; mpris controller for media players (play/pause)					    
 					    "wob" ;; graphical slider display 
-					    "pulseaudio" ;; required for pactl version with get-sink-volume for 
+					    ;;"pulseaudio" ;; required for pactl version with get-sink-volume for 
 
 					    ;;todo nvim tabs -> spaces
 					    ;; todo doesnt work
-					    "xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
+					    ;;"xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
 					    ;; https://mozilla.github.io/webrtc-landing/gum_test.html
 					    ;; https://wiki.archlinux.org/title/PulseAudio#Keyboard_volume_control
 					    ;; https://github.com/misterdanb/avizo
