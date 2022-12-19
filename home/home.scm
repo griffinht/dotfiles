@@ -81,6 +81,8 @@
 			,(local-file "config/sway/playerctl"))
 		       ("lf/lfrc"
 			,(local-file "config/lf/lfrc"))
+		       ("ncspot/config.toml"
+			,(local-file "config/ncspot/config.toml"))
 		       ("foot/foot.ini"
 			,(local-file "config/foot/foot.ini"))
 		       ("git/config"
