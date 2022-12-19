@@ -61,6 +61,11 @@ set $menu foot sh -c 'compgen -c | sort -u | fzf | xargs swaymsg exec --'
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+# disable mouse acceleration
+input type:pointer {
+    accel_profile flat
+}
+
 # screenshot with grim and slurp
 include screenshot
 
