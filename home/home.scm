@@ -14,6 +14,7 @@
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
   (packages (specifications->packages (list 
+					    "glibc-locales"
 					    ;; window manager
 					    "sway"
 					    "foot" ;; terminal emulator
@@ -52,7 +53,10 @@
                                             "ncdu" ;; disk usage
 					    ;; other
 					    "xournalpp" ;; drawing gui
-					    ;; "firefox-wayland" ;; web browser
+					    "firefox-wayland" ;; web browser
+					    ;;"pandoc" ;; file converter (like html -> pdf)
+					    ;;"texlive" ;; a real chonker with all the latex
+					    "nfs-utils"
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
@@ -80,9 +84,15 @@
 			,(local-file "config/sway/playerctl"))
 		       ("lf/lfrc"
 			,(local-file "config/lf/lfrc"))
+		       ("ncspot/config.toml"
+			,(local-file "config/ncspot/config.toml"))
 		       ("foot/foot.ini"
 			,(local-file "config/foot/foot.ini"))
 		       ("git/config"
 			,(local-file "config/git/config"))))
-    (service home-bash-service-type) ;; provides default bash config
+    (service home-bash-service-type ;; provides default bash config
+	     (home-bash-configuration
+	       (bashrc (list (local-file
+			       ".bashrc"
+			       "bashrc"))))) 
     )))
