@@ -32,7 +32,7 @@
 		(menu-entries (list (menu-entry
 				      (label "arch btw")
 				      (linux "/boot/arch/vmlinuz-linux")
-				      (linux-arguments '("root=/dev/nvme0n1p7"))
+				      (linux-arguments '("root=/dev/nvme0n1p7 nvidia_drm.modeset=1"))
 				      (initrd "/boot/arch/initramfs-linux.img"))))))
 
   (file-systems (append

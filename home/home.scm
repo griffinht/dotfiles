@@ -14,7 +14,7 @@
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
   (packages (specifications->packages (list 
-					    "glibc-locales"
+					    ;;"glibc-locales"
 					    ;; window manager
 					    "sway"
 					    "foot" ;; terminal emulator
