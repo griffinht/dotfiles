@@ -7,11 +7,12 @@
 	     (nongnu packages nvidia);; proprietary nvidia drivers
 	     (nongnu packages linux)
 	     (nongnu system linux-initrd)
+	     (nongnu services nvidia) ;; nvidia service
 	     (srfi srfi-1)) ;;srfi is list processing, we use it for remove gdm
 ;;	     (gnu services desktop)) ;;
 (use-service-modules networking 
 		     desktop 
-		     linux ;;kernel-module-loader-service-type
+;;		     linux ;;kernel-module-loader-service-type
 		     xorg) ;;defines gdm-service-type so we can remove it
 (use-package-modules certs ;; for nss-certs so we have ssl certs for https
 		     linux
@@ -66,7 +67,7 @@
  (kernel linux-lts)
  (initrd microcode-initrd)
  (firmware (list linux-firmware))
- (kernel-loadable-modules (list nvidia-driver))
+ (kernel-loadable-modules (list nvidia-module))
 
   ;; Globally-installed packages.
   (packages (append (list nss-certs ;; so we have ssl certs for https
@@ -77,15 +78,17 @@
 ;;  (services (append (list (service dhcp-client-service-type))
 ;;		    %base-services)))
   (services (remove (lambda (service) ;; remove usees srfi srfi-1
-		     (eq? (service-kind service) gdm-service-type))
-		    (cons* (simple-service
-			     'custom-udev-rules udev-service-type
-			     (list nvidia-driver))
-			   (service kernel-module-loader-service-type '("nvidia_drm"
-									"nvidia"
-									"nvidia_uvm"
-									"nvidia_modeset"
-									"ipmi_devintf"))
+		     (eq? (service-kind service) gdm-service-type)) ;; remove gnome login manager
+		    (cons* ;;(simple-service
+			    ;; 'custom-udev-rules udev-service-type
+			     ;;(list nvidia-driver))
+			   (service nvidia-service-type)
+			   (service nvidia)
+			   ;;(service kernel-module-loader-service-type '("nvidia_drm"
+			;;						"nvidia"
+			;;						"nvidia_uvm"
+			;;						"nvidia_modeset"
+			;;						"ipmi_devintf"))
 			   (modify-services %desktop-services
 					    (guix-service-type config =>
 					      (guix-configuration
