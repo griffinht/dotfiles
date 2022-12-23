@@ -56,6 +56,7 @@
 					    "firefox-wayland" ;; web browser
 					    ;;"pandoc" ;; file converter (like html -> pdf)
 					    ;;"texlive" ;; a real chonker with all the latex
+					    "nfs-utils"
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
