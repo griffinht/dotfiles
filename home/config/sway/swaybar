@@ -1,0 +1,24 @@
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    position bottom
+
+    # start invisible
+    # will be toggled by bindsym toggle.sh below
+    mode invisible
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    # battery /sys/class/power/BAT*/capacity
+    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
+# toggle sway bar with super key
+# toggle.sh alternates between running the first command and the second command
+bindsym --release Super_L exec ~/.config/sway/toggle.sh "$XDG_RUNTIME_DIR/sway-bar-toggle" 'swaymsg bar mode invisible' 'swaymsg bar mode overlay'
