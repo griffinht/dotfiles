@@ -81,6 +81,10 @@
 			,(local-file "config/sway/volume"))
 		       ("sway/playerctl"
 			,(local-file "config/sway/playerctl"))
+		       ("sway/workspaces"
+			,(local-file "config/sway/workspaces"))
+		       ("sway/toggle.sh"
+			,(local-file "config/sway/toggle.sh"))
 		       ("lf/lfrc"
 			,(local-file "config/lf/lfrc"))
 		       ("ncspot/config.toml"

@@ -219,13 +219,11 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
+    position bottom
 
-    # hide unless super is pressed
-    # todo
-    mode hide
-    # alt key
-    modifier Mod1
+    # start invisible
+    # will be toggled by bindsym toggle.sh below
+    mode invisible
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
@@ -237,6 +235,11 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
+# toggle sway bar with super key
+# toggle.sh alternates between running the first command and the second command
+bindsym --release Super_L exec ~/.config/sway/toggle.sh "$XDG_RUNTIME_DIR/sway-bar-toggle" 'swaymsg bar mode invisible' 'swaymsg bar mode overlay'
 
 include @sysconfdir@/sway/config.d/*
 
+# configure default workspace layout
+include workspaces
