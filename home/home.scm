@@ -14,7 +14,7 @@
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
   (packages (specifications->packages (list 
-					    ;;"glibc-locales"
+					    "glibc-locales"
 					    ;; window manager
 					    "sway"
 					    "foot" ;; terminal emulator
@@ -26,7 +26,7 @@
 					    "brightnessctl" ;; brightness, might require root setup
 					    "playerctl" ;; mpris controller for media players (play/pause)					    
 					    "wob" ;; graphical slider display 
-					    ;;"pulseaudio" ;; required for pactl version with get-sink-volume for 
+					    "pulseaudio" ;; required for pactl version with get-sink-volume for, and for sound in general
 
 					    ;;todo nvim tabs -> spaces
 					    ;; todo doesnt work
