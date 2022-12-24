@@ -176,5 +176,10 @@ include swaybar
 # configure default workspace layout
 include workspaces
 
+# start mako notification daemon
+exec mako
+# if using elogind, see mako readme for more info
+# dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus
+
 # default stuff
 include @sysconfdir@/sway/config.d/*

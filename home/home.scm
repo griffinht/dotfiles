@@ -21,6 +21,7 @@
 					    "ncurses" ;; makes foot work
                                             "fzf" ;; fuzzy search for application launcher menu
 					    "grim" "slurp" ;; screenshot and screen selection
+					    "mako" ;; notification daemon
 
 					    ;; system controls
 					    "brightnessctl" ;; brightness, might require root setup
