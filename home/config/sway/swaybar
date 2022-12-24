@@ -21,4 +21,4 @@ bar {
 }
 # toggle sway bar with super key
 # toggle.sh alternates between running the first command and the second command
-bindsym --release Super_L exec ~/.config/sway/toggle.sh "$XDG_RUNTIME_DIR/sway-bar-toggle" 'swaymsg bar mode invisible' 'swaymsg bar mode overlay'
+bindsym --release Super_L exec ~/.config/sway/toggle.sh "$XDG_RUNTIME_DIR/sway-bar-toggle" 'swaymsg bar mode invisible; makoctl dismiss --all' 'swaymsg bar mode overlay; makoctl restore'
