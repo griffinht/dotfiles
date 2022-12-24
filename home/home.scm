@@ -79,6 +79,8 @@
 			,(local-file "config/ncspot/config.toml"))
 		       ("foot"
 			,(local-file "config/foot" #:recursive? #t))
+		       ("mako"
+			,(local-file "config/mako" #:recursive? #t))
 		       ("git"
 			,(local-file "config/git" #:recursive? #t))))
     (service home-bash-service-type ;; provides default bash config
