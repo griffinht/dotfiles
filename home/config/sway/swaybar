@@ -19,6 +19,8 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
-# toggle sway bar with super key
 # toggle.sh alternates between running the first command and the second command
+#
+# toggle sway bar visbility with super key press and release (kind of like gnome??)
+# also show the last mako notification, and dismiss all mako notifications on hide
 bindsym --release Super_L exec ~/.config/sway/toggle.sh "$XDG_RUNTIME_DIR/sway-bar-toggle" 'swaymsg bar mode invisible; makoctl dismiss --all' 'swaymsg bar mode overlay; makoctl restore'
