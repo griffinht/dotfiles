@@ -1,0 +1,6 @@
+# title bar with no border outline
+default_border normal 0
+
+# no border when there is only 1 window
+# doesn't seem to do anything??? todo
+#smart_borders on

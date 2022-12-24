@@ -1,3 +1,4 @@
+#https://github.com/rkubosz/base16-sway
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -214,6 +215,9 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# configure border layout
+include borders
 
 #
 # Status Bar:
