@@ -84,7 +84,7 @@
 		       ("sway/workspaces"
 			,(local-file "config/sway/workspaces"))
 		       ("sway/toggle.sh"
-			,(local-file "config/sway/toggle.sh"))
+			,(local-file "config/sway/toggle.sh" #:recursive? #t))
 		       ("lf/lfrc"
 			,(local-file "config/lf/lfrc"))
 		       ("ncspot/config.toml"
