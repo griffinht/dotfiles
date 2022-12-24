@@ -67,24 +67,8 @@
 		     home-xdg-configuration-files-service-type
 		     `(("nvim/init.vim"
 			,(local-file "config/nvim/init.vim"))
-		       ("sway/config"
-			,(local-file "config/sway/config"))
-		       ("sway/wacom"
-			,(local-file "config/sway/wacom"))
-		       ("sway/screenshot"
-			,(local-file "config/sway/screenshot"))
-		       ("sway/brightness"
-			,(local-file "config/sway/brightness"))
-		       ("sway/wob"
-			,(local-file "config/sway/wob"))
-		       ("sway/volume"
-			,(local-file "config/sway/volume"))
-		       ("sway/playerctl"
-			,(local-file "config/sway/playerctl"))
-		       ("sway/workspaces"
-			,(local-file "config/sway/workspaces"))
-		       ("sway/toggle.sh"
-			,(local-file "config/sway/toggle.sh" #:recursive? #t))
+		       ("sway"
+			,(local-file "config/sway" #:recursive? #t))
 		       ("lf/lfrc"
 			,(local-file "config/lf/lfrc"))
 		       ("ncspot/config.toml"
