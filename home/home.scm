@@ -65,18 +65,18 @@
    (list 
      (simple-service 'dotfiles
 		     home-xdg-configuration-files-service-type
-		     `(("nvim/init.vim"
-			,(local-file "config/nvim/init.vim"))
+		     `(("nvim"
+			,(local-file "config/nvim" #:recursive? #t))
 		       ("sway"
 			,(local-file "config/sway" #:recursive? #t))
-		       ("lf/lfrc"
-			,(local-file "config/lf/lfrc"))
-		       ("ncspot/config.toml"
-			,(local-file "config/ncspot/config.toml"))
-		       ("foot/foot.ini"
-			,(local-file "config/foot/foot.ini"))
-		       ("git/config"
-			,(local-file "config/git/config"))))
+		       ("lf"
+			,(local-file "config/lf" #:recursive? #t))
+		       ("ncspot"
+			,(local-file "config/ncspot" #:recursive? #t))
+		       ("foot"
+			,(local-file "config/foot" #:recursive? #t))
+		       ("git"
+			,(local-file "config/git" #:recursive? #t))))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
 	       (bashrc (list (local-file
