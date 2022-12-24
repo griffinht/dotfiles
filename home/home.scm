@@ -73,8 +73,9 @@
 			,(local-file "config/sway" #:recursive? #t))
 		       ("lf"
 			,(local-file "config/lf" #:recursive? #t))
-		       ("ncspot"
-			,(local-file "config/ncspot" #:recursive? #t))
+		       ;; ncspot wants to write to its config directory
+		       ("ncspot/config.toml"
+			,(local-file "config/ncspot/config.toml"))
 		       ("foot"
 			,(local-file "config/foot" #:recursive? #t))
 		       ("git"
