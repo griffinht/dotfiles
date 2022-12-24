@@ -61,6 +61,8 @@
 
   ;; Below is the list of Home services.  To search for available
   ;; services, run 'guix home search KEYWORD' in a terminal.
+  ;; todo document this??
+  ;; https://www.mail-archive.com/help-guix@gnu.org/msg12592.html
   (services
    (list 
      (simple-service 'dotfiles
