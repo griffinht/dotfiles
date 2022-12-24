@@ -64,7 +64,10 @@ set $menu foot sh -c 'compgen -c | sort -u | fzf | xargs swaymsg exec --'
 # disable mouse acceleration
 input type:pointer {
     accel_profile flat
+    # dwt disable while typing???
 }
+# hide cursor when typing
+seat * hide_cursor when-typing enable
 
 # screenshot with grim and slurp
 include screenshot
@@ -72,8 +75,6 @@ include screenshot
 # automatically map wacom tablet input to any workspace
 # todo
 include wacom
-# hide cursor when typing
-seat * hide_cursor when-typing enable
 
 # play/pause for mpris devices with playerctl
 include playerctl
