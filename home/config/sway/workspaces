@@ -1,0 +1,2 @@
+exec swaymsg "workspace 1; exec $term ncspot"
+exec swaymsg "workspace 2; exec $term"
