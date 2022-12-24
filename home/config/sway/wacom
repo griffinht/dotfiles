@@ -3,7 +3,6 @@
 
 set $map-to-active swaymsg input type:tablet_tool map_to_output `swaymsg -t get_outputs | jq -r '.[] | select(.focused == true) | .name'`
 
-exec $map-to-active
 
 bindsym $mod+1 workspace number 1 ; exec $map-to-active
 bindsym $mod+2 workspace number 2 ; exec $map-to-active
@@ -14,3 +13,5 @@ bindsym $mod+6 workspace number 6 ; exec $map-to-active
 bindsym $mod+7 workspace number 7 ; exec $map-to-active
 bindsym $mod+8 workspace number 8 ; exec $map-to-active
 bindsym $mod+9 workspace number 9 ; exec $map-to-active
+
+exec $map-to-active
