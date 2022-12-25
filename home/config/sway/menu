@@ -1,0 +1,17 @@
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#set $menu $term "sh -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'"
+#set $menu $term "sh -c 'compgen -c | sort -u | fzf | xargs swaymsg -t exec --'"
+
+# this just needs to be something unique
+set $menu_title mymenutitlecustom
+
+set $menu foot --title=$menu_title sh -c 'compgen -c | sort -u | fzf | xargs swaymsg exec --'
+
+for_window [title="$menu_title"] {
+	floating enable
+	opacity .9
+	border none
+}
