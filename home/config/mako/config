@@ -1,2 +1,9 @@
 # 2 seconds
 default-timeout=2000
+
+# sizing
+max-icon-size=256
+width=512
+
+# positioning
+anchor=center-right
