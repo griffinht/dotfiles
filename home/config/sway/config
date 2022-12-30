@@ -60,7 +60,14 @@ output * bg ~/.config/sway/wallpaper.png tile
 # disable mouse acceleration
 input type:pointer {
     accel_profile flat
-    # dwt disable while typing???
+    # allow mouse and keyboard
+    dwt disable
+}
+
+input type:touchpad {
+	tap enabled
+	drag enabled
+	natural_scroll enabled
 }
 # hide cursor when typing
 seat * hide_cursor when-typing enable
