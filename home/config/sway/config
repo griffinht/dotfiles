@@ -178,6 +178,9 @@ include swaybar
 # configure default workspace layout
 include workspaces
 
+# optional include for display configuration per device
+include ~/.sway_displays
+
 # start mako notification daemon
 exec mako
 # if using elogind, see mako readme for more info
