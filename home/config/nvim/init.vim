@@ -8,3 +8,7 @@ imap jj <Esc>
 
 " set title of parent terminal to the file being edited
 set title
+
+" tabs -> 4 width spaces
+set expandtab
+set shiftwidth=4
