@@ -10,3 +10,6 @@ footssh() {
 	TERM=linux ssh $@
 }
 alias ssh=footssh
+
+# set window title to working directory
+PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
