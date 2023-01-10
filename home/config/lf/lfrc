@@ -20,3 +20,14 @@ cmd open ${{
 		    ;;
 	esac
 }}
+
+# show current directory in window title
+cmd on-cd &{{
+    # '&' commands run silently in background (which is what we want here),
+    # but are not connected to stdout.
+    # To make sure our escape sequence still reaches stdout we pipe it to /dev/tty
+    printf "\033]0; $PWD\007" > /dev/tty
+}}
+
+# also run at startup
+on-cd
