@@ -54,7 +54,7 @@
                                             "ncdu" ;; disk usage
 					    ;; other
 					    "xournalpp" ;; drawing gui
-					    "firefox-wayland" ;; web browser
+					    ;;"firefox-wayland" ;; web browser
 					    "libreoffice" ;; office
 					    ;;"pandoc" ;; file converter (like html -> pdf)
 					    ;;"texlive" ;; a real chonker with all the latex
@@ -82,6 +82,8 @@
 			,(local-file "config/foot" #:recursive? #t))
 		       ("mako"
 			,(local-file "config/mako" #:recursive? #t))
+		       ("zathura"
+			,(local-file "config/zathura" #:recursive? #t))
 		       ("git"
 			,(local-file "config/git" #:recursive? #t))))
     (service home-bash-service-type ;; provides default bash config
