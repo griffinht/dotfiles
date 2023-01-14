@@ -54,7 +54,7 @@
                                             "ncdu" ;; disk usage
 					    ;; other
 					    "xournalpp" ;; drawing gui
-					    ;;"firefox-wayland" ;; web browser
+					    "firefox-wayland" ;; web browser
 					    "libreoffice" ;; office
 					    ;;"pandoc" ;; file converter (like html -> pdf)
 					    ;;"texlive" ;; a real chonker with all the latex
