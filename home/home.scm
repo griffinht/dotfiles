@@ -56,8 +56,8 @@
 					    "xournalpp" ;; drawing gui
 					    "firefox-wayland" ;; web browser
 					    "libreoffice" ;; office
-					    ;;"pandoc" ;; file converter (like html -> pdf)
-					    ;;"texlive" ;; a real chonker with all the latex
+					    "pandoc" ;; file converter (like html -> pdf)
+					    "texlive" ;; a real chonker with all the latex
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
