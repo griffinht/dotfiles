@@ -31,3 +31,6 @@ cmd on-cd &{{
 
 # also run at startup
 on-cd
+
+# borders
+set drawbox
