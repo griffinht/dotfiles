@@ -11,5 +11,10 @@ footssh() {
 }
 alias ssh=footssh
 
+newterminal() {
+    foot > /dev/null 2> /dev/null &
+}
+alias new=newterminal
+
 # set window title to working directory
 PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
