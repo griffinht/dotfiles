@@ -12,7 +12,8 @@ bar {
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     # battery /sys/class/power/BAT*/capacity
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    # todo kind of takes a while (100ms??) thanks to the file read
+    status_command while ~/.config/sway/swaybar.sh; do sleep 1; done
     colors {
         statusline #ffffff
         background #323232
