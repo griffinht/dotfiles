@@ -13,7 +13,7 @@ bar {
     # The default just shows the current date and time.
     # battery /sys/class/power/BAT*/capacity
     # todo kind of takes a while (100ms??) thanks to the file read
-    status_command while ~/.config/sway/swaybar.sh; do sleep 1; done
+    status_command while ~/.config/sway/status_command.sh; do sleep 1; done
     colors {
         statusline #ffffff
         background #323232
@@ -24,4 +24,7 @@ bar {
 #
 # toggle sway bar visbility with super key press and release (kind of like gnome??)
 # also show the last mako notification, and dismiss all mako notifications on hide
-bindsym --release Super_L exec ~/.config/sway/toggle.sh "$XDG_RUNTIME_DIR/sway-bar-toggle" 'swaymsg bar mode invisible; makoctl dismiss --all' 'swaymsg bar mode overlay; makoctl restore'
+# if [ "$(makoctl list | jq '.data[] != []')" == true ]; then echo true; else echo false; fi
+bindsym --release Super_L exec ~/.config/sway/toggle.sh "$XDG_RUNTIME_DIR/sway-bar-toggle" \
+    'swaymsg bar mode invisible; makoctl dismiss --all' \
+    'swaymsg bar mode overlay; makoctl restore'
