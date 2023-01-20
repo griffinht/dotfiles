@@ -1,2 +1,4 @@
+workspace_layout tabbed
+
 exec swaymsg "workspace 1; exec $term ncspot"
 exec swaymsg "workspace 2; exec $term nvim ~/griffin/documents/planner.md"
