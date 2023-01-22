@@ -16,5 +16,7 @@ newterminal() {
 }
 alias new=newterminal
 
+alias nmtui='TERM=linux nmtui'
+
 # set window title to working directory
 PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
