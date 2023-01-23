@@ -17,17 +17,27 @@
 					    "glibc-locales"
 					    ;; window manager
 					    "sway"
-					    "foot" ;; terminal emulator
-					    "ncurses" ;; makes foot work
                                             "fzf" ;; fuzzy search for application launcher menu
 					    "grim" "slurp" ;; screenshot and screen selection
 					    "mako" ;; notification daemon
+                                            ;; terminal emulator
+					    "foot" ;; terminal emulator
+					    "ncurses" ;; makes foot work
+                                            "lf" ;; file browser
+                                            ;; "ctpv" not packaged :( ;; previewer for lf
+                                            "chafa" ;; image previews (sixels)
+                                            "jq" ;; json parser thing used for json previews i think?
+                                            "ffmpegthumbnailer" ;; video previews
+                                            ;; "pdftoppm" pdf previews todo
+                                            ;; "mdcat" markdown previews todo
+                                            ;; do not install swaylock to user (setuid needs root) "swaylock" ;; screen locker
 
 					    ;; system controls
 					    "brightnessctl" ;; brightness, might require root setup
 					    "playerctl" ;; mpris controller for media players (play/pause)					    
 					    "wob" ;; graphical slider display 
 					    "pulseaudio" ;; required for pactl version with get-sink-volume for, and for sound in general
+                                            "pavucontrol" ;; gui audio control
 
 					    ;;todo nvim tabs -> spaces
 					    ;; todo doesnt work
@@ -42,7 +52,6 @@
 					    "git"
 					    "curl"
                                             ;; file browsing
-                                            "lf" ;; terminal file browser
 					    "mpv" ;; video player
                                             "imv" ;; image viewer
                                             "zathura" ;; document viewer
@@ -82,6 +91,8 @@
 			,(local-file "config/foot" #:recursive? #t))
 		       ("mako"
 			,(local-file "config/mako" #:recursive? #t))
+		       ("ctpv"
+			,(local-file "config/ctpv" #:recursive? #t))
 		       ("zathura"
 			,(local-file "config/zathura" #:recursive? #t))
 		       ("git"

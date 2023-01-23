@@ -33,4 +33,10 @@ cmd on-cd &{{
 on-cd
 
 # borders
-set drawbox
+#set drawbox
+
+# ctpv previews
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id

@@ -1,0 +1,5 @@
+set forcechafa
+# requires lf sixels fork
+# https://github.com/horriblename/lf/
+set autochafa
+

@@ -17,6 +17,10 @@ newterminal() {
 alias new=newterminal
 
 alias nmtui='TERM=linux nmtui'
+# use lf sixels fork
+# todo find a way to install binaries to guix
+# or figure out guix packaging lol
+alias lf='/usr/local/bin/lf'
 
 # set window title to working directory
 PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
