@@ -12,3 +12,8 @@ set title
 " tabs -> 4 width spaces
 set expandtab
 set shiftwidth=4
+
+" hide status bar
+set laststatus=0
+" hide -- INSERT -- mode stuff
+set noshowmode
