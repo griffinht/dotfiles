@@ -6,6 +6,9 @@ cmd open ${{
 		image/*)
 		    imv "$fx" > /dev/null 2>&1 &
 		    ;;
+                video/*)
+                    mpv "$fx" > /dev/null 2>&1 &
+                    ;;
 		application/pdf)
 		    zathura "$fx" > /dev/null 2>&1 &
 		    ;;
