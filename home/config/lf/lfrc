@@ -15,6 +15,9 @@ cmd open ${{
 		application/gzip)
 		    xournalpp "$fx" > /dev/null 2>&1 &
 		    ;;
+                application/vnd.openxmlformats-officedocument*)
+                    libreoffice "$fx" > /dev/null 2>&1 &
+                    ;;
 		*) 
 		    for f in $fx; do
 			echo $f $(file --mime-type -Lb $f)| less;
