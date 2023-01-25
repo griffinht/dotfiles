@@ -5,6 +5,10 @@ set forcechafa
 # https://github.com/horriblename/lf/
 set autochafa
 
-preview unzip .zip {{
+preview zip .zip {{
     unzip -l "$f"
+}}
+
+preview tar application/x-xz application/x-tar application/gzip {{
+    tar -tf "$f"
 }}
