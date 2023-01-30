@@ -18,7 +18,7 @@ cmd open ${{
 		application/gzip)
 		    xournalpp "$fx" > /dev/null 2>&1 &
 		    ;;
-                application/vnd.openxmlformats-officedocument*)
+                application/vnd.*)
                     libreoffice "$fx" > /dev/null 2>&1 &
                     ;;
 		*) 
