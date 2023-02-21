@@ -12,6 +12,9 @@ cmd open ${{
                 video/*)
                     mpv "$fx" > /dev/null 2>&1 &
                     ;;
+                audio/*)
+                    mpv "$fx" > /dev/null 2>&1 &
+                    ;;
 		application/pdf)
 		    zathura "$fx" > /dev/null 2>&1 &
 		    ;;
