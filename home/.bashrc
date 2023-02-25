@@ -24,3 +24,5 @@ alias lf='/usr/local/bin/lf'
 
 # set window title to working directory
 PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
+
+lf

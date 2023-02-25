@@ -16,8 +16,6 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term foot
-# start commadn for terminal
-set $term_startup lf
 set $browser MOZ_ENABLE_WAYLAND=1 firefox
 
 include menu
@@ -101,9 +99,7 @@ include volume
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term $term_startup
-    # start a terminal without startup
-    bindsym $mod+Shift+Return exec $term
+    bindsym $mod+Return exec $term
 
     # Kill focused window
     bindsym $mod+Shift+q kill
