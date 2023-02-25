@@ -12,7 +12,7 @@ footssh() {
 alias ssh=footssh
 
 newterminal() {
-    foot > /dev/null 2> /dev/null &
+    LF_LEVEL=0 foot > /dev/null 2> /dev/null &
 }
 alias new=newterminal
 
@@ -25,4 +25,6 @@ alias lf='/usr/local/bin/lf'
 # set window title to working directory
 PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
 
-lf
+if [ -z "$LF_LEVEL" ] || [ "$LF_LEVEL" -eq 0 ]; then
+    lf
+fi
