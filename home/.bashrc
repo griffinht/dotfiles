@@ -26,5 +26,5 @@ alias lf='/usr/local/bin/lf'
 PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
 
 if [ -z "$LF_LEVEL" ] || [ "$LF_LEVEL" -eq 0 ]; then
-    lf
+    exec /usr/local/bin/lf
 fi
