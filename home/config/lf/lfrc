@@ -1,3 +1,5 @@
+# todo duplicate switch statements
+
 cmd open ${{
 	case $(file --mime-type -Lb "$f") in
                 inode/x-empty)
@@ -9,7 +11,7 @@ cmd open ${{
 		image/*)
 		    imv "$fx" > /dev/null 2>&1 &
 		    ;;
-                video/*)
+                video/*) 
                     mpv "$fx" > /dev/null 2>&1 &
                     ;;
                 audio/*)
@@ -21,6 +23,9 @@ cmd open ${{
 		application/gzip)
 		    xournalpp "$fx" > /dev/null 2>&1 &
 		    ;;
+                application/msword) 
+                    libreoffice "$fx" > /dev/null 2>&1 &
+                    ;;
                 application/vnd.*)
                     libreoffice "$fx" > /dev/null 2>&1 &
                     ;;
