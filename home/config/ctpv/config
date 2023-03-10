@@ -5,7 +5,7 @@ set forcechafa
 # https://github.com/horriblename/lf/
 set autochafa
 
-preview zip application/zip {{
+preview zip application/zip application/java-archive {{
     unzip -l "$f"
 }}
 
