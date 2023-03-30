@@ -18,7 +18,9 @@ cmd open ${{
                     mpv "$fx" > /dev/null 2>&1 &
                     ;;
 		application/pdf)
-		    zathura "$fx" > /dev/null 2>&1 &
+                # nohup so zathura is not closed when the terminal closes
+                # i might want to use this for other things as well
+		    nohup zathura "$fx" > /dev/null 2>&1 &
 		    ;;
 		application/gzip)
 		    xournalpp "$fx" > /dev/null 2>&1 &
