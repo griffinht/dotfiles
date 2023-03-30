@@ -18,6 +18,8 @@ cmd open ${{
                     mpv "$fx" > /dev/null 2>&1 &
                     ;;
 		application/pdf)
+#https://unix.stackexchange.com/questions/3886/difference-between-nohup-disown-and
+#maybe use &! or disown?
                 # nohup so zathura is not closed when the terminal closes
                 # i might want to use this for other things as well
 		    nohup zathura "$fx" > /dev/null 2>&1 &
