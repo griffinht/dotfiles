@@ -1,0 +1,22 @@
+todo add to thing
+
+arch set /etc/locale.conf locale to en_US.UTF8
+install nss-certs
+
+add non guix as guix channel
+https://gitlab.com/nonguix/nonguix
+https://guix.gnu.org/manual/en/html_node/Getting-Substitutes-from-Other-Servers.html
+
+todo manage non guix config with guix home
+
+
+firefox arkenfox
+
+
+
+
+
+todo sway lock
+
+
+root guix home!??!
