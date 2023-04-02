@@ -20,11 +20,17 @@ alias nmtui='TERM=linux nmtui'
 # use lf sixels fork
 # todo find a way to install binaries to guix
 # or figure out guix packaging lol
-alias lf='/usr/local/bin/lf'
+# only if it exists
+if [ -f /usr/local/bin/lf ]; then
+    alias lf='/usr/local/bin/lf'
+fi
 
 # set window title to working directory
 PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
 
 if [ -z "$LF_LEVEL" ] || [ "$LF_LEVEL" -eq 0 ]; then
-    exec /usr/local/bin/lf
+    # only if it exists
+    if [ -f /usr/local/bin/lf ]; then
+        exec /usr/local/bin/lf
+    fi 
 fi
