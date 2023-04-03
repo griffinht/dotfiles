@@ -12,6 +12,9 @@ https://guix.gnu.org/manual/en/html_node/Getting-Substitutes-from-Other-Servers.
 
 todo manage non guix config with guix home
 
+sudo terminfo
+export TERMINFO_DIRS=/home/griffin/.guix-home/profile/share/terminfo:/home/griffin/.guix-home/profile/share/terminfo
+
 
 
 
@@ -42,3 +45,23 @@ ncspot with covers support - arch ncspot community?
 ctpv - arch ctpv-git
 
 lf fork https://github.com/horriblename/lf - manual install to /usr/local/bin/lf with https://github.com/horriblename/lf/releases
+
+
+
+SWAY DISPLAYS
+
+### ~/.sway_displays
+output eDP-1 {
+    pos 0,0
+}
+
+#output HDMI-A-1 {
+output DP-1 {
+    pos 1920,0
+}
+
+workspace 1 output DP-1
+workspace 2 output DP-1
+workspace 3 output DP-1
+workspace 4 output eDP-1
+workspace 5 output DP-1

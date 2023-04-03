@@ -63,6 +63,7 @@
 					    "wl-clipboard" ;; needed for neovim clipboard to work https://github.com/neovim/neovim/pull/9229
 					    ;; cool utils
                                             "ncdu" ;; disk usage
+                                            "powertop" ;; power usage
 					    ;; other
 					    "xournalpp" ;; drawing gui
 					    "firefox-wayland" ;; web browser
