@@ -107,14 +107,9 @@
                  (local-file "sway.sh" #:recursive? #t))
                 ;; todo i hate how clunk this is but it seems to work
                 ;; also its bad to install arkenfox in source code but it does beat manual installation?
+                ;; todo this is probably the wrong way to do this
                 (".mozilla/firefox/myprofile/user.js",
                  (local-file "firefox/user.js" #:recursive? #t))
-                (".mozilla/firefox/myprofile/prefsCleaner.sh",
-                 (local-file "firefox/prefsCleaner.sh" #:recursive? #t))
-                (".mozilla/firefox/myprofile/updater.sh",
-                 (local-file "firefox/updater.sh" #:recursive? #t))
-                (".mozilla/firefox/myprofile/user-overrides.js",
-                 (local-file "firefox/user-overrides.js" #:recursive? #t))))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
 	       (bashrc (list (local-file
