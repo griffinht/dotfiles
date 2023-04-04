@@ -110,6 +110,7 @@
                 ;; todo this is probably the wrong way to do this
                 (".mozilla/firefox/myprofile/user.js",
                  (local-file "firefox/user.js" #:recursive? #t))
+                ))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
 	       (bashrc (list (local-file
