@@ -69,7 +69,7 @@
 					    "firefox-wayland" ;; web browser
 					    "libreoffice" ;; office
 					    "pandoc" ;; file converter (like html -> pdf)
-					    "texlive" ;; a real chonker with all the latex
+					    ;;"texlive" ;; a real chonker with all the latex
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
@@ -77,6 +77,7 @@
   ;; services, run 'guix home search KEYWORD' in a terminal.
   ;; todo document this??
   ;; https://www.mail-archive.com/help-guix@gnu.org/msg12592.html
+  ;; https://guix.gnu.org/manual/en/html_node/G_002dExpressions.html see local-file recursive
   (services
    (list 
      (simple-service 'dotfiles
@@ -100,6 +101,20 @@
 			,(local-file "config/zathura" #:recursive? #t))
 		       ("git"
 			,(local-file "config/git" #:recursive? #t))))
+     (service home-files-service-type
+              `(("sway.sh",
+                 ;; recursive to keep executable bit
+                 (local-file "sway.sh" #:recursive? #t))
+                ;; todo i hate how clunk this is but it seems to work
+                ;; also its bad to install arkenfox in source code but it does beat manual installation?
+                (".mozilla/firefox/myprofile/user.js",
+                 (local-file "firefox/user.js" #:recursive? #t))
+                (".mozilla/firefox/myprofile/prefsCleaner.sh",
+                 (local-file "firefox/prefsCleaner.sh" #:recursive? #t))
+                (".mozilla/firefox/myprofile/updater.sh",
+                 (local-file "firefox/updater.sh" #:recursive? #t))
+                (".mozilla/firefox/myprofile/user-overrides.js",
+                 (local-file "firefox/user-overrides.js" #:recursive? #t))))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
 	       (bashrc (list (local-file
