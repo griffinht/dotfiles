@@ -102,9 +102,7 @@
 		       ("git"
 			,(local-file "config/git" #:recursive? #t))))
      (service home-files-service-type
-              `(("sway.sh",
-                 ;; recursive to keep executable bit
-                 (local-file "sway.sh" #:recursive? #t))
+              `(
                 ;; todo i hate how clunk this is but it seems to work
                 ;; also its bad to install arkenfox in source code but it does beat manual installation?
                 ;; todo this is probably the wrong way to do this
