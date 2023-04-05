@@ -18,6 +18,7 @@
 					    ;; window manager
 					    "sway"
                                             "fzf" ;; fuzzy search for application launcher menu
+                                            "ripgrep" ;; used with fzf.sh
 					    "grim" "slurp" ;; screenshot and screen selection
 					    "mako" ;; notification daemon
                                             ;; terminal emulator
