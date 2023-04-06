@@ -4,3 +4,5 @@ and also subsccribe to lf updates and fzf updates for sixels support
 
 todo add search from ~/
 todo add find but dont jump or find but jump in new tab?
+todo open file or directory
+if [ ! -z 
