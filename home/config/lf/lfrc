@@ -86,6 +86,7 @@ cmd fzf_find ${{
          # I HATE SHELL ESCAPING
          # I HATE SHELL ESCAPING
          # I HATE SHELL ESCAPING
+ # todo files with spaces dont work somehow bruh
 # todo use "become" once fzf updates
 # this way fzf isnt left hanging around
 # not that it really does but whatever
