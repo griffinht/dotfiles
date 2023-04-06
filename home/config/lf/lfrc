@@ -77,9 +77,18 @@ cmd fzf_search ${{
 map gs :fzf_search
 #https://github.com/gokcehan/lf/wiki/Integrations#fzf
 
+# alt-enter to launch in new window
 cmd fzf_find ${{
      lf -remote "send $id select $( \
-         fzf --preview-window=up --preview "ctpv "{}"" \
+         fzf --preview-window=up --preview="ctpv "{}"" \
+            --bind="alt-enter:execute(swaymsg -t command exec \\\$term lf $(pwd)/{})+abort" \
          )"
+         # I HATE SHELL ESCAPING
+         # I HATE SHELL ESCAPING
+         # I HATE SHELL ESCAPING
+# todo use "become" once fzf updates
+# this way fzf isnt left hanging around
+# not that it really does but whatever
 }}
 map f :fzf_find
+
