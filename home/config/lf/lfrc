@@ -58,3 +58,28 @@ set previewer ctpv
 set cleaner ctpvclear
 &ctpv -s $id
 &ctpvquit $id
+
+
+cmd fzf_search ${{
+    lf -remote "send $id select $( \
+        RG_PREFIX="rg --color=always --smart-case --column --line-number --heading --context=5"
+        FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
+            fzf \
+            --disabled --ansi \
+            --bind "change:reload:$RG_PREFIX {q} || true" \
+            | cut -d ':' -f 1
+        )"
+
+#--layout-reverse?
+#--header 'header'?
+    #--delimiter ':' --preview 'bat --color=always {1} --highlight-line={2}' \
+}}
+map gs :fzf_search
+#https://github.com/gokcehan/lf/wiki/Integrations#fzf
+
+cmd fzf_find ${{
+     lf -remote "send $id select $( \
+         fzf --preview-window=up --preview "ctpv "{}"" \
+         )"
+}}
+map f :fzf_find

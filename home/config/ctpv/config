@@ -3,7 +3,7 @@ set forcechafa
 # let chafa decide the format, usually sixels which isn't supported by lf
 # requires lf sixels fork
 # https://github.com/horriblename/lf/
-set autochafa
+#set autochafa
 
 preview zip application/zip application/java-archive {{
     unzip -l "$f"
