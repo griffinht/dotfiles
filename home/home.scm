@@ -30,7 +30,7 @@
                                             "ffmpegthumbnailer" ;; video previews
                                             "bat" ;; text file syntax highlighting previews
                                             "lynx" ;; html file previews
-                                            ;; "pdftoppm" pdf previews todo
+                                            "poppler" ;; pdf previews
                                             ;; "mdcat" markdown previews todo
                                             ;; do not install swaylock to user (setuid needs root) "swaylock" ;; screen locker
 
