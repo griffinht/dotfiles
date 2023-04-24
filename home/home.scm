@@ -17,6 +17,9 @@
 					    "glibc-locales"
 					    ;; window manager
 					    "sway"
+                                            "swayidle"
+                                            ;;"swaybg" not needed? make sure this is on the host or else weird bugs! todo arch thing
+                                            ;; do not install swaylock to user (setuid needs root) "swaylock" ;; screen locker
                                             "fzf" ;; fuzzy search for application launcher menu
 					    "grim" "slurp" ;; screenshot and screen selection
 					    "mako" ;; notification daemon
@@ -32,7 +35,6 @@
                                             "lynx" ;; html file previews
                                             "poppler" ;; pdf previews
                                             ;; "mdcat" markdown previews todo
-                                            ;; do not install swaylock to user (setuid needs root) "swaylock" ;; screen locker
 
 					    ;; system controls
 					    "brightnessctl" ;; brightness, might require root setup
