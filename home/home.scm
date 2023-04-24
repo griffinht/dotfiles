@@ -100,6 +100,8 @@
 			,(local-file "config/nvim" #:recursive? #t))
 		       ("sway"
 			,(local-file "config/sway" #:recursive? #t))
+		       ("swaylock"
+			,(local-file "config/swaylock" #:recursive? #t))
 		       ("lf"
 			,(local-file "config/lf" #:recursive? #t))
 		       ;; ncspot wants to write to its config directory
