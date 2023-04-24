@@ -12,7 +12,7 @@ cmd open ${{
 		    imv "$fx" > /dev/null 2>&1 &
 		    ;;
                 video/*) 
-                    mpv --keep-open=yes "$fx" > /dev/null 2>&1 &
+                    mpv --keep-open=yes --force-window=yes "$fx" > /dev/null 2>&1 &
                     ;;
                 audio/*)
                     mpv --keep-open=yes --force-window=yes "$fx" > /dev/null 2>&1 &
