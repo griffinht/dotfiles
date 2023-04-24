@@ -1,3 +1,13 @@
+# COMMANDS
+loginctl lock-session
+systemctl suspend
+systemctl poweroff
+# or just poweroff?
+
+
+
+
+
 xdg usr dirs - secreenshots
 
 https://www.freedesktop.org/wiki/Software/xdg-utils/
@@ -8,14 +18,14 @@ use qt5ct to test
 todo screen share
 cheese?
 
-AUDACITRY
+# AUDACITRY
 https://wiki.archlinux.org/title/PulseAudio/Troubleshooting#Audacity
 pasuspender -- audacity
 https://askubuntu.com/questions/1098666/iec958-s-pdif-not-working
 https://bbs.archlinux.org/viewtopic.php?id=87003
 https://unix.stackexchange.com/questions/656920/audacity-only-hears-system-sounds
 
-EQUALIZER
+# EQUALIZER
 pacmand python-pyqt5
 it dont work
 guix python-dbus dbus-python python-pyqt python-qtpy
@@ -82,11 +92,6 @@ firefox arkenfox see readme
 
 
 
-# TODO
-linux power top power tuning
-swaybar power
-
-swaylock customize
 
 
 
