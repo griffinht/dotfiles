@@ -65,11 +65,25 @@
                                             "ncdu" ;; disk usage
                                             "powertop" ;; power usage
 					    ;; other
-					    "xournalpp" ;; drawing gui
 					    "firefox-wayland" ;; web browser
-					    "libreoffice" ;; office
 					    "pandoc" ;; file converter (like html -> pdf)
 					    ;;"texlive" ;; a real chonker with all the latex
+
+                                            ;; heavyweights
+                                            ;; heavyweights
+                                            ;; heavyweights
+
+                                            ;; should i leave some of these to be installed locally? as needed?
+                                            "obs" ;; recording
+                                            "audacity" ;; audacity
+					    "xournalpp" ;; drawing gui
+					    "libreoffice" ;; office
+                                            ;; qt
+                                            ;; instead i have to guix shell qtwayland@y
+                                            ;;"qtwayland@5" ;; qt applications, seems to need 5?
+                                            ;;"kdenlive" ;; qt video editor
+                                            ;;qt apps dont work with guix home
+                                            ;;"openjdk:jdk" ;; jdk
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
