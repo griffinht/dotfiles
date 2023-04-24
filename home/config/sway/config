@@ -62,6 +62,7 @@ output * bg ~/.config/sway/wallpaper.png tile
 input type:pointer {
     accel_profile flat
     # allow mouse and keyboard
+    # in other words, don't disable mouse when keyboard, useful for games
     dwt disable
 }
 
@@ -182,8 +183,12 @@ include swaybar
 # configure default workspace layout
 include workspaces
 
+# swaylock screen locker
+include lock.config
+
 # optional include for display configuration per device
 include ~/.sway_displays
+
 
 # start mako notification daemon
 exec mako

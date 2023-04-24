@@ -67,6 +67,9 @@ sudo terminfo
 export TERMINFO_DIRS=/home/griffin/.guix-home/profile/share/terminfo:/home/griffin/.guix-home/profile/share/terminfo
 
 swaylock
+# sway background
+# todo gives really werid error messages when not installed!
+swaybg
 install to host on arch and use arch sway
 debian is a no go
 guix home system is maybe yes
