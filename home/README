@@ -1,3 +1,27 @@
+xdg usr dirs - secreenshots
+
+https://www.freedesktop.org/wiki/Software/xdg-utils/
+qt applications - qtwayland @ v5
+use qt5ct to test
+
+
+todo screen share
+cheese?
+
+AUDACITRY
+https://wiki.archlinux.org/title/PulseAudio/Troubleshooting#Audacity
+pasuspender -- audacity
+https://askubuntu.com/questions/1098666/iec958-s-pdif-not-working
+https://bbs.archlinux.org/viewtopic.php?id=87003
+https://unix.stackexchange.com/questions/656920/audacity-only-hears-system-sounds
+
+EQUALIZER
+pacmand python-pyqt5
+it dont work
+guix python-dbus dbus-python python-pyqt python-qtpy
+
+
+
 todo add to thing
 
 # ARCH
@@ -7,6 +31,26 @@ iwd works
 wpa sup does not work
 not patching the bug made the suspend freeze and break
 https://bugzilla.kernel.org/show_bug.cgi?id=203709
+
+#LUKS
+MODULES=(usbhid xhci_hcd) for usb 3 hub
+HOOKS=put keyboard before autodetect for external kb
+
+#mkinit modules
+==> WARNING: Possibly missing firmware for module: 'xhci_pci'
+  -> Running build hook: [modconf]
+  -> Running build hook: [kms]
+==> WARNING: Possibly missing firmware for module: 'ast'
+  -> Running build hook: [sd-vconsole]
+  -> Running build hook: [block]
+==> WARNING: Possibly missing firmware for module: 'aic94xx'
+==> WARNING: Possibly missing firmware for module: 'qla2xxx'
+==> WARNING: Possibly missing firmware for module: 'bfa'
+==> WARNING: Possibly missing firmware for module: 'wd719x'
+==> WARNING: Possibly missing firmware for module: 'qed'
+==> WARNING: Possibly missing firmware for module: 'qla1280'
+  -> Running build hook: [sd-encrypt]
+==> WARNING: Possibly missing firmware for module: 'qat_4xxx'
 
 install curl obvsiously
 set /etc/locale.conf locale to en_US.UTF8
@@ -52,6 +96,7 @@ swaylock customize
 
 
 
+
 root guix home!??!
 
 
@@ -85,3 +130,14 @@ workspace 2 output DP-1
 workspace 3 output DP-1
 workspace 4 output eDP-1
 workspace 5 output DP-1
+
+
+
+
+
+
+https://libreddit.hot.griffinht.com/r/swaywm/comments/mtc11k/swaylock_trying_to_have_a_somewhat_nice_locker/
+https://bbs.archlinux.org/viewtopic.php?id=276815
+
+external display color
+https://github.com/swaywm/sway/issues/3173
