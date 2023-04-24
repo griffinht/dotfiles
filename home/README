@@ -35,6 +35,7 @@ guix python-dbus dbus-python python-pyqt python-qtpy
 todo add to thing
 
 # ARCH
+document nfs-utils on hoist orr not?
 fix t480s wifi bug
 apply the modprobe thing
 iwd works

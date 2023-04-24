@@ -69,7 +69,7 @@
 					    ;; other
 					    "firefox-wayland" ;; web browser
 					    "pandoc" ;; file converter (like html -> pdf)
-					    ;;"texlive" ;; a real chonker with all the latex
+					    ;;"texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
 
                                             ;; heavyweights
                                             ;; heavyweights
