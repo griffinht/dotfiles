@@ -12,10 +12,10 @@ cmd open ${{
 		    imv "$fx" > /dev/null 2>&1 &
 		    ;;
                 video/*) 
-                    mpv "$fx" > /dev/null 2>&1 &
+                    mpv --keep-open=yes "$fx" > /dev/null 2>&1 &
                     ;;
                 audio/*)
-                    mpv "$fx" > /dev/null 2>&1 &
+                    mpv --keep-open=yes --force-window=yes "$fx" > /dev/null 2>&1 &
                     ;;
 		application/pdf)
 #https://unix.stackexchange.com/questions/3886/difference-between-nohup-disown-and
