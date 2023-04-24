@@ -6,3 +6,5 @@ bindsym XF86AudioRaiseVolume exec ~/.config/sway/volume.sh '+1' > "$WOBSOCK"
 bindsym XF86AudioLowerVolume exec ~/.config/sway/volume.sh '-1' > "$WOBSOCK"
 
 bindsym XF86AudioMute exec ~/.config/sway/volume.sh 'mute' > "$WOBSOCK"
+#todo also set acpi button led status?
+#and mic unmute mute?
