@@ -85,7 +85,13 @@
                                             ;;"qtwayland@5" ;; qt applications, seems to need 5?
                                             ;;"kdenlive" ;; qt video editor
                                             ;;qt apps dont work with guix home
+
+                                            ;; development?
+                                            ;; development?
+                                            ;; development?
+
                                             ;;"openjdk:jdk" ;; jdk
+                                            "podman"
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
@@ -115,6 +121,8 @@
 			,(local-file "config/mako" #:recursive? #t))
 		       ("ctpv"
 			,(local-file "config/ctpv" #:recursive? #t))
+		       ("containers" ; for podman or probably docker
+			,(local-file "config/containers" #:recursive? #t))
 		       ("zathura"
 			,(local-file "config/zathura" #:recursive? #t))
 		       ("git"
