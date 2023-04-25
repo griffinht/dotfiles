@@ -91,7 +91,7 @@
                                             ;; development?
 
                                             ;;"openjdk:jdk" ;; jdk
-                                            "podman"
+                                            "podman" ;; todo slirp4netns does not work, current workaround is run --network=none
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
