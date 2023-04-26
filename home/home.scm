@@ -93,6 +93,7 @@
 
                                             ;;"openjdk:jdk" ;; jdk
                                             "podman" ;; todo slirp4netns does not work, current workaround is --network=none or --network=host
+                                            "docker-cli" ;; todo add docker engine later soon?
 					    )))
   ;; note that on debian i had to install glibc-locales or something
 
@@ -135,6 +136,8 @@
                 ;; todo this is probably the wrong way to do this
                 (".mozilla/firefox/myprofile/user.js",
                  (local-file "firefox/user.js" #:recursive? #t))
+                (".docker/contexts/meta",
+                 (local-file "docker/contexts/meta" #:recursive? #t))
                 ))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
