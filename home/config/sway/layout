@@ -24,5 +24,8 @@
     # Move focus to the parent container
     bindsym $mod+a focus parent
     # Move focus to the child container
-    bindsym $mod+shift+a focus child
-
+    bindsym $mod+Shift+a focus child
+    # delete split
+    # todo this is a little close to the sway danger binds
+    # but who cards
+    bindsym $mod+x split none
