@@ -50,7 +50,7 @@
 					    ;; https://wiki.archlinux.org/title/PulseAudio#Keyboard_volume_control
 					    ;; https://github.com/misterdanb/avizo
 					    ;; https://libreddit.griffinht.com/r/swaywm/comments/oms1jf/help_with_volume_up_and_down_keys/
-					    ;; pavucontrol
+
 					    ;; dev utils
 					    "openssh"
 					    "git"
@@ -66,6 +66,7 @@
 					    ;; cool utils
                                             "ncdu" ;; disk usage
                                             "powertop" ;; power usage
+                                            "btop" ;; cool system monitor, also see glances nmon
 					    ;; other
 					    "firefox-wayland" ;; web browser
 					    "pandoc" ;; file converter (like html -> pdf)
