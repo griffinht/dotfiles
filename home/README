@@ -10,6 +10,7 @@ curl -SL https://github.com/docker/compose/releases/download/v2.17.2/docker-comp
 
 
 #TODO
+# make foot work on root
 podman?
 https://github.com/containers/podman/issues/12811
 docker compose
