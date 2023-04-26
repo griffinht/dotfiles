@@ -141,6 +141,8 @@
                  (local-file "docker/contexts/meta" #:recursive? #t))
                 (".docker/cli-plugins/docker-compose",
                  (local-file "bin/docker-compose" #:recursive? #t))
+                (".local/bin",
+                 (local-file "bin/local" #:recursive? #t))
                 ))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration

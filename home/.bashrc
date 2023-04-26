@@ -5,6 +5,7 @@
 export SSL_CERT_DIR="$HOME/.guix-profile/etc/ssl/certs"
 export SSL_CERT_FILE="$HOME/.guix-profile/etc/ssl/certs/ca-certificates.crt"
 export GIT_SSL_CAINFO="$SSL_CERT_FILE"
+export PATH="$HOME/.local/bin:$PATH"
 
 footssh() {
 	TERM=linux ssh $@
@@ -30,7 +31,7 @@ PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
 
 if [ -z "$LF_LEVEL" ] || [ "$LF_LEVEL" -eq 0 ]; then
     # only if it exists
-    if [ -f /usr/local/bin/lf ]; then
-        exec /usr/local/bin/lf
+    if which lf; then
+        exec lf
     fi 
 fi
