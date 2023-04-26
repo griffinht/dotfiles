@@ -146,7 +146,5 @@
                 ))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
-	       (bashrc (list (local-file
-			       ".bashrc"
-			       "bashrc"))))) 
+	       (bashrc (list (local-file "bashrc"))))) 
     )))
