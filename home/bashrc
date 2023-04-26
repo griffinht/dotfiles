@@ -31,7 +31,7 @@ PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
 
 if [ -z "$LF_LEVEL" ] || [ "$LF_LEVEL" -eq 0 ]; then
     # only if it exists
-    if which lf; then
+    if which lf > /dev/null; then
         exec lf
     fi 
 fi
