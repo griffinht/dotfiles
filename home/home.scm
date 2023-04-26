@@ -28,6 +28,7 @@
 					    "ncurses" ;; makes foot work
                                             "lf" ;; file browser
                                             ;; "ctpv" not packaged :( ;; previewer for lf
+                                            "ffmpeg" ;; used for vid previews
                                             "chafa" ;; image previews (sixels)
                                             "jq" ;; json parser thing used for json previews i think?
                                             "ffmpegthumbnailer" ;; video previews
