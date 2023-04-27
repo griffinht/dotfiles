@@ -1,4 +1,5 @@
-
+todo scrobble
+trash-cli
 docker podman
 https://hot.griffinht.com/searx/search?t=ffab&q=site%3Anews.ycombinator.com+podman+vs+docker+composejjj
 
@@ -113,6 +114,11 @@ guix home system is maybe yes
 
 firefox arkenfox see readme
 
+# WACOM TABLET
+# debian kindly provides this for me, arch does not
+# this also installs some random x stuff which isn't needed
+# pretty sure i just need the wacom kernel module driver
+sudo pacman -S xf86-input-wacom
 
 
 
