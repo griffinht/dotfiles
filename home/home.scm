@@ -73,6 +73,10 @@
 					    "pandoc" ;; file converter (like html -> pdf)
 					    ;;"texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
 
+                                            ;; ledger
+                                            "pinfo" ;; good info reader
+                                            "hledger" ;; plain text accounting software
+
                                             ;; heavyweights
                                             ;; heavyweights
                                             ;; heavyweights
