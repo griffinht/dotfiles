@@ -1222,3 +1222,6 @@ user_pref("privacy.cpd.history", false);  // [DEFAULT: true]
 //user_pref("privacy.cpd.sessions", true); // [DEFAULT: true]
 
 user_pref("signon.rememberSignons", false);  // [DEFAULT: true]
+
+//user_pref("dom.webgpu.enabled", true);
+//opengl is also disabled
