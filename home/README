@@ -103,6 +103,7 @@ todo manage non guix config with guix home
 
 sudo terminfo
 export TERMINFO_DIRS=/home/griffin/.guix-home/profile/share/terminfo:/home/griffin/.guix-home/profile/share/terminfo
+load modprobe i2c-dev on boot for ddcutil
 
 swaylock
 # sway background
