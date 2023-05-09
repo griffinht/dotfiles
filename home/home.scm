@@ -44,6 +44,7 @@
 					    "wob" ;; graphical slider display 
 					    "pulseaudio" ;; required for pactl version with get-sink-volume for, and for sound in general
                                             "pavucontrol" ;; gui audio control
+                                            "ddcutil" ;; external monitor controls (brightness for example)
 
 					    ;;todo nvim tabs -> spaces
 					    ;; todo doesnt work
@@ -57,6 +58,8 @@
 					    "openssh"
 					    "git"
 					    "curl"
+                                            "wireguard-tools"
+
                                             ;; file browsing
 					    "mpv" ;; video player
                                             "imv" ;; image viewer
