@@ -42,17 +42,22 @@
 					    "brightnessctl" ;; brightness, might require root setup
 					    "playerctl" ;; mpris controller for media players (play/pause)					    
 					    "wob" ;; graphical slider display 
-					    "pulseaudio" ;; required for pactl version with get-sink-volume for, and for sound in general
-                                            "pavucontrol" ;; gui audio control
                                             "ddcutil" ;; external monitor controls (brightness for example)
+                                            "pavucontrol" ;; gui audio control
 
-					    ;;todo nvim tabs -> spaces
-					    ;; todo doesnt work
+					    ;;"pulseaudio" ;; no more pulse!
+
+                                            ;; pipewire/sound
+                                            ;; todo guix pulse bluetooth https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/#module-bluetooth-discover
+                                            ;; todo figure out how to make a guix package!
+                                            ;;"xdg-desktop-portal" ;; needed for pipewire and things i guess
 					    ;;"xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
+                                            ;;"pipewire"
+                                            ;;"wireplumber"
+                                            ;; todo libcamera
+                                            ;;https://www.collabora.com/news-and-blog/blog/2020/09/11/integrating-libcamera-into-pipewire/
+                                            ;;"pipewire-pulse"
 					    ;; https://mozilla.github.io/webrtc-landing/gum_test.html
-					    ;; https://wiki.archlinux.org/title/PulseAudio#Keyboard_volume_control
-					    ;; https://github.com/misterdanb/avizo
-					    ;; https://libreddit.griffinht.com/r/swaywm/comments/oms1jf/help_with_volume_up_and_down_keys/
 
 					    ;; dev utils
 					    "openssh"

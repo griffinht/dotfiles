@@ -189,6 +189,8 @@ include lock.config
 # optional include for display configuration per device
 include ~/.sway_displays
 
+include xdg-desktop-portal.config
+
 
 # start mako notification daemon
 exec mako

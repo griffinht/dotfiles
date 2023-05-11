@@ -90,21 +90,29 @@ HOOKS=put keyboard before autodetect for external kb
   -> Running build hook: [sd-encrypt]
 ==> WARNING: Possibly missing firmware for module: 'qat_4xxx'
 
+###
 install curl obvsiously
 set /etc/locale.conf locale to en_US.UTF8
 install nss-certs
 install man pages
 
+###
 add non guix as guix channel
 https://gitlab.com/nonguix/nonguix
 https://guix.gnu.org/manual/en/html_node/Getting-Substitutes-from-Other-Servers.html
 
 todo manage non guix config with guix home
 
+###
 sudo terminfo
 export TERMINFO_DIRS=/home/griffin/.guix-home/profile/share/terminfo:/home/griffin/.guix-home/profile/share/terminfo
 load modprobe i2c-dev on boot for ddcutil
 
+###
+# i wanna install these with guix :(
+sudo pacman -S pipewire wireplumber pipewire-alsa pipewire-pulse pipewire-jack xdg-desktop-portal-wlr
+
+###
 swaylock
 # sway background
 # todo gives really werid error messages when not installed!
@@ -113,8 +121,10 @@ install to host on arch and use arch sway
 debian is a no go
 guix home system is maybe yes
 
+###
 firefox arkenfox see readme
 
+###
 # WACOM TABLET
 # debian kindly provides this for me, arch does not
 # this also installs some random x stuff which isn't needed
