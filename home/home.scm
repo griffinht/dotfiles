@@ -63,7 +63,11 @@
 					    "openssh"
 					    "git"
 					    "curl"
-                                            "wireguard-tools"
+                                            "wireguard-tools" ;; wg-quick
+                                            "bind:utils" ;; dig
+                                            "whois"
+                                            "units" ;; unit conversions! it kind of sucks but idk
+                                            "sshpass"
 
                                             ;; file browsing
 					    "mpv" ;; video player
