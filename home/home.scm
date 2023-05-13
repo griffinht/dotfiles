@@ -3,12 +3,21 @@
 ;; need to capture the channels being used, as returned by "guix describe".
 ;; See the "Replicating Guix" section in the manual.
 
+;; todo figure this out
+;; https://www.gnu.org/software/guile/manual/html_node/Load-Paths.html
+;; this adds the current directory to the load paths
+(add-to-load-path (dirname (current-filename)))
+
 (use-modules (gnu home)
              (gnu packages)
              (gnu services)
              (guix gexp)
              (gnu home services shells)
-	     (gnu home services))
+	     (gnu home services)
+             ;; my packages in the packages folder
+             ;; ./mypackages/test.scm provides (mypackages test)
+             ;; this works because i added the current directory of this file (home.scm) to the load path with the add-to-load path
+             (mypackages test))
 
 (home-environment
   ;; Below is the list of packages that will show up in your
