@@ -127,6 +127,8 @@
 		     home-xdg-configuration-files-service-type
 		     `(("nvim"
 			,(local-file "config/nvim" #:recursive? #t))
+		       ("guix/channels.scm"
+			,(local-file "config/guix/channels.scm"))
 		       ("sway"
 			,(local-file "config/sway" #:recursive? #t))
 		       ("swaylock"
