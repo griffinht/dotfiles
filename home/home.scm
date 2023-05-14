@@ -180,6 +180,8 @@
                 ;; todo this is probably the wrong way to do this
                 (".mozilla/firefox/myprofile/user.js",
                  (local-file "firefox/user.js" #:recursive? #t))
+                (".guile",
+                 (local-file "guile"))
                 (".docker/contexts/meta",
                  (local-file "docker/contexts/meta" #:recursive? #t))
                 (".docker/cli-plugins/docker-compose",
