@@ -4,3 +4,13 @@ i make a channel at my-channel
 you can use it with ./guix.sh <args> instead of guix <args>
 its also loaded in home.scm
 it works by adding the channel to guix load paths
+
+
+
+guix meta commands?
+,help
+,apropos
+,binding
+,describe
+,pretty-print
+,module or ,reload
