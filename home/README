@@ -216,3 +216,4 @@ remove all these things
 :: removing gdk-pixbuf2 breaks dependency 'gdk-pixbuf2' required by swaybg
 :: removing gdk-pixbuf2 breaks dependency 'gdk-pixbuf2' required by swaylock
 :: removing gdk-pixbuf2 breaks dependency 'gdk-pixbuf2' required by xdg-desktop-portal
+https://gist.github.com/mhitza/a00d7900571e9f13bac2bbf4a203d21b
