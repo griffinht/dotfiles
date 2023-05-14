@@ -19,6 +19,7 @@
              ;; my packages in the packages folder
              ;; ./mypackages/test.scm provides (mypackages test)
              ;; this works because i added the current directory of this file (home.scm) to the load path with the add-to-load path
+             (packages misc)
              (packages my-hello))
 
 (home-environment
@@ -28,7 +29,7 @@
   ;; specification->packages seems to dynamically load things
   ;; so we don't have to have a bunch of different use-modules declarations for each package
   ;; but for my-hello we still do it the regular way
-  (packages (append (list my-hello) (specifications->packages (list 
+  (packages (append (list mylf) (specifications->packages (list 
 					    "glibc-locales"
 					    ;; window manager
 					    "sway"
@@ -42,7 +43,8 @@
                                             ;; terminal emulator
 					    "foot" ;; terminal emulator
 					    "ncurses" ;; makes foot work
-                                            "lf" ;; file browser
+                                            ;; see my package mylf
+                                            ;;"lf" ;; file browser
                                             ;; "ctpv" not packaged :( ;; previewer for lf
                                             "ffmpeg" ;; used for vid previews
                                             "chafa" ;; image previews (sixels)
@@ -176,8 +178,8 @@
                  (local-file "docker/contexts/meta" #:recursive? #t))
                 (".docker/cli-plugins/docker-compose",
                  (local-file "bin/docker-compose" #:recursive? #t))
-                (".local/bin/lf",
-                 (local-file "bin/local/lf" #:recursive? #t))
+                ;;(".local/bin/lf",
+                 ;;(local-file "bin/local/lf" #:recursive? #t))
                 ))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
