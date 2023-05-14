@@ -31,3 +31,36 @@ command-line arguments, multiple languages, and so on.")
   (home-page "https://www.gnu.org/software/hello/")
   ;; todo this doesnt have a license i just copied this field from the example
   (license gpl3+)))
+;;https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64 
+
+(define-public mydocker-compose
+               (package
+  (name "mydocker-compose")
+  (version "2.10")
+  ;; todo use origin instead
+  (source (origin
+
+
+;;/gnu/store/nx7ih0mqg7hlppw194xzrvsgq5d1x29h-docker-compose-linux-x86_64
+;;1nidh0ai9ljjq8gsa7zky4hlyzrjjn9yz63bkyp3wm1i4a0j0pl9
+            (uri "https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64")
+            (method url-fetch)
+            (sha256 "1nidh0ai9ljjq8gsa7zky4hlyzrjjn9yz63bkyp3wm1i4a0j0pl9")
+            ))
+  (build-system copy-build-system)
+  (arguments
+;; todo i guess . works?
+;; also need to make sure chmod
+;; Docker Compose for all users on your system, replace ~/.docker/cli-plugins with /usr/local/lib/docker/cli-plugins.
+;; i think this belonds in libexec and not lib? because its executable?
+;; todo this needs to chmod executable
+;; https://github.com/docker/compose
+    '(#:install-plan '(("docker-compose-linux-x86_64" "libexec/docker/cli-plugins/docker-compose"))))
+  (synopsis "Hello, Guix world: An example custom Guix package")
+  (description
+   "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+  (home-page "https://www.gnu.org/software/hello/")
+  ;; todo this doesnt have a license i just copied this field from the example
+  (license gpl3+)))
