@@ -17,12 +17,16 @@
              ;; my packages in the packages folder
              ;; ./mypackages/test.scm provides (mypackages test)
              ;; this works because i added the current directory of this file (home.scm) to the load path with the add-to-load path
-             (mypackages test))
+             (packages my-hello))
 
 (home-environment
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
-  (packages (specifications->packages (list 
+
+  ;; specification->packages seems to dynamically load things
+  ;; so we don't have to have a bunch of different use-modules declarations for each package
+  ;; but for my-hello we still do it the regular way
+  (packages (append (list my-hello) (specifications->packages (list 
 					    "glibc-locales"
 					    ;; window manager
 					    "sway"
@@ -122,7 +126,7 @@
                                             "podman" ;; todo slirp4netns does not work, current workaround is --network=none or --network=host
                                             "docker-cli" ;; docker cli for remote daemons so far
                                             ;;"docker" ;; todo start rootless daemon
-					    )))
+					    ))))
   ;; note that on debian i had to install glibc-locales or something
 
   ;; Below is the list of Home services.  To search for available
