@@ -1,0 +1,6 @@
+https://gitlab.com/pjotrp/guix-notes/blob/master/HACKING.org
+
+i make a channel at my-channel
+you can use it with ./guix.sh <args> instead of guix <args>
+its also loaded in home.scm
+it works by adding the channel to guix load paths
