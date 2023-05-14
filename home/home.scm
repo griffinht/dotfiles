@@ -6,7 +6,9 @@
 ;; todo figure this out
 ;; https://www.gnu.org/software/guile/manual/html_node/Load-Paths.html
 ;; this adds the current directory to the load paths
-(add-to-load-path (dirname (current-filename)))
+;; (add-to-load-path (string-append (dirname "home/home.scm") "/my-channel))
+;; (add-to-load-path (string-append "home" "/my-channel))
+(add-to-load-path (string-append (dirname (current-filename)) "/my-channel"))
 
 (use-modules (gnu home)
              (gnu packages)
