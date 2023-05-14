@@ -7,6 +7,9 @@ export SSL_CERT_FILE="$HOME/.guix-profile/etc/ssl/certs/ca-certificates.crt"
 export GIT_SSL_CAINFO="$SSL_CERT_FILE"
 export PATH="$HOME/.local/bin:$PATH"
 
+# vim binds
+set -o vi
+
 footssh() {
 	TERM=linux ssh $@
 }

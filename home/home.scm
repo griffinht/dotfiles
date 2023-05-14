@@ -80,11 +80,18 @@
 					    "openssh"
 					    "git"
 					    "curl"
+                                            "make"
+                                            ;; guile
+                                            "guile"
+                                            "guile-colorized"
+                                            "guile-readline"
+                                            ;; other utils
+                                            "sshpass"
                                             "wireguard-tools" ;; wg-quick
                                             "bind:utils" ;; dig
                                             "whois"
                                             "units" ;; unit conversions! it kind of sucks but idk
-                                            "sshpass"
+                                            "pinfo" ;; good info reader
 
                                             ;; file browsing
 					    "mpv" ;; video player
@@ -104,7 +111,6 @@
 					    ;;"texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
 
                                             ;; ledger
-                                            "pinfo" ;; good info reader
                                             "hledger" ;; plain text accounting software
 
                                             ;; heavyweights
@@ -178,8 +184,6 @@
                  (local-file "docker/contexts/meta" #:recursive? #t))
                 (".docker/cli-plugins/docker-compose",
                  (local-file "bin/docker-compose" #:recursive? #t))
-                ;;(".local/bin/lf",
-                 ;;(local-file "bin/local/lf" #:recursive? #t))
                 ))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
