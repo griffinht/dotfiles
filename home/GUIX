@@ -14,3 +14,31 @@ guix meta commands?
 ,describe
 ,pretty-print
 ,module or ,reload
+
+
+
+
+
+
+https://github.com/Tass0sm/dotfiles
+https://github.com/engstrand-config/guix-dotfiles
+configure home services
+https://guix.gnu.org/manual/devel/en/html_node/Shepherd-Home-Service.html
+https://guix.gnu.org/manual/en/html_node/The-Perfect-Setup.html
+
+
+
+
+(l)ast
+
+(u)p
+
+(n)ext
+(p)revious
+
+next previous with children
+[]
+
+
+(d)irectory
+(t)op
