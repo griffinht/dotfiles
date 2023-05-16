@@ -81,6 +81,7 @@
 					    "git"
 					    "curl"
                                             "make"
+                                            "python"
                                             ;; guile
                                             ;; note this requires GUILE_LOAD_PATH to be set or .guile to be modified
                                             ;; it works both ways!
