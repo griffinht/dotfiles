@@ -95,6 +95,7 @@
                                             "whois"
                                             "units" ;; unit conversions! it kind of sucks but idk
                                             "pinfo" ;; good info reader
+                                            "zbar" ;; provides zbarimg which is a barcode reader
 
                                             ;; file browsing
 					    "mpv" ;; video player
