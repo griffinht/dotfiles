@@ -64,3 +64,25 @@ command-line arguments, multiple languages, and so on.")
   (home-page "https://www.gnu.org/software/hello/")
   ;; todo this doesnt have a license i just copied this field from the example
   (license gpl3+)))
+
+(define-public myrescrobbled
+               (package
+  (name "myrescrobbled")
+  (version "2.10")
+  ;; todo use origin instead
+  (source (origin
+            (uri "https://github.com/InputUsername/rescrobbled/releases/download/v0.7.0/rescrobbled")
+            (method url-fetch)
+            (sha256 "003wmxp1va17f10gwvprdjyslkazmihf0p9z0dpf16vmpg7laahi")
+            ))
+  (build-system copy-build-system)
+  (arguments
+    '(#:install-plan '(("rescrobbled" "bin/"))))
+  (synopsis "Hello, Guix world: An example custom Guix package")
+  (description
+   "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+  (home-page "https://www.gnu.org/software/hello/")
+  ;; todo this doesnt have a license i just copied this field from the example
+  (license gpl3+)))
