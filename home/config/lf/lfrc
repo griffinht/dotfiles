@@ -3,19 +3,19 @@
 cmd open ${{
 	case $(file --mime-type -Lb "$f") in
                 inode/x-empty)
-                    nvim $fx
+                    nvim "$fx"
                     ;;
  		text/*) 
-		    nvim $fx
+		    nvim "$fx"
 		    ;;
 		image/*)
-		    imv "$fx" > /dev/null 2>&1 &
+		    nohup imv "$fx" > /dev/null 2>&1 &
 		    ;;
                 video/*) 
-                    mpv --keep-open=yes --force-window=yes "$fx" > /dev/null 2>&1 &
+                    nohup mpv --keep-open=yes --force-window=yes "$fx" > /dev/null 2>&1 &
                     ;;
                 audio/*)
-                    mpv --keep-open=yes --force-window=yes "$fx" > /dev/null 2>&1 &
+                    nohup mpv --keep-open=yes --force-window=yes "$fx" > /dev/null 2>&1 &
                     ;;
 		application/pdf)
 #https://unix.stackexchange.com/questions/3886/difference-between-nohup-disown-and
@@ -25,13 +25,13 @@ cmd open ${{
 		    nohup zathura "$fx" > /dev/null 2>&1 &
 		    ;;
 		application/gzip)
-		    xournalpp "$fx" > /dev/null 2>&1 &
+		    nohup xournalpp "$fx" > /dev/null 2>&1 &
 		    ;;
                 application/msword) 
-                    libreoffice "$fx" > /dev/null 2>&1 &
+                    nohup libreoffice "$fx" > /dev/null 2>&1 &
                     ;;
                 application/vnd.*)
-                    libreoffice "$fx" > /dev/null 2>&1 &
+                    nohup libreoffice "$fx" > /dev/null 2>&1 &
                     ;;
 		*) 
 		    for f in $fx; do
@@ -79,6 +79,7 @@ map gs :fzf_search
 
 # alt-enter to launch in new window
 # todo preview with ctpv sixels :O, using bad for now
+#todo fix not opening file and navigating
 cmd fzf_find ${{
      lf -remote "send $id select $( \
          fzf --preview-window=up --preview="bat --force-colorization "{}"" \
