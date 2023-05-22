@@ -9,6 +9,9 @@ preview zip application/zip application/java-archive {{
     unzip -l "$f"
 }}
 
+#todo xournalpp-thumbnailer
+#todo audio preview https://stackoverflow.com/questions/4468157/how-can-i-create-a-waveform-image-of-an-mp3-in-linux
+
 preview tar application/x-xz application/x-tar application/gzip {{
     tar -tf "$f"
 }}
