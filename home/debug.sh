@@ -13,6 +13,11 @@ case "$PROGRAM" in
             nvim -u config/nvim/init.vim
         done
         ;;
+    sway)
+        rm ~/.config/sway || exit 1
+        ln -s $PWD/config/sway ~/.config/sway || exit 1
+        echo done
+        ;;
     *)
         echo unknown program
         exit 1
