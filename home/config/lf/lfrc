@@ -1,40 +1,44 @@
 # todo duplicate switch statements
+# todo libreoffice breaks randomly :(
+# i think it gets stuck on file not found in the splash screen?
 
+# todo use xdg-open????
 cmd open ${{
 	case $(file --mime-type -Lb "$f") in
                 inode/x-empty)
-                    nvim "$fx"
+                    nvim "$f"
                     ;;
  		text/*) 
-		    nvim "$fx"
+		    nvim "$f"
 		    ;;
 		image/*)
-		    nohup imv "$fx" > /dev/null 2>&1 &
+		    nohup imv "$f" > /dev/null 2>&1 &
 		    ;;
                 video/*) 
-                    nohup mpv --keep-open=yes --force-window=yes "$fx" > /dev/null 2>&1 &
+                    nohup mpv --keep-open=yes --force-window=yes "$f" > /dev/null 2>&1 &
                     ;;
                 audio/*)
-                    nohup mpv --keep-open=yes --force-window=yes "$fx" > /dev/null 2>&1 &
+                    nohup mpv --keep-open=yes --force-window=yes "$f" > /dev/null 2>&1 &
                     ;;
 		application/pdf)
 #https://unix.stackexchange.com/questions/3886/difference-between-nohup-disown-and
 #maybe use &! or disown?
                 # nohup so zathura is not closed when the terminal closes
                 # i might want to use this for other things as well
-		    nohup zathura "$fx" > /dev/null 2>&1 &
+		    nohup zathura "$f" > /dev/null 2>&1 &
 		    ;;
 		application/gzip)
-		    nohup xournalpp "$fx" > /dev/null 2>&1 &
+		    nohup xournalpp "$f" > /dev/null 2>&1 &
 		    ;;
                 application/msword) 
-                    nohup libreoffice "$fx" > /dev/null 2>&1 &
+                    nohup libreoffice "$f" > /dev/null 2>&1 &
                     ;;
                 application/vnd.*)
-                    nohup libreoffice "$fx" > /dev/null 2>&1 &
+                    nohup libreoffice "$f" > /dev/null 2>&1 &
                     ;;
 		*) 
-		    for f in $fx; do
+                    # what is this even doing
+		    for f in $f; do
 			echo $f $(file --mime-type -Lb $f)| less;
 			# xdg-open $f > /dev/null 2> /dev/null &
 		    done
@@ -74,7 +78,8 @@ cmd fzf_search ${{
 #--header 'header'?
     #--delimiter ':' --preview 'bat --color=always {1} --highlight-line={2}' \
 }}
-map gs :fzf_search
+# find grep
+map fg :fzf_search
 #https://github.com/gokcehan/lf/wiki/Integrations#fzf
 
 # alt-enter to launch in new window
@@ -93,5 +98,53 @@ cmd fzf_find ${{
 # this way fzf isnt left hanging around
 # not that it really does but whatever
 }}
-map f :fzf_find
+# find fuzzy
+map ff :fzf_find
+# unbind default find
+map f
+
+
+
+# bruh https://github.com/gokcehan/lf/issues/899
+cmd delete %trash-put "$f"
+# todo set editor
+# set pager var?
+map x :delete
+
+
+#o open as
+#map o
+map ox &nohup xournalpp "$f" > /dev/null 2>&1
+map oa &nohup audacity "$f" > /dev/null 2>&1
+# todo make sure firefox is already open??
+map of %firefox "$f"
+map oo !"$f"
+
+# n new
+map n %printf 'new file: ' && read && touch "$REPLY" && lf -remote "send $id select $REPLY"
+#tood new xournalpp new audacity
+
+#g git commands
+
+# git add
+map ga %git add "$f"
+map gA %git add .
+# git add (incremental)
+map <c-g>a $git add -p "$f"
+map <c-g>A $git add -p .
+# git commit
+map gc $git commit
+# todo bats pager??
+map gs $git status -c color.ui=always | less -R
+# git diff
+map gd $git diff --name-only --relative --diff-filter=d "$f" | xargs bat --diff --paging=always
+map gD $git diff --name-only --relative --diff-filter=d | xargs bat --diff --paging=always
+# git diff --cached
+map <c-g>d $git diff --cached --name-only --relative --diff-filter=d "$f" | xargs bat --diff --paging=always
+map <c-g>D $git diff --cached --name-only --relative --diff-filter=d | xargs bat --diff --paging=always
+# git reset
+map gr $git reset "$f"
+map gR $git reset .
+#find a safer way to delete local changes
+#map gx $git checkout -- .
 
