@@ -46,6 +46,7 @@
                                             ;; see my package mylf
                                             ;;"lf" ;; file browser
                                             ;; "ctpv" not packaged :( ;; previewer for lf
+                                            "trash-cli" ;; for lf delete
                                             "ffmpeg" ;; used for vid previews
                                             "chafa" ;; image previews (sixels)
                                             "jq" ;; json parser thing used for json previews i think?
