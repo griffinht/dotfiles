@@ -121,27 +121,32 @@ map of %firefox "$f"
 map oo !"$f"
 
 # n new
+# todo use push
 map n %printf 'new file: ' && read && touch "$REPLY" && lf -remote "send $id select $REPLY"
 #tood new xournalpp new audacity
 
 #g git commands
 
 # git add
-map ga %git add "$f"
-map gA %git add .
+map gaa %git add "$f"
+map gaA %git add .
 # git add (incremental)
-map <c-g>a $git add -p "$f"
-map <c-g>A $git add -p .
+map gap $git add -p "$f"
+map gaP $git add -p .
 # git commit
 map gc $git commit
 # todo bats pager??
-map gs $git status -c color.ui=always | less -R
+map gs $git -c color.ui=always status . | less -R
+map gS $git -c color.ui=always status | less -R
 # git diff
-map gd $git diff --name-only --relative --diff-filter=d "$f" | xargs bat --diff --paging=always
-map gD $git diff --name-only --relative --diff-filter=d | xargs bat --diff --paging=always
+# --diff-filter=d excludes deleted files
+map gdd $git diff --name-only --relative --diff-filter=d "$f" | xargs bat --diff --paging=always
+map gdD $git diff --name-only --relative --diff-filter=d | xargs bat --diff --paging=always
 # git diff --cached
-map <c-g>d $git diff --cached --name-only --relative --diff-filter=d "$f" | xargs bat --diff --paging=always
-map <c-g>D $git diff --cached --name-only --relative --diff-filter=d | xargs bat --diff --paging=always
+# todo use dandavision/delta
+# bat doesnt handled cached output
+map gdc $git diff --cached --relative "$f"
+map gdC $git diff --cached --relative
 # git reset
 map gr $git reset "$f"
 map gR $git reset .
