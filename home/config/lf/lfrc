@@ -150,6 +150,10 @@ map gdC $git diff --cached --relative
 # git reset
 map gr $git reset "$f"
 map gR $git reset .
+# git push
+# git pull
+map gpp $git push
+map gpP $git pull
 #find a safer way to delete local changes
 #map gx $git checkout -- .
 
