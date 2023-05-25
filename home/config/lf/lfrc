@@ -114,24 +114,35 @@ map x :delete
 
 #o open as
 #map o
+# todo duplicate code a
 map ox &nohup xournalpp "$f" > /dev/null 2>&1
 map oa &nohup audacity "$f" > /dev/null 2>&1
 # todo make sure firefox is already open??
 map of %firefox "$f"
 map oo !"$f"
 
+# new stuff
+#
+# unmap n
+map n
+
 # nd new directory
 cmd mkdir %{{
     mkdir "$1" && lf -remote "send $id select $1"
 }}
+map nx push :xournalpp<space>
 # nf new file
 cmd touch %{{
+# todo duplicate code c
     touch "$1" && lf -remote "send $id select $1"
 }}
 map nn push :touch<space>
+# nx new xournalpp document
+# todo duplicate code a
+cmd xournalpp &{{
+    nohup xournalpp "$1" > /dev/null 2>&1
+}}
 map nd push :mkdir<space>
-# unmap n
-map n
 #map n %printf 'new file: ' && read && touch "$REPLY" && lf -remote "send $id select $REPLY"
 
 #g git commands
@@ -169,6 +180,7 @@ map gpP $git pull
 map gl $git log
 # git init
 cmd gi %{{
+# todo duplicate code c
     git init "$1" && lf -remote "send $id select $1"
 }}
 map gi push :gi<space>
