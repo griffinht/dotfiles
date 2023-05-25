@@ -1,3 +1,17 @@
+#
+# BASH CONFIG
+#
+
+# set window title to working directory
+PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
+
+# vim binds
+set -o vi
+
+#
+# ENVIRONMENT VARIABLES
+#
+
 # make ssh work on guix foreign distro
 # not needed for guix distro????
 # but arch needs this and probably debian
@@ -5,11 +19,18 @@
 export SSL_CERT_DIR="$HOME/.guix-profile/etc/ssl/certs"
 export SSL_CERT_FILE="$HOME/.guix-profile/etc/ssl/certs/ca-certificates.crt"
 export GIT_SSL_CAINFO="$SSL_CERT_FILE"
+
+# add local bin for testing
 export PATH="$HOME/.local/bin:$PATH"
 
-# vim binds
-set -o vi
+# use bat as manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+#
+# ALIASES
+#
+
+# temp fix for ssh on remote terminals without foot installed (which is all of them)
 footssh() {
 	TERM=linux ssh $@
 }
@@ -20,17 +41,17 @@ newterminal() {
 }
 alias new=newterminal
 
+# network manager doesnt work with foot term for some reason, this seems to fix it
 alias nmtui='TERM=linux nmtui'
-# use lf sixels fork
-# todo find a way to install binaries to guix
-# or figure out guix packaging lol
-# only if it exists
-if [ -f /usr/local/bin/lf ]; then
-    alias lf='/usr/local/bin/lf'
-fi
 
-# set window title to working directory
-PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
+
+
+
+
+
+#
+# START LF BY DEFAULT
+#
 
 if [ -z "$LF_LEVEL" ] || [ "$LF_LEVEL" -eq 0 ]; then
     # only if it exists
