@@ -18,6 +18,11 @@ case "$PROGRAM" in
         ln -s $PWD/config/sway ~/.config/sway || exit 1
         echo done
         ;;
+    bash)
+        rm ~/.bashrc || exit 1
+        ln -s $PWD/bashrc ~/.bashrc || exit 1
+        echo done
+        ;;
     *)
         echo unknown program
         exit 1
