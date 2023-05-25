@@ -120,14 +120,19 @@ map oa &nohup audacity "$f" > /dev/null 2>&1
 map of %firefox "$f"
 map oo !"$f"
 
-# n new
-# todo use push
+# nd new directory
+cmd mkdir %{{
+    mkdir "$1" && lf -remote "send $id select $1"
+}}
+# nf new file
 cmd touch %{{
     touch "$1" && lf -remote "send $id select $1"
 }}
-map n push :touch<space>
+map nn push :touch<space>
+map nd push :mkdir<space>
+# unmap n
+map n
 #map n %printf 'new file: ' && read && touch "$REPLY" && lf -remote "send $id select $REPLY"
-#tood new xournalpp new audacity
 
 #g git commands
 
@@ -152,8 +157,8 @@ map gdD $git diff --name-only --relative --diff-filter=d | xargs bat --diff --pa
 map gdc $git diff --cached --relative "$f"
 map gdC $git diff --cached --relative
 # git reset
-map gr $git reset "$f"
-map gR $git reset
+map gr %git reset "$f"
+map gR %git reset
 # git push
 # git pull
 map gpp $git push
@@ -162,3 +167,19 @@ map gpP $git pull
 #map gx $git checkout -- .
 # git log
 map gl $git log
+# git init
+cmd gi %{{
+    git init "$1" && lf -remote "send $id select $1"
+}}
+map gi push :gi<space>
+
+# git clone
+cmd gCc !{{
+    git clone "$1"
+}}
+# git clone to current directory
+cmd gCc !{{
+    git clone "$1" .
+}}
+map gCc push :gCc<space>
+map gCC push :gCC<space>
