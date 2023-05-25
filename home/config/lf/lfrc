@@ -122,7 +122,11 @@ map oo !"$f"
 
 # n new
 # todo use push
-map n %printf 'new file: ' && read && touch "$REPLY" && lf -remote "send $id select $REPLY"
+cmd touch %{{
+    touch "$1" && lf -remote "send $id select $1"
+}}
+map n push :touch<space>
+#map n %printf 'new file: ' && read && touch "$REPLY" && lf -remote "send $id select $REPLY"
 #tood new xournalpp new audacity
 
 #g git commands
