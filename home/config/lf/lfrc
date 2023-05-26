@@ -83,7 +83,7 @@ cmd fzf_search ${{
     #--delimiter ':' --preview 'bat --color=always {1} --highlight-line={2}' \
 }}
 # find grep
-map fg :fzf_search
+map <c-f> :fzf_search
 #https://github.com/gokcehan/lf/wiki/Integrations#fzf
 
 # alt-enter to launch in new window
@@ -103,9 +103,7 @@ cmd fzf_find ${{
 # not that it really does but whatever
 }}
 # find fuzzy
-map ff :fzf_find
-# unbind default find
-map f
+map F :fzf_find
 
 
 
