@@ -51,11 +51,15 @@ cmd open ${{
 }}
 
 # show current directory in window title
+#TODO
+#https://github.com/gokcehan/lf/wiki/Integrations#git
 cmd on-cd &{{
     # '&' commands run silently in background (which is what we want here),
     # but are not connected to stdout.
     # To make sure our escape sequence still reaches stdout we pipe it to /dev/tty
     printf "\033]0;$PWD\007" > /dev/tty
+
+    # also set osc7 escape sequence for foot ctrl+shift+n new terminal to spawn with the correct working directory
     ~/.config/lf/set_osc7.sh
 }}
 
