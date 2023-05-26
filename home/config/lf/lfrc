@@ -124,6 +124,10 @@ map oa &nohup audacity "$f" > /dev/null 2>&1
 # todo make sure firefox is already open??
 map of %firefox "$f"
 map oo !"$f"
+cmd execute !{{
+    ./"$f" $@
+}}
+map oO push :execute<space>
 
 # new stuff
 #
@@ -141,6 +145,11 @@ cmd touch %{{
     touch "$1" && lf -remote "send $id select $1"
 }}
 map nn push :touch<space>
+map nx %{{
+    chmod +x "$f"
+    # lf must be reloaded to show the executable bit has been set
+    lf -remote "send $id reload"
+}}
 # nx new xournalpp document
 # todo duplicate code a
 cmd xournalpp &{{
