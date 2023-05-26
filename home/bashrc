@@ -50,12 +50,15 @@ alias nmtui='TERM=linux nmtui'
 
 
 #
-# START LF BY DEFAULT
+# DEFAULT PROGRAM
+# start lf with fish shell
+# bash is fine as an initial login shell (its usually the default across linux), i just immediately switch to fish for the rest of my user stuff
+# i could however try to move more config over to fish shell
 #
 
 if [ -z "$LF_LEVEL" ] || [ "$LF_LEVEL" -eq 0 ]; then
     # only if it exists
     if which lf > /dev/null; then
-        exec lf
+        SHELL=fish exec lf
     fi 
 fi
