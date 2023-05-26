@@ -125,7 +125,7 @@ map oa &nohup audacity "$f" > /dev/null 2>&1
 map of %firefox "$f"
 map oo !"$f"
 cmd execute !{{
-    ./"$f" $@
+    "$f" $@
 }}
 map oO push :execute<space>
 
