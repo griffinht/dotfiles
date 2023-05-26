@@ -10,7 +10,7 @@ case "$PROGRAM" in
         ;;
     nvim)
         while true; do
-            nvim -u config/nvim/init.vim
+            XDG_CONFIG_HOME=$PWD/config nvim
         done
         ;;
     sway)
