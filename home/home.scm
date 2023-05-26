@@ -198,6 +198,8 @@
 			,(local-file "config/containers" #:recursive? #t))
 		       ("zathura"
 			,(local-file "config/zathura" #:recursive? #t))
+		       ("bat"
+			,(local-file "config/bat" #:recursive? #t))
                        ; todo remove and replace with system agnostic init
 		       ("systemd"
 			,(local-file "config/systemd" #:recursive? #t))
