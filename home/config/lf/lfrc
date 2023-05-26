@@ -178,8 +178,8 @@ map gdD $git diff --name-only --relative --diff-filter=d | xargs bat --diff --pa
 # git diff --cached
 # todo use dandavision/delta
 # bat doesnt handled cached output
-map gdc $git diff --cached --relative "$f"
-map gdC $git diff --cached --relative
+map gdc $git -c color.ui=always diff --cached --relative "$f" | less -R
+map gdC $git -c color.ui=always diff --cached --relative | less -R
 # git reset
 map gr %git reset "$f"
 map gR %git reset
