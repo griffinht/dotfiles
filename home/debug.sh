@@ -23,9 +23,9 @@ case "$PROGRAM" in
         ln -s $PWD/bashrc ~/.bashrc || exit 1
         echo done
         ;;
-    foot)
+    fish)
         while true; do
-            foot -c config/foot.ini
+            XDG_CONFIG_HOME=$PWD/config fish
         done
         ;;
     *)
