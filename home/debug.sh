@@ -23,6 +23,11 @@ case "$PROGRAM" in
         ln -s $PWD/bashrc ~/.bashrc || exit 1
         echo done
         ;;
+    foot)
+        while true; do
+            foot -c config/foot.ini
+        done
+        ;;
     *)
         echo unknown program
         exit 1
