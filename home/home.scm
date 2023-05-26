@@ -30,19 +30,33 @@
   ;; so we don't have to have a bunch of different use-modules declarations for each package
   ;; but for my-hello we still do it the regular way
   (packages (append (list mylf) (specifications->packages (list 
+                                            ;; needed to make things work i think?
 					    "glibc-locales"
+
+                                            ;;
 					    ;; window manager
+                                            ;;
+
 					    "sway"
                                             "swayidle"
                                             ;;"swaybg" not needed? make sure this is on the host or else weird bugs! todo arch thing
                                             ;; do not install swaylock to user (setuid needs root) "swaylock" ;; screen locker
-                                            "fzf" ;; fuzzy search for application launcher menu
-                                            "ripgrep" ;; used with fzf.sh
+                                            "fzf" ;; application launcher menu
 					    "grim" "slurp" ;; screenshot and screen selection
 					    "mako" ;; notification daemon
-                                            ;; terminal emulator
+					    "wl-clipboard" ;; needed for neovim clipboard to work https://github.com/neovim/neovim/pull/9229
+
+                                            ;;
+                                            ;; terminal
+                                            ;;
+
 					    "foot" ;; terminal emulator
 					    "ncurses" ;; makes foot work
+                                            "fish" ;; shell
+                                            "neovim" ;; editor
+                                            ;; todo switch to emacs evil :) :) :0
+
+                                            ;; file browsing
                                             ;; see my package mylf
                                             ;;"lf" ;; file browser
                                             ;; "ctpv" not packaged :( ;; previewer for lf
@@ -54,9 +68,18 @@
                                             "bat" ;; text file syntax highlighting previews
                                             "lynx" ;; html file previews
                                             "poppler" ;; pdf previews
+                                            "ripgrep" ;; used with fzf.sh
                                             ;; "mdcat" markdown previews todo
 
+                                            ;; file browsing (graphical)
+					    "mpv" ;; video player
+                                            "imv" ;; image viewer
+                                            "zathura" ;; document viewer
+                                            "zathura-pdf-mupdf" ;; allows zathura to render pdfs
+
+                                            ;;
 					    ;; system controls
+                                            ;;
 					    "brightnessctl" ;; brightness, might require root setup
 					    "playerctl" ;; mpris controller for media players (play/pause)					    
 					    "wob" ;; graphical slider display 
@@ -77,7 +100,9 @@
                                             ;;"pipewire-pulse"
 					    ;; https://mozilla.github.io/webrtc-landing/gum_test.html
 
+                                            ;;
 					    ;; dev utils
+                                            ;;
 					    "openssh"
 					    "git"
 					    "curl"
@@ -98,24 +123,21 @@
                                             "pinfo" ;; good info reader
                                             "zbar" ;; provides zbarimg which is a barcode reader
 
-                                            ;; file browsing
-					    "mpv" ;; video player
-                                            "imv" ;; image viewer
-                                            "zathura" ;; document viewer
-                                            "zathura-pdf-mupdf" ;; allows zathura to render pdfs
-					    ;; neovim
-					    "neovim"
-					    "wl-clipboard" ;; needed for neovim clipboard to work https://github.com/neovim/neovim/pull/9229
 					    ;; cool utils
                                             "ncdu" ;; disk usage
                                             "powertop" ;; power usage
                                             "btop" ;; cool system monitor, also see glances nmon
 					    ;; other
-					    "firefox-wayland" ;; web browser
 					    "pandoc" ;; file converter (like html -> pdf)
 					    ;;"texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
+                                            
 
-                                            ;; ledger
+                                            ;;
+                                            ;; other software
+                                            ;;
+
+					    "firefox-wayland" ;; web browser
+
                                             "hledger" ;; plain text accounting software
 
                                             ;; heavyweights
@@ -176,6 +198,9 @@
 			,(local-file "config/containers" #:recursive? #t))
 		       ("zathura"
 			,(local-file "config/zathura" #:recursive? #t))
+                       ; todo remove and replace with system agnostic init
+		       ("systemd"
+			,(local-file "config/systemd" #:recursive? #t))
 		       ("git"
 			,(local-file "config/git" #:recursive? #t))))
      (service home-files-service-type
