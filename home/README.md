@@ -1,3 +1,12 @@
+# THEME
+SOLARIZED DARK
+it was foots default suddenly so i started using
+
+bat config
+sway theme.config
+foot default solarized
+
+# WORKFLOW
 starting stuff
 mod+d gui launcher
 mod+shift+d terminal launcher (for btop, ncspot...)
