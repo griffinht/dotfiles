@@ -200,6 +200,8 @@
 			,(local-file "config/zathura" #:recursive? #t))
 		       ("bat"
 			,(local-file "config/bat" #:recursive? #t))
+		       ("fish"
+			,(local-file "config/fish" #:recursive? #t))
                        ; todo remove and replace with system agnostic init
 		       ("systemd"
 			,(local-file "config/systemd" #:recursive? #t))
