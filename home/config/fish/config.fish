@@ -18,3 +18,7 @@ end
 function mark_prompt_start --on-event fish_prompt
     echo -en "\e]133;A\e\\"
 end
+
+function fish_prompt
+    printf '%s$%s ' (set_color $fish_color_cwd) (set_color normal)
+end
