@@ -23,4 +23,6 @@ F fuzzy file name search (fzf)
 <c-f> exact file content search (rg)
 
 
-
+ctpv client/server bruh!
+maybe foot?
+maybe lf?
