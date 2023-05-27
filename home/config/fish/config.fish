@@ -8,3 +8,13 @@ end
 function fish_title
     pwd
 end
+
+function fish_greeting
+    # nothing
+end
+
+# set OSC-133;A for foot prompt jumping
+# https://codeberg.org/dnkl/foot/wiki#fish-1
+function mark_prompt_start --on-event fish_prompt
+    echo -en "\e]133;A\e\\"
+end
