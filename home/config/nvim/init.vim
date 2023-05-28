@@ -1,10 +1,3 @@
-" use relativ path for sourcing? causes issues otherwise i think with my
-" debug.sh script
-" https://stackoverflow.com/questions/46964475/how-can-i-source-files-relative-to-file
-"
-" color scheme
-"source solarized.vim
-
 " line numbers
 set number
 " make them relative numbers
