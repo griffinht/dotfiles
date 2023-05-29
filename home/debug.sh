@@ -33,6 +33,12 @@ case "$PROGRAM" in
         XDG_CONFIG_HOME=$PWD/config emacs $@
         #done
         ;;
+    gtk)
+        rm ~/.config/gtk-3.0
+        rm ~/.config/gtk-4.0
+        ln -s $PWD/config/gtk-x ~/.config/gtk-3.0
+        ln -s $PWD/config/gtk-x ~/.config/gtk-4.0
+        ;;
     *)
         echo unknown program
         exit 1

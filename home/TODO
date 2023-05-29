@@ -1,4 +1,3 @@
-vim get rid of the binaries and package solarized and autosave
 
 
 
@@ -184,6 +183,8 @@ sudo pacman -S xf86-input-wacom
 
 
 # NOT PACKAGED
+adw-gtk3-git
+
 manual
 ncspot with covers support - arch ncspot community?
 ctpv - arch ctpv-git
