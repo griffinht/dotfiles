@@ -217,7 +217,7 @@
                 (".mozilla/firefox/myprofile/user.js",
                  (local-file "firefox/user.js" #:recursive? #t))
                 (".guile",
-                 (local-file "guile"))
+                 (local-file "guile.scm"))
                 (".docker/contexts/meta",
                  (local-file "docker/contexts/meta" #:recursive? #t))
                 (".docker/cli-plugins/docker-compose",
