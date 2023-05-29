@@ -195,5 +195,8 @@ include xdg-desktop-portal.config
 
 include init.config
 
+# unused see gtk.config
+#include gtk.config
+
 # default stuff
 include @sysconfdir@/sway/config.d/*

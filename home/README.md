@@ -1,10 +1,29 @@
+# INSTALLATION
+#~/git
+git clone https://github.com/Pocco81/auto-save.nvim
+git clone https://github.com/lassekongo83/adw-gtk3
+
+#~/git/guix/home (this directory)
+make
+
 # THEME
 SOLARIZED DARK
 it was foots default suddenly so i started using
 
+gtk TODO PACKAGE
+inspiration: https://github.com/Ferdi265/numix-solarized-gtk-theme
+https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
+https://github.com/lassekongo83/adw-gtk3
+currently half broken, needs GTK_THEME=adw-gtk3-dark to be set :(
+
 bat config
+
 sway theme.config
+
 foot default solarized
+
+nvim TODO PACKAGE
+currently used hacked together hardcoded guix vim-solarized
 
 # WORKFLOW
 starting stuff
