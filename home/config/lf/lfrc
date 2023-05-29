@@ -137,29 +137,39 @@ map oO push :execute<space>
 # unmap n
 map n
 
-# nd new directory
+# nm new directory
 cmd mkdir %{{
     mkdir "$1" && lf -remote "send $id select $1"
 }}
-map nx push :xournalpp<space>
-# nf new file
+map nm push :mkdir<space>
+
+# nt new file
 cmd touch %{{
-# todo duplicate code c
+    # todo duplicate code c
     touch "$1" && lf -remote "send $id select $1"
 }}
-map nn push :touch<space>
-map nx %{{
+map nt push :touch<space>
+
+# nc set executable bit
+# todo this is dumb i think
+map nc %{{
     chmod +x "$f"
     # lf must be reloaded to show the executable bit has been set
     lf -remote "send $id reload"
 }}
+
 # nx new xournalpp document
-# todo duplicate code a
 cmd xournalpp &{{
+    # todo duplicate code a
     nohup xournalpp "$1" > /dev/null 2>&1
 }}
-map nd push :mkdir<space>
-#map n %printf 'new file: ' && read && touch "$REPLY" && lf -remote "send $id select $REPLY"
+map nx push :xournalpp<space>
+
+# nn new terminal
+map nn &{{
+    # todo this is non standard and will probably break
+    nohup "$TERM_PROGRAM" > /dev/null 2>&1
+}}
 
 #g git commands
 
