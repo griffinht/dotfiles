@@ -8,13 +8,25 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+#
+# APPEARANCE
+#
+
+# title
 # https://fishshell.com/docs/current/interactive.html#programmable-title
 function fish_title
     pwd
 end
 
+# greeting
 function fish_greeting
     # nothing
+end
+# prompt
+function fish_prompt
+    printf '%s$%s ' (set_color $fish_color_cwd) (set_color normal)
+end
+function fish_right_prompt
 end
 
 # set OSC-133;A for foot prompt jumping
@@ -23,9 +35,9 @@ function mark_prompt_start --on-event fish_prompt
     echo -en "\e]133;A\e\\"
 end
 
-function fish_prompt
-    printf '%s$%s ' (set_color $fish_color_cwd) (set_color normal)
-end
+#
+# KEYBINDS
+#
 
 # https://fishshell.com/docs/current/interactive.html#vi-mode-commands
 function fish_user_key_bindings
@@ -39,7 +51,7 @@ function fish_user_key_bindings
     fish_vi_key_bindings --no-erase insert
 end
 
-# disable ugly mode prompt
+# disable ugly mode prompt from vim mode
 function fish_mode_prompt
 end
 
