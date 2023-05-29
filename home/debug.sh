@@ -10,7 +10,7 @@ case "$PROGRAM" in
         ;;
     nvim)
         while true; do
-            XDG_CONFIG_HOME=$PWD/config nvim
+            XDG_CONFIG_HOME=$PWD/config "$@"
         done
         ;;
     sway)
@@ -27,6 +27,11 @@ case "$PROGRAM" in
         while true; do
             XDG_CONFIG_HOME=$PWD/config fish
         done
+        ;;
+    emacs)
+        #while true; do
+        XDG_CONFIG_HOME=$PWD/config emacs $@
+        #done
         ;;
     *)
         echo unknown program
