@@ -54,6 +54,7 @@
 					    "ncurses" ;; makes foot work
                                             ;; editor
                                             "neovim" ;; the best text editor
+                                            "vim-solarized" ;; this is technically for vim, but using a terrible hack it can work with nvim
 
                                             ;; shell
                                             "fish" ;; amazing interactive shell
@@ -210,6 +211,10 @@
 			,(local-file "config/fish" #:recursive? #t))
 		       ("emacs"
 			,(local-file "config/emacs" #:recursive? #t))
+		       ("gtk-3.0"
+			,(local-file "config/gtk-x" #:recursive? #t))
+		       ("gtk-4.0"
+			,(local-file "config/gtk-x" #:recursive? #t))
                        ; todo remove and replace with system agnostic init
 		       ("systemd"
 			,(local-file "config/systemd" #:recursive? #t))
