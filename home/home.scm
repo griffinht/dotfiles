@@ -202,6 +202,8 @@
 			,(local-file "config/bat" #:recursive? #t))
 		       ("fish"
 			,(local-file "config/fish" #:recursive? #t))
+		       ("emacs"
+			,(local-file "config/emacs" #:recursive? #t))
                        ; todo remove and replace with system agnostic init
 		       ("systemd"
 			,(local-file "config/systemd" #:recursive? #t))
