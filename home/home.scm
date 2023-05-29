@@ -52,8 +52,14 @@
 
 					    "foot" ;; terminal emulator
 					    "ncurses" ;; makes foot work
-                                            "fish" ;; shell
-                                            "neovim" ;; editor
+                                            ;; editor
+                                            "neovim" ;; the best text editor
+
+                                            ;; shell
+                                            "fish" ;; amazing interactive shell
+                                            "lolcat" ;; rainbowizes stuff
+                                            "cowsay"
+
                                             ;; todo switch to emacs evil :) :) :0
 
                                             ;; file browsing
