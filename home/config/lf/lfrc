@@ -11,10 +11,10 @@
 cmd open ${{
 	case $(file --mime-type -Lb "$f") in
                 inode/x-empty)
-                    $PAGER "$f"
+                    $EDITOR "$f"
                     ;;
  		text/*) 
-		    $PAGER "$f"
+		    $EDITOR "$f"
 		    ;;
 		image/*)
 		    nohup imv "$f" > /dev/null 2>&1 &
