@@ -112,7 +112,8 @@ set -g GIT_SSL_CAINFO "$SSL_CERT_FILE"
 set -g PATH "$HOME/.local/bin:$PATH"
 
 # use bat as pager
-set -g PAGER "bat"
+# this is useless and the same as PAGER=less
+#set -g PAGER "bat --style=plain"
 
 # use bat as manpager
 set -g MANPAGER "sh -c 'col -bx | bat -l man -p'"
