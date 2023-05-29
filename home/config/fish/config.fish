@@ -22,11 +22,20 @@ end
 function fish_greeting
     # nothing
 end
+
 # prompt
+# inspiration https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block)
 function fish_prompt
-    printf '%s$%s ' (set_color $fish_color_cwd) (set_color normal)
+    set last_pipestatus $pipestatus
+
+    # todo doesn't work with cat fail | echo success
+    printf '%s%s\n%s>%s ' \
+        (set_color $fish_color_cwd) (string repeat -n (math "$(tput cols) / 2") '◠◡') \
+        (__fish_print_pipestatus '[' ']' '|' (set_color $fish_color_cwd) (set_color $fish_color_error) $last_pipestatus) \
+        (set_color normal)
 end
 function fish_right_prompt
+    printf '%s' (set_color $fish_color_cwd) (date '+%T')
 end
 
 # set OSC-133;A for foot prompt jumping
