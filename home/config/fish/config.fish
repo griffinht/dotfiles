@@ -111,8 +111,14 @@ set -g GIT_SSL_CAINFO "$SSL_CERT_FILE"
 # add local bin for testing
 set -g PATH "$HOME/.local/bin:$PATH"
 
+# use bat as pager
+set -g PAGER "bat"
+
 # use bat as manpager
 set -g MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
+# set editor
+set -g EDITOR "nvim"
 
 #
 # ALIASES
