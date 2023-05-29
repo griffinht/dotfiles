@@ -131,11 +131,10 @@ alias ssh="TERM=linux command ssh $argv"
 # MAIN
 #
 
-#if lf level is set and it is 0
-#if [ -z "$LF_LEVEL" ] || [ "$LF_LEVEL" -eq 0 ]; then
-#    # only if it exists
-#    if which lf > /dev/null; then
-#        SHELL=fish exec lf
-#    fi 
-#fi
-
+# if lf level is set and it is 0
+if test -z "$LF_LEVEL" || test "$LF_LEVEL" -eq 0
+    # only if it exists
+    if which lf > /dev/null
+        exec lf
+    end 
+end
