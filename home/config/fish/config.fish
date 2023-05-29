@@ -1,3 +1,7 @@
+#
+# FISH
+#
+
 #https://stackoverflow.com/questions/28444740/how-to-use-vi-mode-in-fish-shell
 
 if status is-interactive
@@ -38,3 +42,45 @@ end
 # disable ugly mode prompt
 function fish_mode_prompt
 end
+
+#bind -k nul 'do something'
+#bind \t accept-autosuggestion
+#bind \r accept-autosuggestion
+
+#
+# ENVIRONMENT
+#
+
+# make ssh work on guix foreign distro
+# not needed for guix distro????
+# but arch needs this and probably debian
+# when nss-certs is installed
+set -g SSL_CERT_DIR "$HOME/.guix-profile/etc/ssl/certs"
+set -g SSL_CERT_FILE "$HOME/.guix-profile/etc/ssl/certs/ca-certificates.crt"
+set -g GIT_SSL_CAINFO "$SSL_CERT_FILE"
+
+# add local bin for testing
+set -g PATH "$HOME/.local/bin:$PATH"
+
+# use bat as manpager
+set -g MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
+#
+# ALIASES
+#
+
+# temp fix for ssh on remote terminals without foot installed (which is all of them)
+alias ssh="TERM=linux command ssh $argv"
+
+#
+# MAIN
+#
+
+#if lf level is set and it is 0
+#if [ -z "$LF_LEVEL" ] || [ "$LF_LEVEL" -eq 0 ]; then
+#    # only if it exists
+#    if which lf > /dev/null; then
+#        SHELL=fish exec lf
+#    fi 
+#fi
+

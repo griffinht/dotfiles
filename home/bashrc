@@ -2,63 +2,13 @@
 # BASH CONFIG
 #
 
+# obsolete with fish
 # set window title to working directory
-PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
-
-# vim binds
-set -o vi
+#PROMPT_COMMAND='echo -en "\033]0;$(pwd)\a"'
 
 #
 # ENVIRONMENT VARIABLES
 #
 
-# make ssh work on guix foreign distro
-# not needed for guix distro????
-# but arch needs this and probably debian
-# when nss-certs is installed
-export SSL_CERT_DIR="$HOME/.guix-profile/etc/ssl/certs"
-export SSL_CERT_FILE="$HOME/.guix-profile/etc/ssl/certs/ca-certificates.crt"
-export GIT_SSL_CAINFO="$SSL_CERT_FILE"
-
-# add local bin for testing
-export PATH="$HOME/.local/bin:$PATH"
-
-# use bat as manpager
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-#
-# ALIASES
-#
-
-# temp fix for ssh on remote terminals without foot installed (which is all of them)
-footssh() {
-	TERM=linux ssh $@
-}
-alias ssh=footssh
-
-newterminal() {
-    LF_LEVEL=0 foot > /dev/null 2> /dev/null &
-}
-alias new=newterminal
-
-# network manager doesnt work with foot term for some reason, this seems to fix it
-alias nmtui='TERM=linux nmtui'
-
-
-
-
-
-
-#
-# DEFAULT PROGRAM
-# start lf with fish shell
 # bash is fine as an initial login shell (its usually the default across linux), i just immediately switch to fish for the rest of my user stuff
-# i could however try to move more config over to fish shell
-#
-
-if [ -z "$LF_LEVEL" ] || [ "$LF_LEVEL" -eq 0 ]; then
-    # only if it exists
-    if which lf > /dev/null; then
-        SHELL=fish exec lf
-    fi 
-fi
+exec fish
