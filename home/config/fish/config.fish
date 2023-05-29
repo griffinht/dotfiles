@@ -43,9 +43,14 @@ end
 function fish_mode_prompt
 end
 
-#bind -k nul 'do something'
-#bind \t accept-autosuggestion
-#bind \r accept-autosuggestion
+# rememebr we are in vim mode which means our binds need to be in insert mode
+
+# control+space cycle through autocompletes
+bind -M insert -k nul complete
+# tab accept next word
+bind -M insert \t forward-bigword
+# shift+enter accept all and execute
+bind -M insert \e\[27\;2\;13~ accept-autosuggestion execute
 
 #
 # ENVIRONMENT
