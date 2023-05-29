@@ -20,8 +20,9 @@ end
 
 # greeting
 function fish_greeting
-    # nothing
-    # todo cowsay
+    cbonsai -p
+    pwd | figlet -tr | lolcat --24bit --invert
+    echo "welcome to the fish shell, $USER" | cowsay | lolcat --24bit
 end
 
 # prompt
@@ -46,19 +47,32 @@ function fish_prompt
         set right_brace $brace_color$right_brace
         set separator $brace_color$separator$status_color
 
-        set last_pipestatus $left_brace$status_color$(fish_status_to_signal $last_pipestatus | string join $separator)$right_brace
+        printf '%s%s' \
+            "looks like your program exited with a " \
+            (fish_status_to_signal $last_pipestatus | string join $separator) \
+            | cowsay -d | lolcat --24bit > /dev/tty
+        #set last_pipestatus $left_brace$status_color$(fish_status_to_signal $last_pipestatus | string join $separator)$right_brace
+        set last_pipestatus ''
     else
         set last_pipestatus ''
     end
 
-    # todo lolcat
-    printf '%s%s\n%s>%s ' \
-        (set_color $fish_color_cwd) (string repeat -n (math "$(tput cols) / 2") '◠◡') \
-        $last_pipestatus \
+        #$last_pipestatus \
+        #printf '%s%s\n%s>%s ' \
+        #(set_color $fish_color_cwd) (string repeat -n (math "$(tput cols) / 2" | lolcat) '◠◡') \
+        #(set_color normal)
+    #echo | figlet -trf mnemonic | lolcat --24bit --invert > /dev/tty
+
+    # flush solid line without that wierd gap on the right, doesn't work with echo (inserts unwanted newline)
+    # note this doesn't display on fresh terminals for some reason but its actually fine and looks better probably
+    printf '%s' (string repeat -n (math "$(tput cols) + 0") ' ') | lolcat --24bit --invert > /dev/tty
+    printf '%s%s%s' \
+        (set_color $fish_color_cwd) \
+        'o > ' \
         (set_color normal)
 end
 function fish_right_prompt
-    printf '%s' (set_color $fish_color_cwd) (date '+%T')
+    printf '%s ' (set_color $fish_color_cwd) (date '+%T' | lolcat)
 end
 
 # set OSC-133;A for foot prompt jumping

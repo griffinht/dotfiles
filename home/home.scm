@@ -58,8 +58,13 @@
 
                                             ;; shell
                                             "fish" ;; amazing interactive shell
-                                            "lolcat" ;; rainbowizes stuff
-                                            "cowsay"
+                                            "lolcat" ;; cat but colorful
+                                            "cowsay" ;; cat but meat-based
+                                            "figlet" ;; cat but bannerized
+                                            "cbonsai" "sl" "cmatrix" ;; animation
+                                            ;; doesn't work with guix home :(
+                                            ;;"daikichi" "fortunes-jkirchartz" ;; provides fortune for daikichi
+                                            
 
                                             ;; todo switch to emacs evil :) :) :0
 
