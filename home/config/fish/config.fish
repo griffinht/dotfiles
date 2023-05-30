@@ -20,8 +20,9 @@ end
 
 # greeting
 function fish_greeting
-    cbonsai -p
-    pwd | figlet -tr | lolcat --24bit --invert
+    # so pretty yet so terribly hard to read in a real shell
+    #cbonsai -p
+    #pwd | figlet -tr | lolcat --24bit --invert
     echo "welcome to the fish shell, $USER" | cowsay | lolcat --24bit
 end
 
@@ -68,7 +69,7 @@ function fish_prompt
     printf '%s' (string repeat -n (math "$(tput cols) + 0") ' ') | lolcat --24bit --invert > /dev/tty
     printf '%s%s%s' \
         (set_color $fish_color_cwd) \
-        'o > ' \
+        ' ▬▶ ' \
         (set_color normal)
 end
 function fish_right_prompt
