@@ -71,6 +71,8 @@ function fish_prompt
 
     # flush solid line without that wierd gap on the right, doesn't work with echo (inserts unwanted newline)
     # note this doesn't display on fresh terminals for some reason but its actually fine and looks better probably
+    #(string repeat -n (math "$(tput cols) + 0") ' ' | lolcat --24bit --invert) \
+        #string repeat -n (tput cols) ' ' | lolcat --24bit --invert
     printf '%s%s\n%s%s' \
         (set_color $fish_color_cwd) \
         (string repeat -n (math "$(tput cols) / 2") '◠◡') \
