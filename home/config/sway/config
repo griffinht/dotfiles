@@ -195,6 +195,8 @@ include xdg-desktop-portal.config
 
 include init.config
 
+include theme.config
+
 # unused see gtk.config
 #include gtk.config
 
