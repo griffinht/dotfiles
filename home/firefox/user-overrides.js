@@ -14,3 +14,7 @@ user_pref("signon.rememberSignons", false);  // [DEFAULT: true]
 
 //user_pref("dom.webgpu.enabled", true);
 //opengl is also disabled
+
+// this defeats like the whole purpose of arkenfox??
+// idk who cares bruh
+user_pref("privacy.resistFingerprinting", false); // i want my dark mode
