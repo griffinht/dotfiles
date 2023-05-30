@@ -118,22 +118,22 @@ bind -M insert \e\[27\;2\;13~ accept-autosuggestion execute
 # not needed for guix distro????
 # but arch needs this and probably debian
 # when nss-certs is installed
-set -g SSL_CERT_DIR "$HOME/.guix-profile/etc/ssl/certs"
-set -g SSL_CERT_FILE "$HOME/.guix-profile/etc/ssl/certs/ca-certificates.crt"
-set -g GIT_SSL_CAINFO "$SSL_CERT_FILE"
+set -x SSL_CERT_DIR "$HOME/.guix-profile/etc/ssl/certs"
+set -x SSL_CERT_FILE "$HOME/.guix-profile/etc/ssl/certs/ca-certificates.crt"
+set -x GIT_SSL_CAINFO "$SSL_CERT_FILE"
 
 # add local bin for testing
-set -g PATH "$HOME/.local/bin:$PATH"
+set -x PATH "$HOME/.local/bin:$PATH"
 
 # use bat as pager
 # this is useless and the same as PAGER=less
-#set -g PAGER "bat --style=plain"
+#set -x PAGER "bat --style=plain"
 
 # use bat as manpager
-set -g MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 # set editor
-set -g EDITOR "nvim"
+set -x EDITOR "nvim"
 
 #
 # ALIASES
