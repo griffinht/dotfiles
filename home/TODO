@@ -1,37 +1,9 @@
-
-
-
 vim autosave
 re look over all sway move commands
-make new file
-execute in terminal
-delete
-make file executable/toggle exectute bit
-look at what you are doing - heck maybe even record it?
-
-REDUCE THAT FEEDBACK CYCLE
-MAKE THINGS EASIER
 https://invidious.hot.griffinht.com/watch?v=8Ab3ArE8W3s&listen=false
 
 
 
-why does rm permanarntly delete
-todo trash-cli lf shortcut
-trash-cli
-
-why do i have to guix home reconfigure every sway reconfigure
-my top priority should be reducing feedback cycles
-live edit? it depends i suppose
-how can i make iline website faster? i certainly can!
-stop rejecting browser live load!
-vim autosdave!
-
-stop git add git commit its so terribly slow!
-when i git add git commit i want to see my changes how?
-
-
-
-todo scrobble
 docker podman
 https://hot.griffinht.com/searx/search?t=ffab&q=site%3Anews.ycombinator.com+podman+vs+docker+composejjj
 
@@ -58,21 +30,6 @@ https://www.freedesktop.org/wiki/Software/xdg-utils/
 qt applications - qtwayland @ v5
     use qt5ct to test
 root guix home!??!
-todo put bin in git? its manual anyways so why not?
-also fr learn guix
-
-# EQUALIZER
-pacmand python-pyqt5
-it dont work
-guix python-dbus dbus-python python-pyqt python-qtpy
-
-# AUDACITRY
-https://wiki.archlinux.org/title/PulseAudio/Troubleshooting#Audacity
-pasuspender -- audacity
-https://askubuntu.com/questions/1098666/iec958-s-pdif-not-working
-https://bbs.archlinux.org/viewtopic.php?id=87003
-https://unix.stackexchange.com/questions/656920/audacity-only-hears-system-sounds
-
 
 # COMMANDS
 loginctl lock-session
@@ -90,8 +47,6 @@ systemctl poweroff
 
 
 
-
-todo add to thing - what is this lol
 
 # ARCH
 document nfs-utils on hoist orr not?
@@ -253,6 +208,10 @@ remove all these things
 https://gist.github.com/mhitza/a00d7900571e9f13bac2bbf4a203d21b
 
 
+
+
+
+
 check this possibly cool thing out
 https://github.com/Naheel-Azawy/stpv#configuration
 https://github.com/Naheel-Azawy/fmz
@@ -264,25 +223,12 @@ lf git integrations
 
 
 make emojies work
- # FISH STUFF
-https://github.com/PatrickF1/fzf.fish
-https://github.com/jethrokuan/fzf
-https://github.com/jorgebucaran/autopair.fish
 
 
-https://github.com/darch7/swaywm/tree/main/sway-light/config/sway
-xournalpp theming!
 sway launcher change to use foot opacity instead of sway
 https://www.jwz.org/doc/
 read all the fish docs
-https://github.com/IlanCosman/tide
 delta
-https://starship.rs/
-https://github.com/jorgebucaran/cookbook.fish
 https://github.com/ryanoasis/nerd-fonts
 https://github.com/alebcay/awesome-shell
 https://brettterpstra.com/2021/12/24/a-fuzzy-cd-command-for-fish/
-
-
-EMACS
-check out both color solarized schemes!

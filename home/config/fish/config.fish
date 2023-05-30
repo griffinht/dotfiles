@@ -1,3 +1,8 @@
+
+ # FISH STUFF
+ #https://github.com/PatrickF1/fzf.fish
+ #https://github.com/jethrokuan/fzf
+
 #
 # FISH
 #
