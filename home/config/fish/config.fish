@@ -147,6 +147,10 @@ set -x EDITOR "nvim"
 
 # temp fix for ssh on remote terminals without foot installed (which is all of them)
 alias ssh="TERM=linux command ssh $argv"
+# always use 24 bit color with lolcat
+alias lolcat="command lolcat --24bit $argv"
+# always use full terminal width with figlet
+alias figlet="command figlet -t $argv"
 
 #
 # MAIN
