@@ -116,6 +116,7 @@ end
 # control+space cycle through autocompletes
 bind -M insert -k nul complete
 # tab accept next word
+# todo can this also move forward a space? otherwise i have to press space
 bind -M insert \t forward-bigword
 # shift+enter accept all and execute
 bind -M insert \e\[27\;2\;13~ accept-autosuggestion execute
