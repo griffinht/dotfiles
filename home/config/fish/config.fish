@@ -43,6 +43,8 @@ function fish_prompt
     #     it doesnt work with false | true, only true | false works
     #     my implementation fixes this
     if test (math (string join '+' $last_pipestatus)) -ne 0
+        # todo only print this once - shouldn't keep going multiple times
+        # or just stop using cowsay :( its so pretty but so distracting
         set separator '|'
         set left_brace '['
         set right_brace '] '
