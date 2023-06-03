@@ -2,6 +2,7 @@
 #~/git
 git clone https://github.com/Pocco81/auto-save.nvim
 git clone https://github.com/lassekongo83/adw-gtk3
+git clone https://github.com/ledger/vim-ledger
 
 #~/git/guix/home (this directory)
 make

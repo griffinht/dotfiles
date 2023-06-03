@@ -39,7 +39,8 @@ set rtp+=~/.guix-home/profile/share/vim/vimfiles
 let g:solarized_termtrans=1
 colorscheme solarized
 
-
+" hledger vim
+set rtp+=~/git/vim-ledger
 
 "disable this for now, it doesn't really work well
 "lua require("mytreesitter")
