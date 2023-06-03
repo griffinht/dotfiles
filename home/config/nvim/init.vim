@@ -38,3 +38,8 @@ set rtp+=~/.guix-home/profile/share/vim/vimfiles
 " disable solarized double background
 let g:solarized_termtrans=1
 colorscheme solarized
+
+
+
+"disable this for now, it doesn't really work well
+"lua require("mytreesitter")
