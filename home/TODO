@@ -118,6 +118,13 @@ firefox arkenfox see readme
 # pretty sure i just need the wacom kernel module driver
 sudo pacman -S xf86-input-wacom
 
+###
+neovim-nvim-treesitter
+create ~/.local/share/nvim-treesitter
+note that this will use neovim's treesitter package manager thing
+the real solution is to make all the treesitter definitions a big guix package so the treesitter directory can be immutable
+
+
 
 
 
