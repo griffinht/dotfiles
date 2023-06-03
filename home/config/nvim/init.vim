@@ -22,7 +22,7 @@ set noshowmode
 " todo package this
 " temporary auto save installation plugin
 " toggle with :ASToggle
-set rtp+=/home/griffin/git/auto-save.nvim
+set rtp+=~/git/auto-save.nvim
 
 " todo set titlestring=
 "https://neovim.discourse.group/t/help-needed-customizing-nvim-terminal-title/721
