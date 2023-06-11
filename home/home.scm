@@ -101,6 +101,7 @@
 					    ;;"pulseaudio" ;; no more pulse!
 
                                             ;; pipewire/sound
+                                            "bluez" ;; bluetoothctl
                                             ;; todo guix pulse bluetooth https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/#module-bluetooth-discover
                                             ;; todo figure out how to make a guix package!
                                             ;;"xdg-desktop-portal" ;; needed for pipewire and things i guess
