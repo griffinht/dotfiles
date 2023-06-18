@@ -42,6 +42,15 @@ case "$PROGRAM" in
     vdirsyncer)
         XDG_CONFIG_HOME="$PWD/config" "$@"
         ;;
+    khard)
+        XDG_CONFIG_HOME="$PWD/config" "$@"
+        ;;
+    khal)
+        XDG_CONFIG_HOME="$PWD/config" "$@"
+        ;;
+    ikhal)
+        XDG_CONFIG_HOME="$PWD/config" "$@"
+        ;;
     *)
         echo unknown program
         exit 1

@@ -1,0 +1,7 @@
+[calendars]
+    [[calendar]]
+    path = ~/.local/state/calendar/calendar
+
+    [[birthdays]]
+    path = ~/.local/state/contacts/addressbook
+    type = birthdays
