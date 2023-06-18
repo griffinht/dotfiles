@@ -1,4 +1,3 @@
-# todo env vars
 [general]
 status_path = "~/.local/state/vdirsyncer"
 
@@ -16,7 +15,9 @@ fileext = ".vcf"
 type = "carddav"
 url = "http://127.0.0.1:8080"
 username = "griffin"
-password = ""
+# todo use keyring
+#https://vdirsyncer.readthedocs.io/en/latest/keyring.html
+password.fetch = ["command", "cat", "~/.local/state/davpassword"]
 
 
 [pair calendar]
@@ -33,4 +34,6 @@ fileext = ".ics"
 type = "caldav"
 url = "http://127.0.0.1:8080"
 username = "griffin"
-password = ""
+# todo use keyring
+#https://vdirsyncer.readthedocs.io/en/latest/keyring.html
+password.fetch = ["command", "cat", "~/.local/state/davpassword"]
