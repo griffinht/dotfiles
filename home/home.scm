@@ -55,6 +55,9 @@
                                             ;; editor
                                             "neovim" ;; the best text editor
                                             "vim-solarized" ;; this is technically for vim, but using a terrible hack it can work with nvim
+                                            ;; todo email "aerc" "mutt"
+                                            "vdirsyncer" ;; sync calendar/contacts via caldav/carddav
+                                            "khard" "khal" ;; calendar/contacts
 
                                             ;; shell
                                             "fish" ;; amazing interactive shell
