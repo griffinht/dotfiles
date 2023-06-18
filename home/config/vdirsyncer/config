@@ -8,7 +8,7 @@ collections = ["addressbook"]
 
 [storage contacts_local]
 type = "filesystem"
-path = "~/.local/share/contacts"
+path = "~/.local/state/contacts"
 fileext = ".vcf"
 
 [storage contacts_remote]
@@ -27,7 +27,7 @@ collections = ["calendar"]
 
 [storage calendar_local]
 type = "filesystem"
-path = "~/.local/share/calendar"
+path = "~/.local/state/calendar"
 fileext = ".ics"
 
 [storage calendar_remote]
