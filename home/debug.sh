@@ -39,6 +39,9 @@ case "$PROGRAM" in
         ln -s $PWD/config/gtk-x ~/.config/gtk-3.0
         ln -s $PWD/config/gtk-x ~/.config/gtk-4.0
         ;;
+    vdirsyncer)
+        XDG_CONFIG_HOME="$PWD/config" "$@"
+        ;;
     *)
         echo unknown program
         exit 1

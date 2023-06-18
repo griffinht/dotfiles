@@ -1,0 +1,36 @@
+# todo env vars
+[general]
+status_path = "~/.local/state/vdirsyncer"
+
+[pair contacts]
+a = "contacts_local"
+b = "contacts_remote"
+collections = ["addressbook"]
+
+[storage contacts_local]
+type = "filesystem"
+path = "~/.local/share/contacts"
+fileext = ".vcf"
+
+[storage contacts_remote]
+type = "carddav"
+url = "http://127.0.0.1:8080"
+username = "griffin"
+password = ""
+
+
+[pair calendar]
+a = "calendar_local"
+b = "calendar_remote"
+collections = ["calendar"]
+
+[storage calendar_local]
+type = "filesystem"
+path = "~/.local/share/calendar"
+fileext = ".ics"
+
+[storage calendar_remote]
+type = "caldav"
+url = "http://127.0.0.1:8080"
+username = "griffin"
+password = ""
