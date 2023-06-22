@@ -130,7 +130,7 @@ podman
 netavark is for dns
 podman-compose installs everything necessary
 note will probably require restat as this uses overlayfs or something
-pacman -S podman-compose netavark
+pacman -S podman-compose aardvark-dns
 
 
 
