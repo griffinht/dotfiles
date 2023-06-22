@@ -84,6 +84,7 @@
                                             "lynx" ;; html file previews
                                             "poppler" ;; pdf previews
                                             "ripgrep" ;; used with fzf.sh
+                                            "unzip" ;; zip previews
                                             ;; "mdcat" markdown previews todo
 
                                             ;; file browsing (graphical)
