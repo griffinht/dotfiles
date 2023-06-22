@@ -132,6 +132,8 @@ podman-compose installs everything necessary
 note will probably require restat as this uses overlayfs or something
 pacman -S podman-compose aardvark-dns
 
+systemctl enable --now podman.socket
+
 
 
 
