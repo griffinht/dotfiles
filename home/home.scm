@@ -156,6 +156,7 @@
 					    "firefox-wayland" ;; web browser
 
                                             "hledger" ;; plain text accounting software
+                                            "dino" ;; xmpp client
 
                                             ;; heavyweights
                                             ;; heavyweights
