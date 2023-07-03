@@ -157,6 +157,7 @@
 
                                             "hledger" ;; plain text accounting software
                                             "dino" ;; xmpp client
+                                            "gajim" "gajim-omemo" ;; other xmpp client
 
                                             ;; heavyweights
                                             ;; heavyweights
