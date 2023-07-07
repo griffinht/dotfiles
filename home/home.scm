@@ -157,7 +157,7 @@
 
                                             "hledger" ;; plain text accounting software
                                             "dino" ;; xmpp client
-                                            "gajim" "gajim-omemo" ;; other xmpp client
+                                            "gajim" "gajim-omemo" ;; other xmpp client todo omemo doesn't work
 
                                             ;; heavyweights
                                             ;; heavyweights
@@ -167,7 +167,7 @@
                                             "obs" ;; recording
                                             "audacity" ;; audacity
 					    "xournalpp" ;; drawing gui
-					    "libreoffice" ;; office
+					    "libreoffice" "hunspell-dict-en" ;; office todo spellcheck doesnt work :(
                                             ;; qt
                                             ;; instead i have to guix shell qtwayland@y
                                             ;;"qtwayland@5" ;; qt applications, seems to need 5?
