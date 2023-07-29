@@ -1,6 +1,7 @@
 [calendars]
     [[calendar]]
     path = ~/.local/state/calendar/calendar
+    type = calendar
 
     [[birthdays]]
     path = ~/.local/state/contacts/addressbook
