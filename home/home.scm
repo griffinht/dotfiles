@@ -230,6 +230,10 @@
                        ; todo remove and replace with system agnostic init
 		       ("systemd"
 			,(local-file "config/systemd" #:recursive? #t))
+		       ("khal"
+			,(local-file "config/khal" #:recursive? #t))
+		       ("khard"
+			,(local-file "config/khard" #:recursive? #t))
 		       ("git"
 			,(local-file "config/git" #:recursive? #t))))
      (service home-files-service-type
