@@ -142,6 +142,8 @@ set -x PATH "$HOME/.local/bin:$PATH"
 
 # use bat as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# https://github.com/sharkdp/bat/issues/2593
+set -x MANROFFOPT '-c' 
 
 # set editor
 set -x EDITOR "nvim"
