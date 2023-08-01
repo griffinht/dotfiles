@@ -75,9 +75,10 @@ function fish_prompt
     # note this doesn't display on fresh terminals for some reason but its actually fine and looks better probably
     #(string repeat -n (math "$(tput cols) + 0") ' ' | lolcat --24bit --invert) \
         #string repeat -n (tput cols) ' ' | lolcat --24bit --invert
+    # note $(tput cols) can return x.5 so we need to truncate decimals
     printf '%s%s\n%s%s' \
         (set_color $fish_color_cwd) \
-        (string repeat -n (math "$(tput cols) / 2") '◠◡') \
+        (string repeat -n (math --scale 0 "$(tput cols) / 2") '◠◡') \
         ' ▬▶ ' \
         (set_color normal)
 end
