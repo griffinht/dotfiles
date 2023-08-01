@@ -29,7 +29,8 @@
   ;; specification->packages seems to dynamically load things
   ;; so we don't have to have a bunch of different use-modules declarations for each package
   ;; but for my-hello we still do it the regular way
-  (packages (append (list mylf) (specifications->packages (list 
+  (packages (append (list mylf) 
+                    (specifications->packages (list 
                                             ;; needed to make things work i think?
 					    "glibc-locales"
 
@@ -56,8 +57,8 @@
                                             "neovim" ;; the best text editor
                                             "vim-solarized" ;; this is technically for vim, but using a terrible hack it can work with nvim
                                             "vdirsyncer" ;; sync calendar/contacts via caldav/carddav
-                                            "khard" "khal" ;; calendar/contacts
-                                            "aerc" ;; email
+                                            "khard" "khal" ;; calendar/contacts via vdirsyncer ;todo also check out calcurse?
+                                            "aerc" ;; email client
 
                                             ;; shell
                                             "fish" ;; amazing interactive shell
@@ -135,10 +136,10 @@
                                             "sshpass"
                                             "wireguard-tools" ;; wg-quick
                                             "bind:utils" ;; dig
-                                            "whois"
+                                            "whois" ;; whois domain registrar lookups
                                             "units" ;; unit conversions! it kind of sucks but idk
-                                            "pinfo" ;; good info reader
-                                            "zbar" ;; provides zbarimg which is a barcode reader
+                                            "pinfo" ;; good? info reader - seems like they all suck except for emacs users
+                                            "zbar" ;; zbarimg - barcode reader
 
 					    ;; cool utils
                                             "ncdu" ;; disk usage
@@ -179,7 +180,7 @@
                                             ;; development?
 
                                             ;;"openjdk:jdk" ;; jdk
-                                            "podman" ;; todo slirp4netns does not work, current workaround is --network=none or --network=host
+                                            "podman" ;; todo slirp4netns does not work (or does it??), current workaround is --network=none or --network=host
                                             "docker-cli" ;; docker cli for remote daemons so far
                                             ;;"docker" ;; todo start rootless daemon
 					    ))))
@@ -227,13 +228,17 @@
 			,(local-file "config/gtk-x" #:recursive? #t))
 		       ("gtk-4.0"
 			,(local-file "config/gtk-x" #:recursive? #t))
-                       ; todo remove and replace with system agnostic init
+                       ; todo remove and replace with system agnostic init - shepherd :)
 		       ("systemd"
 			,(local-file "config/systemd" #:recursive? #t))
 		       ("khal"
 			,(local-file "config/khal" #:recursive? #t))
 		       ("khard"
 			,(local-file "config/khard" #:recursive? #t))
+		       ("aerc/aerc.conf"
+			,(local-file "config/aerc/aerc.conf" #:recursive? #t))
+		       ("aerc/binds.conf"
+			,(local-file "config/aerc/binds.conf" #:recursive? #t))
 		       ("git"
 			,(local-file "config/git" #:recursive? #t))))
      (service home-files-service-type
@@ -241,6 +246,7 @@
                 ;; todo i hate how clunk this is but it seems to work
                 ;; also its bad to install arkenfox in source code but it does beat manual installation?
                 ;; todo this is probably the wrong way to do this
+                ;; todo uninstall arkenfox? it seems dumb
                 (".mozilla/firefox/myprofile/user.js",
                  (local-file "firefox/user.js" #:recursive? #t))
                 (".guile",
