@@ -46,3 +46,4 @@ F fuzzy file name search (fzf)
 ctpv client/server bruh!
 maybe foot?
 maybe lf?
+
