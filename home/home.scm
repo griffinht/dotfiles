@@ -59,6 +59,7 @@
                                             "vdirsyncer" ;; sync calendar/contacts via caldav/carddav
                                             "khard" "khal" ;; calendar/contacts via vdirsyncer ;todo also check out calcurse?
                                             "aerc" ;; email client
+                                            "weechat" "irssi" ;; irc clients todo pick one and configure it
 
                                             ;; shell
                                             "fish" ;; amazing interactive shell
@@ -126,13 +127,24 @@
 					    "curl"
                                             "make"
                                             "python"
+                                            ;;"openjdk:jdk" ;; jdk
+                                            ;;
                                             ;; guile
+                                            ;;
                                             ;; note this requires GUILE_LOAD_PATH to be set or .guile to be modified
                                             ;; it works both ways!
                                             "guile"
                                             "guile-colorized"
                                             "guile-readline"
+                                            ;;
+                                            ;; docker
+                                            ;;
+                                            "podman" ;; todo slirp4netns does not work (or does it??), current workaround is --network=none or --network=host
+                                            "docker-cli" ;; docker cli for remote daemons so far
+                                            ;"docker" ;; todo start rootless daemon
+                                            ;;
                                             ;; other utils
+                                            ;;
                                             "sshpass"
                                             "wireguard-tools" ;; wg-quick
                                             "bind:utils" ;; dig
@@ -147,17 +159,17 @@
                                             "btop" ;; cool system monitor, also see glances nmon
 					    ;; other
 					    "pandoc" ;; file converter (like html -> pdf)
-					    ;;"texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
+					    ;"texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
                                             
 
                                             ;;
-                                            ;; other software
+                                            ;; graphical software
                                             ;;
 
 					    "firefox-wayland" ;; web browser
 
                                             "hledger" ;; plain text accounting software
-                                            "dino" ;; xmpp client
+                                            "dino" ;; xmpp client - works with snikket! :) :) :) thanks devs! <3
                                             "gajim" "gajim-omemo" ;; other xmpp client todo omemo doesn't work
 
                                             ;; heavyweights
@@ -174,15 +186,6 @@
                                             ;;"qtwayland@5" ;; qt applications, seems to need 5?
                                             ;;"kdenlive" ;; qt video editor
                                             ;;qt apps dont work with guix home
-
-                                            ;; development?
-                                            ;; development?
-                                            ;; development?
-
-                                            ;;"openjdk:jdk" ;; jdk
-                                            "podman" ;; todo slirp4netns does not work (or does it??), current workaround is --network=none or --network=host
-                                            "docker-cli" ;; docker cli for remote daemons so far
-                                            ;;"docker" ;; todo start rootless daemon
 					    ))))
   ;; note that on debian i had to install glibc-locales or something
 
