@@ -28,31 +28,13 @@ case "$PROGRAM" in
             XDG_CONFIG_HOME=$PWD/config fish
         done
         ;;
-    emacs)
-        #while true; do
-        XDG_CONFIG_HOME=$PWD/config emacs $@
-        #done
-        ;;
     gtk)
         rm ~/.config/gtk-3.0
         rm ~/.config/gtk-4.0
         ln -s $PWD/config/gtk-x ~/.config/gtk-3.0
         ln -s $PWD/config/gtk-x ~/.config/gtk-4.0
         ;;
-    vdirsyncer)
-        XDG_CONFIG_HOME="$PWD/config" "$@"
-        ;;
-    khard)
-        XDG_CONFIG_HOME="$PWD/config" "$@"
-        ;;
-    khal)
-        XDG_CONFIG_HOME="$PWD/config" "$@"
-        ;;
-    ikhal)
-        XDG_CONFIG_HOME="$PWD/config" "$@"
-        ;;
     *)
-        echo unknown program
-        exit 1
+        XDG_CONFIG_HOME="$PWD/config" "$@"
         ;;
 esac
