@@ -1,0 +1,2 @@
+note the accounts.conf symlink is just for debugging
+it is not actually added to the user's home directory on guix home reconfigure
