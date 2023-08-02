@@ -149,9 +149,11 @@
                                             "wireguard-tools" ;; wg-quick
                                             "bind:utils" ;; dig
                                             "whois" ;; whois domain registrar lookups
+                                            "arp-scan" ;; sudo arp-scan --localnet
                                             "units" ;; unit conversions! it kind of sucks but idk
                                             "pinfo" ;; good? info reader - seems like they all suck except for emacs users
                                             "zbar" ;; zbarimg - barcode reader
+                                            "qrencode" ;; qr code encoder
 
 					    ;; cool utils
                                             "ncdu" ;; disk usage
