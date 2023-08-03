@@ -60,9 +60,6 @@ function fish_prompt
             (fish_status_to_signal $last_pipestatus | string join $separator) \
             | cowsay -d | lolcat --24bit > /dev/tty
         #set last_pipestatus $left_brace$status_color$(fish_status_to_signal $last_pipestatus | string join $separator)$right_brace
-        set last_pipestatus ''
-    else
-        set last_pipestatus ''
     end
 
         #$last_pipestatus \
