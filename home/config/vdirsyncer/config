@@ -13,8 +13,8 @@ fileext = ".vcf"
 
 [storage contacts_remote]
 type = "carddav"
-url = "http://127.0.0.1:8080"
-username = "griffin"
+url = "https://cdav.migadu.com/"
+username = "davsmarta98wsejf@griffinht.com"
 # todo use keyring
 #https://vdirsyncer.readthedocs.io/en/latest/keyring.html
 password.fetch = ["command", "cat", "~/.local/state/davpassword"]
@@ -32,8 +32,8 @@ fileext = ".ics"
 
 [storage calendar_remote]
 type = "caldav"
-url = "http://127.0.0.1:8080"
-username = "griffin"
+url = "https://cdav.migadu.com/calendars/davsmarta98wsejf@griffinht.com/calendar"
+username = "davsmarta98wsejf@griffinht.com"
 # todo use keyring
 #https://vdirsyncer.readthedocs.io/en/latest/keyring.html
 password.fetch = ["command", "cat", "~/.local/state/davpassword"]
