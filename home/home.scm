@@ -59,6 +59,7 @@
                                             "vdirsyncer" ;; sync calendar/contacts via caldav/carddav
                                             "khard" "khal" ;; calendar/contacts via vdirsyncer ;todo also check out calcurse?
                                             "aerc" ;; email client
+                                            "icedove-wayland" ;; email client that actually works
                                             "weechat" "irssi" ;; irc clients todo pick one and configure it
 
                                             ;; shell
@@ -142,9 +143,11 @@
                                             "podman" ;; todo slirp4netns does not work (or does it??), current workaround is --network=none or --network=host
                                             "docker-cli" ;; docker cli for remote daemons so far
                                             ;"docker" ;; todo start rootless daemon
+                                            "qemu" ;; virtualization
                                             ;;
                                             ;; other utils
                                             ;;
+                                            "iperf" ;; iperf3 -c hot.griffinht.com - speedtest
                                             "sshpass"
                                             "wireguard-tools" ;; wg-quick
                                             "bind:utils" ;; dig
@@ -169,6 +172,7 @@
                                             ;;
 
 					    "firefox-wayland" ;; web browser
+                                            "ungoogled-chromium-wayland" ;; backup web browser when firefox doesn't work on cringe websites :(
 
                                             "hledger" ;; plain text accounting software
                                             "dino" ;; xmpp client - works with snikket! :) :) :) thanks devs! <3
