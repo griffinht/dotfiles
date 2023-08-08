@@ -17,12 +17,10 @@ curl -SL https://github.com/docker/compose/releases/download/v2.17.2/docker-comp
 #TODO
 # make foot work on root
 # sudo powertop does not work
-podman?
 https://github.com/containers/podman/issues/12811
-docker compose
-podman compose? what if it breaks my stuff! seems well tested tho https://github.com/containers/podman-compose/tree/devel/tests
 https://news.ycombinator.com/item?id=31615517#31618237
 
+manpage set term title
 xdg usr dirs - secreenshots
 todo screen share
 cheese? figure out why webcam only likes obs? obs camera plugin?
