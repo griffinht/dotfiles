@@ -57,7 +57,7 @@
                                             "neovim" ;; the best text editor
                                             "vim-solarized" ;; this is technically for vim, but using a terrible hack it can work with nvim
                                             "vdirsyncer" ;; sync calendar/contacts via caldav/carddav
-                                            "khard" "khal" ;; calendar/contacts via vdirsyncer ;todo also check out calcurse?
+                                            "khard" "khal" "todoman" ;; calendar/contacts/caldav todo via vdirsyncer ;todo also check out calcurse?
                                             "aerc" ;; email client
                                             "icedove-wayland" ;; email client that actually works
                                             "weechat" "irssi" ;; irc clients todo pick one and configure it
@@ -244,6 +244,8 @@
 			,(local-file "config/khal" #:recursive? #t))
 		       ("khard"
 			,(local-file "config/khard" #:recursive? #t))
+		       ("todoman"
+			,(local-file "config/todoman" #:recursive? #t))
 		       ("aerc/aerc.conf"
 			,(local-file "config/aerc/aerc.conf" #:recursive? #t))
 		       ("aerc/binds.conf"
