@@ -240,6 +240,8 @@
                        ; todo remove and replace with system agnostic init - shepherd :)
 		       ("systemd"
 			,(local-file "config/systemd" #:recursive? #t))
+		       ("vdirsyncer"
+			,(local-file "config/vdirsyncer" #:recursive? #t))
 		       ("khal"
 			,(local-file "config/khal" #:recursive? #t))
 		       ("khard"
