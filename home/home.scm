@@ -248,10 +248,8 @@
 			,(local-file "config/khard" #:recursive? #t))
 		       ("todoman"
 			,(local-file "config/todoman" #:recursive? #t))
-		       ("aerc/aerc.conf"
-			,(local-file "config/aerc/aerc.conf" #:recursive? #t))
-		       ("aerc/binds.conf"
-			,(local-file "config/aerc/binds.conf" #:recursive? #t))
+		       ("aerc"
+			,(local-file "config/aerc" #:recursive? #t))
 		       ("git"
 			,(local-file "config/git" #:recursive? #t))))
      (service home-files-service-type
