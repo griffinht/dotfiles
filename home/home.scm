@@ -33,6 +33,10 @@
                     (specifications->packages (list 
                                             ;; needed to make things work i think?
 					    "glibc-locales"
+                                            ;; why not use guix coreutils?
+                                            "coreutils"
+                                            ;; provides tools like top, and i like the procps top
+                                            "procps"
 
                                             ;;
 					    ;; window manager
