@@ -1,1 +1,1 @@
-{"Name":"hot-desktop","Metadata":{"StackOrchestrator":"swarm"},"Endpoints":{"docker":{"Host":"ssh://docker-user@192.168.0.5","SkipTLSVerify":false}}}
+{"Name":"hot-desktop","Metadata":{"StackOrchestrator":"swarm"},"Endpoints":{"docker":{"Host":"ssh://docker-user@hot-desktop.wg.griffinht.com","SkipTLSVerify":false}}}

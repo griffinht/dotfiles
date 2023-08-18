@@ -1,1 +1,1 @@
-{"Name":"envy-laptop","Metadata":{"StackOrchestrator":"swarm"},"Endpoints":{"docker":{"Host":"ssh://docker-user@192.168.0.6","SkipTLSVerify":false}}}
+{"Name":"envy-laptop","Metadata":{"StackOrchestrator":"swarm"},"Endpoints":{"docker":{"Host":"ssh://docker-user@envy-laptop.wg.griffinht.com","SkipTLSVerify":false}}}
