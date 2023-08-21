@@ -3,6 +3,25 @@
     path = ~/.local/state/calendar/calendar
     type = calendar
 
+    [[personal]]
+    path = ~/.local/state/calendar/personal
+    type = calendar
+    color = light magenta
+
+    [[ncsu]]
+    path = ~/.local/state/calendar/ncsu
+    type = calendar
+    color = light red
+
+    [[craven]]
+    path = ~/.local/state/calendar/craven
+    type = calendar
+    color = light cyan
+
     [[birthdays]]
     path = ~/.local/state/contacts/addressbook
     type = birthdays
+    color = yellow
+
+[default]
+    highlight_event_days = True
