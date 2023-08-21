@@ -131,6 +131,7 @@
 					    "git"
 					    "curl"
                                             "make"
+                                            "strace"
                                             "python"
                                             ;;"openjdk:jdk" ;; jdk
                                             ;;
