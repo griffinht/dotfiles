@@ -16,7 +16,7 @@ case "$PROGRAM" in
     sway)
         rm ~/.config/sway || exit 1
         ln -s $PWD/config/sway ~/.config/sway || exit 1
-        echo done
+        echo debug mode done, try swaymsg reload, next guix home reconfigure will revert this
         ;;
     bash)
         rm ~/.bashrc || exit 1
