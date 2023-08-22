@@ -197,6 +197,8 @@ include init.config
 
 include theme.config
 
+include xwayland.config
+
 # unused see gtk.config
 #include gtk.config
 
