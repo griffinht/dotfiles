@@ -43,6 +43,9 @@
                                             ;;
 
 					    "sway"
+                                            ;; todo idk if this needs to be installed on system host or can be guix home?
+                                            ;; for now its just installed on arch host with xorg-xwayland or something
+                                            ;"xorg-server-xwayland"
                                             "swayidle"
                                             ;;"swaybg" not needed? make sure this is on the host or else weird bugs! todo arch thing
                                             ;; do not install swaylock to user (setuid needs root) "swaylock" ;; screen locker
@@ -132,6 +135,7 @@
 					    "curl"
                                             "make"
                                             "strace"
+                                            "gdb"
                                             "python"
                                             ;;"openjdk:jdk" ;; jdk
                                             ;;
