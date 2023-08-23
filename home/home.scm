@@ -137,7 +137,8 @@
                                             "strace"
                                             "gdb"
                                             "python"
-                                            ;;"openjdk:jdk" ;; jdk
+                                            "openjdk@17:jdk"
+                                            ;;"openjdk@11:jdk"
                                             ;;
                                             ;; guile
                                             ;;
