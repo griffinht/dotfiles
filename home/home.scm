@@ -85,6 +85,7 @@
                                             ;; see my package mylf
                                             ;;"lf" ;; file browser
                                             ;; "ctpv" not packaged :( ;; previewer for lf
+                                            "file" ;; for file command, needed by lf
                                             "trash-cli" ;; for lf delete
                                             "ffmpeg" ;; used for vid previews
                                             "chafa" ;; image previews (sixels)
@@ -238,8 +239,8 @@
 			,(local-file "config/zathura" #:recursive? #t))
 		       ("bat"
 			,(local-file "config/bat" #:recursive? #t))
-		       ("fish"
-			,(local-file "config/fish" #:recursive? #t))
+		       ("fish/config.fish"
+			,(local-file "config/fish/config.fish" #:recursive? #t))
 		       ("emacs"
 			,(local-file "config/emacs" #:recursive? #t))
 		       ("gtk-3.0"
