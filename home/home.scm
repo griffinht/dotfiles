@@ -268,18 +268,14 @@
 			,(local-file "config/git" #:recursive? #t))))
      (service home-files-service-type
               `(
-                ;; todo i hate how clunk this is but it seems to work
-                ;; also its bad to install arkenfox in source code but it does beat manual installation?
-                ;; todo this is probably the wrong way to do this
-                ;; todo uninstall arkenfox? it seems dumb
-                (".mozilla/firefox/myprofile/user.js",
-                 (local-file "firefox/user.js" #:recursive? #t))
                 (".guile",
                  (local-file "guile.scm"))
                 (".docker/contexts/meta",
                  (local-file "docker/contexts/meta" #:recursive? #t))
                 (".docker/cli-plugins/docker-compose",
-                 (local-file "bin/docker-compose" #:recursive? #t))
+                 (local-file "docker/cli-plugins/docker-compose" #:recursive? #t))
+                (".local/bin",
+                 (local-file "bin" #:recursive? #t))
                 ))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
