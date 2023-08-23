@@ -127,9 +127,10 @@ bind -M insert \e\[27\;2\;13~ accept-autosuggestion execute
 # not needed for guix distro????
 # but arch needs this and probably debian
 # when nss-certs is installed
-set -x SSL_CERT_DIR "$HOME/.guix-profile/etc/ssl/certs"
-set -x SSL_CERT_FILE "$HOME/.guix-profile/etc/ssl/certs/ca-certificates.crt"
+set -x SSL_CERT_DIR "$HOME/.guix-home/profile/etc/ssl/certs"
+set -x SSL_CERT_FILE "$HOME/.guix-home/profile/etc/ssl/certs/ca-certificates.crt"
 set -x GIT_SSL_CAINFO "$SSL_CERT_FILE"
+set -x GUIX_LOCPATH "$HOME/.guix-home/profile/lib/locale"
 
 # add local bin for testing
 set -x PATH "$HOME/.local/bin:$PATH"
