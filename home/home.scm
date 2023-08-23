@@ -32,7 +32,11 @@
   (packages (append (list mylf) 
                     (specifications->packages (list 
                                             ;; needed to make things work i think?
+                                            ;; also needs GUIX_LOCPATH=/home/griffin/.guix-profile/lib/locale
 					    "glibc-locales"
+                                            ;; needed for ssl
+                                            ;; requires SSL_CERT_DIR SSL_CERT_FILE GIT_SSL_CAINFO or something like that see guix x509 setup
+                                            "nss-certs"
                                             ;; why not use guix coreutils?
                                             "coreutils"
                                             ;; provides tools like top, and i like the procps top
