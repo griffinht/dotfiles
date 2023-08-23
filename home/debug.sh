@@ -4,14 +4,14 @@ PROGRAM="$1"
 
 case "$PROGRAM" in
     lf)
-        while true; do
-            lf -config config/lf/lfrc
-        done
+        #while true; do
+        lf -config config/lf/lfrc
+        #done
         ;;
     nvim)
-        while true; do
-            XDG_CONFIG_HOME=$PWD/config "$@"
-        done
+        #while true; do
+        XDG_CONFIG_HOME=$PWD/config "$@"
+        #done
         ;;
     sway)
         rm ~/.config/sway || exit 1
@@ -24,9 +24,9 @@ case "$PROGRAM" in
         echo done
         ;;
     fish)
-        while true; do
-            XDG_CONFIG_HOME=$PWD/config fish
-        done
+        #while true; do
+        XDG_CONFIG_HOME=$PWD/config fish
+        #done
         ;;
     gtk)
         rm ~/.config/gtk-3.0
