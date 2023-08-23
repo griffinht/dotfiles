@@ -25,3 +25,12 @@ sudo apt install nscd nfs-common
 
 /etc/systemd/system/guix-daemon.service
 add nonguix --substitue urls to execstart
+
+`/etc/systemd/system/guix-daemon.serivce`
+```
+[Service]
+# substituv urls added manually
+ExecStart=/var/guix/profiles/per-user/root/current-guix/bin/guix-daemon \
+    --build-users-group=guixbuild --discover=yes \
+    --substitute-urls='https://substitutes.nonguix.org https://ci.guix.gnu.org https://bordeaux.guix.gnu.org'
+```
