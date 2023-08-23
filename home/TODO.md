@@ -47,6 +47,7 @@ systemctl poweroff
 
 
 # ARCH
+base linux-firmware networkmanager vi
 document nfs-utils on hoist orr not?
 fix t480s wifi bug
 apply the modprobe thing
@@ -131,9 +132,12 @@ note will probably require restat as this uses overlayfs or something
 pacman -S podman-compose aardvark-dns
 
 systemctl enable --now podman.socket
+might also need podman.service?
 
-
-
+###
+eclipse
+paru -S eclipse-jee
+or juts installer idk
 
 
 

@@ -3,7 +3,10 @@
                #:use-module (guix download)
                #:use-module (guix build-system copy)
                #:use-module (guix licenses)
-               #:use-module (guix gexp))
+               #:use-module (guix gexp)
+               #:use-module (gnu packages tls)
+               #:use-module (gnu packages commencement)
+               #:use-module (gnu packages glib))
 
 (define-public mylf
                (package
@@ -76,6 +79,11 @@ command-line arguments, multiple languages, and so on.")
             (sha256 "003wmxp1va17f10gwvprdjyslkazmihf0p9z0dpf16vmpg7laahi")
             ))
   (build-system copy-build-system)
+  (propogated-inputs 
+    (list dbus
+          `(,openssl "static")
+          gcc-toolchain
+          ))
   (arguments
     '(#:install-plan '(("rescrobbled" "bin/"))))
   (synopsis "Hello, Guix world: An example custom Guix package")
