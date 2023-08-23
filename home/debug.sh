@@ -26,6 +26,11 @@ case "$PROGRAM" in
     fish)
         #while true; do
         XDG_CONFIG_HOME=$PWD/config fish
+        # fish always likes to create this file
+        rm -f config/fish/fish_variables
+        rmdir config/fish/completions
+        rmdir config/fish/conf.d
+        rmdir config/fish/functions
         #done
         ;;
     gtk)
