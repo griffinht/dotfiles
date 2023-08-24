@@ -1,4 +1,5 @@
-vim autosave
+https://github.com/rafaelmardojai/firefox-gnome-theme
+
 re look over all sway move commands
 https://invidious.hot.griffinht.com/watch?v=8Ab3ArE8W3s&listen=false
 
