@@ -60,7 +60,10 @@
 
                                             ;; theming
                                             "libadwaita" ;; xournalpp crashes otherwise
-                                            "adwaita-icon-theme" ;; xournalpp crashes otherwise
+                                            "adwaita-icon-theme" ;; xournalpp crashes otherwise, still gives a bunch of errors but whatever
+                                            ;"glib:bin" ;; provides gsettings
+                                            ;"gsettings-desktop-schemas" ;; idk lol
+                                            ;; see more here: https://askubuntu.com/questions/1054001/gtk-warnings-during-geany-running
 
                                             ;;
                                             ;; terminal
