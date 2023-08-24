@@ -37,10 +37,14 @@
                                             ;; needed for ssl
                                             ;; requires SSL_CERT_DIR SSL_CERT_FILE GIT_SSL_CAINFO or something like that see guix x509 setup
                                             "nss-certs"
-                                            ;; why not use guix coreutils?
+
+                                            ;;
+                                            ;; core utils
+                                            ;;
                                             "coreutils"
-                                            ;; provides tools like top, and i like the procps top
-                                            "procps"
+                                            "util-linux" ;; provides col among other things
+                                            "man-db" ;; man!
+                                            "procps" ;; provides tools like top, and i like the procps top
 
                                             ;;
 					    ;; window manager
@@ -211,6 +215,13 @@
                                             "audacity" ;; audacity
 					    "xournalpp" ;; drawing gui
 					    "libreoffice" "hunspell-dict-en" ;; office todo spellcheck doesnt work :(
+                                            ;"ncspot" ;; todo package this for real
+                                            ;; these packages are required as part of a stupid hack to get ncspot to work without compiling it or installing system deps
+                                            ;; basically launch ncspot with LD_LIBRARY_PATH=$HOME/.guix-home/profile/lib ncspot
+                                            "pulseaudio"
+                                            "openssl@1.1.1q"
+                                            "libxcb"
+
                                             ;; qt
                                             ;; instead i have to guix shell qtwayland@y
                                             ;;"qtwayland@5" ;; qt applications, seems to need 5?

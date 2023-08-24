@@ -1,6 +1,9 @@
+.SECONDARY=
+
 home: \
 	binaries/themes \
 	binaries/docker-compose \
+	binaries/ncspot \
 	../../adw-colors \
 	../../auto-save.nvim
 	# todo experiment with --max-jobs=x
@@ -9,13 +12,22 @@ home: \
 authorize:
 	guix archive --authorize < ../nonguix-signing-key.pub
 
-binaries/docker-compose:
+binaries/docker-compose: binaries
 	curl -L https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64 > '$@'
 	chmod +x '$@'
 
-binaries/themes:
+binaries:
+	mkdir -p '$@'
+
+# bruh moment this really needs to be packaged properly
+binaries/ncspot: binaries
+	curl -L https://github.com/hrkfdn/ncspot/releases/download/v0.13.4/ncspot-v0.13.4-linux-x86_64.tar.gz | tar -xz -C '$<'
+	touch '$@'
+
+binaries/themes: binaries
 	mkdir -p '$@'
 	curl -L https://github.com/lassekongo83/adw-gtk3/releases/download/v4.8/adw-gtk3v4-8.tar.xz | tar -xJ -C '$@'
+	touch '$@'
 
 ../../adw-colors:
 	git clone https://github.com/lassekongo83/adw-colors '$@'
@@ -26,4 +38,4 @@ binaries/themes:
 clean:
 	rm -rf ../../adw-colors
 	rm -rf ../../auto-save.nvim
-	rm -f docker/cli-plugins/docker-compose
+	rm -rf binaries/*
