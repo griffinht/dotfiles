@@ -150,6 +150,7 @@
                                             "gdb"
                                             "python"
                                             "openjdk@17:jdk"
+                                            "java-swt"
                                             ;;"openjdk@11:jdk"
                                             ;;
                                             ;; guile
@@ -289,6 +290,8 @@
                  (local-file "bin" #:recursive? #t))
                 (".local/share/themes",
                  (local-file "binaries/themes" #:recursive? #t))
+                ("git/ncsu/.gitconfig",
+                 (local-file "ncsu/gitconfig" #:recursive? #t))
                 ))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
