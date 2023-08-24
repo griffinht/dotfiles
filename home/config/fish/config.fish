@@ -157,9 +157,10 @@ alias ssh="TERM=linux command ssh $argv"
 alias lolcat="command lolcat --24bit $argv"
 # always use full terminal width with figlet
 alias figlet="command figlet -t $argv"
-# todo doesn't work?
-alias sudo="PATH=$PATH TERM=linux command sudo $argv"
+# todo path doesn't work?
+alias sudo="TERM=linux command sudo PATH=$PATH $argv"
 # todo stupid hack please remove
+# todo guix container!
 alias ncspot="LD_LIBRARY_PATH=$HOME/.guix-home/profile/lib command ncspot $argv"
 
 #

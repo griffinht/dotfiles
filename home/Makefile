@@ -3,7 +3,7 @@
 home: \
 	binaries/themes \
 	binaries/docker-compose \
-	binaries/ncspot \
+	bin/ncspot \
 	../../adw-colors \
 	../../auto-save.nvim
 	# todo experiment with --max-jobs=x
@@ -20,7 +20,7 @@ binaries:
 	mkdir -p '$@'
 
 # bruh moment this really needs to be packaged properly
-binaries/ncspot: binaries
+bin/ncspot: bin
 	curl -L https://github.com/hrkfdn/ncspot/releases/download/v0.13.4/ncspot-v0.13.4-linux-x86_64.tar.gz | tar -xz -C '$<'
 	touch '$@'
 
@@ -39,3 +39,4 @@ clean:
 	rm -rf ../../adw-colors
 	rm -rf ../../auto-save.nvim
 	rm -rf binaries/*
+	rm -f bin/ncspot
