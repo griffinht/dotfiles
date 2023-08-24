@@ -188,6 +188,7 @@
 
 					    "firefox-wayland" ;; web browser
                                             "ungoogled-chromium-wayland" ;; backup web browser when firefox doesn't work on cringe websites :(
+                                            ;;"ublock-origin-chromium" ;; guix will install extensions for me? cool!
 
                                             "hledger" ;; plain text accounting software
                                             "dino" ;; xmpp client - works with snikket! :) :) :) thanks devs! <3
@@ -275,6 +276,8 @@
                  (local-file "docker/contexts/meta" #:recursive? #t))
                 (".docker/cli-plugins/docker-compose",
                  (local-file "docker/cli-plugins/docker-compose" #:recursive? #t))
+                (".mozilla/firefox/guix-profile/user.js",
+                 (local-file "firefox/user.js" #:recursive? #t))
                 (".local/bin",
                  (local-file "bin" #:recursive? #t))
                 ))
