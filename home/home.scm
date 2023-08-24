@@ -58,6 +58,10 @@
 					    "mako" ;; notification daemon
 					    "wl-clipboard" ;; needed for neovim clipboard to work https://github.com/neovim/neovim/pull/9229
 
+                                            ;; theming
+                                            "libadwaita" ;; xournalpp crashes otherwise
+                                            "adwaita-icon-theme" ;; xournalpp crashes otherwise
+
                                             ;;
                                             ;; terminal
                                             ;;
@@ -280,6 +284,8 @@
                  (local-file "firefox/user.js" #:recursive? #t))
                 (".local/bin",
                  (local-file "bin" #:recursive? #t))
+                (".local/share/themes",
+                 (local-file "binaries/themes" #:recursive? #t))
                 ))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
