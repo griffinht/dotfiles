@@ -157,6 +157,8 @@ alias ssh="TERM=linux command ssh $argv"
 alias lolcat="command lolcat --24bit $argv"
 # always use full terminal width with figlet
 alias figlet="command figlet -t $argv"
+# todo root term set to linux?
+alias sudo="command sudo \"PATH=$PATH\" TERM=linux $argv"
 
 #
 # MAIN
