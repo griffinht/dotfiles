@@ -44,6 +44,7 @@
                                             "coreutils"
                                             "util-linux" ;; provides col among other things
                                             "man-db" ;; man!
+                                            "man-pages" ;; c and kernel manpages
                                             "procps" ;; provides tools like top, and i like the procps top
 
                                             ;;
