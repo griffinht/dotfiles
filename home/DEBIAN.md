@@ -34,3 +34,9 @@ ExecStart=/var/guix/profiles/per-user/root/current-guix/bin/guix-daemon \
     --build-users-group=guixbuild --discover=yes \
     --substitute-urls='https://substitutes.nonguix.org https://ci.guix.gnu.org https://bordeaux.guix.gnu.org'
 ```
+
+
+# podman
+sudo apt install uidmap
+
+todo docker socket see systemd service
