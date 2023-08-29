@@ -46,6 +46,7 @@
                                             "man-db" ;; man!
                                             "man-pages" ;; c and kernel manpages
                                             "procps" ;; provides tools like top, and i like the procps top
+                                            "nfs-utils" ;; for mounting nfs drives
 
                                             ;;
 					    ;; window manager
