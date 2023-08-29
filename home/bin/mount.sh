@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
-sudo wg-quick up hot-desktop
-sudo mount -t nfs4 hot-desktop.wg.griffinht.com:/ public
-sudo wg-quick up envy-laptop
+set -e
+
+wg-quick up hot_desktop
+mount -t nfs4 hot-desktop.wg.griffinht.com:/ ~/public
+wg-quick up envy_laptop
