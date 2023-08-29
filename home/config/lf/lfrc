@@ -181,6 +181,8 @@ map gap $git add -p "$f"
 map gaP $git add -p .
 # git commit
 map gc $git commit
+#todo git checkout
+#map gh $git checkout {}
 # todo bats pager??
 # less -Rc todo use (local lf) env var
 # -R for raw input to use colors
