@@ -131,6 +131,7 @@
                                             "pavucontrol" ;; gui audio control
 
                                             ;; pipewire/sound
+                                            "dbus" ;; why not make my own dbus??
                                             "bluez" ;; bluetoothctl
                                             ;; todo guix pulse bluetooth https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/#module-bluetooth-discover
                                             "xdg-desktop-portal" ;; needed for pipewire and things i guess

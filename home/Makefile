@@ -16,8 +16,8 @@ binaries/docker-compose: binaries
 	curl -L https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64 > '$@'
 	chmod +x '$@'
 
-binaries:
-	mkdir -p '$@'
+#binaries:
+#	mkdir -p '$@'
 
 # bruh moment this really needs to be packaged properly
 bin/ncspot: bin
