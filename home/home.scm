@@ -130,19 +130,18 @@
                                             "ddcutil" ;; external monitor controls (brightness for example)
                                             "pavucontrol" ;; gui audio control
 
-					    ;;"pulseaudio" ;; no more pulse!
-
                                             ;; pipewire/sound
                                             "bluez" ;; bluetoothctl
                                             ;; todo guix pulse bluetooth https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/#module-bluetooth-discover
-                                            ;; todo figure out how to make a guix package!
-                                            ;;"xdg-desktop-portal" ;; needed for pipewire and things i guess
-					    ;;"xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
-                                            ;;"pipewire"
-                                            ;;"wireplumber"
+                                            "xdg-desktop-portal" ;; needed for pipewire and things i guess
+					    "xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
+                                            "pipewire"
+                                            "wireplumber"
                                             ;; todo libcamera
+                                            ;; todo https://lists.gnu.org/archive/html/guix-commits/2023-08/msg01450.html
+                                            ;;"libcamera"
                                             ;;https://www.collabora.com/news-and-blog/blog/2020/09/11/integrating-libcamera-into-pipewire/
-                                            ;;"pipewire-pulse"
+                                            ;;pipewire-pulse
 					    ;; https://mozilla.github.io/webrtc-landing/gum_test.html
 
                                             ;;
@@ -156,7 +155,7 @@
                                             "gdb"
                                             "python"
                                             "openjdk@17:jdk"
-                                            "java-swt"
+                                            ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
                                             ;; guile
@@ -220,6 +219,8 @@
                                             ;"ncspot" ;; todo package this for real
                                             ;; these packages are required as part of a stupid hack to get ncspot to work without compiling it or installing system deps
                                             ;; basically launch ncspot with LD_LIBRARY_PATH=$HOME/.guix-home/profile/lib ncspot
+                                            ;; todo remove
+                                            ;; causes issue when pipewire-pulse is not started and pavucontrol sees pulseaudio and decides to start it itself!
                                             "pulseaudio"
                                             "openssl@1.1.1q"
                                             "libxcb"

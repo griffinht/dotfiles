@@ -191,7 +191,7 @@ include lock.config
 # optional include for display configuration per device
 include ~/.sway_displays
 
-include xdg-desktop-portal.config
+include pipewire.config
 
 include init.config
 
