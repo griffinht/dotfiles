@@ -1,3 +1,4 @@
+source $HOME/.guix-home/profile/etc/grc.fish
 
  # FISH STUFF
  #https://github.com/PatrickF1/fzf.fish

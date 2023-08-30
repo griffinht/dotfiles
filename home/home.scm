@@ -88,6 +88,7 @@
 
                                             ;; shell
                                             "fish" ;; amazing interactive shell
+                                            "grc" ;; magical colorizer
                                             "lolcat" ;; cat but colorful
                                             "cowsay" ;; cat but meat-based
                                             "figlet" ;; cat but bannerized
