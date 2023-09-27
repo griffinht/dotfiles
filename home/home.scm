@@ -308,6 +308,8 @@
                  (local-file "bin" #:recursive? #t))
                 (".local/share/themes",
                  (local-file "binaries/themes" #:recursive? #t))
+                (".local/share/jdtls",
+                 (local-file "binaries/jdtls" #:recursive? #t))
                 ("git/ncsu/.gitconfig",
                  (local-file "ncsu/gitconfig" #:recursive? #t))
                 ))
