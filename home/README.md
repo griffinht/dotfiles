@@ -48,3 +48,5 @@ maybe foot?
 maybe lf?
 
 
+
+https://libreddit.hot.griffinht.com/r/swaywm/comments/gfex9o/how_to_setup_ssh_agent/
