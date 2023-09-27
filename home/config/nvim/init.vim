@@ -44,3 +44,4 @@ set rtp+=~/git/vim-ledger
 
 "disable this for now, it doesn't really work well
 "lua require("mytreesitter")
+lua require("mylsp")
