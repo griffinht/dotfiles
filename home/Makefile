@@ -4,6 +4,7 @@ home: \
 	binaries/themes \
 	binaries/docker-compose \
 	bin/ncspot \
+	bin/jdtlsfiles \
 	../../adw-colors \
 	../../auto-save.nvim
 	# todo experiment with --max-jobs=x
@@ -23,6 +24,10 @@ binaries/docker-compose: binaries
 bin/ncspot: bin
 	curl -L https://github.com/hrkfdn/ncspot/releases/download/v0.13.4/ncspot-v0.13.4-linux-x86_64.tar.gz | tar -xz -C '$<'
 	touch '$@'
+
+bin/jdtlsfiles: bin
+	mkdir -p '$@'
+	curl -L https://www.eclipse.org/downloads/download.php?file=/jdtls/milestones/1.9.0/jdt-language-server-1.9.0-202203031534.tar.gz | tar -xz -C '$@'
 
 binaries/themes: binaries
 	mkdir -p '$@'
