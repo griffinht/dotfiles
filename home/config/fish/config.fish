@@ -163,6 +163,8 @@ alias sudo="TERM=linux command sudo PATH=$PATH $argv"
 # todo stupid hack please remove
 # todo guix container!
 alias ncspot="LD_LIBRARY_PATH=$HOME/.guix-home/profile/lib command ncspot $argv"
+# trash-restore will auto pick up nfs trash dirs causing this command to be really slow, unless we explicitly define the trash directory
+alias trash-restore="command trash-restore --trash-dir $HOME/.local/share/Trash $argv"
 
 #
 # MAIN
