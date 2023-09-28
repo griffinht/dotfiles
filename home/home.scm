@@ -79,7 +79,14 @@
 					    "ncurses" ;; makes foot work
                                             ;; editor
                                             "neovim" ;; the best text editor
+                                            ;; "nvim-dap" todo not packaged
                                             "vim-solarized" ;; this is technically for vim, but using a terrible hack it can work with nvim
+                                            ;; "jdtls" todo not packaged
+                                            "go" "gopls"
+                                            "python-lsp-server"
+                                            ;; can't really be installed with glibc at the same time kind of idk
+                                            ;;"clang" "linux-libre-headers" ;; clang still a little wonky todo
+                                            
                                             "vdirsyncer" ;; sync calendar/contacts via caldav/carddav
                                             "khard" "khal" "todoman" ;; calendar/contacts/caldav todo via vdirsyncer ;todo also check out calcurse?
                                             "aerc" ;; email client
@@ -98,6 +105,7 @@
                                             
 
                                             ;; todo switch to emacs evil :) :) :0
+                                            ;; todo emacs solarized emacs lsp guix makes it sooooo easy
 
                                             ;; file browsing
                                             ;; see my package mylf

@@ -4,7 +4,7 @@ home: \
 	binaries/themes \
 	binaries/docker-compose \
 	bin/ncspot \
-	bin/jdtlsfiles \
+	binaries/jdtls \
 	../../adw-colors \
 	../../auto-save.nvim
 	# todo experiment with --max-jobs=x
