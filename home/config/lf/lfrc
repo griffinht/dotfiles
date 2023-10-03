@@ -169,7 +169,7 @@ map nx push :xournalpp<space>
 # nn new terminal
 map nn &{{
     # todo this is non standard and will probably break
-    LF_LEVEL=0 nohup "$TERM_PROGRAM" > /dev/null 2>&1
+    LF_LEVEL=0 nohup "foot" > /dev/null 2>&1
 }}
 
 #g git commands
