@@ -301,7 +301,9 @@
 		       ("aerc"
 			,(local-file "config/aerc" #:recursive? #t))
 		       ("git"
-			,(local-file "config/git" #:recursive? #t))))
+			,(local-file "config/git" #:recursive? #t))
+		       ("clangd"
+			,(local-file "config/clangd" #:recursive? #t))))
      (service home-files-service-type
               `(
                 (".guile",
