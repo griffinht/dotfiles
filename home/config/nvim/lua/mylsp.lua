@@ -1,3 +1,4 @@
+--"https://miguelcrespo.co/posts/how-to-debug-like-a-pro-using-neovim/
 -- vim.lsp.buf_get_clients()
 --https://langserver.org/
 --https://microsoft.github.io/language-server-protocol/implementors/servers/
@@ -8,13 +9,14 @@
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = {"*.java"},
     callback = function(ev)
+        --todo only kind of works? issue when its not found
         local root_dir = vim.fs.dirname(vim.fs.find({'gradlew', 'mvnw'}, { upward = true })[1])
         --local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
         --local workspace_dir = '/path/to/workspace-root/' .. project_name
         vim.lsp.start({
             --name = 'java',
             cmd = {'jdtls', 
-            '-data', vim.env.HOME .. '/.cache/jdtls' .. root_dir},
+            '-data', vim.env.HOME .. '/.cache/jdtls' .. vim.api.nvim_buf_get_name(0)},
             root_dir = root_dir
             --workspace_folders = {{uri = vim.uri_from_fname('file:///home/griffin/'), name = 'bruh',},},
         })
