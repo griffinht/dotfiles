@@ -172,6 +172,11 @@ map nn &{{
     LF_LEVEL=0 nohup "foot" > /dev/null 2>&1
 }}
 
+# nk import ics file to khal
+map nk ${{
+    khal import "$f"
+}}
+
 #g git commands
 
 # git add
