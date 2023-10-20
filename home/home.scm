@@ -42,6 +42,7 @@
                                             ;; core utils
                                             ;;
                                             "coreutils"
+                                            "findutils" ;; xargs
                                             "util-linux" ;; provides col among other things
                                             "man-db" ;; man!
                                             "man-pages" ;; c and kernel manpages
