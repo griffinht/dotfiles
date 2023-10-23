@@ -2,7 +2,12 @@ home: \
 	binaries/jdtls \
 	../../auto-save.nvim \
 	../../luasnip \
-	../../nvim-cmp
+	../../nvim-cmp \
+	../../nvim-lspconfig \
+	../../cmp-nvim-lsp \
+	../../friendly-snippets \
+	../../cmp_luasnip \
+	../../cmp-buffer
 
 binaries/jdtls: bin
 	mkdir -p '$@'
@@ -14,9 +19,23 @@ binaries/jdtls: bin
 
 ../../luasnip:
 	git clone https://github.com/L3MON4D3/LuaSnip '$@'
+../../friendly-snippets:
+	git clone https://github.com/rafamadriz/friendly-snippets '$@'
+../../cmp_luasnip:
+	git clone https://github.com/saadparwaiz1/cmp_luasnip '$@'
 
 ../../nvim-cmp: 
 	git clone https://github.com/hrsh7th/nvim-cmp '$@'
+
+../../nvim-lspconfig:
+	git clone https://github.com/neovim/nvim-lspconfig '$@'
+
+../../cmp-nvim-lsp:
+	git clone https://github.com/hrsh7th/cmp-nvim-lsp '$@'
+
+../../cmp-buffer:
+	git clone https://github.com/hrsh7th/cmp-buffer '$@'
+
 
 # todo https://github.com/mfussenegger/nvim-dap
 ../../nvim-dap:

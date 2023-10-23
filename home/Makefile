@@ -1,4 +1,4 @@
-.SECONDARY=
+.SECONDARY:
 
 home: \
 	binaries/themes \
@@ -28,6 +28,12 @@ bin/ncspot: bin
 binaries/themes: binaries
 	mkdir -p '$@'
 	curl -L https://github.com/lassekongo83/adw-gtk3/releases/download/v4.8/adw-gtk3v4-8.tar.xz | tar -xJ -C '$@'
+	touch '$@'
+
+../../../.local/share/intellij: binaries
+	mkdir -p '$@'
+	curl -L https://download.jetbrains.com/idea/ideaIU-2023.2.3.tar.gz | tar -xz -C '$@' || (rmdir '$@'; exit 1)
+	mv $@/*/* '$@'
 	touch '$@'
 
 ../../adw-colors:

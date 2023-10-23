@@ -42,6 +42,4 @@ colorscheme solarized
 " hledger vim
 set rtp+=~/git/vim-ledger
 
-"disable this for now, it doesn't really work well
-"lua require("mytreesitter")
-lua require("mylsp")
+lua require("init")
