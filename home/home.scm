@@ -53,7 +53,7 @@
 					    ;; window manager
                                             ;;
 
-					    "sway"
+					    ;;;;"sway"
                                             ;; todo idk if this needs to be installed on system host or can be guix home?
                                             ;; for now its just installed on arch host with xorg-xwayland or something
                                             ;"xorg-server-xwayland"
@@ -139,15 +139,16 @@
 					    "wob" ;; graphical slider display 
                                             "ddcutil" ;; external monitor controls (brightness for example)
                                             "pavucontrol" ;; gui audio control
+                                            ;;; seems to work well on debian probably
 
                                             ;; pipewire/sound
-                                            "dbus" ;; why not make my own dbus??
-                                            "bluez" ;; bluetoothctl
+                                            ;;;;"dbus" ;; why not make my own dbus??
+                                            ;;;;"bluez" ;; bluetoothctl
                                             ;; todo guix pulse bluetooth https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/#module-bluetooth-discover
-                                            "xdg-desktop-portal" ;; needed for pipewire and things i guess
-					    "xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
-                                            "pipewire"
-                                            "wireplumber"
+                                            ;;;;"xdg-desktop-portal" ;; needed for pipewire and things i guess
+					    ;;;;"xdg-desktop-portal-wlr" ;; screen sharing https://wiki.archlinux.org/title/PipeWire#xdg-desktop-portal-wlr 
+                                            ;;;;"pipewire"
+                                            ;;;;"wireplumber"
                                             ;; todo libcamera
                                             ;; todo https://lists.gnu.org/archive/html/guix-commits/2023-08/msg01450.html
                                             ;;"libcamera"
@@ -168,6 +169,7 @@
                                             "openjdk@17:jdk"
                                             "zip"
                                             "unzip" ; note this is here twice for organization i guess
+                                            "oath-toolkit"
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
@@ -212,8 +214,8 @@
                                             ;; graphical software
                                             ;;
 
-					    "firefox-wayland" ;; web browser
-                                            "ungoogled-chromium-wayland" ;; backup web browser when firefox doesn't work on cringe websites :(
+					    ;;;;"firefox-wayland" ;; web browser
+                                            ;;;;"ungoogled-chromium-wayland" ;; backup web browser when firefox doesn't work on cringe websites :(
                                             ;;"ublock-origin-chromium" ;; guix will install extensions for me? cool!
 
                                             "hledger" ;; plain text accounting software
@@ -234,7 +236,7 @@
                                             ;; basically launch ncspot with LD_LIBRARY_PATH=$HOME/.guix-home/profile/lib ncspot
                                             ;; todo remove
                                             ;; causes issue when pipewire-pulse is not started and pavucontrol sees pulseaudio and decides to start it itself!
-                                            "pulseaudio"
+                                            ;;;;"pulseaudio"
                                             "openssl@1.1.1q"
                                             "libxcb"
 

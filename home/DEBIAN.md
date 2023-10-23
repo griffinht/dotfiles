@@ -66,3 +66,10 @@ make sure the system dbus isn't running! `dbus-monitor`
 run sway with `dbus-run-session sway`
 
 don't manually start xdg-desktop-portal or xdg-desktop-portal-wlr, they should both be started by dbus or magic or something idk
+
+
+
+
+
+# EXPERIMENT
+sudo apt install sway pulseaudio xdg-desktop-portal-wlr firefox-esr
