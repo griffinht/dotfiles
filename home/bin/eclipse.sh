@@ -10,5 +10,5 @@ guix shell \
     --preserve='^DISPLAY$' \
     --expose=/sys/dev --expose=/sys/devices --expose=/dev/dri \
     --share=$HOME \
-    which coreutils glib gtk+ glibc libxtst adwaita-icon-theme openjdk@17:jdk \
+    which coreutils glib gtk+ glibc libxtst adwaita-icon-theme openjdk@11:jdk \
     -- $@
