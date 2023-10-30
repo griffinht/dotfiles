@@ -72,4 +72,8 @@ don't manually start xdg-desktop-portal or xdg-desktop-portal-wlr, they should b
 
 
 # EXPERIMENT
-sudo apt install sway pulseaudio xdg-desktop-portal-wlr firefox-esr
+sudo apt install sway pulseaudio xdg-desktop-portal-wlr firefox-esr xwayland
+
+xdg-desktop-portal
+xdg-utils
+oops
