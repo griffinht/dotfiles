@@ -228,12 +228,13 @@ cmd gi %{{
 map gi push :gi<space>
 
 # git clone
-cmd gCc !{{
+cmd gCC ${{
+    # todo how to select the new directory?
     git clone "$1"
 }}
 # git clone to current directory
-cmd gCc !{{
+cmd gCc ${{
     git clone "$1" .
 }}
-map gCc push :gCc<space>
+map gCC push :gCC<space>
 map gCC push :gCC<space>
