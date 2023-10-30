@@ -49,6 +49,10 @@ cmd open ${{
 		    done
 		    ;;
 	esac
+
+        # reset the title after a command runs
+        # todo kind of buggy like im missing this ni a lot of places right now
+        on-cd
 }}
 
 # show current directory in window title
@@ -129,6 +133,7 @@ map oa &nohup audacity "$f" > /dev/null 2>&1
 map of %firefox "$f"
 map oo !"$f"
 cmd execute !{{
+#todo also clear screen?
     "$f" $@
 }}
 map oO push :execute<space>
