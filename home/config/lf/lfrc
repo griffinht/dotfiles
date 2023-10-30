@@ -143,16 +143,17 @@ map oO push :execute<space>
 # unmap n
 map n
 
+#https://github.com/gokcehan/lf/wiki/Tips#commandmapping-to-create-new-directories
 # nm new directory
 cmd mkdir %{{
-    mkdir "$1" && lf -remote "send $id select $1"
+    IFS=" " && mkdir "$*" && lf -remote "send $id select '$*'"
 }}
 map nm push :mkdir<space>
 
 # nt new file
 cmd touch %{{
     # todo duplicate code c
-    touch "$1" && lf -remote "send $id select $1"
+    IFS=" " && touch "$*" && lf -remote "send $id select '$*'"
 }}
 map nt push :touch<space>
 
@@ -167,7 +168,7 @@ map nc %{{
 # nx new xournalpp document
 cmd xournalpp &{{
     # todo duplicate code a
-    nohup xournalpp "$1" > /dev/null 2>&1
+    IFS=" " && nohup xournalpp "$*" > /dev/null 2>&1
 }}
 map nx push :xournalpp<space>
 
