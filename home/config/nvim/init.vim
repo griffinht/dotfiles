@@ -43,3 +43,7 @@ colorscheme solarized
 set rtp+=~/git/vim-ledger
 
 lua require("init")
+
+" spellchecking
+" disable with :nospell
+set spell spelllang=en_us spellfile=~/git/guix/home/spell/english.utf-8.add
