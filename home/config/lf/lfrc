@@ -140,21 +140,6 @@ cmd execute !{{
 }}
 map oO push :execute<space>
 
-# open a man page with fzf to pick which one to open
-cmd man_open ${{
-    #chop off the last ' and insert --color=always
-    MANPAGER="$(printf '%s' "$MANPAGER" | head -c -1) --color=always'"
-    #same as this
-    #MANPAGER="sh -c 'col -bx | bat -l man -p --color=always'"
-
-    #awk turns 'cat (1)' -> 'cat'
-    PREVIEW='awk '\''{print $1}'\'' | xargs man'
-
-    #fzf single quotes: ex {} -> 'value'
-    MANPAGER="$MANPAGER" man -k '' | fzf --preview="echo {} | $PREVIEW | sh -c \"$MANPAGER\"" | sh -c "$PREVIEW"
-}}
-map om :man_open
-
 # new stuff
 #
 # unmap n
