@@ -109,6 +109,8 @@ include volume
     bindsym $mod+d exec $menu
     # start launcher special
     bindsym $mod+Shift+d exec $menu_special
+    # Start manpage search
+    bindsym $mod+m exec $menu_man
 
     # start your browser
     bindsym $mod+n exec $browser
