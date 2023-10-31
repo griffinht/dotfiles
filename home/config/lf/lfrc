@@ -3,6 +3,22 @@
 # todo libreoffice breaks randomly :(
 # i think it gets stuck on file not found in the splash screen?
 
+# show current directory in window title
+#TODO
+#https://github.com/gokcehan/lf/wiki/Integrations#git
+cmd on-cd &{{
+    # '&' commands run silently in background (which is what we want here),
+    # but are not connected to stdout.
+    # To make sure our escape sequence still reaches stdout we pipe it to /dev/tty
+    printf "\033]0;$PWD\007" > /dev/tty
+
+    # also set osc7 escape sequence for foot ctrl+shift+n new terminal to spawn with the correct working directory
+    ~/.config/lf/set_osc7.sh
+}}
+
+# also run at startup
+on-cd
+
 #https://unix.stackexchange.com/questions/3886/difference-between-nohup-disown-and
 #maybe use &! or disown?
                 # nohup so zathura is not closed when the terminal closes
@@ -52,24 +68,10 @@ cmd open ${{
 
         # reset the title after a command runs
         # todo kind of buggy like im missing this ni a lot of places right now
-        on-cd
+        #on-cd
+        #not necessary for some reason?
 }}
 
-# show current directory in window title
-#TODO
-#https://github.com/gokcehan/lf/wiki/Integrations#git
-cmd on-cd &{{
-    # '&' commands run silently in background (which is what we want here),
-    # but are not connected to stdout.
-    # To make sure our escape sequence still reaches stdout we pipe it to /dev/tty
-    printf "\033]0;$PWD\007" > /dev/tty
-
-    # also set osc7 escape sequence for foot ctrl+shift+n new terminal to spawn with the correct working directory
-    ~/.config/lf/set_osc7.sh
-}}
-
-# also run at startup
-on-cd
 
 # ctpv previews
 set previewer ctpv
