@@ -124,6 +124,7 @@ cmd delete %trash-put "$f"
 # todo set editor
 # set pager var?
 map x :delete
+map X $trash-restore
 
 
 #o open as
