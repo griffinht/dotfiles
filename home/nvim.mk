@@ -7,11 +7,23 @@ home: \
 	../../cmp-nvim-lsp \
 	../../friendly-snippets \
 	../../cmp_luasnip \
-	../../cmp-buffer
+	../../cmp-buffer \
+	../../nvim-jdtls \
+	~/.local/share/lua-language-server \
+	binaries/marksman
 
-binaries/jdtls: bin
+binaries/jdtls:
 	mkdir -p '$@'
 	curl -L https://www.eclipse.org/downloads/download.php?file=/jdtls/milestones/1.9.0/jdt-language-server-1.9.0-202203031534.tar.gz | tar -xz -C '$@'
+	touch '$@'
+
+binaries/marksman:
+	curl -L https://github.com/artempyanykh/marksman/releases/download/2023-10-30/marksman-linux-x64 > '$@'
+	chmod +x '$@'
+
+~/.local/share/lua-language-server:
+	mkdir -p '$@'
+	curl -L 'https://github.com/LuaLS/lua-language-server/releases/download/3.7.0/lua-language-server-3.7.0-linux-x64.tar.gz' | tar -xz -C '$@'
 	touch '$@'
 
 ../../auto-save.nvim:
@@ -35,6 +47,9 @@ binaries/jdtls: bin
 
 ../../cmp-buffer:
 	git clone https://github.com/hrsh7th/cmp-buffer '$@'
+
+../../nvim-jdtls:
+	git clone https://github.com/mfussenegger/nvim-jdtls '$@'
 
 
 # todo https://github.com/mfussenegger/nvim-dap

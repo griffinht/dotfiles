@@ -13,7 +13,7 @@ authorize:
 
 include nvim.mk
 
-binaries/docker-compose: binaries
+binaries/docker-compose:
 	curl -L https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64 > '$@'
 	chmod +x '$@'
 
@@ -21,16 +21,16 @@ binaries/docker-compose: binaries
 #	mkdir -p '$@'
 
 # bruh moment this really needs to be packaged properly
-bin/ncspot: bin
+bin/ncspot:
 	curl -L https://github.com/hrkfdn/ncspot/releases/download/v0.13.4/ncspot-v0.13.4-linux-x86_64.tar.gz | tar -xz -C '$<'
 	touch '$@'
 
-binaries/themes: binaries
+binaries/themes:
 	mkdir -p '$@'
 	curl -L https://github.com/lassekongo83/adw-gtk3/releases/download/v4.8/adw-gtk3v4-8.tar.xz | tar -xJ -C '$@'
 	touch '$@'
 
-../../../.local/share/intellij: binaries
+../../../.local/share/intellij:
 	mkdir -p '$@'
 	curl -L https://download.jetbrains.com/idea/ideaIU-2023.2.3.tar.gz | tar -xz -C '$@' || (rmdir '$@'; exit 1)
 	mv $@/*/* '$@'
