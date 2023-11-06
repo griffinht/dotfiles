@@ -77,3 +77,4 @@ sudo apt install sway pulseaudio xdg-desktop-portal-wlr firefox-esr xwayland
 xdg-desktop-portal
 xdg-utils
 oops
+node npm nodesource
