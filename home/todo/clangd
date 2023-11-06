@@ -1,0 +1,7 @@
+CompileFlags:
+  Add: [-Wall, -Wextra]
+Diagnostics:
+  # todo does this do anything
+  ClangTidy:
+    Add: 'bugprone-*'
+    UnusedIncludes: Strict
