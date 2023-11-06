@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+exec ~/.local/share/lua-language-server/bin/lua-language-server $@
