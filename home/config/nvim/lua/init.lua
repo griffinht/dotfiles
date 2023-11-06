@@ -35,11 +35,20 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
   require('cmp_nvim_lsp').default_capabilities()
 )]]--
 
---todo https://github.com/mfussenegger/nvim-jdtls
---lspconfig.jdtls.setup ({})
+--lspconfig.jdtls.setup {}
 --use nvim-jdtls instead of lspconfig's jdtls (has more features) -- https://github.com/mfussenegger/nvim-jdtls
+--https://github.com/mfussenegger/nvim-jdtls#configuration-quickstart
+--todo get cmd from which jdtls
+--currently moved to ftplugin
+--[[
+local config = {
+    cmd = {'/home/griffin/.local/bin/jdtls'},
+    root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+}
+require('jdtls').start_or_attach(config)
+]]--
 
-lspconfig.clangd.setup ({})
+lspconfig.clangd.setup {}
 lspconfig.pylsp.setup {}
 lspconfig.gopls.setup {}
 lspconfig.lua_ls.setup {
