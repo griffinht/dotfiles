@@ -51,6 +51,7 @@ require('jdtls').start_or_attach(config)
 lspconfig.clangd.setup {}
 lspconfig.pylsp.setup {}
 lspconfig.gopls.setup {}
+lspconfig.marksman.setup {}
 lspconfig.lua_ls.setup {
     on_init = function(client)
         client.config.settings = vim.tbl_deep_extend("force", client.config.settings, {
