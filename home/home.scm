@@ -49,6 +49,7 @@
                                             "man-pages-posix" ;; posix man pages
                                             "procps" ;; provides tools like top, and i like the procps top
                                             "nfs-utils" ;; for mounting nfs drives
+                                            "iproute2" ;; ip command
 
                                             ;;
 					    ;; window manager
