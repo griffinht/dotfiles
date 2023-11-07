@@ -218,8 +218,10 @@ map gr %git reset "$f"
 map gR %git reset
 # git push
 # git pull
-map gpp $git push
-map gpP $git pull
+map gpp !git push
+map gpo !git push --set-upstream origin "$(git branch --show-current)"
+#map gpo !echo "$(git branch --show-current)"
+map gpP !git pull
 #find a safer way to delete local changes
 #map gx $git checkout -- .
 # git log
