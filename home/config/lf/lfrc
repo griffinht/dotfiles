@@ -206,8 +206,22 @@ map gs $git -c color.ui=always status . | less -Rc
 map gS $git -c color.ui=always status | less -Rc
 # git diff
 # --diff-filter=d excludes deleted files
-map gdd $git diff --name-only --relative --diff-filter=d "$f" | xargs bat --diff --paging=always
-map gdD $git diff --name-only --relative --diff-filter=d | xargs bat --diff --paging=always
+# bat is nice in theory but not very functiuonal
+# todo use delta https://github.com/dandavison/delta
+#map gdd $git diff --name-only --relative --diff-filter=d "$f" | xargs bat --diff --paging=always
+#map gdD $git diff --name-only --relative --diff-filter=d | xargs bat --diff --paging=always
+map gdd $git -c color.ui=always diff --relative "$f" | less -Rc
+map gdD $git -c color.ui=always diff --relative | less -Rc
+# 
+#
+#
+#
+# trash-cli file
+# git checkout -- file
+#
+#
+#
+#
 # git diff --cached
 # todo use dandavision/delta
 # bat doesnt handled cached output
