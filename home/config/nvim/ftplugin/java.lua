@@ -1,5 +1,9 @@
 local jdtls = require('jdtls')
 
+-- java java :doc output for documentation??
+-- https://github.com/mfussenegger/nvim-jdtls/issues?q=jdt+%3A%2F%2Fcontents
+-- https://github.com/mfussenegger/nvim-jdtls/discussions/124
+
 -- todo do i really even need this??????
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jdtls
 
@@ -18,7 +22,15 @@ local config = {
         -- todo provide --configuration??
     },
     --root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
-    root_dir = jdtls.setup.find_root(root_files)
+    root_dir = jdtls.setup.find_root(root_files),
+    settings = {
+        java = {
+            signatureHelp = { enabled = true },
+        },
+        bruh = {
+            signatureHelp = { enabled = true },
+        }
+    },
 }
 
 jdtls.start_or_attach(config)
