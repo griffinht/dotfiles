@@ -8,9 +8,15 @@ case "$PROGRAM" in
         lf -config config/lf/lfrc
         #done
         ;;
+    lf2)
+        #while true; do
+        echo "lf -config $PWD/config/lf/lfrc"
+        #done
+        ;;
     nvim)
         #while true; do
-        XDG_CONFIG_HOME=$PWD/config "$@"
+        #XDG_CONFIG_HOME=$PWD/config "$@"
+        echo "XDG_CONFIG_HOME=$PWD/config nvim <>"
         #done
         ;;
     sway)
