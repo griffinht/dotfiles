@@ -50,6 +50,8 @@
                                             "procps" ;; provides tools like top, and i like the procps top
                                             "nfs-utils" ;; for mounting nfs drives
                                             "iproute2" ;; ip command
+                                            "grep" ;; grep!
+                                            "gettext-minimal" ;; envsubst
 
                                             ;;
 					    ;; window manager
