@@ -9,7 +9,7 @@ vim.opt.runtimepath:append(",~/git/vim-ledger")
 
 -- terrible hack to add guix vim package to neovim
 -- this will probably break things frequently
-vim.opt.runtimepath:append(",~/.guix-home/profile/share/vim/vimfiles")
+vim.opt.runtimepath:append(",~/.guix-home/profile/share/vim/vimfiles/pack/guix/start/solarized")
 
 -- language server stuff
 vim.opt.runtimepath:append(",~/git/nvim-lspconfig")
