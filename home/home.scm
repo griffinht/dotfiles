@@ -164,6 +164,8 @@
 					    ;; dev utils
                                             ;;
 					    "openssh"
+                                            "sshfs"
+                                            "sshpass"
 					    "git"
 					    "curl"
                                             "make"
@@ -173,7 +175,6 @@
                                             "openjdk@17:jdk"
                                             "zip"
                                             "unzip" ; note this is here twice for organization i guess
-                                            "oath-toolkit"
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
@@ -194,8 +195,8 @@
                                             ;;
                                             ;; other utils
                                             ;;
+                                            "inotify-tools"
                                             "iperf" ;; iperf3 -c hot.griffinht.com - speedtest
-                                            "sshpass"
                                             "wireguard-tools" ;; wg-quick
                                             "bind:utils" ;; dig
                                             "whois" ;; whois domain registrar lookups
@@ -204,6 +205,7 @@
                                             "pinfo" ;; good? info reader - seems like they all suck except for emacs users
                                             "zbar" ;; zbarimg - barcode reader
                                             "qrencode" ;; qr code encoder
+                                            "oath-toolkit" ;; totp generator
 
 					    ;; cool utils
                                             "ncdu" ;; disk usage
