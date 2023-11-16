@@ -121,6 +121,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         -- local mappings
         local options = { buffer = event.buf }
 
+        --todo control-i is mapped??
         -- hover
         --todo this is set by man.lua??? huh?
         vim.keymap.set("n", "K", vim.lsp.buf.hover, options)
