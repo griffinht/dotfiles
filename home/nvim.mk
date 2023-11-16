@@ -1,16 +1,22 @@
+# todo missing vim-ledger?
 home: \
 	binaries/jdtls \
 	../../auto-save.nvim \
-	../../luasnip \
-	../../nvim-cmp \
 	../../nvim-lspconfig \
-	../../cmp-nvim-lsp \
-	../../friendly-snippets \
-	../../cmp_luasnip \
-	../../cmp-buffer \
 	../../nvim-jdtls \
 	~/.local/share/lua-language-server \
+	config/nvim/pack/plugins/start/nvim-dap \
 	binaries/marksman
+#
+#	../../luasnip \
+#	../../nvim-cmp \
+#	../../cmp-nvim-lsp \
+#	../../friendly-snippets \
+#	../../cmp_luasnip \
+#	../../cmp-buffer \
+
+config/nvim/pack/plugins/start/nvim-dap:
+	git clone https://github.com/mfussenegger/nvim-dap.git '$@'
 
 binaries/jdtls:
 	mkdir -p '$@'
