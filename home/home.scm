@@ -175,6 +175,7 @@
                                             "openjdk@17:jdk"
                                             "zip"
                                             "unzip" ; note this is here twice for organization i guess
+                                            "inetutils" ;; telnet
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
