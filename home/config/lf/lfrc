@@ -212,16 +212,8 @@ map gS $git -c color.ui=always status | less -Rc
 #map gdD $git diff --name-only --relative --diff-filter=d | xargs bat --diff --paging=always
 map gdd $git -c color.ui=always diff --relative "$f" | less -Rc
 map gdD $git -c color.ui=always diff --relative | less -Rc
-# 
-#
-#
-#
-# trash-cli file
-# git checkout -- file
-#
-#
-#
-#
+# git trash - prompt to safely ish discard local changes
+map gt !git checkout -p -- "$f"
 # git diff --cached
 # todo use dandavision/delta
 # bat doesnt handled cached output
