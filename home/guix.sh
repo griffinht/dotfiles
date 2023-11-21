@@ -6,4 +6,4 @@
 first="$1"
 shift 1
 
-exec guix "$first" -L my-channel $@
+exec guix "$first" -L my-channel "$@"
