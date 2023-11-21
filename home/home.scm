@@ -333,6 +333,8 @@
                  (local-file "binaries/jdtls" #:recursive? #t))
                 (".local/share/bash-language-server",
                  (local-file "binaries/bash-language-server" #:recursive? #t))
+                (".local/share/vscode-bash-debug",
+                 (local-file "binaries/vscode-bash-debug" #:recursive? #t))
                 (".local/share/marksman",
                  (local-file "binaries/marksman" #:recursive? #t))
                 ("git/ncsu/.gitconfig",
