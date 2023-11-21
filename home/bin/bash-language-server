@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-guix shell node -- exec ~/.local/share/bash-language-server/node-modules/bash-language-server/cli.js $@
+exec guix shell node shellcheck -- ~/.local/share/bash-language-server/node_modules/bash-language-server/out/cli.js "$@"

@@ -11,7 +11,7 @@ guix shell \
     --preserve='^DBUS_' --expose=/var/run/dbus \
     --preserve='^DISPLAY$' \
     --expose=/sys/dev --expose=/sys/devices --expose=/dev/dri \
-    --share=$HOME \
+    --share="$HOME" \
     git grep e2fsprogs procps \
     which coreutils glib gtk+ glibc libxtst adwaita-icon-theme openjdk@17:jdk \
-    -- $@
+    -- "$@"

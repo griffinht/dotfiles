@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-intellij.sh $HOME/.local/share/intellij/bin/idea.sh
+intellij.sh "$HOME/.local/share/intellij/bin/idea.sh"
 
