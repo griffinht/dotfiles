@@ -31,6 +31,11 @@ lspconfig.pylsp.setup {}
 lspconfig.gopls.setup {}
 lspconfig.marksman.setup {}
 lspconfig.bashls.setup {}
+-- see :help lspconfig-all guile_ls
+lspconfig.guile_ls.setup {
+    -- default is scheme.guile which is not recognized
+    filetypes = { "scheme" }
+}
 --https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls
 -- todo add snippet plugin and override capabilities
 --local capabilities = vim.lsp.protocol.make_client_capabilities()

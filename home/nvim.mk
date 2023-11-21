@@ -9,6 +9,7 @@ home: \
 	binaries/bash-language-server \
 	binaries/vscode-langservers-extracted \
 	binaries/vscode-bash-debug \
+	binaries/scheme-lsp-server \
 	binaries/marksman
 #
 #	../../luasnip \
@@ -17,6 +18,10 @@ home: \
 #	../../friendly-snippets \
 #	../../cmp_luasnip \
 #	../../cmp-buffer \
+
+binaries/scheme-lsp-server:
+	git clone https://codeberg.org/rgherdt/scheme-lsp-server '$@'
+	cd '$@' && guix package -f guix.scm
 
 config/nvim/pack/plugins/start/nvim-dap:
 	git clone https://github.com/mfussenegger/nvim-dap.git '$@'

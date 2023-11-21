@@ -9,6 +9,8 @@
 ;; (add-to-load-path (string-append (dirname "home/home.scm") "/my-channel))
 ;; (add-to-load-path (string-append "home" "/my-channel))
 (add-to-load-path (string-append (dirname (current-filename)) "/my-channel"))
+;todo?
+;(add-to-load-path (string-append (dirname (current-filename)) "/binaries/scheme-lsp-server"))
 
 (use-modules (gnu home)
              (gnu packages)
@@ -29,7 +31,7 @@
   ;; specification->packages seems to dynamically load things
   ;; so we don't have to have a bunch of different use-modules declarations for each package
   ;; but for my-hello we still do it the regular way
-  (packages (append (list mylf) 
+  (packages (append (list mylf)
                     (specifications->packages (list 
                                             ;; needed to make things work i think?
                                             ;; also needs GUIX_LOCPATH=/home/griffin/.guix-profile/lib/locale
