@@ -176,6 +176,7 @@
                                             "zip"
                                             "unzip" ; note this is here twice for organization i guess
                                             "inetutils" ;; telnet
+                                            "netcat"
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
@@ -330,6 +331,8 @@
                  (local-file "binaries/themes" #:recursive? #t))
                 (".local/share/jdtls",
                  (local-file "binaries/jdtls" #:recursive? #t))
+                (".local/share/bash-language-server",
+                 (local-file "binaries/bash-language-server" #:recursive? #t))
                 (".local/share/marksman",
                  (local-file "binaries/marksman" #:recursive? #t))
                 ("git/ncsu/.gitconfig",

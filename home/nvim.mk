@@ -6,6 +6,7 @@ home: \
 	../../nvim-jdtls \
 	~/.local/share/lua-language-server \
 	config/nvim/pack/plugins/start/nvim-dap \
+	binaries/bash-language-server \
 	binaries/marksman
 #
 #	../../luasnip \
@@ -17,6 +18,10 @@ home: \
 
 config/nvim/pack/plugins/start/nvim-dap:
 	git clone https://github.com/mfussenegger/nvim-dap.git '$@'
+
+binaries/bash-language-server:
+	mkdir -p '$@'
+	cd '$@' && guix shell node -- npm install bash-language-server
 
 binaries/jdtls:
 	mkdir -p '$@'

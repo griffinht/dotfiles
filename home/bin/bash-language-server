@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+guix shell node -- exec ~/.local/share/bash-language-server/node-modules/bash-language-server/cli.js $@
