@@ -1,6 +1,8 @@
 --todo refactor to other file
 local dap = require("dap")
 
+require("dap_java").configure(dap)
+
 
 -- caused by not defining "program"
 -- Error on launch: executable module does not exist

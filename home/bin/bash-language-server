@@ -1,3 +1,8 @@
 #!/usr/bin/env sh
 
-exec guix shell node shellcheck -- ~/.local/share/bash-language-server/node_modules/bash-language-server/out/cli.js "$@"
+script="bash-language-server"
+
+PATH="$HOME/.local/share/bash-language-server/node_modules/.bin:$PATH" exec guix shell node shellcheck -- "$script" "$@"
+
+#exec guix shell node shellcheck -- ~/.local/share/bash-language-server/node_modules/bash-language-server/out/cli.js "$@"
+

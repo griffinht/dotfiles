@@ -31,6 +31,11 @@ local config = {
             signatureHelp = { enabled = true },
         }
     },
+    init_options = {
+        bundles = {
+            vim.fn.glob("~/.local/share/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1)
+        };
+    },
 }
 
 jdtls.start_or_attach(config)

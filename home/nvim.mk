@@ -19,6 +19,10 @@ home: \
 #	../../cmp_luasnip \
 #	../../cmp-buffer \
 
+binaries/java-debug:
+	git clone https://github.com/microsoft/java-debug '$@'
+	cd '$@' && ./mvnw clean install
+
 binaries/scheme-lsp-server:
 	git clone https://codeberg.org/rgherdt/scheme-lsp-server '$@'
 	cd '$@' && guix package -f guix.scm

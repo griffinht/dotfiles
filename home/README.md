@@ -59,8 +59,3 @@ make color scheme easily configurable!
 DX
 rocky remake
 
-LSP
-https://github.com/redhat-developer/yaml-language-server
-https://github.com/pappasam/nginx-language-server
-https://www.npmjs.com/package/vscode-json-languageserver
-https://github.com/rcjsuen/dockerfile-language-server

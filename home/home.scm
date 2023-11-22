@@ -339,6 +339,10 @@
                  (local-file "binaries/vscode-bash-debug" #:recursive? #t))
                 (".local/share/marksman",
                  (local-file "binaries/marksman" #:recursive? #t))
+                (".local/share/java-debug",
+                 (local-file "binaries/java-debug" #:recursive? #t))
+                (".local/share/vscode-langservers-extracted",
+                 (local-file "binaries/vscode-langservers-extracted" #:recursive? #t))
                 ("git/ncsu/.gitconfig",
                  (local-file "ncsu/gitconfig" #:recursive? #t))
                 ))

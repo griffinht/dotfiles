@@ -41,7 +41,17 @@ lspconfig.guile_ls.setup {
 --local capabilities = vim.lsp.protocol.make_client_capabilities()
 --capabilities.textDocument.completion.completionItem.snippetSupport = true
 --lspconfig.jsonls.setup { capabilities = capabilities }
-lspconfig.jsonls.setup {}
+
+-- vscode
+-- todo formatter
+lspconfig.eslint.setup({})
+-- todo add snippets, formatter
+lspconfig.html.setup({})
+-- todo snippets
+lspconfig.cssls.setup({})
+-- todo snippets
+lspconfig.jsonls.setup({})
+
 lspconfig.lua_ls.setup {
     on_init = function(client)
         client.config.settings = vim.tbl_deep_extend("force", client.config.settings, {
