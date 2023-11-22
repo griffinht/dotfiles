@@ -141,13 +141,25 @@ dap.defaults.fallback.external_terminal = {
 -- lldb-vscode is included in the guix lldb package
 -- it is simply a dap adapter for lldb, and will probably be renamed to lldb-dap soon
 -- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#ccrust-via-lldb-vscode
+local function find_executable(executable)
+    local path = vim.fn.exepath(executable)
+    if path == "" then
+        -- vim.fn.exepath returns "" empty string when not found
+        -- this causes a confusing error message when nvim-dap tries to run the configuration
+        -- so instead, return the executable (which won't be found) but will provide a more helpful error
+        return executable
+    end
+
+    return path
+end
 dap.adapters["lldb-vscode"] = {
     type = "executable";
     --must be an absolute path
     -- this is because lldb will try to reexecute itself to pipe the terminal in if runInTerminal is true
     -- putting a relative path here breaks this
     --command = "lldb-vscode"
-    command = vim.fn.exepath("lldb-vscode")
+    --todo when lldb-vscode is not found this gives an empty string
+    command = find_executable("lldb-vscode")
 }
 dap.adapters.bashdb = {
     type = "executable";
