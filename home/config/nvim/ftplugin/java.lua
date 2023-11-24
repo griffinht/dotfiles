@@ -27,15 +27,65 @@ local config = {
         java = {
             signatureHelp = { enabled = true },
         },
-        bruh = {
-            signatureHelp = { enabled = true },
-        }
     },
     init_options = {
         bundles = {
-            vim.fn.glob("~/.local/share/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1)
+            --vim.fn.glob("~/.local/share/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1)
         };
     },
 }
 
 jdtls.start_or_attach(config)
+
+--[[
+    JdtCompile
+    JdtSetRuntime
+    JdtUpdateConfig
+    JdtUpdateDebugConfig (if dap and java-debug bundles are available)
+    JdtUpdateHotcode (if dap and java-debug bundles are available)
+    JdtBytecode
+    JdtJol
+    JdtJshell
+    JdtRestart
+    ]]--
+    --todo!
+
+    --[[
+function BruhBruh()
+    print("excused me")
+    local command = {
+        command = "vscode.java.startDebugSession";
+        --args = {"mainClass", "projectName"};
+    }
+    print(vim.lsp.buf.execute_command(command))
+      print("excusme")
+      print("excusme")
+      print("excusme")
+      print("excusme")
+      print("excusme")
+    --[[
+    local err, is_test_file = execute_command({ command = "vscode.java.startDebugSession" }, callback, vim.api.nvim_get_current_buf())
+    if err then
+        print("error: " .. err.message)
+    end
+    print("result:")
+    print(is_test_file)]]--
+
+    --[[
+    local dap = require("dap")
+    dap.adapters.java = function(callback)
+        -- FIXME:
+        -- Here a function needs to trigger the `vscode.java.startDebugSession` LSP command
+        -- The response to the command must be the `port` used below
+        local command = {
+            command = "vscode.java.startDebugSession"
+        }
+        callback({
+            type = 'server';
+            host = '127.0.0.1';
+            port = port;
+        })
+    end
+end
+
+]]--
