@@ -114,27 +114,37 @@ do
     })
 end]]--
 
-local dap_current_file = vim.fs.dirname(vim.api.nvim_buf_get_name(0))
-local dap_project_root = vim.fs.dirname(vim.fs.find({'.vscode'}, {
-    upward = true,
-    path = dap_current_file,
-})[1])
+-- .vscode/launch.json
+do
+    local dap_current_file = vim.fs.dirname(vim.api.nvim_buf_get_name(0))
+    local dap_project_root = vim.fs.dirname(vim.fs.find({'.vscode'}, {
+        upward = true,
+        path = dap_current_file,
+    })[1])
 
-if dap_project_root ~= nil then
-    local type_to_filetypes = {}
-    type_to_filetypes["lldb-vscode"] = { "c", "cpp", "h", "hpp" }
-    require("dap.ext.vscode").load_launchjs(dap_project_root .. "/.vscode/launch.json", type_to_filetypes)
-else
-    print("couldn't find dap project root for file " .. dap_current_file)
+    if dap_project_root ~= nil then
+        local type_to_filetypes = {}
+        type_to_filetypes["lldb-vscode"] = { "c", "cpp", "h", "hpp" }
+        require("dap.ext.vscode").load_launchjs(dap_project_root .. "/.vscode/launch.json", type_to_filetypes)
+    else
+        print("couldn't find dap project root for file " .. dap_current_file)
+    end
 end
 
 
---[[
-dap.defaults.fallback.external_terminal = {
-    command = "touch";
-    args = {"/tmp/bruhhhh"};
-}]]--
---dap.defaults.fallback.force_external_terminal = true
+
+-- terminal config
+do
+    -- for external terminal to work it needs to be forced and there needs to be a fallback.external_terminal configuration defined, as below
+    --dap.defaults.fallback.force_external_terminal = true
+    dap.defaults.fallback.external_terminal = {
+        -- spawns a foot terminal window with some nice formatting
+        -- todo debug why the cwd on this is borked
+        -- i hate dap! i hate dap!
+        command = "debug-client.sh";
+        --args = {};
+    }
+end
 
 -- ADAPTER CONFIG
 
@@ -159,13 +169,19 @@ dap.adapters["lldb-vscode"] = {
     -- putting a relative path here breaks this
     --command = "lldb-vscode"
     --todo when lldb-vscode is not found this gives an empty string
-    command = find_executable("lldb-vscode")
+    command = find_executable("lldb-vscode");
+    options = {
+        cwd = "/";
+    };
 }
 dap.adapters.bashdb = {
     type = "executable";
-    --command = vim.fn.exepath("bashdb")
+    --command = find_executable("bashdb")
     command = "bashdb"
 }
+
+
+
 -- set leader to space
 -- todo centralize keymap config?
 vim.g.mapleader = " "

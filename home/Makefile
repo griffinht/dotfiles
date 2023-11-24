@@ -6,7 +6,9 @@ home: \
 	bin/ncspot \
 	../../adw-colors \
 	# todo experiment with --max-jobs=x
-	guix home reconfigure --max-jobs=2 home.scm
+	guix home reconfigure --max-jobs=2 $(FLAGS) home.scm
+home.offline: FLAGS=--no-substitutes
+home.offline: home
 
 authorize:
 	guix archive --authorize < ../nonguix-signing-key.pub

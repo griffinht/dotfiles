@@ -16,5 +16,6 @@ vim.opt.runtimepath:append(",~/git/nvim-lspconfig")
 vim.opt.runtimepath:append(",~/git/nvim-jdtls")
 
 
+require("treesitter_config")
 require("lsp_config")
 require("dap_config")

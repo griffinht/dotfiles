@@ -10,14 +10,24 @@ home: \
 	binaries/vscode-langservers-extracted \
 	binaries/vscode-bash-debug \
 	binaries/scheme-lsp-server \
+	config/nvim/pack/plugins/start/nvim-treesitter \
 	binaries/marksman
 #
+#	config/nvim/pack/plugins/start/nvim-dap-virtual-text \
 #	../../luasnip \
 #	../../nvim-cmp \
 #	../../cmp-nvim-lsp \
 #	../../friendly-snippets \
 #	../../cmp_luasnip \
 #	../../cmp-buffer \
+
+#https://github.com/theHamsta/nvim-dap-virtual-text/issues/18
+#requires nvim treesitter!
+config/nvim/pack/plugins/start/nvim-dap-virtual-text:
+	git clone https://github.com/theHamsta/nvim-dap-virtual-text '$@'
+
+config/nvim/pack/plugins/start/nvim-treesitter:
+	git clone https://github.com/nvim-treesitter/nvim-treesitter '$@'
 
 binaries/java-debug:
 	git clone https://github.com/microsoft/java-debug '$@'
@@ -91,3 +101,4 @@ binaries/marksman:
 clean: nvim.clean
 nvim.clean:
 	rm -rf ../../auto-save.nvim
+	rm -rf config/nvim/pack
