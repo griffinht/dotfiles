@@ -29,6 +29,10 @@ config/nvim/pack/plugins/start/nvim-dap-virtual-text:
 config/nvim/pack/plugins/start/nvim-treesitter:
 	git clone https://github.com/nvim-treesitter/nvim-treesitter '$@'
 
+binaries/vscode-java-test:
+	git clone https://github.com/microsoft/vscode-java-test '$@'
+	cd '$@' && guix shell node -- sh -c 'npm install && npm run build-plugin'
+
 binaries/java-debug:
 	git clone https://github.com/microsoft/java-debug '$@'
 	cd '$@' && ./mvnw clean install

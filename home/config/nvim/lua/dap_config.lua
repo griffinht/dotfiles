@@ -1,7 +1,11 @@
+-- virtual text! so amazing!
+-- note this requires treesitter to be working
+require("nvim-dap-virtual-text").setup({})
+-- todo nvim-dap-repl-highlights
+-- syntax highlighting in the repl!
+
 --todo refactor to other file
 local dap = require("dap")
-
-require("dap_java").configure(dap)
 
 
 -- caused by not defining "program"
@@ -189,11 +193,14 @@ vim.g.mapleader = " "
 --dap.toggle_breakpoint()
 vim.keymap.set('n', '<F5>', dap.continue)
 vim.keymap.set('n', '<F10>', dap.step_over)
+--vim.keymap.set('n', '<F11>', function() dap.step_into({askForTargets = true}) end)
 vim.keymap.set('n', '<F11>', dap.step_into)
 vim.keymap.set('n', '<F12>', dap.step_out)
 vim.keymap.set('n', '<Leader>b', dap.toggle_breakpoint)
 vim.keymap.set('n', '<Leader>B', dap.set_breakpoint)
+vim.keymap.set('n', '<Leader><CR>b', dap.set_exception_breakpoints)
 
+-- todo add restart keybind?????/
 vim.keymap.set('n', '<Leader>dp', dap.pause)
 vim.keymap.set('n', '<Leader>dt', dap.terminate)
 
@@ -204,10 +211,22 @@ vim.keymap.set('n', '<Leader>dl', function() dap.run_last() end)
 local dap_widgets = require("dap.ui.widgets")
 vim.keymap.set({'n', 'v'}, '<Leader>dh', dap_widgets.hover)
 --vim.keymap.set({'n', 'v'}, '<Leader>dp', dap_widgets.preview)
-vim.keymap.set('n', '<Leader>df', function() dap_widgets.centered_float(dap_widgets.frames) end)
+
+-- WIDGETS
+-- <enter> to expand
+-- <a> to view actions
+
+
+-- sessions
+vim.keymap.set('n', '<Leader>dS', function() dap_widgets.centered_float(dap_widgets.sessions) end)
+-- scopes
 vim.keymap.set('n', '<Leader>ds', function() dap_widgets.centered_float(dap_widgets.scopes) end)
-
-
-
-
-
+-- frames
+vim.keymap.set('n', '<Leader>df', function() dap_widgets.centered_float(dap_widgets.frames) end)
+vim.keymap.set('n', '<Leader>dF', dap.focus_frame)
+vim.keymap.set('n', '<Leader>dD', dap.up)
+vim.keymap.set('n', '<Leader>dd', dap.down)
+-- expression
+vim.keymap.set('n', '<Leader>de', function() dap_widgets.centered_float(dap_widgets.expression) end)
+-- threads
+vim.keymap.set('n', '<Leader>dT', function() dap_widgets.centered_float(dap_widgets.threads) end)

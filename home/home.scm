@@ -54,6 +54,8 @@
                                             "iproute2" ;; ip command
                                             "grep" ;; grep!
                                             "gettext-minimal" ;; envsubst
+                                            "mawk" ;; awk! note im not using gnu gawk
+                                            "sed" ;; sed!
 
                                             ;;
 					    ;; window manager
@@ -175,6 +177,8 @@
                                             "gdb"
                                             "python"
                                             "openjdk@17:jdk"
+                                            "openjdk@17:doc" ;; doesn't do anything
+                                            "openjdk@17:out" ;; doesn't do anything
                                             "zip"
                                             "unzip" ; note this is here twice for organization i guess
                                             "inetutils" ;; telnet
@@ -343,6 +347,8 @@
                  (local-file "binaries/java-debug" #:recursive? #t))
                 (".local/share/vscode-langservers-extracted",
                  (local-file "binaries/vscode-langservers-extracted" #:recursive? #t))
+                (".local/share/vscode-java-test",
+                 (local-file "binaries/vscode-java-test" #:recursive? #t))
                 ("git/ncsu/.gitconfig",
                  (local-file "ncsu/gitconfig" #:recursive? #t))
                 ))

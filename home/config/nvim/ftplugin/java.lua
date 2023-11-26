@@ -1,5 +1,7 @@
 local jdtls = require('jdtls')
 
+-- todo hot reload!
+
 -- java java :doc output for documentation??
 -- https://github.com/mfussenegger/nvim-jdtls/issues?q=jdt+%3A%2F%2Fcontents
 -- https://github.com/mfussenegger/nvim-jdtls/discussions/124
@@ -30,12 +32,17 @@ local config = {
     },
     init_options = {
         bundles = {
+            vim.split(vim.fn.glob("~/.local/share/vscode-java-test/server/*.jar", 1), "\n")
             --vim.fn.glob("~/.local/share/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1)
         };
     },
 }
 
 jdtls.start_or_attach(config)
+
+--todo do this automatically
+--it needs to wait for the lsp to attach
+--require('jdtls.dap').setup_dap_main_class_configs()
 
 --[[
     JdtCompile
