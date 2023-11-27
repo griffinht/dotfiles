@@ -57,7 +57,8 @@ binaries/vscode-langservers-extracted:
 
 binaries/jdtls:
 	mkdir -p '$@'
-	curl -L https://www.eclipse.org/downloads/download.php?file=/jdtls/milestones/1.9.0/jdt-language-server-1.9.0-202203031534.tar.gz | tar -xz -C '$@'
+	# i wish this was a milestone but the snapshot should be fine lol
+	curl -L https://www.eclipse.org/downloads/download.php?file=/jdtls/snapshots/jdt-language-server-1.29.0-202310261436.tar.gz | tar -xz -C '$@'
 	touch '$@'
 
 binaries/marksman:
