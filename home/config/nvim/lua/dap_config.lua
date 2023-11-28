@@ -183,6 +183,11 @@ dap.adapters.bashdb = {
     --command = find_executable("bashdb")
     command = "bashdb"
 }
+-- could be uncaught or caught
+-- todo maybe this should be in ftplugin java.lua config?
+dap.defaults.java.exception_breakpoints = {
+    "uncaught",
+}
 
 
 
@@ -198,7 +203,7 @@ vim.keymap.set('n', '<F11>', dap.step_into)
 vim.keymap.set('n', '<F12>', dap.step_out)
 vim.keymap.set('n', '<Leader>b', dap.toggle_breakpoint)
 vim.keymap.set('n', '<Leader>B', dap.set_breakpoint)
-vim.keymap.set('n', '<Leader><CR>b', dap.set_exception_breakpoints)
+vim.keymap.set('n', '<Leader>e', dap.set_exception_breakpoints)
 
 -- todo add restart keybind?????/
 vim.keymap.set('n', '<Leader>dp', dap.pause)

@@ -16,6 +16,16 @@ local root_files = {
     'settings.gradle.kts', -- Gradle
 }
 
+local bundles = {
+    -- JdtUpdateDebugConfig
+    vim.fn.glob("~/.local/share/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1);
+}
+-- vscode-java-test
+-- https://github.com/mfussenegger/nvim-jdtls#vscode-java-test-installation
+-- :lua require ("jdtls.dap").test_class()
+-- see :help dap i think?
+vim.list_extend(bundles, vim.split(vim.fn.glob("~/.local/share/vscode-java-test/server/*.jar", 1), "\n"));
+
 local config = {
     cmd = {
         'jdtls',
@@ -31,14 +41,20 @@ local config = {
         },
     },
     init_options = {
-        bundles = {
-            vim.split(vim.fn.glob("~/.local/share/vscode-java-test/server/*.jar", 1), "\n")
-            --vim.fn.glob("~/.local/share/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1)
-        };
+        bundles = bundles;
     },
 }
 
 jdtls.start_or_attach(config)
+
+local jdtls_dap = require("jdtls.dap")
+vim.keymap.set('n', '<Leader>tT', jdtls_dap.test_class)
+vim.keymap.set('n', '<Leader>tt', jdtls_dap.test_nearest_method)
+vim.keymap.set('n', '<Leader>tf', jdtls_dap.pick_test)
+
+local jdtls_tests = require("jdtls.tests")
+vim.keymap.set('n', '<Leader>tG', jdtls_tests.generate)
+vim.keymap.set('n', '<Leader>tg', jdtls_tests.goto_subjects)
 
 --todo do this automatically
 --it needs to wait for the lsp to attach
