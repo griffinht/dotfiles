@@ -41,6 +41,10 @@ binaries/themes:
 ../../adw-colors:
 	git clone https://github.com/lassekongo83/adw-colors '$@'
 
+# nerd font
+#binaries/font:
+#	curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/DejaVuSansMono.zip
+
 clean:
 	rm -rf ../../adw-colors
 	rm -rf binaries/*

@@ -85,6 +85,9 @@
                                             ;;
 
 					    "foot" ;; terminal emulator
+                                            "fontconfig" ;; from somewhere else??
+                                            ;; don't forget nerd fonts! installed manually in Makefile
+                                            "font-apple-color-emoji" ;; alternative is google noto
 					    "ncurses" ;; makes foot work
                                             ;; editor
                                             "neovim" ;; the best text editor
@@ -241,7 +244,7 @@
                                             ;; heavyweights
 
                                             ;; should i leave some of these to be installed locally? as needed?
-                                            "obs" ;; recording
+                                            ;;"obs" ;; recording
                                             "audacity" ;; audacity
 					    "xournalpp" ;; drawing gui
 					    "libreoffice" "hunspell-dict-en" ;; office todo spellcheck doesnt work :(
@@ -343,6 +346,8 @@
                  (local-file "binaries/vscode-bash-debug" #:recursive? #t))
                 (".local/share/marksman",
                  (local-file "binaries/marksman" #:recursive? #t))
+                (".local/share/rust-analyzer",
+                 (local-file "binaries/rust-analyzer" #:recursive? #t))
                 (".local/share/java-debug",
                  (local-file "binaries/java-debug" #:recursive? #t))
                 (".local/share/vscode-langservers-extracted",
