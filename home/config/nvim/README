@@ -29,12 +29,26 @@ gitsigns
 
 
 LSP
+https://langserver.org/
 https://github.com/redhat-developer/yaml-language-server
+https://github.com/eclipse/lemminx
 https://github.com/pappasam/nginx-language-server
 https://www.npmjs.com/package/vscode-json-languageserver
 https://github.com/rcjsuen/dockerfile-language-server
+
+BIG
+https://microsoft.github.io/language-server-protocol/implementors/tools/
 
 NEOVIM
 https://gpanders.com/blog/whats-new-in-neovim-0-7/
 todo restructure
     https://stackoverflow.com/questions/48700563/how-do-i-install-plugins-in-neovim-correctly
+
+
+lint
+https://github.com/mfussenegger/nvim-lint
+
+
+https://github.com/mfussenegger/nvim-treehopper
+
+

@@ -40,6 +40,7 @@ lspconfig.html.setup({})
 lspconfig.cssls.setup({})
 -- todo snippets
 lspconfig.jsonls.setup({})
+lspconfig.rust_analyzer.setup({})
 
 lspconfig.lua_ls.setup {
     on_init = function(client)

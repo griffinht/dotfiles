@@ -11,6 +11,10 @@ home: \
 	binaries/vscode-bash-debug \
 	binaries/scheme-lsp-server \
 	config/nvim/pack/plugins/start/nvim-treesitter \
+	binaries/rust-analyzer \
+	config/nvim/pack/plugins/start/rust-tools \
+	config/nvim/pack/plugins/start/plenary \
+	config/nvim/pack/plugins/start/nvim-dap-ui \
 	binaries/marksman
 #
 #	config/nvim/pack/plugins/start/nvim-dap-virtual-text \
@@ -21,6 +25,15 @@ home: \
 #	../../cmp_luasnip \
 #	../../cmp-buffer \
 
+config/nvim/pack/plugins/start/nvim-dap-ui:
+	git clone https://github.com/rcarriga/nvim-dap-ui '$@'
+
+config/nvim/pack/plugins/start/plenary:
+	git clone https://github.com/nvim-lua/plenary.nvim '$@'
+
+config/nvim/pack/plugins/start/rust-tools:
+	git clone https://github.com/simrat39/rust-tools.nvim '$@'
+
 #https://github.com/theHamsta/nvim-dap-virtual-text/issues/18
 #requires nvim treesitter!
 config/nvim/pack/plugins/start/nvim-dap-virtual-text:
@@ -28,6 +41,10 @@ config/nvim/pack/plugins/start/nvim-dap-virtual-text:
 
 config/nvim/pack/plugins/start/nvim-treesitter:
 	git clone https://github.com/nvim-treesitter/nvim-treesitter '$@'
+
+binaries/rust-analyzer:
+	curl -L https://github.com/rust-lang/rust-analyzer/releases/download/2023-12-04/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip > '$@'
+	chmod +x '$@'
 
 binaries/vscode-java-test:
 	git clone https://github.com/microsoft/vscode-java-test '$@'

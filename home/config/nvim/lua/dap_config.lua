@@ -188,6 +188,10 @@ dap.adapters.bashdb = {
 dap.defaults.java.exception_breakpoints = {
     "uncaught",
 }
+dap.defaults["lldb-vscode"].exception_breakpoints = {
+    "cpp_throw",
+    --"ccp_catch",
+}
 
 
 
@@ -196,11 +200,18 @@ dap.defaults.java.exception_breakpoints = {
 vim.g.mapleader = " "
 --vim.keymap.set("n", "gD", vim.lsp.buf.declaration, options)
 --dap.toggle_breakpoint()
+
 vim.keymap.set('n', '<F5>', dap.continue)
+vim.keymap.set('n', '<C-S-L>', dap.continue)
 vim.keymap.set('n', '<F10>', dap.step_over)
---vim.keymap.set('n', '<F11>', function() dap.step_into({askForTargets = true}) end)
+vim.keymap.set('n', '<C-L>', dap.step_over)
+
 vim.keymap.set('n', '<F11>', dap.step_into)
+vim.keymap.set('n', '<C-J>', dap.step_into)
+vim.keymap.set('n', '<C-S-J>', function() dap.step_into({askForTargets = true}) end)
 vim.keymap.set('n', '<F12>', dap.step_out)
+vim.keymap.set('n', '<C-K>', dap.step_out)
+
 vim.keymap.set('n', '<Leader>b', dap.toggle_breakpoint)
 vim.keymap.set('n', '<Leader>B', dap.set_breakpoint)
 vim.keymap.set('n', '<Leader>e', dap.set_exception_breakpoints)
@@ -214,6 +225,9 @@ vim.keymap.set('n', '<Leader>dr', function() dap.repl.open() end)
 vim.keymap.set('n', '<Leader>dl', function() dap.run_last() end)
 
 local dap_widgets = require("dap.ui.widgets")
+
+--todo ???
+--vim.keymap.set('n', '<M-h>', dap_widgets.hover)
 vim.keymap.set({'n', 'v'}, '<Leader>dh', dap_widgets.hover)
 --vim.keymap.set({'n', 'v'}, '<Leader>dp', dap_widgets.preview)
 
@@ -228,10 +242,17 @@ vim.keymap.set('n', '<Leader>dS', function() dap_widgets.centered_float(dap_widg
 vim.keymap.set('n', '<Leader>ds', function() dap_widgets.centered_float(dap_widgets.scopes) end)
 -- frames
 vim.keymap.set('n', '<Leader>df', function() dap_widgets.centered_float(dap_widgets.frames) end)
+vim.keymap.set('n', '<M-h>', function() dap_widgets.centered_float(dap_widgets.frames) end)
 vim.keymap.set('n', '<Leader>dF', dap.focus_frame)
-vim.keymap.set('n', '<Leader>dD', dap.up)
-vim.keymap.set('n', '<Leader>dd', dap.down)
--- expression
+-- todo remaps shift H shift L jump top to bottom of screen
+vim.keymap.set('n', '<M-l>', dap.focus_frame)
+vim.keymap.set('n', '<M-k>', dap.up)
+-- todo remaps concatenate lines :(
+vim.keymap.set('n', '<M-j>', dap.down)
+-- expression - extraneous same as hover i think
 vim.keymap.set('n', '<Leader>de', function() dap_widgets.centered_float(dap_widgets.expression) end)
 -- threads
+vim.keymap.set('n', '<M-C-h>', function() dap_widgets.centered_float(dap_widgets.threads) end)
 vim.keymap.set('n', '<Leader>dT', function() dap_widgets.centered_float(dap_widgets.threads) end)
+-- todo was is c-s-k???
+-- todo how to warn when overriding a mapping
