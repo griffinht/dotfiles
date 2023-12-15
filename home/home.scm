@@ -186,6 +186,7 @@
                                             "unzip" ; note this is here twice for organization i guess
                                             "inetutils" ;; telnet
                                             "netcat"
+                                            "smartmontools" ;; smartctl
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
