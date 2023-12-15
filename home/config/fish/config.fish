@@ -110,13 +110,24 @@ end
 function fish_mode_prompt
 end
 
-# rememebr we are in vim mode which means our binds need to be in insert mode
+function copy_last_command
+    # also print the copied command to stderr
+    history -n 1 | tee /dev/stderr | wl-copy
+end
 
+#bind \cS\C-C 'echo "Control + Shift + C pressed"'
+#bind -M insert \cS\C-C 
+# rememebr we are in vim mode which means our binds need to be in insert mode
+# https://github.com/fish-shell/fish-shell/issues/3011 https://github.com/fish-shell/fish-shell/issues/324
 # control+space cycle through autocompletes
-bind -M insert -k nul complete
-# tab accept next word
-# todo can this also move forward a space? otherwise i have to press space
-bind -M insert \t forward-bigword
+#bind -M insert -k nul complete-and-search
+
+# tab
+bind -M insert \t forward-word forward-single-char
+# shift tab
+bind -M insert \e\[Z forward-bigword forward-single-char
+# control tab
+bind -M insert \e\[27\;5\;9~ complete-and-search
 # shift+enter accept all and execute
 bind -M insert \e\[27\;2\;13~ accept-autosuggestion execute
 
@@ -155,6 +166,18 @@ set -x MANROFFOPT '-c'
 
 # set editor
 set -x EDITOR "nvim"
+
+# 
+# PIP
+#
+
+# pip install path
+set -x PIP_TARGET "$HOME/.local/share/pip"
+# pip install will put binaries here
+# todo path priority?
+set -x PATH "$PATH:$HOME/.local/share/pip/bin"
+# this makes python script import work
+set -x PYTHONPATH "$PYTHONPATH:$HOME/.local/share/pip"
 
 #
 # ALIASES
