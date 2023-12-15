@@ -225,7 +225,7 @@
                                             "btop" ;; cool system monitor, also see glances nmon
 					    ;; other
 					    "pandoc" ;; file converter (like html -> pdf)
-					    ;"texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
+					    "texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
                                             
 
                                             ;;
