@@ -354,6 +354,10 @@
                  (local-file "binaries/vscode-langservers-extracted" #:recursive? #t))
                 (".local/share/vscode-java-test",
                  (local-file "binaries/vscode-java-test" #:recursive? #t))
+                (".local/share/vscode",
+                 (local-file "binaries/vscode/VSCode-linux-x64" #:recursive? #t))
+                (".local/share/fonts",
+                 (local-file "binaries/fonts" #:recursive? #t))
                 ("git/ncsu/.gitconfig",
                  (local-file "ncsu/gitconfig" #:recursive? #t))
                 ))

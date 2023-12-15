@@ -5,15 +5,16 @@ home: \
 	binaries/docker-compose \
 	bin/ncspot \
 	../../adw-colors \
+	binaries/vscode \
+	binaries/fonts/dejavu \
 	# todo experiment with --max-jobs=x
 	guix home reconfigure --max-jobs=2 $(FLAGS) home.scm
 home.offline: FLAGS=--no-substitutes
 home.offline: home
-
 authorize:
 	guix archive --authorize < ../nonguix-signing-key.pub
 
-include nvim.mk
+include config/nvim/nvim.mk
 
 binaries/docker-compose:
 	curl -L https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64 > '$@'
@@ -41,9 +42,21 @@ binaries/themes:
 ../../adw-colors:
 	git clone https://github.com/lassekongo83/adw-colors '$@'
 
+binaries/vscode:
+	mkdir '$@'
+	curl -L 'https://code.visualstudio.com/sha/download?build=stable&os=linux-x64' | tar -xz -C '$@'
+
+# todo
+pip:
+	pip install openinterpretertodo_double check if this is the right package name
+
 # nerd font
-#binaries/font:
-#	curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/DejaVuSansMono.zip
+binaries/fonts/dejavu:
+	mkdir -p '$@'
+	temp="$(mktemp)" \
+		&& curl -L 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/DejaVuSansMono.zip' > "$temp" \
+		&& unzip -d "$@" "$temp" \
+		&& rm "$temp"
 
 clean:
 	rm -rf ../../adw-colors
