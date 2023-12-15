@@ -35,8 +35,8 @@ case "$PROGRAM" in
         # fish always likes to create this file
         echo cleaning up...
         rm -f config/fish/fish_variables
+        rm config/fish/config.fish
         rmdir config/fish/completions
-        rmdir config/fish/conf.d
         rmdir config/fish/functions
         #done
         ;;
