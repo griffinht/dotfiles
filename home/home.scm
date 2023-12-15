@@ -302,6 +302,8 @@
 			,(local-file "config/bat" #:recursive? #t))
 		       ("fish/config.fish"
 			,(local-file "config/fish/config.fish" #:recursive? #t))
+		       ("fish/conf.d"
+			,(local-file "config/fish/conf.d" #:recursive? #t))
 		       ("emacs"
 			,(local-file "config/emacs" #:recursive? #t))
 		       ("gtk-3.0"

@@ -18,10 +18,6 @@ function run_last_command
     echo done
 end
 
-function noop
-end
-
-bind -M insert --sets-mode default jj noop
 abbr gg run_last_command
 #bind -M insert ! run_last_command
 alias !!="echo hi"

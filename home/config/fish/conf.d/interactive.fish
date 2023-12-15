@@ -38,6 +38,7 @@ function fish_user_key_bindings
 
     # AUTOCOMPLETE
 
+
     # tab
     bind -M insert \t forward-word forward-single-char
     # shift tab
