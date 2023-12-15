@@ -15,7 +15,11 @@ home: \
 	config/nvim/pack/plugins/start/rust-tools \
 	config/nvim/pack/plugins/start/plenary \
 	config/nvim/pack/plugins/start/nvim-dap-ui \
+	config/nvim/pack/Exafunction/start/codeium.vim \
 	binaries/marksman
+
+
+#	config/nvim/pack/plugins/start/copilot.lua \
 #
 #	config/nvim/pack/plugins/start/nvim-dap-virtual-text \
 #	../../luasnip \
@@ -24,6 +28,12 @@ home: \
 #	../../friendly-snippets \
 #	../../cmp_luasnip \
 #	../../cmp-buffer \
+
+config/nvim/pack/Exafunction/start/codeium.vim:
+	git clone https://github.com/Exafunction/codeium.vim '$@'
+
+config/nvim/pack/plugins/start/copilot.lua:
+	git clone https://github.com/zbirenbaum/copilot.lua '$@'
 
 config/nvim/pack/plugins/start/nvim-dap-ui:
 	git clone https://github.com/rcarriga/nvim-dap-ui '$@'

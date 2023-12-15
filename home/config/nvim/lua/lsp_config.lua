@@ -41,6 +41,9 @@ lspconfig.cssls.setup({})
 -- todo snippets
 lspconfig.jsonls.setup({})
 lspconfig.rust_analyzer.setup({})
+--todo sql lsp
+--this one or joes?
+--lspconfig.sqlls.setup{}
 
 lspconfig.lua_ls.setup {
     on_init = function(client)

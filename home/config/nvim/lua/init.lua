@@ -38,3 +38,7 @@ rt.setup({
     end,
   },
 })
+
+
+
+require("copilot_config")
