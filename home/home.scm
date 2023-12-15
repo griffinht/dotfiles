@@ -359,6 +359,8 @@
                  (local-file "binaries/vscode/VSCode-linux-x64" #:recursive? #t))
                 (".local/share/fonts",
                  (local-file "binaries/fonts" #:recursive? #t))
+                (".local/share/aichat",
+                 (local-file "binaries/aichat" #:recursive? #t))
                 ("git/ncsu/.gitconfig",
                  (local-file "ncsu/gitconfig" #:recursive? #t))
                 ))
