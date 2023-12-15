@@ -33,6 +33,7 @@ case "$PROGRAM" in
         #while true; do
         XDG_CONFIG_HOME=$PWD/config fish
         # fish always likes to create this file
+        echo cleaning up...
         rm -f config/fish/fish_variables
         rmdir config/fish/completions
         rmdir config/fish/conf.d
