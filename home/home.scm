@@ -92,7 +92,7 @@
                                             ;; editor
                                             "neovim" ;; the best text editor
                                             ;; "nvim-dap" todo not packaged
-                                            "vim-solarized" ;; this is technically for vim, but using a terrible hack it can work with nvim
+                                            ;;"vim-solarized" ;; this is technically for vim, but using a terrible hack it can work with nvim
                                             ;; "jdtls" todo not packaged
                                             "go" "gopls"
                                             "python-lsp-server"
