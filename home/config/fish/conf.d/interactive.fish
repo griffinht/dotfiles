@@ -47,6 +47,8 @@ function fish_user_key_bindings
     bind -M insert \e\[27\;5\;9~ complete-and-search
     # shift+enter accept all and execute
     bind -M insert \e\[27\;2\;13~ accept-autosuggestion execute
+    # shift+enter from nvim
+    bind -M insert \e\[13\;2u accept-autosuggestion execute
 end
 
 
