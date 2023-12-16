@@ -30,8 +30,13 @@ set noshowmode
 "https://hot.griffinht.com/searx/search?t=ffab&q=neovim+solarized+
 
 " disable solarized double background
-let g:solarized_termtrans=1
-colorscheme solarized
+" this was for that ancient broken solarized theme
+" now i use https://github.com/lifepillar/vim-solarized8/tree/neovim
+"let g:solarized_termtrans=1
+" enable terminal colors
+set termguicolors
+set background=dark
+colorscheme solarized8
 
 " spellchecking
 " disable with :nospell

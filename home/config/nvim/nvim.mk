@@ -16,6 +16,8 @@ home: \
 	config/nvim/pack/plugins/start/plenary \
 	config/nvim/pack/plugins/start/nvim-dap-ui \
 	config/nvim/pack/Exafunction/start/codeium.vim \
+	config/nvim/pack/plugins/start/gp.nvim \
+	config/nvim/pack/themes/start/solarized8 \
 	binaries/marksman
 
 
@@ -28,6 +30,13 @@ home: \
 #	../../friendly-snippets \
 #	../../cmp_luasnip \
 #	../../cmp-buffer \
+
+config/nvim/pack/themes/start/solarized8:
+	git clone https://github.com/lifepillar/vim-solarized8.git '$@'
+	cd '$@' && git checkout neovim
+
+config/nvim/pack/plugins/start/gp.nvim:
+	git clone https://github.com/Robitx/gp.nvim '$@'
 
 config/nvim/pack/Exafunction/start/codeium.vim:
 	git clone https://github.com/Exafunction/codeium.vim '$@'
