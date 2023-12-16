@@ -77,6 +77,7 @@ vim.api.nvim_create_autocmd({"TermOpen"}, {
 -- todo this will probably break lsp
 vim.api.nvim_create_autocmd({"TermClose"}, {
     callback = function()
+        vim.fn.input("Process exited with " .. vim.v.event.status .. ", press enter to continue")
         vim.api.nvim_command("quit")
     end,
 })
