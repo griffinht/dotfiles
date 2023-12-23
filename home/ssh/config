@@ -1,0 +1,11 @@
+Include config.d/*
+
+Host hot-desktop.lan.griffinht.com
+    User admin
+
+Host envy-laptop.lan.griffinht.com
+    User root
+
+Host localhost
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
