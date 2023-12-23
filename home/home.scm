@@ -365,6 +365,8 @@
                  (local-file "binaries/aichat" #:recursive? #t))
                 ("git/ncsu/.gitconfig",
                  (local-file "ncsu/gitconfig" #:recursive? #t))
+                (".ssh/config",
+                 (local-file "ssh/config" #:recursive? #t))
                 ))
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
