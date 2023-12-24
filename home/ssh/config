@@ -1,7 +1,7 @@
 Include config.d/*
 
 Host hot-desktop.lan.griffinht.com
-    User admin
+    User root
 
 Host envy-laptop.lan.griffinht.com
     User root
