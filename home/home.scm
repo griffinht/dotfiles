@@ -187,6 +187,7 @@
                                             "inetutils" ;; telnet
                                             "netcat"
                                             "smartmontools" ;; smartctl
+                                            "tree"
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
