@@ -44,6 +44,7 @@ lspconfig.rust_analyzer.setup({})
 --todo sql lsp
 --this one or joes?
 --lspconfig.sqlls.setup{}
+--todo yaml/yml WITH SCHEME https://github.com/jesseduffield/lazydocker/blob/master/docs/Config.md
 
 lspconfig.lua_ls.setup {
     on_init = function(client)
