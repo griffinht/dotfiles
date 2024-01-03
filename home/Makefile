@@ -8,7 +8,7 @@ home: \
 	binaries/vscode \
 	binaries/fonts/dejavu \
 	# todo experiment with --max-jobs=x
-	guix home reconfigure --max-jobs=2 $(FLAGS) home.scm
+	guix home reconfigure --max-jobs=16 $(FLAGS) home.scm
 home.offline: FLAGS=--no-substitutes
 home.offline: home
 authorize:
