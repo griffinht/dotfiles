@@ -188,6 +188,7 @@
                                             "netcat"
                                             "smartmontools" ;; smartctl
                                             "tree"
+                                            "time"
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
