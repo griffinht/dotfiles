@@ -31,7 +31,8 @@
   ;; specification->packages seems to dynamically load things
   ;; so we don't have to have a bunch of different use-modules declarations for each package
   ;; but for my-hello we still do it the regular way
-  (packages (append (list mylf)
+  (packages (append (list mylf
+                          mitmproxy)
                     (specifications->packages (list 
                                             ;; needed to make things work i think?
                                             ;; also needs GUIX_LOCPATH=/home/griffin/.guix-profile/lib/locale

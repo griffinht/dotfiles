@@ -6,6 +6,7 @@
                #:use-module (guix gexp)
                #:use-module (gnu packages tls)
                #:use-module (gnu packages commencement)
+               #:use-module (gnu packages compression)
                #:use-module (gnu packages glib))
 
 (define-public mylf
@@ -68,7 +69,7 @@ command-line arguments, multiple languages, and so on.")
   ;; todo this doesnt have a license i just copied this field from the example
   (license gpl3+)))
 
-(define-public myrescrobbled
+#|(define-public myrescrobbled
                (package
   (name "myrescrobbled")
   (version "2.10")
@@ -93,4 +94,22 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
   (home-page "https://www.gnu.org/software/hello/")
   ;; todo this doesnt have a license i just copied this field from the example
-  (license gpl3+)))
+  (license gpl3+)))|#
+(define-public mitmproxy
+               (package
+                 (name "mitmproxy")
+                 (version "10.20.0")
+                 (source (origin
+                           (uri "https://downloads.mitmproxy.org/10.2.0/mitmproxy-10.2.0-linux-x86_64.tar.gz")
+                           (method url-fetch)
+                           (sha256 "04vr51wna946ljydmsm0qhj3ss0rifb18lqmpd38p86y60pbmh4m")))
+                 (build-system copy-build-system)
+                 (arguments
+                   '(#:install-plan '(("." "bin/")) ; todo this includes environment-variables which we dont want
+                     #:phases (modify-phases %standard-phases
+                                             (delete 'validate-runpath))))
+                 ;(propagated-inputs (list glib zlib))
+                 (synopsis "An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.")
+                 (description "mitmproxy is an interactive, SSL/TLS-capable intercepting proxy with a console interface for HTTP/1, HTTP/2, and WebSockets. mitmdump is the command-line version of mitmproxy. Think tcpdump for HTTP. mitmweb is a web-based interface for mitmproxy.")
+                 (home-page "https://mitmproxy.org/")
+                 (license expat)))
