@@ -3,9 +3,13 @@ Include config.d/*
 Host hot-desktop.lan.griffinht.com
     User root
 
+Host hot-desktop.wg.griffinht.com
+    User root
+
 Host envy-laptop.lan.griffinht.com
     User root
 
 Host localhost
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
+    User root
