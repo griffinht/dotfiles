@@ -12,6 +12,11 @@ git clone https://github.com/ledger/vim-ledger
 make
 
 # THEME
+auto switching! cool!
+https://arslan.io/2021/02/15/automatic-dark-mode-for-terminal-applications/
+https://www.josherv.in/2018/06/22/unix/
+https://codeberg.org/dnkl/foot/issues/708
+
 SOLARIZED DARK
 it was foots default suddenly so i started using
 
@@ -29,6 +34,10 @@ foot default solarized
 
 nvim TODO PACKAGE
 currently used hacked together hardcoded guix vim-solarized
+
+# theme todo
+aerc
+sway
 
 # WORKFLOW
 starting stuff
