@@ -35,7 +35,7 @@
   (packages (append (list mylf
                           mitmproxy
                           theme.sh
-                          conjure)
+                          neovim-conjure neovim-nfnl)
                     (specifications->packages (list 
                                             ;; needed to make things work i think?
                                             ;; also needs GUIX_LOCPATH=/home/griffin/.guix-profile/lib/locale
