@@ -15,37 +15,7 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
 
 --moved to ftplugin
 --lspconfig.jdtls.setup {}
-lspconfig.clangd.setup {}
-lspconfig.pylsp.setup {}
-lspconfig.gopls.setup {}
-lspconfig.marksman.setup {}
-lspconfig.bashls.setup {}
--- see :help lspconfig-all guile_ls
---[[
-lspconfig.guile_ls.setup {
-    -- default is scheme.guile which is not recognized
-    filetypes = { "scheme" }
-}]]--
---https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls
--- todo add snippet plugin and override capabilities
---local capabilities = vim.lsp.protocol.make_client_capabilities()
---capabilities.textDocument.completion.completionItem.snippetSupport = true
---lspconfig.jsonls.setup { capabilities = capabilities }
 
--- vscode
--- todo formatter
-lspconfig.eslint.setup({})
--- todo add snippets, formatter
-lspconfig.html.setup({})
--- todo snippets
-lspconfig.cssls.setup({})
--- todo snippets
-lspconfig.jsonls.setup({})
-lspconfig.rust_analyzer.setup({})
---todo sql lsp
---this one or joes?
---lspconfig.sqlls.setup{}
---todo yaml/yml WITH SCHEME https://github.com/jesseduffield/lazydocker/blob/master/docs/Config.md
 
 lspconfig.lua_ls.setup {
     on_init = function(client)

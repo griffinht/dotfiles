@@ -1,0 +1,12 @@
+-- [nfnl] Compiled from lua/lsp_config2.fnl by https://github.com/Olical/nfnl, do not edit.
+local lspconfig = require("lspconfig")
+lspconfig.clangd.setup({})
+lspconfig.pylsp.setup({})
+lspconfig.gopls.setup({})
+lspconfig.marksman.setup({})
+lspconfig.bashls.setup({})
+lspconfig.eslint.setup({})
+lspconfig.html.setup({})
+lspconfig.cssls.setup({})
+lspconfig.jsonls.setup({})
+return lspconfig.rust_analyzer.setup({})

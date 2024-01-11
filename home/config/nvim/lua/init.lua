@@ -14,15 +14,7 @@ vim.opt.runtimepath:append(",~/.guix-home/profile/share/vim/vimfiles/pack/guix/s
 -- language server stuff
 vim.opt.runtimepath:append(",~/git/nvim-lspconfig")
 vim.opt.runtimepath:append(",~/git/nvim-jdtls")
-
-require("treesitter_config")
-require("lsp_config")
-
--- requires codicons
-local dapui = require("dapui")
-dapui.setup()
-require("dap_config")
-vim.keymap.set('n', '<Leader>du', function() dapui.toggle() end)
+require("init2")
 
 -- requires plenary for debugging
 local rt = require("rust-tools")
