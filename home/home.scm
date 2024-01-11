@@ -33,7 +33,9 @@
   ;; so we don't have to have a bunch of different use-modules declarations for each package
   ;; but for my-hello we still do it the regular way
   (packages (append (list mylf
-                          mitmproxy)
+                          mitmproxy
+                          theme.sh
+                          conjure)
                     (specifications->packages (list 
                                             ;; needed to make things work i think?
                                             ;; also needs GUIX_LOCPATH=/home/griffin/.guix-profile/lib/locale

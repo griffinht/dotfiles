@@ -1,14 +1,23 @@
 (define-module (packages misc)
                #:use-module (guix packages)
                #:use-module (guix download)
+               #:use-module (guix git-download)
                #:use-module (guix build-system copy)
+               #:use-module (guix build-system gnu)
                #:use-module (guix licenses)
                #:use-module (guix gexp)
                #:use-module (gnu packages tls)
                #:use-module (gnu packages commencement)
                #:use-module (gnu packages compression)
-               #:use-module (gnu packages glib))
+               #:use-module (gnu packages glib)
+               #:use-module (gnu packages base)
+               #:use-module (gnu packages gawk)
+               #:use-module (gnu packages terminals)
+               #:use-module (gnu packages bash)
+               #:use-module (gnu packages llvm))
 
+; todo use modified guix lf package with --from-source or whatever
+; todo actually looks like its been merged in
 (define-public mylf
                (package
   (name "mylf")
@@ -112,4 +121,55 @@ command-line arguments, multiple languages, and so on.")
                  (synopsis "An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.")
                  (description "mitmproxy is an interactive, SSL/TLS-capable intercepting proxy with a console interface for HTTP/1, HTTP/2, and WebSockets. mitmdump is the command-line version of mitmproxy. Think tcpdump for HTTP. mitmweb is a web-based interface for mitmproxy.")
                  (home-page "https://mitmproxy.org/")
+                 (license expat)))
+
+(define-public theme.sh
+               (package
+                 (name "theme.sh")
+                 (version "1.1.5")
+                 (source (origin
+                           (method git-fetch)
+                           (uri
+                             (git-reference
+                               (url "https://github.com/lemnos/theme.sh.git")
+                               (commit (string-append "v" version))))
+                           (sha256 "0wnnwl30bacmdc8hkygknj4ksgn52hmfy3988k3qyfvkc1c3qg6c")))
+                            ;(file-name (git-file-name name version)) what is this
+                 (build-system copy-build-system)
+                 (arguments
+                   '(#:install-plan '(("bin" "bin"))))
+                 (propagated-inputs (list coreutils gawk fzf bash)) ; --interactive requires fzf and sh
+                 (synopsis "A script which lets you set your $terminal theme")
+                 (description "One theme script to rule them all.")
+                 (home-page "https://github.com/lemnos/theme.sh")
+                 (license expat)))
+
+(define-public ctpv
+               (package
+                 (name "ctpv")
+                 (version "1.1")
+                 (source (origin
+                           (method git-fetch)
+                           (uri
+                             (git-reference
+                               (url "https://github.com/NikitaIvanovV/ctpv")
+                               (commit (string-append "v" version))))
+                           (sha256 "1zj0jcsk9zqnrifvrh6rn12hmmkp78l38ichj27ik11qdvi2456w")))
+                            ;(file-name (git-file-name name version)) what is this
+                 (build-system gnu-build-system)
+                 (arguments
+                   '(#:phases (modify-phases %standard-phases
+                                             (delete 'configure)
+                                             (delete 'check))
+                     #:make-flags (list
+                                    "CC=gcc" ; uses cc by default, i wonder if this breaks clang-toolchain
+                                    "DESTDIR=/usr/$out"
+                                    "PREFIX=./")))
+                 (inputs (list openssl))
+                 ;(propagated-inputs (list coreutils gawk fzf bash)) ; --interactive requires fzf and sh
+                 (synopsis "Image previews for lf file manager")
+                 (description "ctpv is a file previewer utility for a terminal. 
+                              It was made with integration into lf file manager in mind, but I believe that it can be easily integrated into other programs as well.
+                              It supports previews for source code, archives, PDF files, images, videos, etc. See Previews for more info.")
+                 (home-page "https://github.com/NikitaIvanovV/ctpv")
                  (license expat)))
