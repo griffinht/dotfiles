@@ -22,7 +22,8 @@
              ;; ./mypackages/test.scm provides (mypackages test)
              ;; this works because i added the current directory of this file (home.scm) to the load path with the add-to-load path
              (packages misc)
-             (packages my-hello))
+             (packages my-hello)
+             (packages neovim))
 
 (home-environment
   ;; Below is the list of packages that will show up in your
