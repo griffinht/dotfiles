@@ -16,8 +16,9 @@
              (gnu packages)
              (gnu services)
              (guix gexp)
-             (gnu home services shells)
 	     (gnu home services)
+             (gnu home services shells)
+             (gnu home services pm)
              ;; my packages in the packages folder
              ;; ./mypackages/test.scm provides (mypackages test)
              ;; this works because i added the current directory of this file (home.scm) to the load path with the add-to-load path
@@ -290,6 +291,7 @@
   ;; https://guix.gnu.org/manual/en/html_node/G_002dExpressions.html see local-file recursive
   (services
    (list 
+     (service home-batsignal-service-type) ; send notification when my battery is getting low
      (simple-service 'dotfiles
 		     home-xdg-configuration-files-service-type
 		     `(("nvim"
