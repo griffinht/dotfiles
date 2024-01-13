@@ -1,11 +1,7 @@
 # todo missing vim-ledger?
 home: \
 	binaries/jdtls \
-	../../auto-save.nvim \
-	../../nvim-lspconfig \
-	../../nvim-jdtls \
 	~/.local/share/lua-language-server \
-	config/nvim/pack/plugins/start/nvim-dap \
 	binaries/bash-language-server \
 	binaries/vscode-langservers-extracted \
 	binaries/vscode-bash-debug \
@@ -17,9 +13,9 @@ home: \
 	config/nvim/pack/plugins/start/nvim-dap-ui \
 	config/nvim/pack/Exafunction/start/codeium.vim \
 	config/nvim/pack/plugins/start/gp.nvim \
-	config/nvim/pack/themes/start/solarized8 \
 	binaries/marksman
 
+#	config/nvim/pack/themes/start/solarized8 \
 
 #	config/nvim/pack/plugins/start/copilot.lua \
 #
@@ -30,10 +26,6 @@ home: \
 #	../../friendly-snippets \
 #	../../cmp_luasnip \
 #	../../cmp-buffer \
-
-config/nvim/pack/themes/start/solarized8:
-	git clone https://github.com/lifepillar/vim-solarized8.git '$@'
-	cd '$@' && git checkout neovim
 
 config/nvim/pack/plugins/start/gp.nvim:
 	git clone https://github.com/Robitx/gp.nvim '$@'
@@ -77,9 +69,6 @@ binaries/scheme-lsp-server:
 	git clone https://codeberg.org/rgherdt/scheme-lsp-server '$@'
 	cd '$@' && guix package -f guix.scm
 
-config/nvim/pack/plugins/start/nvim-dap:
-	git clone https://github.com/mfussenegger/nvim-dap.git '$@'
-
 binaries/vscode-bash-debug:
 	git clone https://github.com/rogalmic/vscode-bash-debug '$@'
 
@@ -106,9 +95,6 @@ binaries/marksman:
 	curl -L 'https://github.com/LuaLS/lua-language-server/releases/download/3.7.0/lua-language-server-3.7.0-linux-x64.tar.gz' | tar -xz -C '$@'
 	touch '$@'
 
-../../auto-save.nvim:
-	git clone https://github.com/Pocco81/auto-save.nvim '$@'
-
 ../../luasnip:
 	git clone https://github.com/L3MON4D3/LuaSnip '$@'
 ../../friendly-snippets:
@@ -119,25 +105,12 @@ binaries/marksman:
 ../../nvim-cmp: 
 	git clone https://github.com/hrsh7th/nvim-cmp '$@'
 
-../../nvim-lspconfig:
-	git clone https://github.com/neovim/nvim-lspconfig '$@'
-
 ../../cmp-nvim-lsp:
 	git clone https://github.com/hrsh7th/cmp-nvim-lsp '$@'
 
 ../../cmp-buffer:
 	git clone https://github.com/hrsh7th/cmp-buffer '$@'
 
-../../nvim-jdtls:
-	git clone https://github.com/mfussenegger/nvim-jdtls '$@'
-
-
-# todo https://github.com/mfussenegger/nvim-dap
-../../nvim-dap:
-	git clone https://github.com/mfussenegger/nvim-dap.git '$@'
-	#todo touch necessary here?
-	#touch '$@'
-	#~/.config/nvim/pack/plugins/start/nvim-dap
 
 clean: nvim.clean
 nvim.clean:

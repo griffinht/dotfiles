@@ -53,3 +53,156 @@
     (description "Write Fennel, run Lua, nfnl will not load unless you're actively modifying your Neovim configuration or plugin source code.")
     (home-page "https://github.com/Olical/nfnl")
     (license unlicense)))
+
+(define-public
+  neovim-jdtls
+  (package
+    (name "neovim-jdtls")
+    (version "")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/mfussenegger/nvim-jdtls")
+               (commit "66b5ace68a5d1c45fdfb1afa8d847e87af2aa1f8")))
+        (sha256 "1cycasjvms1m58vcb3sk01dp4dzjjchds20yq0c6vq1s98wir0y6")))
+    (build-system vim-build-system)
+    (synopsis "Extensions for the built-in LSP support in Neovim for eclipse.jdt.ls")
+    (description "Extensions for the built-in Language Server Protocol support in Neovim (>= 0.6.0) for eclipse.jdt.ls.")
+    (home-page "https://github.com/mfussenegger/nvim-jdtls")
+    (license gpl3)))
+
+(define-public
+  neovim-lspconfig
+  (package
+    (name "neovim-lspconfig")
+    (version "0.1.7")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/neovim/nvim-lspconfig")
+               (commit (string-append "v" version))))
+        (sha256 "1jm99x9lvgn9h6d5d974c3g52aj8kyhy1w8pr7w80biny2hwan58")))
+    (build-system vim-build-system)
+    (synopsis "Quickstart configs for Nvim LSP")
+    (description "Configs for the Nvim LSP client (:help lsp).")
+    (home-page "https://github.com/neovim/nvim-lspconfig")
+    (license asl2.0)))
+
+(define-public
+  neovim-auto-save
+  (package
+    (name "neovim-auto-save")
+    (version "")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/okuuva/auto-save.nvim")
+               (commit "e98cafef75271ec83dc84c933f124ab1bb675ef8")))
+        (sha256 "1sa9c3xziciylb1fj3yiy0xzdmls1h9wadmzh9m828ax8wca1pzy")))
+    (build-system vim-build-system)
+    (synopsis "🧶 Automatically save your changes in NeoVim")
+    (description "auto-save.nvim is a lua plugin for automatically saving your changed buffers in Neovim
+                 Forked from auto-save.nvim as active development has stopped")
+    (home-page "https://github.com/okuuva/auto-save.nvim")
+    (license gpl3)))
+
+(define-public
+  vim-ledger
+  (package
+    (name "vim-ledger")
+    (version "")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/ledger/vim-ledger")
+               (commit "281346a221434574dd7f8767a352b2bf0b218b74")))
+        (sha256 "0fa5b41qlall8z2pziwgc43sj24kpavrhdz9amwwsiv2g9wl5cli")))
+    (build-system vim-build-system)
+    (synopsis "Vim plugin for Ledger")
+    (description "Filetype detection, syntax highlighting, auto-formatting, auto-completion, and other tools for working with ledger files. Compatible with both ledger and hledger. See plaintextaccounting.org for background information and other useful links.")
+    (home-page "https://github.com/ledger/vim-ledger")
+    (license gpl2)))
+
+(define-public
+  neovim-treesitter
+  (package
+    (name "neovim-treesitter")
+    (version "0.9.1")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/nvim-treesitter/nvim-treesitter")
+               (commit (string-append "v" version))))
+        (sha256 "0sq4q070104rcnssxm0icxn31ngcfjbjg9430prb4hsm92msz2yl")))
+    (build-system vim-build-system)
+    (synopsis "Nvim Treesitter configurations and abstraction layer")
+    (description "The goal of nvim-treesitter is both to provide a simple and easy way to use the interface for tree-sitter in Neovim and to provide some basic functionality such as highlighting based on it:")
+    (home-page "https://github.com/nvim-treesitter/nvim-treesitter")
+    (license asl2.0)))
+
+; todo define multiple outputs for neovim and vim??
+(define-public
+  neovim-solarized8
+  (package
+    (name "neovim-solarized8")
+    (version "1.5.1")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/lifepillar/vim-solarized8/")
+               (commit (string-append "v" version "-neovim"))))
+        (sha256 "0w1vdp105lcqal63ws0av33nn5ba9arh29idq72pfri54qfhqy0a")))
+    (build-system vim-build-system)
+    (synopsis "Optimized Solarized colorschemes. Best served with true-color terminals!")
+    (description "This is yet another Solarized theme for Vim. It places itself half way between the original Solarized and the Flattened variant. It removes only some of the bullshit. The color palette is exactly the same as in Solarized, although some highlight groups are defined slightly differently (for instance, I have tried to avoid red on blue).")
+    (home-page "https://github.com/lifepillar/vim-solarized8")
+    (license expat))) ; todo im not sure if this is actually mit license
+
+(define-public
+  neovim-dap
+  (package
+    (name "neovim-dap")
+    (version "0.7.0")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/mfussenegger/nvim-dap")
+               (commit version)))
+        (sha256 "1pwn5c0hjm3wpzzybbakxgpq4bd7f6aygvslhivi4inzn48dla90")))
+    (build-system vim-build-system)
+    (synopsis "Debug Adapter Protocol client implementation for Neovim ")
+    (description "nvim-dap is a Debug Adapter Protocol client implementation for Neovim. nvim-dap allows you to:
+                  Launch an application to debug
+                  Attach to running applications and debug them
+                  Set breakpoints and step through code
+                  Inspect the state of the application")
+    (home-page "https://github.com/mfussenegger/nvim-dap")
+    (license gpl3)))
+
+; guix already packaged this lol
+#|
+(define-public
+  vim-slime
+  (package
+    (name "vim-slime")
+    (version "")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/jpalardy/vim-slime")
+               (commit "a532203bcd7af7f5e571c07b60bba7287076dc19")))
+        (sha256 "0jfzah18mzh0iszi6k86k4y571j6jjhg3cyy9ivxcybacppaf2id")))
+    (build-system vim-build-system)
+    (synopsis "A vim plugin to give you some slime. (Emacs)")
+    (description "vim-slime is a humble attempt at getting _some_ of the SLIME features into Vim.
+It works with any REPL and isn't tied to Lisp.")
+    (home-page "https://github.com/jpalardy/vim-slime")
+    (license expat)))|#

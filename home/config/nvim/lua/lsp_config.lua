@@ -17,6 +17,7 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
 --lspconfig.jdtls.setup {}
 
 
+-- todo neovim stuff idk https://github.com/folke/neodev.nvim
 lspconfig.lua_ls.setup {
     on_init = function(client)
         client.config.settings = vim.tbl_deep_extend("force", client.config.settings, {
@@ -45,25 +46,6 @@ lspconfig.lua_ls.setup {
         return true
     end,
 }
-
-
--- jump around C-], C-O back C-I forward
--- :noh clear search
--- todo use space leader key?
--- <space>f for example
---vim.keymap.del("n", "k")
-vim.keymap.set("n", "<Tab>", function()
-    local buffer = vim.diagnostic.open_float()
-    print(buffer)
-    vim.keymap.set("n", "<Enter>", ":q<CR>", {buffer = buffer})
-    vim.keymap.set("n", "<Esc>", ":q<CR>", {buffer = buffer})
-end)
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
-
-
-vim.keymap.set("i", "<C-Space>", "<C-X><C-O>")
 
 --pretty great example of auto closeable and stuff
 --https://neovim.discourse.group/t/how-to-show-diagnostics-on-hover/3830/3

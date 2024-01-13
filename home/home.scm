@@ -35,8 +35,19 @@
   (packages (append (list mylf
                           mitmproxy
                           theme.sh
-                          neovim-conjure neovim-nfnl)
+                          ; custom neovim packages
+                          neovim-conjure
+                          neovim-nfnl
+                          neovim-jdtls
+                          neovim-lspconfig
+                          neovim-auto-save
+                          vim-ledger
+                          neovim-treesitter
+                          neovim-solarized8
+                          neovim-dap)
                     (specifications->packages (list 
+                                                "vim-slime" ; todo organize
+
                                             ;; needed to make things work i think?
                                             ;; also needs GUIX_LOCPATH=/home/griffin/.guix-profile/lib/locale
 					    "glibc-locales"

@@ -31,3 +31,34 @@
 ; one or joes?
 ;lspconfig.sqlls.setup{}
 ; yaml/yml WITH SCHEME https://github.com/jesseduffield/lazydocker/blob/master/docs/Config.md
+
+; jump around C-], C-O back C-I forward
+; :noh clear search
+; todo use space leader key?
+; <space>f for example
+;vim.keymap.del("n", "k")
+;(vim.keymap.set
+; todo todo todo
+;  "n"
+;  "<Tab>"
+;  (lambda [] 
+;    (let buffer (vim.diagnostic.open_float))
+;    (print buffer)
+;    (vim.keymap.set "n" "<Enter>" ":q<CR>" {"buffer" buffer})
+;    (vim.keymap.set "n" "<Esc>" ":q<CR>" {"buffer" buffer})))
+
+;(local bruh ["n" "[d" "asd"]
+;       (vim.keymap.set (. bruh 0) (. bruh 1) (.bruh 2)))
+
+
+
+;  [
+;   [ "n" "[d" vim.diagnostic.goto_prev ]
+;   [ "n" "]d" vim.diagnostic.goto_next ]
+;   [ "n" "<space>q" vim.diagnostics.setloclist ]])
+;(vim.keymap.set "n" "[d" vim.diagnostic.goto_prev)
+;(vim.keymap.set "n" "]d" vim.diagnostic.goto_next)
+;(vim.keymap.set "n" "<space>q" vim.diagnostic.setloclist)
+
+
+(vim.keymap.set "i" "<C-Space>" "<C-X><C-O>")
