@@ -8,6 +8,7 @@ require("copilot_config")
 require("gp_config")
 require("term_config")
 require("cmp_config") -- todo improve lsp config - see :help cmp
+require("vim_plugins")
 
 
 
