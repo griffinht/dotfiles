@@ -44,7 +44,7 @@
 ;vim.opt.runtimepath
 ;(vim.cmd "scriptnames")
 ;(vim.cmd "load-plugins")
-((. (require :auto-save) :setup) {})	
+((. (require :auto-save) :setup) {"debounce_delay" 100})
 
 ;todo debug vim hledger and load-plugins and scriptnames
 ; actually why not debug the other one?
