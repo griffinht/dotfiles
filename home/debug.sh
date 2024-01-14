@@ -13,6 +13,11 @@ case "$PROGRAM" in
         echo "lf -config $PWD/config/lf/lfrc"
         #done
         ;;
+    lf3)
+        #while true; do
+        XDG_CONFIG_HOME="$PWD/config" lf
+        #done
+        ;;
     nvim)
         #while true; do
         #XDG_CONFIG_HOME=$PWD/config "$@"
