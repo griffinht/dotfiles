@@ -186,6 +186,46 @@
     (home-page "https://github.com/mfussenegger/nvim-dap")
     (license gpl3)))
 
+; todo broken?
+(define-public
+  neovim-gitsigns
+  (package
+    (name "neovim-gitsigns")
+    (version "0.7")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/lewis6991/gitsigns.nvim")
+               (commit (string-append "v" version))))
+        (sha256 "086jmhzgpavwjvp7ssd8ga0wxgnz480zzjiv84h4ivva2nv3lnvi")))
+    (build-system vim-build-system)
+    (synopsis "Git integration for buffers")
+    (description "Super fast git decorations implemented purely in Lua.")
+    (home-page "https://github.com/lewis6991/gitsigns.nvim")
+    (license expat)))
+
+(define-public
+  neovim-cmp
+  (package
+    (name "neovim-cmp")
+    (version "")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/hrsh7th/nvim-cmp")
+               (commit "538e37ba87284942c1d76ed38dd497e54e65b891")))
+        (sha256 "1mxigpm4h8ad8hjd8zy6ajkk2c03vgcrigqarhybz6zsi52iil06")))
+    (build-system vim-build-system)
+    (synopsis "A completion plugin for neovim coded in Lua. ")
+    (description "A completion engine plugin for neovim written in Lua. Completion sources are installed from external repositories and \"sourced\".")
+    (home-page "https://github.com/hrsh7th/nvim-cmp")
+    (license expat)))
+
+
+
+
 ; guix already packaged this lol
 #|
 (define-public

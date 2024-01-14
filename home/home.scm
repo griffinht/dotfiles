@@ -45,7 +45,9 @@
                           vim-ledger
                           neovim-treesitter
                           neovim-solarized8
-                          neovim-dap)
+                          neovim-dap
+                          neovim-gitsigns
+                          neovim-cmp) ; todo improve integration! toggle blame and stage hunks
                     (specifications->packages (list 
                                                 "vim-slime" ; todo organize
 

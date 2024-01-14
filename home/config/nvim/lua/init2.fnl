@@ -10,6 +10,9 @@
 (vim.keymap.set "n" "<Leader>du" dapui.toggle)
 ;(local rt (require :rust-tools))
 
+; todo set up binds
+((. (require :gitsigns) :setup) {})	
+
 
 
 ;/home/griffin/.config/nvim,
