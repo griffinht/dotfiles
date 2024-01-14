@@ -61,4 +61,4 @@
 ;(vim.keymap.set "n" "<space>q" vim.diagnostic.setloclist)
 
 
-(vim.keymap.set "i" "<C-Space>" "<C-X><C-O>")
+;(vim.keymap.set "i" "<C-Space>" "<C-X><C-O>")

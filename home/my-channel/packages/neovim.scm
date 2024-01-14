@@ -218,11 +218,46 @@
                (commit "538e37ba87284942c1d76ed38dd497e54e65b891")))
         (sha256 "1mxigpm4h8ad8hjd8zy6ajkk2c03vgcrigqarhybz6zsi52iil06")))
     (build-system vim-build-system)
-    (synopsis "A completion plugin for neovim coded in Lua. ")
+    (synopsis "A completion plugin for neovim coded in Lua.")
     (description "A completion engine plugin for neovim written in Lua. Completion sources are installed from external repositories and \"sourced\".")
     (home-page "https://github.com/hrsh7th/nvim-cmp")
     (license expat)))
 
+(define-public
+  neovim-cmp-conjure
+  (package
+    (name "neovim-cmp-conjure")
+    (version "")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/PaterJason/cmp-conjure")
+               (commit "8c9a88efedc0e5bf3165baa6af8a407afe29daf6")))
+        (sha256 "1izh45qn90d5ramhnzwvdalg8as9273r4p4flcwaf2klr8drff5r")))
+    (build-system vim-build-system)
+    (synopsis "nvim-cmp source for conjure.")
+    (description "")
+    (home-page "https://github.com/PaterJason/cmp-conjure")
+    (license expat)))
+
+(define-public
+  neovim-cmp-lsp
+  (package
+    (name "neovim-cmp-lsp")
+    (version "")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/hrsh7th/cmp-nvim-lsp")
+               (commit "5af77f54de1b16c34b23cba810150689a3a90312")))
+        (sha256 "03q0v6wgi1lphcfjjdsc26zhnmj3ab9xxsiyp1adl3s1ybv22jzz")))
+    (build-system vim-build-system)
+    (synopsis "nvim-cmp source for neovim builtin LSP client")
+    (description "")
+    (home-page "https://github.com/hrsh7th/cmp-nvim-lsp")
+    (license expat)))
 
 
 

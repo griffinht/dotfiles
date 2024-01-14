@@ -8,6 +8,7 @@
 ;; this adds the current directory to the load paths
 ;; (add-to-load-path (string-append (dirname "home/home.scm") "/my-channel))
 ;; (add-to-load-path (string-append "home" "/my-channel))
+; equivalent to -L/--load-path=my-channel i think
 (add-to-load-path (string-append (dirname (current-filename)) "/my-channel"))
 ;todo?
 ;(add-to-load-path (string-append (dirname (current-filename)) "/binaries/scheme-lsp-server"))
@@ -36,20 +37,31 @@
   (packages (append (list mylf
                           mitmproxy
                           theme.sh
-                          ; custom neovim packages
+                          ; neovim
+                          ; util
+                          neovim-auto-save
+                          neovim-gitsigns ; todo improve integration! toggle blame and stage hunks
+                          ; theme
+                          neovim-solarized8
+                          ; syntax
+                          neovim-treesitter
+                          vim-ledger
+                          ; lsp
+                          neovim-lspconfig
+                          ; dap
+                          neovim-dap
+                          neovim-jdtls
+                          ; interactive (magic! amazing! incredible!)
                           neovim-conjure
                           neovim-nfnl
-                          neovim-jdtls
-                          neovim-lspconfig
-                          neovim-auto-save
-                          vim-ledger
-                          neovim-treesitter
-                          neovim-solarized8
-                          neovim-dap
-                          neovim-gitsigns
-                          neovim-cmp) ; todo improve integration! toggle blame and stage hunks
+                          ; todo slimv, vlime, or vim-slime?????
+                          ; autocomplete
+                          neovim-cmp
+                          ;neovim-cmp-buffer i don't like this one very much
+                          neovim-cmp-lsp
+                          neovim-cmp-conjure)
                     (specifications->packages (list 
-                                                "vim-slime" ; todo organize
+                                                "vim-slime" ; todo organize with other neovim packages idk
 
                                             ;; needed to make things work i think?
                                             ;; also needs GUIX_LOCPATH=/home/griffin/.guix-profile/lib/locale
