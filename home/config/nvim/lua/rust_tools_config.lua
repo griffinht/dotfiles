@@ -1,3 +1,5 @@
+--[[
+-- todo use rustaceanvim
 -- requires plenary for debugging
 do
     local rt = require("rust-tools")
@@ -12,3 +14,4 @@ do
       },
     })
 end
+]]--
