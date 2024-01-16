@@ -169,6 +169,7 @@
                                             ;; file browsing (graphical)
 					    "mpv" ;; video player
                                             "imv" ;; image viewer
+                                            ; todo use okular?
                                             "zathura" ;; document viewer
                                             "zathura-pdf-mupdf" ;; allows zathura to render pdfs
 
