@@ -10,6 +10,7 @@ local jdtls = require('jdtls')
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jdtls
 
 local root_files = {
+    '.project', -- eclipse
     'build.xml', -- Ant
     'pom.xml', -- Maven
     'settings.gradle', -- Gradle
