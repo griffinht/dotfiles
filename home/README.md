@@ -1,3 +1,6 @@
+npm packages!
+https://github.com/minikN/dots/tree/main
+
 https://discourse.nixos.org/t/oci-images-is-there-something-similar-to-distroless-images-built-with-nix/35957/2
 
 
