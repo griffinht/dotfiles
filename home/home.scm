@@ -50,6 +50,8 @@
                           neovim-lspconfig
                           ; dap
                           neovim-dap
+                          neovim-dap-ui
+                          neovim-dap-virtual-text
                           neovim-jdtls
                           ; interactive (magic! amazing! incredible!)
                           neovim-conjure
@@ -62,6 +64,8 @@
                           neovim-cmp-conjure)
                     (specifications->packages (list 
                                                 "vim-slime" ; todo organize with other neovim packages idk
+                                                ;"rust-analyzer"
+
 
                                             ;; needed to make things work i think?
                                             ;; also needs GUIX_LOCPATH=/home/griffin/.guix-profile/lib/locale

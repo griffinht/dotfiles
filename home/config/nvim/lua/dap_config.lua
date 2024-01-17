@@ -256,3 +256,11 @@ vim.keymap.set('n', '<M-C-h>', function() dap_widgets.centered_float(dap_widgets
 vim.keymap.set('n', '<Leader>dT', function() dap_widgets.centered_float(dap_widgets.threads) end)
 -- todo was is c-s-k???
 -- todo how to warn when overriding a mapping
+
+
+
+
+local dapui = require("dapui")
+dapui.setup()
+vim.keymap.set("n", "<Leader>du", dapui.toggle)
+--vim.keymap.set("n", "<Leader>du", require("dapui").toggle)

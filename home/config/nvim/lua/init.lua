@@ -1,5 +1,12 @@
-require("init2")
+--require("init2")
 
+-- [nfnl] Compiled from lua/init2.fnl by https://github.com/Olical/nfnl, do not edit.
+require("treesitter_config")
+require("lsp_config")
+require("lsp_config2")
+require("conjure")
+require("gitsigns").setup({})
+require("auto-save").setup({debounce_delay = 100})
 
 
 

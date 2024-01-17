@@ -259,6 +259,85 @@
     (home-page "https://github.com/hrsh7th/cmp-nvim-lsp")
     (license expat)))
 
+(define-public
+  neovim-dap-ui
+  (package
+    (name "neovim-dap-ui")
+    (version "3.9.2")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/rcarriga/nvim-dap-ui")
+               (commit (string-append "v" version))))
+        (sha256 "0xa8bk272rxh95m9iiiipc1v12j0ln37pshg12dxmqb0bq678d43")))
+    (build-system vim-build-system)
+    (synopsis "A UI for nvim-dap")
+    (description "A UI for nvim-dap which provides a good out of the box configuration.")
+    (home-page "https://github.com/rcarriga/nvim-dap-ui")
+    (license expat)))
+
+
+#|
+(define-public
+  neovim-plenary
+  (package
+    (name "neovim-plenary")
+    (version "0.1.4")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/nvim-lua/plenary.nvim")
+               (commit (string-append "v" version))))
+        (sha256 "b3q0v6wgi1lphcfjjdsc26zhnmj3ab9xxsiyp1adl3s1ybv22jzz")))
+    (build-system vim-build-system)
+    (synopsis "All the lua functions I don't want to write twice.")
+    (description "")
+    (home-page "https://github.com/nvim-lua/plenary.nvim")
+    (license expat)))|#
+
+; todo depend on treesitter
+(define-public
+  neovim-dap-virtual-text
+  (package
+    (name "neovim-dap-virtual-text")
+    (version "")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/theHamsta/nvim-dap-virtual-text")
+               (commit "d4542ac257d3c7ee4131350db6179ae6340ce40b")))
+        (sha256 "1xgj7m5b89ndy5asg6zknhpqbgflhd82vvwafzqxgc6zr86iv4r0")))
+    (build-system vim-build-system)
+    ;(propagated-inputs
+    ;  (list neovim-treesitter))
+    (synopsis "")
+    (description "This plugin adds virtual text support to nvim-dap")
+    (home-page "https://github.com/theHamsta/nvim-dap-virtual-text")
+    (license gpl3)))
+
+(define-public
+  neovim-treesitter
+  (package
+    (name "neovim-treesitter")
+    (version "0.9.1")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/nvim-treesitter/nvim-treesitter")
+               (commit (string-append "v" version))))
+        (sha256 "0sq4q070104rcnssxm0icxn31ngcfjbjg9430prb4hsm92msz2yl")))
+    (build-system vim-build-system)
+    (synopsis "Nvim Treesitter configurations and abstraction layer")
+    (description "The goal of nvim-treesitter is both to provide a simple and easy way to use the interface for tree-sitter in Neovim and to provide some basic functionality such as highlighting based on it")
+    (home-page "https://github.com/nvim-treesitter/nvim-treesitter")
+    (license asl2.0)))
+
+
+
 
 
 ; guix already packaged this lol
