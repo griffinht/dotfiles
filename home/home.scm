@@ -23,7 +23,7 @@
              ;; my packages in the packages folder
              ;; ./mypackages/test.scm provides (mypackages test)
              ;; this works because i added the current directory of this file (home.scm) to the load path with the add-to-load path
-             (packages misc)
+             (packages-bin misc)
              (packages my-hello)
              (packages neovim))
 
@@ -35,8 +35,10 @@
   ;; so we don't have to have a bunch of different use-modules declarations for each package
   ;; but for my-hello we still do it the regular way
   (packages (append (list mylf
+                          ; util
                           mitmproxy
                           theme.sh
+                          lazygit gitui
                           ; neovim
                           ; util
                           neovim-auto-save
