@@ -1,4 +1,4 @@
-(define-module (packages misc)
+(define-module (packages-bin misc)
                #:use-module (guix packages)
                #:use-module (guix download)
                #:use-module (guix git-download)
@@ -6,6 +6,8 @@
                #:use-module (guix build-system gnu)
                #:use-module (guix licenses)
                #:use-module (guix gexp)
+               #:use-module (gnu packages version-control)
+               #:use-module (gnu packages ncurses)
                #:use-module (gnu packages tls)
                #:use-module (gnu packages commencement)
                #:use-module (gnu packages compression)
@@ -173,3 +175,23 @@ command-line arguments, multiple languages, and so on.")
                               It supports previews for source code, archives, PDF files, images, videos, etc. See Previews for more info.")
                  (home-page "https://github.com/NikitaIvanovV/ctpv")
                  (license expat)))
+
+(define-public
+  lazygit
+  (package
+    (name "lazygit")
+    (version "0.40.2")
+    (source
+      (origin
+        (method url-fetch)
+        (uri (string-append "https://github.com/jesseduffield/lazygit/releases/download/v" version "/lazygit_" version "_Linux_x86_64.tar.gz"))
+        (sha256 "1wbzvcl3ifqb3sl7ywjqk96l40629cwwvrbm14icx187pn7cn1gz")))
+    (build-system copy-build-system)
+    (arguments
+      '(#:install-plan '(("lazygit" "bin/"))))
+    (propagated-inputs
+      (list git ncurses))
+    (synopsis "simple terminal UI for git commands")
+    (description "")
+    (home-page "https://github.com/jesseduffield/lazygit")
+    (license expat)))
