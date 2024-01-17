@@ -195,3 +195,21 @@ command-line arguments, multiple languages, and so on.")
     (description "")
     (home-page "https://github.com/jesseduffield/lazygit")
     (license expat)))
+
+(define-public
+  gitui
+  (package
+    (name "gitui")
+    (version "0.24.3")
+    (source
+      (origin
+        (method url-fetch)
+        (uri (string-append "https://github.com/extrawurst/gitui/releases/download/v" version "/gitui-linux-musl.tar.gz"))
+        (sha256 "1b91r2cd67q9j65lx3cw3d72jz7cb5sk069a6n2pfy1bskfzr53f")))
+    (build-system copy-build-system)
+    (arguments
+      '(#:install-plan '(("gitui" "bin/"))))
+    (synopsis "Blazing 💥 fast terminal-ui for git written in rust 🦀")
+    (description "")
+    (home-page "https://github.com/extrawurst/gitui")
+    (license expat)))
