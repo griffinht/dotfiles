@@ -25,7 +25,8 @@
              ;; this works because i added the current directory of this file (home.scm) to the load path with the add-to-load path
              (packages-bin misc)
              (packages my-hello)
-             (packages neovim))
+             (packages neovim)
+             (packages-bin language-server))
 
 (home-environment
   ;; Below is the list of packages that will show up in your
@@ -39,6 +40,10 @@
                           mitmproxy
                           theme.sh
                           lazygit gitui
+                          ; lsp
+                          vscode-langservers-extracted
+                          typescript-language-server
+                          bash-language-server
                           ; neovim
                           ; util
                           neovim-auto-save
@@ -65,7 +70,8 @@
                           neovim-cmp-lsp
                           neovim-cmp-conjure)
                     (specifications->packages (list 
-                                                "vim-slime" ; todo organize with other neovim packages idk
+                                                ; todo organize with other neovim packages idk
+                                                "vim-slime" "screen" ; secretly requires vim-slime
                                                 ;"rust-analyzer"
 
 
@@ -385,22 +391,16 @@
                  (local-file "binaries/themes" #:recursive? #t))
                 (".local/share/jdtls",
                  (local-file "binaries/jdtls" #:recursive? #t))
-                (".local/share/bash-language-server",
-                 (local-file "binaries/bash-language-server" #:recursive? #t))
-                (".local/share/vscode-bash-debug",
-                 (local-file "binaries/vscode-bash-debug" #:recursive? #t))
                 (".local/share/marksman",
                  (local-file "binaries/marksman" #:recursive? #t))
-                (".local/share/rust-analyzer",
-                 (local-file "binaries/rust-analyzer" #:recursive? #t))
                 (".local/share/java-debug",
                  (local-file "binaries/java-debug" #:recursive? #t))
-                (".local/share/vscode-langservers-extracted",
-                 (local-file "binaries/vscode-langservers-extracted" #:recursive? #t))
+                ;(".local/share/vscode-langservers-extracted",
+                ; (local-file "binaries/vscode-langservers-extracted" #:recursive? #t))
                 (".local/share/vscode-java-test",
                  (local-file "binaries/vscode-java-test" #:recursive? #t))
-                (".local/share/vscode",
-                 (local-file "binaries/vscode/VSCode-linux-x64" #:recursive? #t))
+                ;(".local/share/vscode",
+                ; (local-file "binaries/vscode/VSCode-linux-x64" #:recursive? #t))
                 (".local/share/fonts",
                  (local-file "binaries/fonts" #:recursive? #t))
                 (".local/share/aichat",

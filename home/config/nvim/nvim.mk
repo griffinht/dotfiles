@@ -4,7 +4,7 @@ home: \
 	~/.local/share/lua-language-server \
 	binaries/bash-language-server \
 	binaries/vscode-langservers-extracted \
-	binaries/vscode-bash-debug \
+	binaries/typescript-language-server \
 	binaries/scheme-lsp-server \
 	config/nvim/pack/Exafunction/start/codeium.vim \
 	config/nvim/pack/plugins/start/gp.nvim \
@@ -22,10 +22,6 @@ config/nvim/pack/Exafunction/start/codeium.vim:
 config/nvim/pack/plugins/start/copilot.lua:
 	git clone https://github.com/zbirenbaum/copilot.lua '$@'
 
-binaries/vscode-java-test:
-	git clone https://github.com/microsoft/vscode-java-test '$@'
-	cd '$@' && guix shell node -- sh -c 'npm install && npm run build-plugin'
-
 binaries/java-debug:
 	git clone https://github.com/microsoft/java-debug '$@'
 	cd '$@' && ./mvnw clean install
@@ -33,17 +29,6 @@ binaries/java-debug:
 binaries/scheme-lsp-server:
 	git clone https://codeberg.org/rgherdt/scheme-lsp-server '$@'
 	cd '$@' && guix package -f guix.scm
-
-binaries/vscode-bash-debug:
-	git clone https://github.com/rogalmic/vscode-bash-debug '$@'
-
-binaries/bash-language-server:
-	mkdir -p '$@'
-	cd '$@' && guix shell node -- npm install bash-language-server
-
-binaries/vscode-langservers-extracted:
-	mkdir -p '$@'
-	cd '$@' && guix shell node -- npm install vscode-langservers-extracted
 
 binaries/jdtls:
 	mkdir -p '$@'
@@ -59,3 +44,22 @@ binaries/marksman:
 	mkdir -p '$@'
 	curl -L 'https://github.com/LuaLS/lua-language-server/releases/download/3.7.0/lua-language-server-3.7.0-linux-x64.tar.gz' | tar -xz -C '$@'
 	touch '$@'
+
+
+
+
+
+
+
+binaries/vscode-java-test:
+	git clone https://github.com/microsoft/vscode-java-test '$@'
+	cd '$@' && guix shell node -- sh -c 'npm install && npm run build-plugin'
+
+binaries/bash-language-server:
+	guix shell node -- npm install -g --prefix='$@' bash-language-server
+
+binaries/vscode-langservers-extracted:
+	guix shell node -- npm install -g --prefix='$@' vscode-langservers-extracted
+
+binaries/typescript-language-server:
+	guix shell node -- npm install -g --prefix='$@' typescript-language-server typescript

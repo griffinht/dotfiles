@@ -94,30 +94,6 @@ do
 end
 
 
---[[
-dap.configurations.sh = {}
-do
-    -- todo
-    --https://github.com/williamboman/mason.nvim/discussions/539
-    --https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#bash
-    local program_path = vim.api.nvim_buf_get_name(0);
-
-    table.insert(dap.configurations.sh, {
-        name = "Launch Bash debugger for \"" .. program_path .. "\" (default)";
-        type = "bashdb";
-        request = "launch";
-        -- cwd of lldb-vscode i think?
-        --debuggerRoot = working_directory;
-        -- program to launch
-        program = program_path;
-        pathBashdb = BASHDB_DIR .. "/bashdb",
-        pathBashdbLib = BASHDB_DIR,
-        -- cwd of program
-        --cwd = working_directory;
-        --stopOnEntry = true,
-    })
-end]]--
-
 -- .vscode/launch.json
 do
     local dap_current_file = vim.fs.dirname(vim.api.nvim_buf_get_name(0))

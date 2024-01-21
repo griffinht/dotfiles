@@ -57,6 +57,12 @@ local jdtls_tests = require("jdtls.tests")
 vim.keymap.set('n', '<Leader>tG', jdtls_tests.generate)
 vim.keymap.set('n', '<Leader>tg', jdtls_tests.goto_subjects)
 
+-- todo update debug config, or maybe do that automatically?
+-- magical hot code reload
+vim.keymap.set('n', '<Leader>th', function() vim.cmd("JdtUpdateHotcode") end)
+vim.keymap.set('n', '<Leader>ts', function() vim.cmd("JdtJshell") end)
+
+
 --todo do this automatically
 --it needs to wait for the lsp to attach
 --require('jdtls.dap').setup_dap_main_class_configs()
