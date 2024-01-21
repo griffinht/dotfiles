@@ -40,6 +40,7 @@ https://github.com/eclipse/lemminx
 https://github.com/pappasam/nginx-language-server
 https://www.npmjs.com/package/vscode-json-languageserver
 https://github.com/rcjsuen/dockerfile-language-server
+todo one lsp per project
 
 BIG
 https://microsoft.github.io/language-server-protocol/implementors/tools/
@@ -63,3 +64,10 @@ https://github.com/mfussenegger/nvim-treehopper
 https://www.reddit.com/r/vimplugins/comments/k4gk5f/which_repl_plugins_do_you_use_if_any_and_for_what/
 https://github.com/jpalardy/vim-slime
     docs?
+
+
+
+nvim fuzzy finder and display
+    nvim
+    :help bruh
+    :only
