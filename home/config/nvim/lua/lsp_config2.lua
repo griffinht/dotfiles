@@ -38,28 +38,42 @@ lspconfig.rust_analyzer.setup {}
 -- todo use space leader key?
 -- <space>f for example
 --vim.keymap.del("n", "k")
---(vim.keymap.set
--- todo todo todo
---  "n"
---  "<Tab>"
---  (lambda [] 
---;    (let buffer (vim.diagnostic.open_float))
---;    (print buffer)
---;    (vim.keymap.set "n" "<Enter>" ":q<CR>" {"buffer" buffer})
---;    (vim.keymap.set "n" "<Esc>" ":q<CR>" {"buffer" buffer})))
-
 --;(local bruh ["n" "[d" "asd"]
 --;       (vim.keymap.set (. bruh 0) (. bruh 1) (.bruh 2)))
 
 
+local function fold(tbl, func, accumulator)
+    for _, value in ipairs(tbl) do
+        accumulator = func(accumulator, value)
+    end
+end
 
---;  [
---;   [ "n" "[d" vim.diagnostic.goto_prev ]
---;   [ "n" "]d" vim.diagnostic.goto_next ]
---;   [ "n" "<space>q" vim.diagnostics.setloclist ]])
---;(vim.keymap.set "n" "[d" vim.diagnostic.goto_prev)
---;(vim.keymap.set "n" "]d" vim.diagnostic.goto_next)
---;(vim.keymap.set "n" "<space>q" vim.diagnostic.setloclist)
+local function reduce(tbl, func)
+    return fold(tbl, func, tbl[1])
+end
 
+local function forEach(tbl, func)
+    reduce(tbl, function(_, value)
+        func(value)
+        return nil
+    end)
+end
+
+forEach({
+   { "n", "<Tab>", function()
+       local buffer = vim.diagnostic.open_float()
+       forEach(
+           { "<Enter>", "<Esc>" },
+           function(_, value)
+               vim.keymap.set("n", value, ":q<CR>", {buffer = buffer})
+           end)
+   end },
+   { "n", "[d", vim.diagnostic.goto_prev },
+   { "n", "]d", vim.diagnostic.goto_next },
+   { "n", "<space>q", vim.diagnostic.setloclist },
+   },
+   function(value)
+       vim.keymap.set(unpack(value))
+   end)
 
 --;(vim.keymap.set "i" "<C-Space>" "<C-X><C-O>")
