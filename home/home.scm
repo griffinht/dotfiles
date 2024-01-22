@@ -26,7 +26,7 @@
              (packages-bin misc)
              (packages my-hello)
              (packages neovim)
-             (packages-bin language-server))
+             (packages-built misc))
 
 (home-environment
   ;; Below is the list of packages that will show up in your
@@ -60,6 +60,8 @@
                           neovim-dap-ui
                           neovim-dap-virtual-text
                           neovim-jdtls
+                          vscode-java-test
+                          java-debug
                           ; interactive (magic! amazing! incredible!)
                           neovim-conjure
                           neovim-nfnl
@@ -393,12 +395,12 @@
                  (local-file "binaries/jdtls" #:recursive? #t))
                 (".local/share/marksman",
                  (local-file "binaries/marksman" #:recursive? #t))
-                (".local/share/java-debug",
-                 (local-file "binaries/java-debug" #:recursive? #t))
+                ;(".local/share/java-debug",
+                ; (local-file "binaries/java-debug" #:recursive? #t))
                 ;(".local/share/vscode-langservers-extracted",
                 ; (local-file "binaries/vscode-langservers-extracted" #:recursive? #t))
-                (".local/share/vscode-java-test",
-                 (local-file "binaries/vscode-java-test" #:recursive? #t))
+                ;(".local/share/vscode-java-test",
+                ; (local-file "binaries/vscode-java-test" #:recursive? #t))
                 ;(".local/share/vscode",
                 ; (local-file "binaries/vscode/VSCode-linux-x64" #:recursive? #t))
                 (".local/share/fonts",

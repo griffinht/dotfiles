@@ -2,13 +2,11 @@
 home: \
 	binaries/jdtls \
 	~/.local/share/lua-language-server \
-	binaries/bash-language-server \
-	binaries/vscode-langservers-extracted \
-	binaries/typescript-language-server \
-	binaries/scheme-lsp-server \
 	config/nvim/pack/Exafunction/start/codeium.vim \
 	config/nvim/pack/plugins/start/gp.nvim \
-	binaries/marksman
+	binaries/marksman \
+	dumb
+
 
 
 #	config/nvim/pack/plugins/start/copilot.lua \
@@ -21,14 +19,6 @@ config/nvim/pack/Exafunction/start/codeium.vim:
 
 config/nvim/pack/plugins/start/copilot.lua:
 	git clone https://github.com/zbirenbaum/copilot.lua '$@'
-
-binaries/java-debug:
-	git clone https://github.com/microsoft/java-debug '$@'
-	cd '$@' && ./mvnw clean install
-
-binaries/scheme-lsp-server:
-	git clone https://codeberg.org/rgherdt/scheme-lsp-server '$@'
-	cd '$@' && guix package -f guix.scm
 
 binaries/jdtls:
 	mkdir -p '$@'
@@ -47,9 +37,24 @@ binaries/marksman:
 
 
 
+binaries/scheme-lsp-server:
+	git clone https://codeberg.org/rgherdt/scheme-lsp-server '$@'
+	cd '$@' && guix package -f guix.scm
 
 
 
+
+dumb: \
+	binaries/java-debug \
+	binaries/vscode-java-test \
+	binaries/bash-language-server \
+	binaries/vscode-langservers-extracted \
+	binaries/typescript-language-server \
+	binaries/scheme-lsp-server
+
+binaries/java-debug:
+	git clone https://github.com/microsoft/java-debug '$@'
+	cd '$@' && ./mvnw clean install
 
 binaries/vscode-java-test:
 	git clone https://github.com/microsoft/vscode-java-test '$@'
