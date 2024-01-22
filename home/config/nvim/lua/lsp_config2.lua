@@ -61,12 +61,18 @@ end
 
 forEach({
    { "n", "<Tab>", function()
+       --[[
        local buffer = vim.diagnostic.open_float()
        forEach(
            { "<Enter>", "<Esc>" },
-           function(_, value)
+           function(value)
                vim.keymap.set("n", value, ":q<CR>", {buffer = buffer})
            end)
+           ]]--
+        fold({"<Enter>", "<Esc>"}, function(buffer, value)
+               vim.keymap.set("n", value, ":q<CR>", {buffer = buffer})
+               return buffer;
+           end, vim.diagnostic.open_float())
    end },
    { "n", "[d", vim.diagnostic.goto_prev },
    { "n", "]d", vim.diagnostic.goto_next },
