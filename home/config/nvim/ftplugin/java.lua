@@ -19,13 +19,13 @@ local root_files = {
 
 local bundles = {
     -- JdtUpdateDebugConfig
-    "~/.guix-home/lib/java-debug";
+    vim.fn.expand("~/.guix-home/profile/lib/java-debug");
 }
 -- vscode-java-test
 -- https://github.com/mfussenegger/nvim-jdtls#vscode-java-test-installation
 -- :lua require ("jdtls.dap").test_class()
 -- see :help dap i think?
-vim.list_extend(bundles, vim.split(vim.fn.glob("~/.guix-home/vscode-java-test/*.jar", 1), "\n"));
+vim.list_extend(bundles, vim.split(vim.fn.glob("~/.guix-home/profile/lib/vscode-java-test/*.jar"), "\n"));
 
 local config = {
     cmd = {
