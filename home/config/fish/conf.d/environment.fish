@@ -1,4 +1,4 @@
-if ! set -q FISH_IS_SETUP
+if set -q FISH_IS_SETUP
     return
 end
 
@@ -20,7 +20,6 @@ set -x SSL_CERT_FILE "$HOME/.guix-home/profile/etc/ssl/certs/ca-certificates.crt
 set -x GIT_SSL_CAINFO "$SSL_CERT_FILE"
 set -x GUIX_LOCPATH "$HOME/.guix-home/profile/lib/locale"
 
-set -x FISHY
 # add local bin for testing
 set -x PATH "$HOME/.local/bin:$PATH"
 # add missing guix-profile bin
