@@ -211,6 +211,7 @@
                                             ;;https://www.collabora.com/news-and-blog/blog/2020/09/11/integrating-libcamera-into-pipewire/
                                             ;;pipewire-pulse
 					    ;; https://mozilla.github.io/webrtc-landing/gum_test.html
+                                            "qpwgraph"
 
                                             ;;
 					    ;; dev utils
