@@ -154,11 +154,12 @@ dap.adapters["lldb-vscode"] = {
         cwd = "/";
     };
 }
+--[[
 dap.adapters.bashdb = {
     type = "executable";
     --command = find_executable("bashdb")
     command = "bashdb"
-}
+}]]--
 -- could be uncaught or caught
 -- todo maybe this should be in ftplugin java.lua config?
 dap.defaults.java.exception_breakpoints = {
@@ -236,7 +237,11 @@ vim.keymap.set('n', '<Leader>dT', function() dap_widgets.centered_float(dap_widg
 
 
 
+--[[
 local dapui = require("dapui")
 dapui.setup()
 vim.keymap.set("n", "<Leader>du", dapui.toggle)
+]]--
+-- note this takes over window creation
+
 --vim.keymap.set("n", "<Leader>du", require("dapui").toggle)
