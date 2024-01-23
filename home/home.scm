@@ -165,7 +165,7 @@
 
                                             ;; file browsing
                                             ;; see my package mylf
-                                            ;;"lf" ;; file browser
+                                            ;;"lf" ;; file browser - todo use nnn! seems neat! git integration!
                                             ;; "ctpv" not packaged :( ;; previewer for lf
                                             "file" ;; for file command, needed by lf
                                             "trash-cli" ;; for lf delete
