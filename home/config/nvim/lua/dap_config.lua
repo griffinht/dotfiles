@@ -202,6 +202,12 @@ vim.keymap.set('n', '<Leader>e', dap.set_exception_breakpoints)
 -- todo add restart keybind?????/
 vim.keymap.set('n', '<Leader>dp', dap.pause)
 vim.keymap.set('n', '<Leader>dt', dap.terminate)
+vim.api.nvim_create_autocmd("VimLeave", {
+    callback = function()
+        print("quitting todo dap_config.lua:207")
+        -- todo freezes when process is still running, todo kill dap before quit also check github this should be a known issue?
+    end
+})
 
 vim.keymap.set('n', '<Leader>lp', function() dap.set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
 vim.keymap.set('n', '<Leader>dr', function() dap.repl.open() end)
