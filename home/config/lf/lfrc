@@ -13,7 +13,7 @@ cmd on-cd &{{
     printf "\033]0;$PWD\007" > /dev/tty
 
     # also set osc7 escape sequence for foot ctrl+shift+n new terminal to spawn with the correct working directory
-    set_osc7.sh
+    set_osc7.sh > /dev/tty
 }}
 
 # also run at startup

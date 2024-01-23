@@ -19,5 +19,6 @@ osc7_cwd() {
 }
 #PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }osc7_cwd
 
-# pipe escape sequence output directly to /dev/tty
-osc7_cwd > /dev/tty
+osc7_cwd
+# example usage:
+# set_osc7.sh > /dev/tty
