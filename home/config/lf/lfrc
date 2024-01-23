@@ -186,8 +186,11 @@ map nk ${{
     khal import "$f"
 }}
 
-#g git commands
+#g git GIT commands
 
+# git interfaces
+map gGG $gitui
+map gGg $lazygit
 # git add
 map gaa %git add "$f"
 map gaA %git add .
