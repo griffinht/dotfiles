@@ -117,6 +117,12 @@ end
 do
     -- for external terminal to work it needs to be forced and there needs to be a fallback.external_terminal configuration defined, as below
     --dap.defaults.fallback.force_external_terminal = true
+    --todo interesting
+    --[[
+dap.listeners.after.launch['show_launch'] = function(session, err, response, request)
+  -- Use info from `request` - this will basically be the `dap-configuration` you used.
+end--]]
+
     dap.defaults.fallback.external_terminal = {
         -- spawns a foot terminal window with some nice formatting
         -- todo debug why the cwd on this is borked
@@ -237,11 +243,12 @@ vim.keymap.set('n', '<Leader>dT', function() dap_widgets.centered_float(dap_widg
 
 
 
+-- note this takes over window creation, breaking things lol
 --[[
 local dapui = require("dapui")
 dapui.setup()
 vim.keymap.set("n", "<Leader>du", dapui.toggle)
 ]]--
--- note this takes over window creation
+
 
 --vim.keymap.set("n", "<Leader>du", require("dapui").toggle)
