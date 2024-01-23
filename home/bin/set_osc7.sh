@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # sets the current working directory to $PWD so foot can launch new terminal instances with ctrl+shift+n in the correct directory
 
