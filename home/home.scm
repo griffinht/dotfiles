@@ -74,7 +74,7 @@
                     (specifications->packages (list 
                                                 ; todo organize with other neovim packages idk
                                                 "vim-slime" "screen" ; secretly requires vim-slime
-                                                ;"rust-analyzer"
+                                                "rust-analyzer"
 
 
                                             ;; needed to make things work i think?
@@ -255,6 +255,7 @@
                                             ;;
                                             ;; other utils
                                             ;;
+                                            "virt-manager" ; awesome qemu/libvirt gui frontend!
                                             "inotify-tools"
                                             "iperf" ;; iperf3 -c hot.griffinht.com - speedtest
                                             "wireguard-tools" ;; wg-quick
