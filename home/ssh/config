@@ -9,6 +9,9 @@ Host hot-desktop.wg.griffinht.com
 Host envy-laptop.lan.griffinht.com
     User root
 
+Host nerd-vps.griffinht.com
+    User root
+
 Host localhost
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
