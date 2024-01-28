@@ -75,6 +75,7 @@
                                                 ; todo organize with other neovim packages idk
                                                 "vim-slime" "screen" ; secretly requires vim-slime
                                                 "rust-analyzer"
+                                                "shellcheck"
 
 
                                             ;; needed to make things work i think?
