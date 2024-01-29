@@ -1,6 +1,16 @@
 local lspconfig = require "lspconfig"
 lspconfig.clangd.setup {}
-lspconfig.pylsp.setup {}
+lspconfig.pylsp.setup {
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'E501'},
+        }
+      }
+    }
+  }
+}
 lspconfig.gopls.setup {}
 lspconfig.marksman.setup {}
 lspconfig.bashls.setup {}
