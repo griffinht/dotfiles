@@ -40,6 +40,7 @@
                           mitmproxy
                           theme.sh
                           lazygit gitui
+                          android-studio
                           ; lsp
                           vscode-langservers-extracted
                           typescript-language-server

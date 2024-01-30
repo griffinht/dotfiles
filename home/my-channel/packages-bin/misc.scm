@@ -213,3 +213,24 @@ command-line arguments, multiple languages, and so on.")
     (description "")
     (home-page "https://github.com/extrawurst/gitui")
     (license expat)))
+
+(define-public
+  android-studio
+  (package
+    (name "android-studio")
+    (version "2023.1.1.28")
+    (source
+      (origin
+        (method url-fetch)
+        (uri (string-append "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/" version "/android-studio-" version "-linux.tar.gz"))
+        (sha256 "1y98l76aragiw0ng1m598hh52d0ssfv0jp7mzdl3nd8996xhv78k")))
+    (build-system copy-build-system)
+    (arguments
+      '(#:phases
+        (modify-phases
+          %standard-phases
+          (delete 'validate-runpath))))
+    (synopsis "")
+    (description "")
+    (home-page "https://developer.android.com/studio")
+    (license asl2.0)))
