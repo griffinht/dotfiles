@@ -237,6 +237,7 @@
                                             "smartmontools" ;; smartctl
                                             "tree"
                                             "time"
+                                            "lsof"
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
