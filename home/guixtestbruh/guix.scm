@@ -1,0 +1,2 @@
+(load "lazydocker.scm")
+lazydocker
