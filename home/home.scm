@@ -254,11 +254,15 @@
                                             "podman" ;; todo slirp4netns does not work (or does it??), current workaround is --network=none or --network=host
                                             "docker-cli" ;; docker cli for remote daemons so far
                                             ;"docker" ;; todo start rootless daemon
-                                            "qemu" ;; virtualization
+                                            ;;
+                                            ;; virtualization
+                                            ;;
+                                            "qemu"
+                                            "libvirt" ; for virsh command and stuff
+                                            "virt-manager" ; awesome qemu/libvirt gui frontend!
                                             ;;
                                             ;; other utils
                                             ;;
-                                            "virt-manager" ; awesome qemu/libvirt gui frontend!
                                             "inotify-tools"
                                             "iperf" ;; iperf3 -c hot.griffinht.com - speedtest
                                             "wireguard-tools" ;; wg-quick
