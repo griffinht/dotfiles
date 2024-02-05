@@ -15,6 +15,7 @@
                #:use-module (gnu packages base)
                #:use-module (gnu packages gawk)
                #:use-module (gnu packages terminals)
+               #:use-module (gnu packages compression)
                #:use-module (gnu packages bash)
                #:use-module (gnu packages llvm))
 
@@ -234,3 +235,21 @@ command-line arguments, multiple languages, and so on.")
     (description "")
     (home-page "https://developer.android.com/studio")
     (license asl2.0)))
+
+(define-public
+  opentofu
+  (package
+    (name "opentofu")
+    (version "1.6.1")
+    (source
+      (origin
+        (method url-fetch)
+        (uri (string-append "https://github.com/opentofu/opentofu/releases/download/v" version "/tofu_" version "_linux_amd64.zip"))
+        (sha256 "00vlsgy22pvzz9wv579yn5y58xgdz7xhxch5wqq7wvgbkdqqiz9g")))
+    (build-system copy-build-system)
+    (inputs
+      (list unzip))
+    (synopsis "")
+    (description "")
+    (home-page "https://opentofu.org/")
+    (license mpl2.0)))

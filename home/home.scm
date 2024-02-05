@@ -41,6 +41,7 @@
                           theme.sh
                           lazygit gitui
                           android-studio
+                          opentofu
                           ; lsp
                           vscode-langservers-extracted
                           typescript-language-server
