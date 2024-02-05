@@ -249,6 +249,8 @@ command-line arguments, multiple languages, and so on.")
     (build-system copy-build-system)
     (inputs
       (list unzip))
+    (arguments
+      '(#:install-plan '(("tofu" "bin/"))))
     (synopsis "")
     (description "")
     (home-page "https://opentofu.org/")
