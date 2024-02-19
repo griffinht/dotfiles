@@ -108,6 +108,8 @@
 					    ;; window manager
                                             ;;
 
+                                            "wdisplays" ;; gui display configurerer
+                                            "wev" ;; wayland event viewer
 					    ;;;;"sway"
                                             ;; todo idk if this needs to be installed on system host or can be guix home?
                                             ;; for now its just installed on arch host with xorg-xwayland or something
