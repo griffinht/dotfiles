@@ -33,6 +33,7 @@ colorscheme $theme_nvim
 set background=$color_scheme
 EOF
 
+# todo ls colors???
 cat > "$directory/config.fish" << EOF
 function theme
     apply_theme.sh terminal
@@ -41,12 +42,49 @@ end
 # enable reloads by sending SIGUSR1 to fish processes
 trap theme USR1
 
+# todo performance! cache!
+#export LS_COLORS="$(vivid generate "$theme_sh_theme")"
+
 # apply theme on startup
 #theme
 # not necessary! handled by foot!
 EOF
 
 # todo set with theme.sh -p?
+
+if [ "$color_scheme" = "light" ]; then
+cat > "$directory/foot.ini" << EOF
+# colors copied from https://codeberg.org/dnkl/foot/src/branch/master/themes/solarized-dark
+
+# -*- conf -*-
+# Solarized light
+
+[cursor]
+color=fdf6e3 586e75
+
+[colors]
+background=              fdf6e3
+foreground=              657b83
+regular0=                eee8d5
+regular1=                dc322f
+regular2=                859900
+regular3=                b58900
+regular4=                268bd2
+regular5=                d33682
+regular6=                2aa198
+regular7=                073642
+bright0=                 cb4b16
+bright1=                 fdf6e3
+bright2=                 93a1a1
+bright3=                 839496
+bright4=                 657b83
+bright5=                 6c71c4
+bright6=                 586e75
+bright7=                 002b36
+EOF
+
+else
+
 cat > "$directory/foot.ini" << EOF
 # colors copied from https://codeberg.org/dnkl/foot/src/branch/master/themes/solarized-dark
 
@@ -81,5 +119,11 @@ bright7=    fdf6e3
 selection-foreground=93a1a1
 selection-background=073642
 EOF
+
+#todo lf file manager!
+# todo sway
+#https://github.com/gokcehan/lf/issues/1483
+
+fi
 
 reload_theme.sh
