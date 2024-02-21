@@ -35,8 +35,10 @@ set noshowmode
 "let g:solarized_termtrans=1
 " enable terminal colors
 set termguicolors
-set background=dark
-colorscheme solarized8
+
+source $XDG_CACHE_HOME/theme/config.vim
+"set background=dark
+"colorscheme solarized8
 
 " spellchecking
 " disable with :nospell

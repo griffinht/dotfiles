@@ -15,10 +15,27 @@ git clone https://github.com/ledger/vim-ledger
 make
 
 # THEME
-auto switching! cool!
-https://arslan.io/2021/02/15/automatic-dark-mode-for-terminal-applications/
+
+NEXT STEPS
+try migratint to guix xdg-desktop-portal
+https://wiki.archlinux.org/title/XDG_Desktop_Portal
+
+## gtk
+https://wiki.archlinux.org/title/Dark_mode_switching
+https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
+https://wiki.archlinux.org/title/GTK#Themes
+#https://wiki.archlinux.org/title/Firefox#Dark_themes
+    https://github.com/lassekongo83/adw-gtk3?tab=readme-ov-file
+        https://github.com/lassekongo83/adw-colors
+    https://github.com/catppuccin/gtk?tab=readme-ov-file
+    https://github.com/TheGreatMcPain/gruvbox-material-gtk
+    gsettings monitor org.gnome.desktop.interface
+    dconf watch /
+    dbus-monitor
+    guix shell glib:bin dconf dconf-editor
+    dconf-editor
+
 https://www.josherv.in/2018/06/22/unix/
-https://codeberg.org/dnkl/foot/issues/708
 
 SOLARIZED DARK
 it was foots default suddenly so i started using

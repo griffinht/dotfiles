@@ -403,7 +403,7 @@
                 (".local/bin",
                  (local-file "bin" #:recursive? #t))
                 (".local/share/themes",
-                 (local-file "binaries/themes" #:recursive? #t))
+                 (local-file "share/themes" #:recursive? #t))
                 (".local/share/jdtls",
                  (local-file "binaries/jdtls" #:recursive? #t))
                 (".local/share/marksman",
