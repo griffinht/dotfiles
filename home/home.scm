@@ -291,8 +291,9 @@
                                             ;; graphical software
                                             ;;
 
-					    ;;;;"firefox-wayland" ;; web browser
-                                            ;;;;"ungoogled-chromium-wayland" ;; backup web browser when firefox doesn't work on cringe websites :(
+                                            "firefox" ;; web browser
+                                            ;; overrides firefox in xdg-open which is annoying and idk how to configure xdg-open yet
+                                            ;;"ungoogled-chromium-wayland" ;; backup web browser when firefox doesn't work on cringe websites :(
                                             ;;"ublock-origin-chromium" ;; guix will install extensions for me? cool!
 
                                             "hledger" ;; plain text accounting software

@@ -12,5 +12,5 @@
 #|    (channel
       (name 'griffin)
       (url (string-append "file://" (getenv "HOME")
-                          "/git/channel")))|#
+                          "/git/channel")))|#)
     %default-channels)
