@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+set -xe
 
 # should be light or dark
 color_scheme="$1"
@@ -25,6 +25,7 @@ fi
 cat > "$directory/theme.sh" << EOF
 theme.sh $theme_sh_theme
 EOF
+chmod +x "$directory/theme.sh"
 
 cat > "$directory/config.vim" << EOF
 " todo?
@@ -34,16 +35,17 @@ set background=$color_scheme
 EOF
 
 # todo ls colors???
+# todo performance! cache!
+#export LS_COLORS="$(vivid generate "$theme_sh_theme")"
 cat > "$directory/config.fish" << EOF
 function theme
-    apply_theme.sh terminal
+    # todo escaping?
+    $directory/theme.sh
 end
 
 # enable reloads by sending SIGUSR1 to fish processes
 trap theme USR1
 
-# todo performance! cache!
-#export LS_COLORS="$(vivid generate "$theme_sh_theme")"
 
 # apply theme on startup
 #theme
@@ -126,4 +128,22 @@ EOF
 
 fi
 
-reload_theme.sh
+
+
+
+
+
+# make sure all neovim instances are launched like this:
+# nvim --listen "~/.cache/nvim/$((RANDOM % 1000000)).pipe"
+for pipe in ~/.cache/nvim/*.pipe; do
+    # :colorscheme to set the neovim specific color scheme
+    # :set background= to set light/dark mode
+    # :<Esc> to clear the command from the view
+    echo todo "$pipe"
+    #nvim --server "$pipe" --remote-send ":source $XDG_CACHE_HOME/theme/config.vim<CR>:<Esc>"
+    #nvim --server "$pipe" --remote-send ":colorscheme $theme_nvim<CR>:set background=$THEME_COLOR_SCHEME<CR>:<Esc>"
+done
+
+echo todo pkill -USR1 fish
+#todo 
+#pkill -USR1 fish
