@@ -21,6 +21,9 @@ try migratint to guix xdg-desktop-portal
 https://wiki.archlinux.org/title/XDG_Desktop_Portal
 
 ## gtk
+https://jashankj.space/blog/2022-04-04-unhand-my-dark-themes/
+https://www.dedoimedo.com/computers/gnome-40-edit-theme.html
+http://localhost:8082/search?q=gnome+custom+gtk.css+theme+customize&category_general=&language=en&time_range=&safesearch=0&theme=simple
 https://wiki.archlinux.org/title/Dark_mode_switching
 https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
 https://wiki.archlinux.org/title/GTK#Themes

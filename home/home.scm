@@ -123,10 +123,11 @@
 					    "wl-clipboard" ;; needed for neovim clipboard to work https://github.com/neovim/neovim/pull/9229
 
                                             ;; theming
-                                            "libadwaita" ;; xournalpp crashes otherwise
-                                            "adwaita-icon-theme" ;; xournalpp crashes otherwise, still gives a bunch of errors but whatever
+                                            ;"libadwaita" ;; xournalpp crashes otherwise
+                                            ;"adwaita-icon-theme" ;; xournalpp crashes otherwise, still gives a bunch of errors but whatever
                                             ;"glib:bin" ;; provides gsettings
                                             ;"gsettings-desktop-schemas" ;; idk lol
+                                            ;"glib:bin" "gsettings-desktop-schemas" "dconf" "dconf-editor"
                                             ;; see more here: https://askubuntu.com/questions/1054001/gtk-warnings-during-geany-running
 
                                             ;;
@@ -367,10 +368,12 @@
 			,(local-file "config/fish/conf.d" #:recursive? #t))
 		       ("emacs"
 			,(local-file "config/emacs" #:recursive? #t))
+                       #|
 		       ("gtk-3.0"
 			,(local-file "config/gtk-x" #:recursive? #t))
 		       ("gtk-4.0"
 			,(local-file "config/gtk-x" #:recursive? #t))
+                       |#
                        ; todo remove and replace with system agnostic init - shepherd :)
 		       ("systemd"
 			,(local-file "config/systemd" #:recursive? #t))

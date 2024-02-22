@@ -10,4 +10,5 @@
 #GTK_THEME=adw-gtk3-dark LF_LEVEL=0 exec dbus-run-session sway
 # loginctl also only shows 1 seat i think
 
-GTK_THEME=adw-gtk3-dark LF_LEVEL=0 exec /usr/bin/sway
+#GTK_THEME=adw-gtk3-dark LF_LEVEL=0 exec /usr/bin/sway
+LF_LEVEL=0 exec /usr/bin/sway
