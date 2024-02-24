@@ -68,6 +68,10 @@ run sway with `dbus-run-session sway`
 don't manually start xdg-desktop-portal or xdg-desktop-portal-wlr, they should both be started by dbus or magic or something idk
 
 
+# bluetooth
+
+sudo apt install bluetooth libspa-0.2-bluetooth
+https://forums.debian.net/viewtopic.php?t=155520
 
 
 
