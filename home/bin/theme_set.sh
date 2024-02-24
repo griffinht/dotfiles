@@ -19,13 +19,20 @@ mkdir -p "$directory"
 
 if [ "$color_scheme" = light ]; then
     theme_sh_theme=solarized-light
+    is_light_theme=true
 else
     theme_sh_theme=solarized-dark
+    is_light_theme=false
 fi
 cat > "$directory/theme.sh" << EOF
 theme.sh $theme_sh_theme
 EOF
 chmod +x "$directory/theme.sh"
+
+cat > "$directory/config.env" << EOF
+# https://github.com/sigoden/aichat/wiki/Environment-Variables
+export AICHAT_LIGHT_THEME=$is_light_theme
+EOF
 
 cat > "$directory/config.vim" << EOF
 " todo?
@@ -41,8 +48,10 @@ cat > "$directory/config.fish" << EOF
 function theme
     # todo escaping?
     $directory/theme.sh
+    . $directory/config.env
 end
 
+. $directory/config.env
 # enable reloads by sending SIGUSR1 to fish processes
 trap theme USR1
 

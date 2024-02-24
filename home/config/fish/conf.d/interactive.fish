@@ -2,9 +2,6 @@ if ! status is-interactive
     return
 end
 
-# theme integration
-source "$XDG_CACHE_HOME/theme/config.fish"
-
 # grc is a magical ( but unmaintained :/ ) syntax highlighter for certain commands i run
 source $HOME/.guix-home/profile/etc/grc.fish
 
