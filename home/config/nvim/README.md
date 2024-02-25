@@ -71,3 +71,6 @@ nvim fuzzy finder and display
     nvim
     :help bruh
     :only
+
+https://news.ycombinator.com/item?id=39478441
+https://susam.net/lisp-in-vim.html
