@@ -5,7 +5,7 @@ Include config.d/*
 
 # silly little old router only supports legacy stuff idk
 Host lil-tik.lan.hot.griffinht.com
-    User root
+    User admin
     PubkeyAcceptedAlgorithms +ssh-rsa
 
 Host hot-desktop.lan.hot.griffinht.com
