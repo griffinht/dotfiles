@@ -42,6 +42,7 @@
                           lazygit gitui
                           android-studio
                           opentofu
+                          mydocker-compose
                           ; lsp
                           vscode-langservers-extracted
                           typescript-language-server
@@ -399,8 +400,8 @@
                  (local-file "guile.scm"))
                 (".docker/contexts/meta",
                  (local-file "docker/contexts/meta" #:recursive? #t))
-                (".docker/cli-plugins/docker-compose",
-                 (local-file "docker/cli-plugins/docker-compose" #:recursive? #t))
+                (".docker/cli-plugins",
+                 (local-file "docker/cli-plugins" #:recursive? #t))
                 (".mozilla/firefox/guix-profile/user.js",
                  (local-file "firefox/user.js" #:recursive? #t))
                 (".local/bin",

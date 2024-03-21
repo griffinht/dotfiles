@@ -2,7 +2,6 @@
 
 home: \
 	binaries/themes \
-	binaries/docker-compose \
 	bin/ncspot \
 	../../adw-colors \
 	binaries/vscode \
@@ -15,10 +14,6 @@ authorize:
 	guix archive --authorize < ../nonguix-signing-key.pub
 
 include config/nvim/nvim.mk
-
-binaries/docker-compose:
-	curl -L https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64 > '$@'
-	chmod +x '$@'
 
 #binaries:
 #	mkdir -p '$@'

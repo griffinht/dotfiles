@@ -52,16 +52,18 @@ command-line arguments, multiple languages, and so on.")
 (define-public mydocker-compose
                (package
   (name "mydocker-compose")
-  (version "2.10")
+  (version "2.25.0")
   ;; todo use origin instead
   (source (origin
 
 
 ;;/gnu/store/nx7ih0mqg7hlppw194xzrvsgq5d1x29h-docker-compose-linux-x86_64
 ;;1nidh0ai9ljjq8gsa7zky4hlyzrjjn9yz63bkyp3wm1i4a0j0pl9
-            (uri "https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64")
-            (method url-fetch)
-            (sha256 "1nidh0ai9ljjq8gsa7zky4hlyzrjjn9yz63bkyp3wm1i4a0j0pl9")
+            (uri (string-append "https://github.com/docker/compose/releases/download/v" version "/docker-compose-linux-x86_64"))
+            ; this has zero documentation anywhere... thanks chatgpt and ripgrep on guix source code!
+            ; basically makes the downloaded file executable
+            (method url-fetch/executable)
+            (sha256 "0ax8rziiv1w45minzq1zg5cr1c8ppq9dkk1c06fbds3drm4rijp6")
             ))
   (build-system copy-build-system)
   (arguments
