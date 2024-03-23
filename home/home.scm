@@ -257,6 +257,7 @@
                                             ;; docker
                                             ;;
                                             "podman" ;; todo slirp4netns does not work (or does it??), current workaround is --network=none or --network=host
+                                            "skopeo"
                                             "docker-cli" ;; docker cli for remote daemons so far
                                             ;"docker" ;; todo start rootless daemon
                                             ;;
