@@ -232,6 +232,8 @@
                                             "strace"
                                             "gdb"
                                             "python" "python-pip"
+                                            ;; todo don't install java system wide? idk or maybe do idk
+                                            ; update to java 21?
                                             "openjdk@17:jdk"
                                             "openjdk@17:doc" ;; doesn't do anything
                                             "openjdk@17:out" ;; doesn't do anything
@@ -289,6 +291,8 @@
 					    "pandoc" ;; file converter (like html -> pdf)
 					    "texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
                                             
+                                            "flatpak" ; it always works!
+                                            ; todo set xdg application dir
 
                                             ;;
                                             ;; graphical software
