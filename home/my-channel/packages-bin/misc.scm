@@ -4,14 +4,24 @@
                #:use-module (guix git-download)
                #:use-module (guix build-system copy)
                #:use-module (guix build-system gnu)
+               #:use-module (guix build-system cmake)
                #:use-module (guix licenses)
                #:use-module (guix gexp)
                #:use-module (gnu packages version-control)
                #:use-module (gnu packages ncurses)
                #:use-module (gnu packages tls)
+               #:use-module (gnu packages kde-frameworks)
                #:use-module (gnu packages commencement)
                #:use-module (gnu packages compression)
                #:use-module (gnu packages glib)
+               #:use-module (gnu packages cpp)
+               #:use-module (gnu packages java)
+               #:use-module (gnu packages ninja)
+               #:use-module (gnu packages xdisorg)
+               #:use-module (gnu packages markup)
+               #:use-module (gnu packages pkg-config)
+               #:use-module (gnu packages qt)
+               #:use-module (gnu packages vulkan)
                #:use-module (gnu packages base)
                #:use-module (gnu packages gawk)
                #:use-module (gnu packages terminals)
@@ -257,3 +267,38 @@ command-line arguments, multiple languages, and so on.")
     (description "")
     (home-page "https://opentofu.org/")
     (license mpl2.0)))
+
+
+; todo package non appimage qt6 - see nix!
+(define-public
+  prismlauncher
+  (package
+    (name "prismlauncher")
+    (version "8.2")
+    (source
+      (origin
+        (method git-fetch)
+        (uri
+          (git-reference
+            (url "https://github.com/PrismLauncher/PrismLauncher")
+            (commit version)))
+        (sha256 "1qf18f8w1am4pph4vyj17vp6666vw06bzvvhnb24gz72kk2jhnz1")))
+    (build-system cmake-build-system)
+    (native-inputs
+      (list
+        extra-cmake-modules openjdk17 openjdk11 javacc ninja pkgconf vulkan-headers))
+    (inputs
+      (list
+        qtbase
+        qt5compat
+        qtwayland
+        libxkbcommon
+        quazip
+        gulrak-filesystem
+        cmark
+        ; tomlplusplus
+        zlib))
+    (synopsis "")
+    (description "")
+    (home-page "https://github.com/PrismLauncher/PrismLauncher/")
+    (license gpl3+)))
