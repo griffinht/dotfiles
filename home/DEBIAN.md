@@ -82,3 +82,9 @@ xdg-desktop-portal
 xdg-utils
 oops
 node npm nodesource
+
+
+# podman dns
+
+sudo apt install aardvark-dns also installs the other other
+todo package!
