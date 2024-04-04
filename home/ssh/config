@@ -25,7 +25,10 @@ Host mystuff-guix.lan.hot.griffinht.com
 
 
 
-Host nerd-vps.hot.griffinht.com
+Host nerd-vps.griffinht.com
+    User root
+
+Host nerd-vps.wg.hot.griffinht.com
     User root
 
 Host localhost
