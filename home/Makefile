@@ -45,10 +45,6 @@ binaries/vscode:
 pip:
 	pip install openinterpretertodo_double check if this is the right package name
 
-binaries/aichat:
-	mkdir '$@'
-	curl -L 'https://github.com/sigoden/aichat/releases/download/v0.11.0/aichat-v0.11.0-x86_64-unknown-linux-musl.tar.gz' | tar -xz -C binaries
-
 # nerd font
 binaries/fonts/dejavu:
 	mkdir -p '$@'
