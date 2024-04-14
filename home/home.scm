@@ -180,6 +180,7 @@
                                             "ffmpeg" ;; used for vid previews
                                             "chafa" ;; image previews (sixels)
                                             "jq" ;; json parser thing used for json previews i think?
+                                            "yq" ;; like jq but for yaml!
                                             "ffmpegthumbnailer" ;; video previews
                                             "bat" ;; text file syntax highlighting previews
                                             "lynx" ;; html file previews
