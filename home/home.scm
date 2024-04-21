@@ -143,6 +143,7 @@
 					    "ncurses" ;; makes foot work
                                             ;; editor
                                             "neovim" ;; the best text editor
+                                            "vscodium" ;; the text editor which always works :(
                                             ;; "nvim-dap" todo not packaged
                                             ;;"vim-solarized" ;; this is technically for vim, but using a terrible hack it can work with nvim
                                             ;; "jdtls" todo not packaged
@@ -399,6 +400,8 @@
 			,(local-file "config/git" #:recursive? #t))
 		       ("lazydocker"
 			,(local-file "config/lazydocker" #:recursive? #t))
+		       ("VSCodium/product.json"
+			,(local-file "config/VSCodium/product.json" #:recursive? #t))
 		       ("clangd"
 			,(local-file "config/clangd" #:recursive? #t))))
      (service home-files-service-type
