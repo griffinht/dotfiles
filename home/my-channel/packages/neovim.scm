@@ -336,8 +336,26 @@
     (home-page "https://github.com/nvim-treesitter/nvim-treesitter")
     (license asl2.0)))
 
-
-
+#|
+broken
+(define-public
+  vscode-js-debug
+  (package
+    (name "vscode-js-debug")
+    (version "main")
+    (source
+      (origin
+        (method git-fetch)
+        (uri (git-reference
+               (url "https://github.com/mxsdev/nvim-dap-vscode-js")
+               (commit (string-append version))))
+        (sha256 "1nj299by3qs0dbsv1lxb19ia9pbpspw22kdlrilwl8vqixl77ngi")))
+    (build-system vim-build-system)
+    (synopsis "nvim-dap adapter for vscode-js-debug")
+    (description "nvim-dap adapter for vscode-js-debug.")
+    (home-page "https://github.com/mxsdev/nvim-dap-vscode-js")
+    (license #f)))
+|#
 
 
 ; guix already packaged this lol
