@@ -1,3 +1,7 @@
+
+intellij
+
+```sh
 #!/usr/bin/env sh
 
 #https://libreddit.hot.griffinht.com/r/GUIX/comments/11tljcb/running_eclipse_ide_in_gnu_guix_system/
@@ -15,3 +19,4 @@ guix shell \
     git grep e2fsprogs procps \
     which coreutils glib gtk+ glibc libxtst adwaita-icon-theme openjdk@17:jdk \
     -- "$@"
+```

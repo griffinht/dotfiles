@@ -319,3 +319,85 @@ command-line arguments, multiple languages, and so on.")
     (description "")
     (home-page "https://github.com/PrismLauncher/PrismLauncher/")
     (license gpl3+)))
+
+(define-public
+  marksman
+  (package
+    (name "marksman")
+    (version "2023-12-09")
+    (source
+      (origin
+        (method url-fetch/executable)
+        (uri (string-append "https://github.com/artempyanykh/marksman/releases/download/" version "/marksman-linux-x64"))
+        (sha256 "0cc6hp4p299sclziwb1n9sncvl5rcbm7zlpj5xdgnbsh4knfn669")))
+    (build-system copy-build-system)
+    (arguments
+      '(#:install-plan '(("marksman-linux-x64" "share/marksman")) ; if i copy to bin then guix mangles the executable for some reason
+        #:phases (modify-phases %standard-phases
+                                (delete 'validate-runpath))))
+    (synopsis #f)
+    (description #f)
+    (home-page #f)
+    (license #f)))
+
+(define-public
+  ncspot
+  (package
+    (name "ncspot")
+    (version "1.1.0")
+    (source
+      (origin
+        (method url-fetch)
+        (uri (string-append "https://github.com/hrkfdn/ncspot/releases/download/v" version "/ncspot-v" version "-linux-x86_64.tar.gz"))
+        (sha256 "0m8ihcd49gk0jvfpgzgri67in6j8zkznavgrs0h03v0zvv8zimqh")))
+    (build-system copy-build-system)
+    (arguments
+      '(#:install-plan '(("ncspot" "bin/"))
+        #:phases (modify-phases %standard-phases
+                                (delete 'validate-runpath))))
+    (synopsis #f)
+    (description #f)
+    (home-page #f)
+    (license #f)))
+
+#|
+; requires executable to launch bin
+(define-public
+  lua-lanugage-server
+  (package
+    (name "lua-language-server")
+    (version "3.7.4")
+    (source
+      (origin
+        (method url-fetch)
+        (uri (string-append "https://github.com/LuaLS/lua-language-server/releases/download/" version "/lua-language-server-" version "-linux-x64.tar.gz"))
+        (sha256 "19cnyn1p20pnhgfvhlsnc8qsr5l1zrrwmm252ajszfcl7gxapap8")))
+    (build-system copy-build-system)
+    (arguments
+      '(#:install-plan '(("bruh" "bruh"))))
+    (synopsis #f)
+    (description #f)
+    (home-page #f)
+    (license #f)))
+|#
+
+#|
+eclipse download website is annoying :(
+(define-public
+  jdtls
+  (package
+    (name "jdtls")
+    (version "1.34.0")
+    (source
+      (origin
+        (method url-fetch)
+        (uri (string-append "https://www.eclipse.org/downloads/download.php?file=/jdtls/milestones/" version "/jdt-language-server-" version "-202404031240.tar.gz"))
+        (sha256 "0nbdk322haw52hv9m2np9aw0zf8045m8al18n9h0il64p6ibsn1d")))
+    (build-system copy-build-system)
+    (arguments
+      '(#:install-plan '(("aichat" "bin/"))))
+    (synopsis #f)
+    (description #f)
+    (home-page #f)
+    (license #f)))
+|#

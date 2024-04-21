@@ -44,10 +44,12 @@
                           opentofu
                           aichat
                           mydocker-compose
+                          ncspot
                           ; lsp
                           vscode-langservers-extracted
                           typescript-language-server
                           bash-language-server
+                          marksman
                           ; neovim
                           ; util
                           neovim-auto-save
@@ -420,8 +422,6 @@
                  (local-file "share/themes" #:recursive? #t))
                 (".local/share/jdtls",
                  (local-file "binaries/jdtls" #:recursive? #t))
-                (".local/share/marksman",
-                 (local-file "binaries/marksman" #:recursive? #t))
                 ;(".local/share/java-debug",
                 ; (local-file "binaries/java-debug" #:recursive? #t))
                 ;(".local/share/vscode-langservers-extracted",

@@ -1,34 +1,23 @@
 # todo missing vim-ledger?
 home: \
-	binaries/jdtls \
+	dumb \
 	~/.local/share/lua-language-server \
-	config/nvim/pack/Exafunction/start/codeium.vim \
-	config/nvim/pack/plugins/start/gp.nvim \
-	binaries/marksman \
-	dumb
+	binaries/jdtls
 
 
 
 #	config/nvim/pack/plugins/start/copilot.lua \
 
-config/nvim/pack/plugins/start/gp.nvim:
-	git clone https://github.com/Robitx/gp.nvim '$@'
+# codium.vim
+# gp.nvim
+# copilot.lua
 
-config/nvim/pack/Exafunction/start/codeium.vim:
-	git clone https://github.com/Exafunction/codeium.vim '$@'
-
-config/nvim/pack/plugins/start/copilot.lua:
-	git clone https://github.com/zbirenbaum/copilot.lua '$@'
 
 binaries/jdtls:
 	mkdir -p '$@'
 	# i wish this was a milestone but the snapshot should be fine lol
 	curl -L https://www.eclipse.org/downloads/download.php?file=/jdtls/snapshots/jdt-language-server-1.29.0-202310261436.tar.gz | tar -xz -C '$@'
 	touch '$@'
-
-binaries/marksman:
-	curl -L https://github.com/artempyanykh/marksman/releases/download/2023-10-30/marksman-linux-x64 > '$@'
-	chmod +x '$@'
 
 ~/.local/share/lua-language-server:
 	mkdir -p '$@'
