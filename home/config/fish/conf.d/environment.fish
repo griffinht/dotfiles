@@ -22,6 +22,7 @@ set -x GUIX_LOCPATH "$HOME/.guix-home/profile/lib/locale"
 
 # add local bin for testing
 set -x PATH "$HOME/.local/bin:$PATH"
+set -x PATH "$PATH:$HOME/.local/share/bin"
 # add missing guix-profile bin
 # this is only because of scheme-lsp-server
 # https://codeberg.org/rgherdt/scheme-lsp-server#installation-with-guix

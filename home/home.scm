@@ -308,7 +308,7 @@
                                             ;;"ungoogled-chromium-wayland" ;; backup web browser when firefox doesn't work on cringe websites :(
                                             ;;"ublock-origin-chromium" ;; guix will install extensions for me? cool!
 
-                                            "hledger" ;; plain text accounting software
+                                            ;"hledger" ;; plain text accounting software
                                             "dino" ;; xmpp client - works with snikket! :) :) :) thanks devs! <3
                                             "gajim" "gajim-omemo" ;; other xmpp client todo omemo doesn't work
 
@@ -422,6 +422,8 @@
                  (local-file "share/themes" #:recursive? #t))
                 (".local/share/jdtls",
                  (local-file "binaries/jdtls" #:recursive? #t))
+                (".local/share/bin",
+                 (local-file "binaries/bin" #:recursive? #t))
                 ;(".local/share/java-debug",
                 ; (local-file "binaries/java-debug" #:recursive? #t))
                 ;(".local/share/vscode-langservers-extracted",

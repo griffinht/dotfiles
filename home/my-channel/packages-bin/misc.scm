@@ -360,6 +360,32 @@ command-line arguments, multiple languages, and so on.")
     (home-page #f)
     (license #f)))
 
+
+
+#|
+; hledger has a zip which gives us a tarball which we have to extract
+; too much work lol!
+(define-public
+  hledger
+  (package
+    (name "hledger")
+    (version "1.33")
+    (source
+      (origin
+        (method url-fetch)
+        (uri (string-append "https://github.com/simonmichael/hledger/releases/download/" version "/hledger-linux-x64.zip"))
+        (sha256 "16031ixn1qf8n993m3wa0q4yy8ymcld4w5bvc0wan7gyqhdl1bqp")))
+    (build-system copy-build-system)
+    (native-inputs
+      (list unzip))
+    (arguments
+      '(#:install-plan '(("ncspot" "bin/"))))
+    (synopsis #f)
+    (description #f)
+    (home-page #f)
+    (license #f)))
+|#
+
 #|
 ; requires executable to launch bin
 (define-public

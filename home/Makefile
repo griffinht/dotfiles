@@ -27,11 +27,21 @@ pip:
 
 # nerd font
 binaries/fonts/dejavu:
+	# todo $ interpolation doesn't work here... this is a makefile
+	exit 1
 	mkdir -p '$@'
 	temp="$(mktemp)" \
 		&& curl -L 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/DejaVuSansMono.zip' > "$temp" \
 		&& unzip -d "$@" "$temp" \
 		&& rm "$temp"
+
+hledger:
+	# todo hledger gives us a zip which is a tarball...
+	temp="$$(mktemp -d)" \
+	     && curl -L 'https://github.com/simonmichael/hledger/releases/download/1.33/hledger-linux-x64.zip' > "$$temp/hledger.zip" \
+	     && unzip -d "$$temp" "$$temp/hledger.zip" \
+	     && tar -x -C binaries/bin -f "$$temp/hledger-linux-x64.tar" \
+	     && rm -r "$$temp"
 
 clean:
 	rm -rf ../../adw-colors
