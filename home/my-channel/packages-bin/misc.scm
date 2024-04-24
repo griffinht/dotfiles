@@ -360,6 +360,23 @@ command-line arguments, multiple languages, and so on.")
     (home-page #f)
     (license #f)))
 
+(define-public
+  buildkit
+  (package
+    (name "buildkit")
+    (version "0.13.1")
+    (source
+      (origin
+        (method url-fetch)
+        (uri (string-append "https://github.com/moby/buildkit/releases/download/v" version "/buildkit-v" version ".linux-amd64.tar.gz"))
+        (sha256 "1v37y62clzqi0a6azmnxh84lrhjics07wz6i485pl7c573s6wjjx")))
+    (build-system copy-build-system)
+    (arguments
+      '(#:install-plan '(("." "bin/"))))
+    (synopsis #f)
+    (description #f)
+    (home-page #f)
+    (license #f)))
 
 
 #|

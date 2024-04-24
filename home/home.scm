@@ -45,6 +45,7 @@
                           aichat
                           mydocker-compose
                           ncspot
+                          buildkit
                           ; lsp
                           vscode-langservers-extracted
                           typescript-language-server
