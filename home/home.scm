@@ -251,6 +251,7 @@
                                             "tree"
                                             "time"
                                             "lsof"
+                                            "parallel" ;; gnu parallel
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
