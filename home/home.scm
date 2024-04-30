@@ -279,6 +279,7 @@
                                             ;; other utils
                                             ;;
                                             "inotify-tools"
+                                            "entr" ;; friendly inotify!
                                             "iperf" ;; iperf3 -c hot.griffinht.com - speedtest
                                             "wireguard-tools" ;; wg-quick
                                             "bind:utils" ;; dig
