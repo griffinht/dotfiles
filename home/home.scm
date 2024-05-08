@@ -20,6 +20,7 @@
 	     (gnu home services)
              (gnu home services shells)
              (gnu home services pm)
+             (gnu home services syncthing)
              ;; my packages in the packages folder
              ;; ./mypackages/test.scm provides (mypackages test)
              ;; this works because i added the current directory of this file (home.scm) to the load path with the add-to-load path
@@ -445,4 +446,9 @@
     (service home-bash-service-type ;; provides default bash config
 	     (home-bash-configuration
 	       (bashrc (list (local-file "bashrc"))))) 
+    ; todo security!!!!!
+    (service home-syncthing-service-type
+             (for-home
+               (syncthing-configuration)))
+                 ;(arguments '("serve", "--logfile=/home/griffin/bruh")))))
     )))
