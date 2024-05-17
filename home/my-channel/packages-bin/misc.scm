@@ -272,12 +272,12 @@ command-line arguments, multiple languages, and so on.")
   aichat
   (package
     (name "aichat")
-    (version "0.16.0")
+    (version "0.17.0")
     (source
       (origin
         (method url-fetch)
         (uri (string-append "https://github.com/sigoden/aichat/releases/download/v" version "/aichat-v" version "-x86_64-unknown-linux-musl.tar.gz"))
-        (sha256 "0zxbg07b0nji1fp2h6dss9kj2my7j1zv6f65c1xj12flh74kjqxs")))
+        (sha256 "07k30xb333124ip6rfqsixyw4ssf0sb5vyik4nc5w455591jz2hm")))
     (build-system copy-build-system)
     (arguments
       '(#:install-plan '(("aichat" "bin/"))))
