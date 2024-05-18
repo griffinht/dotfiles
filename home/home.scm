@@ -127,6 +127,7 @@
 					    "grim" "slurp" ;; screenshot and screen selection
 					    "mako" ;; notification daemon
 					    "wl-clipboard" ;; needed for neovim clipboard to work https://github.com/neovim/neovim/pull/9229
+                                            "libnotify" ;; provides notify-send to trigger notifications from cli - eg 'notify-send hello there!'
 
                                             ;; theming
                                             ;"libadwaita" ;; xournalpp crashes otherwise
@@ -381,6 +382,8 @@
 			,(local-file "config/fish/config.fish" #:recursive? #t))
 		       ("fish/conf.d"
 			,(local-file "config/fish/conf.d" #:recursive? #t))
+		       ("fish/completions"
+			,(local-file "config/fish/completions" #:recursive? #t))
 		       ("emacs"
 			,(local-file "config/emacs" #:recursive? #t))
                        #|
