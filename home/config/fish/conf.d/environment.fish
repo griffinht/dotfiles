@@ -22,6 +22,8 @@ set -x GUIX_LOCPATH "$HOME/.guix-home/profile/lib/locale"
 
 # add local bin for testing
 set -x PATH "$HOME/.local/bin:$PATH"
+# todo
+set -x PATH "$HOME/.local/testbin:$PATH"
 set -x PATH "$PATH:$HOME/.local/share/bin"
 # add missing guix-profile bin
 # this is only because of scheme-lsp-server
