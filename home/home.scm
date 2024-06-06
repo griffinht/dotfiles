@@ -44,7 +44,7 @@
                           android-studio
                           opentofu
                           aichat
-                          mydocker-compose
+                          ;mydocker-compose
                           ncspot
                           buildkit
                           ; lsp
@@ -254,6 +254,7 @@
                                             "time"
                                             "lsof"
                                             "parallel" ;; gnu parallel
+                                            "ansible"
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
@@ -269,7 +270,7 @@
                                             ;;
                                             "podman" ;; todo slirp4netns does not work (or does it??), current workaround is --network=none or --network=host
                                             "skopeo"
-                                            "docker-cli" ;; docker cli for remote daemons so far
+                                            ;"docker-cli" ;; docker cli for remote daemons so far
                                             ;"docker" ;; todo start rootless daemon
                                             ;;
                                             ;; virtualization
@@ -292,6 +293,7 @@
                                             "zbar" ;; zbarimg - barcode reader
                                             "qrencode" ;; qr code encoder
                                             "oath-toolkit" ;; totp generator
+                                            "graphviz" ;; dot
 
 					    ;; cool utils
                                             "ncdu" ;; disk usage

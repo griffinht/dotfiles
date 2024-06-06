@@ -62,7 +62,7 @@ command-line arguments, multiple languages, and so on.")
 (define-public mydocker-compose
                (package
   (name "mydocker-compose")
-  (version "2.25.0")
+  (version "2.27.1")
   ;; todo use origin instead
   (source (origin
 
@@ -73,7 +73,7 @@ command-line arguments, multiple languages, and so on.")
             ; this has zero documentation anywhere... thanks chatgpt and ripgrep on guix source code!
             ; basically makes the downloaded file executable
             (method url-fetch/executable)
-            (sha256 "0ax8rziiv1w45minzq1zg5cr1c8ppq9dkk1c06fbds3drm4rijp6")
+            (sha256 "19ykdfl3ihjkfm95sh8l036lbb9lq3bqlqmm2irwn442ksarjwhw")
             ))
   (build-system copy-build-system)
   (arguments
