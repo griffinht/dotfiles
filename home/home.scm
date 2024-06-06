@@ -43,7 +43,6 @@
                           lazygit gitui
                           android-studio
                           opentofu
-                          aichat
                           ;mydocker-compose
                           ncspot
                           buildkit
