@@ -4,34 +4,11 @@ Include config.d/*
 # todo wildcard? why not??
 
 # silly little old router only supports legacy stuff idk
-Host lil-tik.lan.hot.griffinht.com
-    User admin
-    PubkeyAcceptedAlgorithms +ssh-rsa
+#Host lil-tik.lan.hot.griffinht.com
+#    User admin
+#    PubkeyAcceptedAlgorithms +ssh-rsa
 
-Host hot-desktop.lan.hot.griffinht.com
-    User root
-
-Host hot-desktop.wg.hot.griffinht.com
-    User root
-
-Host envy-laptop.lan.hot.griffinht.com
-    User root
-
-Host cloudtest.lan.hot.griffinht.com
-    User root
-
-Host mystuff-guix.lan.hot.griffinht.com
-    User root
-
-
-
-Host nerd-vps.griffinht.com
-    User root
-
-Host nerd-vps.wg.hot.griffinht.com
-    User root
-
-Host localhost
-    StrictHostKeyChecking no
-    UserKnownHostsFile /dev/null
-    User root
+#Host localhost
+#    StrictHostKeyChecking no
+#    UserKnownHostsFile /dev/null
+#    User root
