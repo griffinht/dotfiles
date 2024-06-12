@@ -236,6 +236,7 @@
 					    "git"
 					    "curl"
                                             "make"
+                                            "just" ;; like make but better???
                                             "strace"
                                             "gdb"
                                             "python" "python-pip"
