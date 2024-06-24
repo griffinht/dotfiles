@@ -160,7 +160,7 @@
                                             "khard" "khal" "todoman" ;; calendar/contacts/caldav todo via vdirsyncer ;todo also check out calcurse?
                                             "aerc" ;; email client
                                             "icedove-wayland" ;; email client that actually works
-                                            "weechat" "irssi" ;; irc clients todo pick one and configure it
+                                            ;"weechat" "irssi" ;; irc clients todo pick one and configure it
 
                                             ;; shell
                                             "fish" ;; amazing interactive shell
@@ -254,7 +254,8 @@
                                             "time"
                                             "lsof"
                                             "parallel" ;; gnu parallel
-                                            "ansible"
+                                            "asciinema" ; epic terminal recorder
+                                            ;"ansible"
                                             ;"java-swt" so broken lmao
                                             ;;"openjdk@11:jdk"
                                             ;;
@@ -300,8 +301,8 @@
                                             "powertop" ;; power usage
                                             "btop" ;; cool system monitor, also see glances nmon
 					    ;; other
-					    "pandoc" ;; file converter (like html -> pdf)
-					    "texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
+					    ;"pandoc" ;; file converter (like html -> pdf)
+					    ;"texlive" ;; a real chonker with all the latex, just install this to the profile as needed!
                                             
                                             "flatpak" ; it always works!
                                             ; todo set xdg application dir
@@ -317,7 +318,7 @@
 
                                             ;"hledger" ;; plain text accounting software
                                             "dino" ;; xmpp client - works with snikket! :) :) :) thanks devs! <3
-                                            "gajim" "gajim-omemo" ;; other xmpp client todo omemo doesn't work
+                                            ;"gajim" "gajim-omemo" ;; other xmpp client todo omemo doesn't work
 
                                             ;; heavyweights
                                             ;; heavyweights
