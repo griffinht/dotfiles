@@ -1,3 +1,12 @@
+#https://github.com/gokcehan/lf/blob/master/doc.md#prefixes
+# : read?
+# output in terminal, then back to ui
+# $sleep 1
+# output in ui
+# %sleep 1 && echo hello there!
+# !echo press enter to continue
+# &background process
+
 # todo khal import file
 # todo duplicate switch statements
 # todo libreoffice breaks randomly :(
@@ -256,4 +265,28 @@ cmd gCc ${{
     git clone "$1" .
 }}
 map gCC push :gCC<space>
-map gCC push :gCC<space>
+#map gCC push :gCC<space>
+
+map gt $tig "$f"
+
+
+
+
+# kubernetes
+
+# unmap default mark-save command thing
+map m
+map mm $k9s
+map ma !kubectl apply -f "$f"
+map mA !kubectl apply --force -f "$f"
+map md !kubectl delete -f "$f"
+map mD !kubectl delete -f "$f"
+
+map C %guix shell jupyter -- code --new-window "$f"
+
+map S $shell.sh "$f" -- lf
+map <c-s> push %shell.sh<space>
+
+map DD $lazydocker
+map Do $/home/griffin/oxker
+map Dd $/home/griffin/dry
