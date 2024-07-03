@@ -1,0 +1,4 @@
+2024-06-23 21:26:42.601 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/griffin/git/griffinht.com/notebooks/cloudlab/homelab-to-cloudlab.ipynb","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
+2024-06-23 21:26:42.779 [info] Started local extension host with pid 188332.
+2024-06-23 21:26:44.579 [error] ENOENT: no such file or directory, open '/home/griffin/git/guix/home/config/Code/User/globalStorage/vscodevim.vim/.registers': Error: ENOENT: no such file or directory, open '/home/griffin/git/guix/home/config/Code/User/globalStorage/vscodevim.vim/.registers'
+2024-06-23 21:26:46.413 [info] [perf] Render performance baseline is 157ms

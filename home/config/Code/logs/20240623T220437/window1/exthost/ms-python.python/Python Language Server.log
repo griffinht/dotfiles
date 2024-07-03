@@ -1,0 +1,20 @@
+2024-06-23 22:04:40.596 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-06-23 22:04:41.063 [info] [Info  - 10:04:41 PM] (196356) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-06-23 22:04:41.063 [info] [Info  - 10:04:41 PM] (196356) Server root directory: file:///home/griffin/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-23 22:04:41.079 [info] Auto-Indent enabled
+2024-06-23 22:04:41.080 [info] Auto-Indent enabled
+2024-06-23 22:04:41.085 [info] [Info  - 10:04:41 PM] (196356) Starting service instance "<default>"
+2024-06-23 22:04:41.102 [info] Auto-Indent enabled
+2024-06-23 22:04:41.103 [info] [Info  - 10:04:41 PM] (196356) Setting pythonPath for service "<default>": "/home/griffin/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist"
+2024-06-23 22:04:41.103 [info] [Info  - 10:04:41 PM] (196356) Setting environmentName for service "<default>": "3.11.2 (global)"
+2024-06-23 22:04:41.137 [info] [Info  - 10:04:41 PM] (196356) No source files found.
+2024-06-23 22:04:41.595 [info] [Info  - 10:04:41 PM] (196356) Background analysis(1) root directory: file:///home/griffin/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-23 22:04:41.597 [info] [Info  - 10:04:41 PM] (196356) Background analysis(1) started
+2024-06-23 22:04:57.810 [info] [Info  - 10:04:57 PM] (196356) Starting service instance "<default>"
+2024-06-23 22:04:57.834 [info] Auto-Indent enabled
+2024-06-23 22:04:57.835 [info] [Info  - 10:04:57 PM] (196356) Setting pythonPath for service "<default>": "/gnu/store/1w5v338qk5m8khcazwclprs3znqp6f7f-python-3.10.7/bin/python3"
+2024-06-23 22:04:57.835 [info] [Info  - 10:04:57 PM] (196356) Setting environmentName for service "<default>": "3.11.2 (global)"
+2024-06-23 22:04:57.876 [info] [Info  - 10:04:57 PM] (196356) Assuming Python version 3.10.7.final.0
+2024-06-23 22:04:58.141 [info] [Info  - 10:04:58 PM] (196356) No source files found.
+2024-06-23 22:04:58.242 [info] [Info  - 10:04:58 PM] (196356) Background analysis(2) root directory: file:///home/griffin/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-23 22:04:58.244 [info] [Info  - 10:04:58 PM] (196356) Background analysis(2) started

@@ -1,0 +1,33 @@
+2024-06-23 22:04:39.860 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-06-23 22:04:39.860 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-06-23 22:04:39.860 [info] Experiment 'pythonSurveyNotificationcf' is active
+2024-06-23 22:04:39.860 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-06-23 22:04:39.860 [info] Experiment 'pythonTestAdapter' is active
+2024-06-23 22:04:39.860 [info] Starting Environment refresh
+2024-06-23 22:04:39.860 [info] Searching for interpreters in posix paths locator
+2024-06-23 22:04:39.860 [info] Searching for pyenv environments
+2024-06-23 22:04:39.860 [info] Searching for conda environments
+2024-06-23 22:04:39.860 [info] Searching for global virtual environments
+2024-06-23 22:04:39.860 [info] Searching for custom virtual environments
+2024-06-23 22:04:39.860 [info] pyenv is not installed
+2024-06-23 22:04:39.860 [info] Finished searching for pyenv environments: 36 milliseconds
+2024-06-23 22:04:39.860 [info] Finished searching for custom virtual envs: 36 milliseconds
+2024-06-23 22:04:39.860 [info] > conda info --json
+2024-06-23 22:04:39.860 [info] Python interpreter path: /bin/python3
+2024-06-23 22:04:39.860 [info] Finished searching for global virtual envs: 273 milliseconds
+2024-06-23 22:04:39.865 [info] Found: /bin/python3 --> /bin/python3.11
+2024-06-23 22:04:39.866 [info] Found: /bin/python3.11 --> /bin/python3.11
+2024-06-23 22:04:39.883 [info] Found: /usr/bin/python3 --> /usr/bin/python3.11
+2024-06-23 22:04:39.883 [info] Found: /usr/bin/python3.11 --> /usr/bin/python3.11
+2024-06-23 22:04:39.897 [info] Found: /home/griffin/.guix-home/profile/bin/python3 --> /gnu/store/1w5v338qk5m8khcazwclprs3znqp6f7f-python-3.10.7/bin/python3.10
+2024-06-23 22:04:39.898 [info] Found: /home/griffin/.guix-home/profile/bin/python3.10 --> /gnu/store/1w5v338qk5m8khcazwclprs3znqp6f7f-python-3.10.7/bin/python3.10
+2024-06-23 22:04:39.916 [info] > /bin/python3 -I ~/.vscode/extensions/ms-python.python-2024.8.1/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.8.1/python_files/interpreterInfo.py
+2024-06-23 22:04:39.930 [info] Finished searching for interpreters in posix paths locator: 397 milliseconds
+2024-06-23 22:04:39.930 [info] > /usr/bin/python3 -I ~/.vscode/extensions/ms-python.python-2024.8.1/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.8.1/python_files/interpreterInfo.py
+2024-06-23 22:04:39.934 [info] Environments refresh paths discovered (event): 411 milliseconds
+2024-06-23 22:04:39.934 [info] Environments refresh paths discovered: 411 milliseconds
+2024-06-23 22:04:39.956 [info] > ~/.guix-home/profile/bin/python3 -I ~/.vscode/extensions/ms-python.python-2024.8.1/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.8.1/python_files/interpreterInfo.py
+2024-06-23 22:04:39.987 [info] Environments refresh finished (event): 464 milliseconds
+2024-06-23 22:04:39.991 [info] Environment refresh took 468 milliseconds
+2024-06-23 22:04:40.983 [warning] Shell integration may not be active, environment activated may be overridden by the shell.
+2024-06-23 22:04:41.074 [info] Starting Pylance language server.

@@ -15,7 +15,8 @@ case "$PROGRAM" in
         ;;
     lf3)
         #while true; do
-        XDG_CONFIG_HOME="$PWD/config" PATH="$PWD/bin:$PATH" lf
+        # todo this is dumb
+        XDG_CONFIG_HOME="$PWD/config" PATH="$PWD/bin:$PATH" lf "$2"
         #done
         ;;
     nvim)

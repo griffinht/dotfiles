@@ -1,0 +1,35 @@
+Starting Jupyter from ~/.guix-home/profile/bin/python3 with arguments --no-browser --notebook-dir="/home/griffin/git/griffinht.com/notebooks/pods2kubernetes" --config=/tmp/e7f75803-3847-4842-b83e-09b1caf67831/jupyter_notebook_config.py --NotebookApp.iopub_data_rate_limit=10000000000.0
+/gnu/store/7r3cyic9hy1i3qi02v66m02k2lw9m717-python-traitlets-5.9.0/lib/python3.10/site-packages/traitlets/traitlets.py:2548: FutureWarning: Supporting extra quotes around strings is deprecated in traitlets 5.0. You can use '/home/griffin/git/griffinht.com/notebooks/pods2kubernetes' instead of '"/home/griffin/git/griffinht.com/notebooks/pods2kubernetes"' if you require traitlets >=5.
+  warn(
+[I 22:01:57.956 NotebookApp] The port 8888 is already in use, trying another port.
+[I 22:01:57.956 NotebookApp] The port 8889 is already in use, trying another port.
+[I 22:01:57.956 NotebookApp] The port 8890 is already in use, trying another port.
+[I 22:01:57.956 NotebookApp] The port 8891 is already in use, trying another port.
+[I 22:01:57.958 NotebookApp] Serving notebooks from local directory: /home/griffin/git/griffinht.com/notebooks/pods2kubernetes
+[I 22:01:57.959 NotebookApp] Jupyter Notebook 6.4.10 is running at:
+[I 22:01:57.959 NotebookApp] http://localhost:8892/?token=0e3404c6c7674790b876dcf69c169f7db560245cfe49cabc
+[I 22:01:57.959 NotebookApp]  or http://127.0.0.1:8892/?token=0e3404c6c7674790b876dcf69c169f7db560245cfe49cabc
+[I 22:01:57.959 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 22:01:57.961 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/griffin/.local/share/jupyter/runtime/nbserver-195463-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8892/?token=0e3404c6c7674790b876dcf69c169f7db560245cfe49cabc
+     or http://127.0.0.1:8892/?token=0e3404c6c7674790b876dcf69c169f7db560245cfe49cabc
+[I 22:01:58.956 NotebookApp] Kernel started: bbc201b0-13d0-46b2-adcc-e3fd67f3fd2b, name: bash
+/gnu/store/c7lfsgiv4crvmpwqbs3qh03623wqr88r-profile/bin/python3: No module named bash_kernel
+[I 22:02:01.948 NotebookApp] KernelRestarter: restarting kernel (1/5), new random ports
+/gnu/store/c7lfsgiv4crvmpwqbs3qh03623wqr88r-profile/bin/python3: No module named bash_kernel
+[I 22:02:04.965 NotebookApp] KernelRestarter: restarting kernel (2/5), new random ports
+/gnu/store/c7lfsgiv4crvmpwqbs3qh03623wqr88r-profile/bin/python3: No module named bash_kernel
+[I 22:02:07.985 NotebookApp] KernelRestarter: restarting kernel (3/5), new random ports
+/gnu/store/c7lfsgiv4crvmpwqbs3qh03623wqr88r-profile/bin/python3: No module named bash_kernel
+[I 22:02:11.005 NotebookApp] KernelRestarter: restarting kernel (4/5), new random ports
+/gnu/store/c7lfsgiv4crvmpwqbs3qh03623wqr88r-profile/bin/python3: No module named bash_kernel
+[I 22:02:14.021 NotebookApp] KernelRestarter: restarting kernel (5/5), new random ports
+/gnu/store/c7lfsgiv4crvmpwqbs3qh03623wqr88r-profile/bin/python3: No module named bash_kernel
+[W 22:02:17.041 NotebookApp] KernelRestarter: restart failed
+[W 22:02:17.042 NotebookApp] Kernel bbc201b0-13d0-46b2-adcc-e3fd67f3fd2b died, removing from map.
+[W 22:02:59.000 NotebookApp] Timeout waiting for kernel_info reply from bbc201b0-13d0-46b2-adcc-e3fd67f3fd2b
+[E 22:02:59.001 NotebookApp] Error opening stream: HTTP 404: Not Found (Kernel does not exist: bbc201b0-13d0-46b2-adcc-e3fd67f3fd2b)

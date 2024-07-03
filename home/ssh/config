@@ -8,7 +8,7 @@ Include config.d/*
 #    User admin
 #    PubkeyAcceptedAlgorithms +ssh-rsa
 
-#Host localhost
-#    StrictHostKeyChecking no
-#    UserKnownHostsFile /dev/null
-#    User root
+Host localhost
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    User root

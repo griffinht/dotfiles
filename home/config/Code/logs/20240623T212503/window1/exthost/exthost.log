@@ -1,0 +1,126 @@
+2024-06-23 21:25:04.866 [info] Extension host with pid 187774 started
+2024-06-23 21:25:04.886 [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: false, activationEvent: 'onNotebookSerializer:jupyter-notebook'
+2024-06-23 21:25:04.919 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2024-06-23 21:25:04.928 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-06-23 21:25:04.975 [info] Eager extensions activated
+2024-06-23 21:25:04.976 [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter, startup: false, activationEvent: 'onNotebook:jupyter-notebook'
+2024-06-23 21:25:04.979 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-06-23 21:25:04.981 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-06-23 21:25:04.987 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2024-06-23 21:25:05.102 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: false, activationEvent: 'onStartupFinished'
+2024-06-23 21:25:05.595 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-06-23 21:25:05.600 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2024-06-23 21:25:05.884 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'api', root cause: ms-toolsai.jupyter
+2024-06-23 21:25:06.332 [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'api', root cause: ms-python.python
+2024-06-23 21:25:06.643 [error] Error: ENOENT: no such file or directory, open '/home/griffin/git/guix/home/config/Code/User/globalStorage/vscodevim.vim/.registers'
+2024-06-23 21:26:08.754 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2024-06-23 21:26:08.755 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:2,$model8)
+2024-06-23 21:26:11.198 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2024-06-23 21:26:11.198 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:1,$model11)
+2024-06-23 21:26:12.057 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2024-06-23 21:26:12.057 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:1,$model13)
+2024-06-23 21:26:16.331 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2024-06-23 21:26:16.331 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:1,$model15)
+2024-06-23 21:26:22.252 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2024-06-23 21:26:22.252 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:2,$model18)
+2024-06-23 21:26:23.631 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2024-06-23 21:26:23.631 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:2,$model20)
+2024-06-23 21:26:32.396 [info] Extension host terminating: renderer closed the MessagePort
+2024-06-23 21:26:32.448 [error] Canceled: Canceled
+	at new A (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:50615)
+	at E.U (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:6007)
+	at z.<computed>.M.charCodeAt.R.CharCode.DollarSign.z.<computed> (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:3091)
+	at h.g (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199937)
+	at h.executeCommand (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199375)
+	at I.registerCommand.description (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:198699)
+	at h (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:200476)
+	at h.g (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199468)
+	at h.executeCommand (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199375)
+	at Object.executeCommand (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:163:22742)
+	at w (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1453:39714)
+	at c (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1453:44753)
+	at ActionRunners._updateContextKeys (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:18425)
+	at s (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:16869)
+	at RegisteredActionRunner.unregister (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:17012)
+	at RegisteredActionRunner.dispose (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:15665)
+	at ActionRunners.dispose (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:16452)
+	at /home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1412:20105
+	at Array.forEach (<anonymous>)
+	at Object.dispose (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1412:20087)
+	at f (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:744)
+	at u.eb (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:9991)
+	at /nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:7867
+	at Array.map (<anonymous>)
+	at u.$ (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:7854)
+	at u.terminate (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:8127)
+	at f.terminate (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:163:1513)
+	at t (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:176:10459)
+	at MessagePortMain.<anonymous> (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:176:6675)
+	at MessagePortMain.emit (node:events:514:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2285) setContext undefined
+2024-06-23 21:26:32.449 [error] Canceled: Canceled
+	at new A (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:50615)
+	at E.U (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:6007)
+	at z.<computed>.M.charCodeAt.R.CharCode.DollarSign.z.<computed> (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:3091)
+	at h.g (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199937)
+	at h.executeCommand (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199375)
+	at I.registerCommand.description (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:198699)
+	at h (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:200476)
+	at h.g (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199468)
+	at h.executeCommand (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199375)
+	at Object.executeCommand (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:163:22742)
+	at w (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1453:39714)
+	at c (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1453:44753)
+	at ActionRunners._updateContextKeys (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:18425)
+	at s (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:16869)
+	at RegisteredActionRunner.unregister (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:17012)
+	at RegisteredActionRunner.dispose (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:15665)
+	at ActionRunners.dispose (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:16452)
+	at /home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1412:20105
+	at Array.forEach (<anonymous>)
+	at Object.dispose (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1412:20087)
+	at f (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:744)
+	at u.eb (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:9991)
+	at /nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:7867
+	at Array.map (<anonymous>)
+	at u.$ (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:7854)
+	at u.terminate (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:8127)
+	at f.terminate (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:163:1513)
+	at t (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:176:10459)
+	at MessagePortMain.<anonymous> (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:176:6675)
+	at MessagePortMain.emit (node:events:514:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2285) setContext undefined
+2024-06-23 21:26:32.449 [error] Canceled: Canceled
+	at new A (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:50615)
+	at E.U (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:6007)
+	at z.<computed>.M.charCodeAt.R.CharCode.DollarSign.z.<computed> (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:3091)
+	at h.g (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199937)
+	at h.executeCommand (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199375)
+	at I.registerCommand.description (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:198699)
+	at h (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:200476)
+	at h.g (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199468)
+	at h.executeCommand (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:199375)
+	at Object.executeCommand (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:163:22742)
+	at w (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1453:39714)
+	at c (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1453:44753)
+	at ActionRunners._updateContextKeys (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:18425)
+	at s (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:16869)
+	at RegisteredActionRunner.unregister (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:17012)
+	at RegisteredActionRunner.dispose (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:15665)
+	at ActionRunners.dispose (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1099:16452)
+	at /home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1412:20105
+	at Array.forEach (<anonymous>)
+	at Object.dispose (/home/griffin/.vscode/extensions/eamodio.gitlens-15.1.0/dist/gitlens.js:1412:20087)
+	at f (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:744)
+	at u.eb (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:9991)
+	at /nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:7867
+	at Array.map (<anonymous>)
+	at u.$ (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:7854)
+	at u.terminate (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:8127)
+	at f.terminate (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:163:1513)
+	at t (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:176:10459)
+	at MessagePortMain.<anonymous> (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:176:6675)
+	at MessagePortMain.emit (node:events:514:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2285) setContext undefined
+2024-06-23 21:26:32.449 [error] Error: ENOENT: no such file or directory, open '/home/griffin/git/guix/home/config/Code/User/globalStorage/vscodevim.vim/.registers'
+2024-06-23 21:26:32.451 [info] Extension host with pid 187774 exiting with code 0

@@ -1,0 +1,6 @@
+2024-06-24 07:53:54.924 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-06-24 07:53:55.354 [info] [Info  - 7:53:55 AM] (204471) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-06-24 07:53:55.354 [info] [Info  - 7:53:55 AM] (204471) Server root directory: file:///home/griffin/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-24 07:53:55.366 [info] Auto-Indent enabled
+2024-06-24 07:53:55.367 [info] Auto-Indent enabled
+2024-06-24 19:37:56.222 [info] [Info  - 7:37:56 PM] Server process exited successfully

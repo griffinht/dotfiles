@@ -1,0 +1,101 @@
+Visual Studio Code (1.90.1, undefined, desktop)
+Jupyter Extension Version: 2024.5.0.
+Python Extension Version: 2024.8.1.
+Pylance Extension Version: 2024.6.1.
+Platform: linux (x64).
+No workspace folder opened.
+22:01:47.791 [warn] Exception while attempting zmq : libstdc++.so.6: cannot open shared object file: No such file or directory
+22:01:47.791 [warn] Exception while attempting zmq (fallback) : libstdc++.so.6: cannot open shared object file: No such file or directory
+22:01:48.610 [info] Attempting to start a server because of preload conditions ...
+22:01:48.626 [info] Starting Kernel (Bash) for '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb' (disableUI=true)
+22:01:49.333 [warn] Failed to get activated env vars for /bin/python3 in 613ms
+22:01:49.343 [info] Process Execution: /bin/python3 -c "import site;print("USER_BASE_VALUE");print(site.USER_BASE);print("USER_BASE_VALUE");"
+22:01:49.367 [info] Process Execution: /bin/python3 -c "import jupyter;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:49.375 [info] Process Execution: /bin/python3 -c "import notebook;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:49.506 [warn] Failed to get activated env vars for /bin/python3 in 116ms
+22:01:49.513 [info] Process Execution: /bin/python3 -c "import jupyter;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:49.521 [info] Process Execution: /bin/python3 -c "import notebook;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:49.534 [error] Error starting server in serverPreload:  Error: Jupyter cannot be started. Error attempting to locate Jupyter: Running cells with 'Python 3.11.2' requires the jupyter and notebook package.
+    > at by.startServerImpl (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:291:9975)
+22:01:49.534 [warn] Error occurred while trying to start the kernel, options.disableUI=true Error: Jupyter cannot be started. Error attempting to locate Jupyter: Running cells with 'Python 3.11.2' requires the jupyter and notebook package.
+    > at by.startServerImpl (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:291:9975)
+22:01:50.289 [info] Starting Kernel (Bash) for '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb' (disableUI=false)
+22:01:50.299 [info] Process Execution: /bin/python3 -c "import jupyter;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:50.308 [info] Process Execution: /bin/python3 -c "import notebook;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:50.328 [warn] Error occurred while trying to start the kernel, options.disableUI=false Error: Jupyter cannot be started. Error attempting to locate Jupyter: Running cells with 'Python 3.11.2' requires the jupyter and notebook package.
+    > at by.startServerImpl (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:291:9975)
+22:01:50.328 [warn] Kernel Error, context = start Error: Jupyter cannot be started. Error attempting to locate Jupyter: Running cells with 'Python 3.11.2' requires the jupyter and notebook package.
+    > at by.startServerImpl (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:291:9975)
+22:01:50.340 [info] Process Execution: /bin/python3 -c "import pip;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:50.349 [info] Process Execution: /bin/python3 -c "import jupyter;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:50.359 [info] Process Execution: /bin/python3 -c "import notebook;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:56.228 [warn] Failed to get activated env vars for ~/.guix-home/profile/bin/python3 in 29ms
+22:01:56.243 [info] Process Execution: ~/.guix-home/profile/bin/python3 -c "import site;print("USER_BASE_VALUE");print(site.USER_BASE);print("USER_BASE_VALUE");"
+22:01:56.280 [info] Process Execution: ~/.guix-home/profile/bin/python3 -c "import pip;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:56.290 [info] Process Execution: ~/.guix-home/profile/bin/python3 -c "import jupyter;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:56.300 [info] Process Execution: ~/.guix-home/profile/bin/python3 -c "import notebook;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+22:01:56.504 [info] Process Execution: ~/.guix-home/profile/bin/python3 -m jupyter kernelspec --version
+22:01:56.984 [info] Dispose Kernel '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb' associated with '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb'
+22:01:56.986 [info] Starting Kernel (Bash) for '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb' (disableUI=false)
+22:01:56.988 [info] Starting Jupyter Server
+22:01:57.000 [info] Process Execution: ~/.guix-home/profile/bin/python3 -m jupyter notebook --no-browser --notebook-dir="/home/~/git/~ht.com/notebooks/pods2kubernetes" --config=/tmp/e7f75803-3847-4842-b83e-09b1caf67831/jupyter_notebook_config.py --NotebookApp.iopub_data_rate_limit=10000000000.0
+22:01:57.972 [info] Process Execution: ~/.guix-home/profile/bin/python3 /home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/pythonFiles/vscode_datascience_helpers/getServerInfo.py
+22:01:57.984 [info] Process Execution: ~/.guix-home/profile/bin/python3 /home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/pythonFiles/vscode_datascience_helpers/getServerInfo.py
+22:01:58.965 [info] http://localhost:8892/: Kernel started: bbc201b0-13d0-46b2-adcc-e3fd67f3fd2b
+22:02:10.950 [error] Failed to parse URI localhost TypeError: Invalid URL
+    at new URL (node:internal/url:775:36)
+    at qL (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:434:25068)
+    at Iw.parseUserUriAndGetValidationError (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:434:22607)
+    at n.value (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:434:22362)
+    at l.y (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:82:664)
+    at l.fire (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:82:881)
+    at $._fireDidAccept (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:172705)
+    at n.$onDidAccept (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:153:170934)
+    at E.S (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:5970)
+    at E.Q (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:5736)
+    at E.M (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:4762)
+    at E.L (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:3589)
+    at n.value (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:2282)
+    at l.y (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:82:664)
+    at l.fire (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:82:881)
+    at s.fire (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:107:14502)
+    at n.value (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:176:8481)
+    at l.y (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:82:664)
+    at l.fire (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:82:881)
+    at s.fire (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:107:14502)
+    at MessagePortMain.<anonymous> (/nix/store/qj6dh4x4x9lf3sii0r9nmgiq0q60x3va-vscode-1.90.1/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:176:6631)
+    at MessagePortMain.emit (node:events:514:28)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2285) {
+  code: 'ERR_INVALID_URL',
+  input: 'localhost'
+}
+22:02:18.979 [error] Session disposed while waiting for session to be idle.
+22:02:18.979 [info] Started session for kernel startUsingLocalKernelSpec:.bash./gnu/store/c7lfsgiv4crvmpwqbs3qh03623wqr88r-profile/bin/python3././gnu/store/c7lfsgiv4crvmpwqbs3qh03623wqr88r-profile/bin/python3#-m#bash_kernel#-f#{connection_file}
+22:02:18.980 [warn] Error occurred while trying to start the kernel, options.disableUI=false Error: Jupyter notebook failed to launch. 
+Kernel not initialized in Session
+    > at du.create (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:295:2888)
+    > originalError = Error: Kernel not initialized in Session
+22:02:18.981 [warn] Kernel Error, context = start Error: Jupyter notebook failed to launch. 
+Kernel not initialized in Session
+    > at du.create (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:295:2888)
+    > originalError = Error: Kernel not initialized in Session
+22:02:18.984 [info] Dispose Kernel '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb' associated with '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb'
+22:02:18.984 [error] Error in execution Error: Jupyter notebook failed to launch. 
+Kernel not initialized in Session
+    > at du.create (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:295:2888)
+    > originalError = Error: Kernel not initialized in Session
+22:02:18.986 [error] Error in execution (get message for cell) Error: Jupyter notebook failed to launch. 
+Kernel not initialized in Session
+    > at du.create (/home/~/.vscode/extensions/ms-toolsai.jupyter-2024.5.0-linux-x64/dist/extension.node.js:295:2888)
+    > originalError = Error: Kernel not initialized in Session
+22:02:31.600 [info] Starting Kernel (Python 3 (ipykernel)) for '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb' (disableUI=false)
+22:02:31.666 [info] http://localhost:8888/: Kernel started: f2d06c63-0d14-4009-ab45-05e3604351f7
+22:02:32.410 [info] Started session for kernel startUsingRemoteKernelSpec:3853f239a29b6f054d9cb77338442605ef8708bd3ea56ff4400e163d845cda2f..python3./gnu/store/1w5v338qk5m8khcazwclprs3znqp6f7f-python-3.10.7/bin/python3././gnu/store/1w5v338qk5m8khcazwclprs3znqp6f7f-python-3.10.7/bin/python3#-m#ipykernel_launcher#-f#{connection_file}
+22:02:32.414 [warn] Kernel completions not enabled for 'Python 3 (ipykernel)'. 
+To enable Kernel completion for this language please add the following setting 
+jupyter.completionTriggerCharacters = {/gnu/store/1w5v338qk5m8khcazwclprs3znqp6f7f-python-3.10.7/bin/python3: [<List of characters that will trigger completions>]}. 
+For more information please see https://aka.ms/vscodeJupyterCompletion
+22:02:32.416 [info] Kernel successfully started
+22:03:33.336 [info] Dispose Kernel '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb' associated with '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb'
+22:03:33.336 [info] Dispose Kernel '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb' associated with '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb'
+22:03:33.337 [info] Dispose Kernel '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb' associated with '~/git/~ht.com/notebooks/pods2kubernetes/notebook.ipynb'

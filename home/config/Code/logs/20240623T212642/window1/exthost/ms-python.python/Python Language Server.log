@@ -1,0 +1,11 @@
+2024-06-23 21:26:44.583 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-06-23 21:26:45.028 [info] [Info  - 9:26:45 PM] (188508) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-06-23 21:26:45.028 [info] [Info  - 9:26:45 PM] (188508) Server root directory: file:///home/griffin/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-23 21:26:45.039 [info] Auto-Indent enabled
+2024-06-23 21:26:45.041 [info] Auto-Indent enabled
+2024-06-23 21:26:45.044 [info] [Info  - 9:26:45 PM] (188508) Starting service instance "<default>"
+2024-06-23 21:26:45.060 [info] Auto-Indent enabled
+2024-06-23 21:26:45.062 [info] [Info  - 9:26:45 PM] (188508) Setting pythonPath for service "<default>": "/home/griffin/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist"
+2024-06-23 21:26:45.104 [info] [Info  - 9:26:45 PM] (188508) No source files found.
+2024-06-23 21:26:45.469 [info] [Info  - 9:26:45 PM] (188508) Background analysis(1) root directory: file:///home/griffin/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-23 21:26:45.470 [info] [Info  - 9:26:45 PM] (188508) Background analysis(1) started

@@ -1,0 +1,22 @@
+2024-06-23 21:27:26.615 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-06-23 21:27:26.615 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-06-23 21:27:26.615 [info] Experiment 'pythonSurveyNotificationcf' is active
+2024-06-23 21:27:26.615 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-06-23 21:27:26.615 [info] Experiment 'pythonTestAdapter' is active
+2024-06-23 21:27:26.640 [error] Not allowed to refresh environments in an untrusted workspace
+2024-06-23 21:27:26.692 [info] > python -c "import sys;print(sys.executable)"
+2024-06-23 21:27:26.696 [error] [Error: Command failed: python -c "import sys;print(sys.executable)"
+/bin/sh: 1: python: not found
+
+	at ChildProcess.exithandler (node:child_process:423:12)
+	at ChildProcess.emit (node:events:526:35)
+	at maybeClose (node:internal/child_process:1105:16)
+	at Socket.<anonymous> (node:internal/child_process:457:11)
+	at Socket.emit (node:events:514:28)
+	at Pipe.<anonymous> (node:net:337:12)] {
+  code: 127,
+  killed: false,
+  signal: null,
+  cmd: 'python -c "import sys;print(sys.executable)"'
+}
+2024-06-23 21:27:27.928 [info] Starting Pylance language server.

@@ -1,0 +1,9 @@
+2024-06-23 21:56:57.978 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-06-23 21:56:57.978 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-06-23 21:56:57.978 [info] Experiment 'pythonSurveyNotificationcf' is active
+2024-06-23 21:56:57.978 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-06-23 21:56:57.978 [info] Experiment 'pythonTestAdapter' is active
+2024-06-23 21:56:57.978 [info] Python interpreter path: /bin/python3
+2024-06-23 21:56:58.510 [info] > conda info --json
+2024-06-23 21:56:59.365 [warning] Shell integration may not be active, environment activated may be overridden by the shell.
+2024-06-23 21:56:59.564 [info] Starting Pylance language server.
