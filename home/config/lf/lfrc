@@ -287,6 +287,9 @@ map C %guix shell jupyter -- code --new-window "$f"
 map S $shell.sh "$f" -- lf
 map <c-s> push %shell.sh<space>
 
-map DD $lazydocker
+map DD !docker compose up -d
+map Dd !docker compose down
+map Dl $lazydocker
 map Do $/home/griffin/oxker
-map Dd $/home/griffin/dry
+map Dr $/home/griffin/dry
+map nd $ncdu

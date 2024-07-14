@@ -239,12 +239,12 @@
                                             "just" ;; like make but better???
                                             "strace"
                                             "gdb"
-                                            "python" "python-pip"
+                                            ;"python" "python-pip"
                                             ;; todo don't install java system wide? idk or maybe do idk
                                             ; update to java 21?
-                                            "openjdk@17:jdk"
-                                            "openjdk@17:doc" ;; doesn't do anything
-                                            "openjdk@17:out" ;; doesn't do anything
+                                            ;"openjdk@17:jdk"
+                                            ;"openjdk@17:doc" ;; doesn't do anything
+                                            ;"openjdk@17:out" ;; doesn't do anything
                                             "zip"
                                             "unzip" ; note this is here twice for organization i guess
                                             "inetutils" ;; telnet
@@ -325,7 +325,7 @@
                                             ;; heavyweights
 
                                             ;; should i leave some of these to be installed locally? as needed?
-                                            ;;"obs" ;; recording
+                                            "obs" ;; recording
                                             "audacity" ;; audacity
 					    "xournalpp" ;; drawing gui
 					    "libreoffice" "hunspell-dict-en" ;; office todo spellcheck doesnt work :(
