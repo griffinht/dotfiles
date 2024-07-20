@@ -325,7 +325,7 @@
                                             ;; heavyweights
 
                                             ;; should i leave some of these to be installed locally? as needed?
-                                            "obs" ;; recording
+                                            ;"obs" ;; recording
                                             "audacity" ;; audacity
 					    "xournalpp" ;; drawing gui
 					    "libreoffice" "hunspell-dict-en" ;; office todo spellcheck doesnt work :(
