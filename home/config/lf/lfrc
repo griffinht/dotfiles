@@ -277,10 +277,13 @@ map gt $tig "$f"
 # unmap default mark-save command thing
 map m
 map mm $k9s
-map ma !kubectl apply -f "$f"
+# todo clear for the rest of these commands?
+map ma !clear && kubectl apply -f "$f"
 map mA !kubectl apply --force -f "$f"
-map md !kubectl delete -f "$f"
-map mD !kubectl delete -f "$f"
+map md !kubectl delete --interactive=true -f "$f"
+#map mD !kubectl delete --force??? -f "$f"
+map mc $kubectx
+map mn $kubens
 
 map C %guix shell jupyter -- code --new-window "$f"
 
@@ -292,4 +295,9 @@ map Dd !docker compose down
 map Dl $lazydocker
 map Do $/home/griffin/oxker
 map Dr $/home/griffin/dry
+map Dc $dockctx.sh
+
 map nd $ncdu
+
+
+#map R $rename.sh "$f"
