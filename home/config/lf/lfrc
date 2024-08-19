@@ -145,12 +145,12 @@ map ox &nohup xournalpp "$f" > /dev/null 2>&1
 map oa &nohup audacity "$f" > /dev/null 2>&1
 # todo make sure firefox is already open??
 map of %firefox "$f"
-map oo !"$f"
+map O !"$f"
 cmd execute !{{
 #todo also clear screen?
     "$f" $@
 }}
-map oO push :execute<space>
+map oo push :execute<space>
 
 # new stuff
 #
@@ -271,16 +271,23 @@ map gt $tig "$f"
 
 
 
+map M !make "$f"
+#map M !just default "$f"
 
 # kubernetes
 
 # unmap default mark-save command thing
 map m
 map mm $k9s
-# todo clear for the rest of these commands?
-map ma !clear && kubectl apply -f "$f"
-map mA !kubectl apply --force -f "$f"
-map md !kubectl delete --interactive=true -f "$f"
+# todo use clear for the rest of these commands?
+map ma !clear && jsonnet.sh "$f" | kubectl apply -f -
+map mA !clear && jsonnet.sh "$f" | kubectl apply --force -f -
+map ms !clear && jsonnet.sh "$f"
+map mSx $jsonnet.sh "$f" | fx
+map mSl $jsonnet.sh "$f" | jless
+map md !clear && jsonnet.sh "$f" | kubectl diff -f -
+# --interactive=true doesn't work with pipes - could just be offloaded to another tool idk
+map mD !clear && jsonnet.sh "$f" | kubectl delete -f -
 #map mD !kubectl delete --force??? -f "$f"
 map mc $kubectx
 map mn $kubens
