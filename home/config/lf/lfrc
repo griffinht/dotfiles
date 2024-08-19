@@ -271,7 +271,7 @@ map gt $tig "$f"
 
 
 
-map M !make "$f"
+map M !make "$(basename "$f")"
 #map M !just default "$f"
 
 # kubernetes
