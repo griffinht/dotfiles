@@ -1,0 +1,1 @@
+{"Name":"devbox","Metadata":{},"Endpoints":{"docker":{"Host":"tcp://devbox:2375","SkipTLSVerify":false}}}

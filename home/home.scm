@@ -424,8 +424,8 @@
               `(
                 (".guile",
                  (local-file "guile.scm"))
-                (".docker/contexts/meta",
-                 (local-file "docker/contexts/meta" #:recursive? #t))
+                ;(".docker/contexts/meta",
+                ; (local-file "docker/contexts/meta" #:recursive? #t))
                 (".mozilla/firefox/guix-profile/user.js",
                  (local-file "firefox/user.js" #:recursive? #t))
                 (".local/bin",
