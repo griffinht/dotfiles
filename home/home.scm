@@ -1,5 +1,6 @@
 ; https://yadm.io/
 ;  https://www.chezmoi.io/
+;https://chrishannah.me/using-stow-to-make-managing-your-dotfiles-easier/
 ; https://www.gnu.org/software/stow/
 
 ;; This "home-environment" file can be passed to 'guix home reconfigure' to reproduce the content of your profile.  This is "symbolic": it only

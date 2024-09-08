@@ -25,6 +25,7 @@ set -x PATH "$HOME/.local/bin:$PATH"
 # todo
 set -x PATH "$HOME/.local/testbin:$PATH"
 set -x PATH "$PATH:$HOME/.local/share/bin"
+set -x PATH "$PATH:$HOME/.local/share/bin2"
 # add missing guix-profile bin
 # this is only because of scheme-lsp-server
 # https://codeberg.org/rgherdt/scheme-lsp-server#installation-with-guix
