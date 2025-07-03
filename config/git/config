@@ -1,9 +1,0 @@
-[user]
-	email = git@griffinht.com
-	name = griffinht
-
-[core]
-	editor = nvim
-
-[includeIf "gitdir:~/git/ncsu/"]
-	path = ~/git/ncsu/.gitconfig

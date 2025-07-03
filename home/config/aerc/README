@@ -1,7 +1,0 @@
-note the accounts.conf symlink is just for debugging
-it is not actually added to the user's home directory on guix home reconfigure
-
-todo pipe text/html to lynx -stdin make sure color is one
-make non interactive as well
-
-todo use ctpv for previews! duh!

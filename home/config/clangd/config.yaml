@@ -1,6 +1,0 @@
-# https://stackoverflow.com/questions/71472340/clangd-use-different-compiler-flags-depending-on-file-extension
-# Fragment specific to C++ source files
-If:
-  PathExclude: [.*\.c, .*\.h]
-CompileFlags:
-  Add: [-std=c++20]

@@ -1,4 +1,0 @@
-set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-
-# probably doesn't need to be exec_always
-exec_always rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob

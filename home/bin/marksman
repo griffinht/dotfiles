@@ -1,3 +1,0 @@
-#!/bin/sh
-
-exec ~/.guix-home/profile/share/marksman "$@"

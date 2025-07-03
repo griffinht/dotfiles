@@ -1,5 +1,0 @@
-# hello this is the bat config
---theme='Solarized (dark)'
-# -c force less to start at the top of the screen
-# https://unix.stackexchange.com/questions/255278/how-to-configure-less-to-print-starting-from-the-top-of-terminal-window
---pager='less -Rc'

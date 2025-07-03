@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-
-api_key="$(cat ~/.local/state/interpreteraikey)" 
-
-OPENAI_API_KEY="$api_key" exec ~/.local/share/pip/bin/interpreter "$@"

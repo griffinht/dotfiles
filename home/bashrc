@@ -1,2 +1,0 @@
-# bash is fine as an initial login shell (its usually the default across linux), i just immediately switch to fish for the rest of my user stuff
-exec fish

@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-
-# uses this to find the rest of the files
-exec ~/.local/share/vscode-bash-debug/bashdb_dir/bashdb -L ~/.local/share/vscode-bash-debug/bashdb_dir "$@"
-#exec ~/.local/share/vscode-bash-debug/bashdb_dir/bashdb "$@"
