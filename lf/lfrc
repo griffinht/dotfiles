@@ -1,0 +1,54 @@
+# interpreter for shell commands
+#set shell fish
+map w $fish
+map e $nvim "$f"
+
+
+
+# broken :(
+
+# set pane_path when changing directory
+cmd on-cd &lf -remote "send $id tty-write \"\033]7;file://$PWD\033\\\""
+
+# unset pane_path when quitting
+cmd on-quit tty-write "\033]7;\033\\"
+
+# trigger on-cd upon startup
+on-cd
+
+
+# leave some space at the top and the bottom of the screen
+#set scrolloff 10
+
+# Use the `dim` attribute instead of underline for the cursor in the preview pane
+#set cursorpreviewfmt "\033[7;2m"
+
+# use enter for shell commands
+#map <enter> shell
+
+# show the result of execution of previous commands
+#map ` !true
+
+# dedicated keys for file opener actions
+#map o &mimeopen $f
+#map O $mimeopen --ask $f
+
+# mkdir command. See wiki if you want it to select created dir
+map a :push %mkdir<space>
+
+# define a custom 'rename' command without prompt for overwrite
+cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
+map r push :rename<space>
+
+#cmd trash %set -f; mv -t ~/.trash $fx
+cmd trash $trash-put "$fx"
+
+map x trash
+
+# https://github.com/Naheel-Azawy/stpv
+#set previewer stpv
+#set cleaner stpvimgclr
+#&stpvimg --listen $id
+#cmd on-quit $stpvimg --end $id
+
+map <c-g> $lazygit
